@@ -47,7 +47,7 @@ at [this link](https://github.com/opentibiabr/canary/blob/master/CODE_OF_CONDUCT
 
 ### Getting **Started**
 
-* [Gitbook](https://docs.opentibiabr.com/opentibiabr/projects/canary).
+* [Gitbook](https://docs.opentibiabr.com/projects/canary).
 * [Wiki](https://github.com/opentibiabr/canary/wiki).
 
 ### Issues
@@ -98,6 +98,53 @@ other open-source initiatives.
   <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains" width="150" />
 </a>
 
+## Project supported by [TNT Cloud](https://tntcloudbr.com.br/)
+
+Thanks for supporting our open-source project with your game cloud hosting services.
+
+<a href="https://tntcloudbr.com.br/">
+  <img src="https://tntcloudbr.com.br/logo.png" alt="TNT Cloud - Game Hosting" width="300" />
+</a>
+
 ### Partners
 
 [![Supported by OTServ Brasil](https://raw.githubusercontent.com/otbr/otserv-brasil/main/otbr.png)](https://forums.otserv.com.br)
+
+
+Commands how to build:
+sudo apt update && sudo apt upgrade -y
+sudo apt install git cmake build-essential autoconf libtool ca-certificates curl zip unzip tar pkg-config ninja-build ccache linux-headers-$(uname -r)
+
+Update cmake:
+
+sudo apt remove --purge cmake
+hash -r
+sudo apt install snapd
+sudo snap install cmake --classic
+cmake --version
+
+-
+
+sudo apt install acl
+cd ~
+
+git clone https://github.com/microsoft/vcpkg
+cd vcpkg
+./bootstrap-vcpkg.sh
+cd ~
+
+git clone --depth 1 https://github.com/opentibiabr/canary.git
+sudo setfacl -R -m g:www-data:rx /home/$USER/
+sudo setfacl -R -m g:www-data:rx /home/$USER/canary
+sudo chmod -R 755 canary
+cd canary
+mv config.lua.dist config.lua
+mkdir build && cd build
+
+cmake -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake .. --preset linux-release
+cmake --build linux-release
+
+cd ~
+cd canary
+cp -r build/linux-release/bin/canary .
+sudo chmod +x canary

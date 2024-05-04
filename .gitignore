@@ -397,3 +397,5 @@ vcpkg_installed
 
 # CLION
 cmake-build-*
+data-fire/world/otservbr.otbm
+fire_old
