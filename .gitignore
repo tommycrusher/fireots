@@ -399,3 +399,7 @@ vcpkg_installed
 cmake-build-*
 data-fire/world/otservbr.otbm
 fire_old
+fire
+old map/otservbr.otbm
+old map/fire.otbm
+data-fire/world/fire.otbm

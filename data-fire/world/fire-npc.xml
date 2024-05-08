@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<npcs>
+	<npc centerx="33957" centery="31513" centerz="0" radius="1">
+		<npc name="Tanyt" x="0" y="0" z="0" spawntime="60" />
+	</npc>
+	<npc centerx="32661" centery="31915" centerz="0" radius="1">
+		<npc name="Uzon" x="0" y="0" z="0" spawntime="60" />
+	</npc>
+	<npc centerx="32588" centery="31942" centerz="0" radius="1">
+		<npc name="Gewen" x="0" y="0" z="0" spawntime="60" />
+	</npc>
+	<npc centerx="10252" centery="10032" centerz="1" radius="1">
+		<npc name="Chief Grarkharok" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="10289" centery="10113" centerz="1" radius="1">
+		<npc name="Spectulus" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="32995" centery="31469" centerz="1" radius="1">
+		<npc name="Ulala" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="32983" centery="31539" centerz="1" radius="1">
+		<npc name="Melian" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33231" centery="31754" centerz="1" radius="1">
+		<npc name="Chief Grarkharok" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="32535" centery="31773" centerz="1" radius="1">
+		<npc name="Thanita" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="32586" centery="31786" centerz="1" radius="1">
+		<npc name="Caramellia" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33268" centery="31835" centerz="1" radius="1">
+		<npc name="Spectulus" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33213" centery="32453" centerz="1" radius="1">
+		<npc name="Kasmir" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33101" centery="32520" centerz="1" radius="1">
+		<npc name="Gabel" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33044" centery="32622" centerz="1" radius="1">
+		<npc name="Malor" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="10289" centery="10113" centerz="2" radius="1">
+		<npc name="Sinclair" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="33078" centery="31022" centerz="2" radius="1">
+		<npc name="Chrak" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="32796" centery="31558" centerz="2" radius="1">
+		<npc name="An Old Dragonlord" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="32697" centery="31718" centerz="2" radius="1">
+		<npc name="Edala" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="33268" centery="31835" centerz="2" radius="1">
+		<npc name="Sinclair" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="32479" centery="31901" centerz="2" radius="1">
+		<npc name="Riddler" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+	<npc centerx="33103" centery="32520" centerz="2" radius="1">
+		<npc name="Nah'Bob" x="0" y="0" z="2" spawntime="60" />
+	</npc>
+</npcs>

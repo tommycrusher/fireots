@@ -141,7 +141,7 @@ cd canary
 mv config.lua.dist config.lua
 mkdir build && cd build
 
-cmake -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake .. --preset linux-release
+cmake -DCMAKE_TOOLCHAIN_FILE=~/fireots/vcpkg/scripts/buildsystems/vcpkg.cmake .. --preset linux-release
 cmake --build linux-release
 
 cd ~
