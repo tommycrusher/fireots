@@ -1,12 +1,11 @@
-# OpenTibiaBR - Canary
+# OpenTibia - Fireots
 
-[![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?style=flat-square&logo=discord)](https://discord.gg/gvTj5sh9Mp)
-[![GitHub issues](https://img.shields.io/github/issues/opentibiabr/canary)](https://github.com/opentibiabr/canary/issues)
-[![GitHub pull request](https://img.shields.io/github/issues-pr/opentibiabr/canary)](https://github.com/opentibiabr/canary/pulls)
-[![Contributors](https://img.shields.io/github/contributors/opentibiabr/canary.svg?style=flat-square)](https://github.com/opentibiabr/canary/graphs/contributors)
-[![GitHub](https://img.shields.io/github/license/opentibiabr/canary)](https://github.com/opentibiabr/canary/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/tommycrusher/fireots)](https://github.com/tommycrusher/fireots/issues)
+[![GitHub pull request](https://img.shields.io/github/issues-pr/tommycrusher/fireots)](https://github.com/tommycrusher/fireots/pulls)
+[![Contributors](https://img.shields.io/github/contributors/tommycrusher/fireots.svg?style=flat-square)](https://github.com/tommycrusher/fireots/graphs/contributors)
+[![GitHub](https://img.shields.io/github/license/tommycrusher/fireots)](https://github.com/tommycrusher/fireots/blob/master/LICENSE)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/opentibiabr/canary)
+![GitHub repo size](https://img.shields.io/github/repo-size/tommycrusher/fireots)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=opentibiabr_canary&metric=alert_status)](https://sonarcloud.io/dashboard?id=opentibiabr_canary)
 
@@ -26,14 +25,14 @@
 
 ## Project
 
-OpenTibiaBR - Canary is a free and open-source MMORPG server emulator written in C++.
+OpenTibia - Fireots is a free and open-source MMORPG server emulator written in C++.
 
 It is a fork of the [OTServBR-Global](https://github.com/opentibiabr/otservbr-global) project. You can see the
 repository history in the [releases](https://github.com/opentibiabr/otservbr-global/releases/).
 
 This project was created with the intention of being a base as clean as possible, to work as an MMORPG engine and not
-necessarily linked to Tibia Global, although it will also work. The OpenTibiaBR - Global was adapted to work with the
-source of the Canary, so that it will be the first repository to use this engine.
+necessarily linked to Tibia Global, although it will also work. The OpenTibia - Global was adapted to work with the
+source of the Fire, so that it will be the first repository to use this engine.
 
 To connect to the server and to take a stable experience, you can
 use [mehah's otclient](https://github.com/mehah/otclient)
@@ -47,22 +46,22 @@ at [this link](https://github.com/opentibiabr/canary/blob/master/CODE_OF_CONDUCT
 
 ### Getting **Started**
 
-* [Gitbook](https://docs.opentibiabr.com/projects/canary).
-* [Wiki](https://github.com/opentibiabr/canary/wiki).
+* [Gitbook](https://docs.fireots.pl/projects/fireots).
+* [Wiki](https://github.com/tommycrusher/fireots/wiki).
 
 ### Issues
 
-We use the [issue tracker on GitHub](https://github.com/opentibiabr/canary/issues). Keep in mind that everyone who is
+We use the [issue tracker on GitHub](https://github.com/tommycrusher/fireots/issues). Keep in mind that everyone who is
 watching the repository gets notified by e-mail when there is an activity, so be thoughtful and avoid writing comments
 that aren't meant for an issue (e.g. "+1"). If you'd like for an issue to be fixed faster, you should either fix it
 yourself and submit a pull request, or place a bounty on the issue.
 
 ### Pull requests
 
-Before [creating a pull request](https://github.com/opentibiabr/canary/pulls) please keep in mind:
+Before [creating a pull request](https://github.com/tommycrusher/fireots/pulls) please keep in mind:
 
 * Do not send Pull Request changing the map, as we can't review the changes it's better to use
-  our [Discord](https://discord.gg/gvTj5sh9Mp) to talk about or send the map changes to the responsible for updating it.
+  our [Discord] to talk about or send the map changes to the responsible for updating it.
 * Focus on fixing only one thing, mixing too much things on the same Pull Request make it harder to review, harder to
   test and if we need to revert the change it will remove other things together.
 * Follow the project indentation, if your editor support you can use the [editorconfig](https://editorconfig.org/) to
@@ -73,8 +72,8 @@ Before [creating a pull request](https://github.com/opentibiabr/canary/pulls) pl
 
 ### Special Thanks
 
-* our partners
-* our crew (majesty, gpedro, eduardo dantas, foot)
+* Fireots partners
+* OpenTibiaBR crew (majesty, gpedro, eduardo dantas, foot)
 * [our contributors](https://github.com/opentibiabr/canary/graphs/contributors)
 * [fear lucien](https://github.com/FearLucien)
 * [cjaker](https://github.com/Eternal-Scripts)
@@ -87,14 +86,14 @@ Before [creating a pull request](https://github.com/opentibiabr/canary/pulls) pl
 
 ### **Sponsors**
 
-See our [donate page](https://docs.opentibiabr.com/home/donate)
+See our [donate page](https://fireots.com/home/donate)
 
 ## Project supported by JetBrains
 
 We extend our heartfelt gratitude to Jetbrains for generously granting us licenses to collaborate on this and various
 other open-source initiatives.
 
-<a href="https://jb.gg/OpenSourceSupport/?from=https://github.com/opentibiabr/canary/">
+<a href="https://jb.gg/OpenSourceSupport/?from=https://github.com/tommycrusher/fireots/">
   <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains" width="150" />
 </a>
 
@@ -108,7 +107,7 @@ Thanks for supporting our open-source project with your game cloud hosting servi
 
 ### Partners
 
-[![Supported by OTServ Brasil](https://raw.githubusercontent.com/otbr/otserv-brasil/main/otbr.png)](https://forums.otserv.com.br)
+[![Comming soon]
 
 
 Commands how to build:
@@ -133,7 +132,7 @@ cd vcpkg
 ./bootstrap-vcpkg.sh
 cd ~
 
-git clone --depth 1 https://github.com/opentibiabr/canary.git
+git clone --depth 1 https://github.com/tommycrusher/fireots.git
 sudo setfacl -R -m g:www-data:rx /home/$USER/
 sudo setfacl -R -m g:www-data:rx /home/$USER/canary
 sudo chmod -R 755 canary
