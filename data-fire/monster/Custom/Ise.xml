@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ise" nameDescription="an ise" race="undead" experience="20000" speed="420" manacost="0">
+  <health now="30000" max="30000"/>
+  <look type="235" head="20" corpse="6348"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="80"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" min="-321" max="-532"/>
+    <attack name="lifedrain" interval="2200" chance="18" range="7" radius="6" target="1" min="-476" max="-550">
+		<attribute key="shootEffect" value="suddendeath"/>
+		<attribute key="areaEffect" value="sleep"/>
+    </attack>
+		    <attack name="poisoncondition" interval="1900" chance="18" range="7" target="1" min="-900" max="-1100">
+		<attribute key="shootEffect" value="poison"/>
+		<attribute key="areaEffect" value="poison"/>
+    </attack>
+		    <attack name="death" interval="2500" chance="18" radius="10" target="0" min="-965" max="-1076">
+		<attribute key="areaEffect" value="mortarea"/>
+    </attack>
+    <attack name="manadrain" interval="3000" chance="25" range="7" target="1" min="-285" max="-325"/>
+	<attack name="drunk" interval="2300" chance="21" radius="6" target="1" duration="60000">
+		<attribute key="areaEffect" value="rednote"/>
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+  </attacks>
+  <defenses armor="25" defense="20">
+    <defense name="healing" interval="1000" chance="18" min="1136" max="1954">
+      <attribute key="areaEffect" value="redfirework"/>
+    </defense>
+  </defenses>
+  <elements>
+	<element firePercent="-15"/>
+	<element icePercent="40"/>
+	<element energyPercent="-15"/>
+  </elements>
+  <immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+		<immunity earth="1"/>
+		<immunity fire="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Revenge ... is so ... sweet!"/>
+    <voice sentence="Life...force!"/>
+    <voice sentence="Feed me your... lifeforce!"/>
+  </voices>
+  <loot>
+	<item id="5909" chance="3500" countmax="1" /> -- white piece of cloth
+	<item id="2134" chance="4444" /> -- silver brooch
+	<item id="6500" chance="8100" countmax="1" /> -- demonic essence
+	<item id="2642" chance="5000" /> -- sandals
+	<item id="2071" chance="1818" /> -- lyre
+	<item id="8868" chance="15000"/>
+	<item id="2148" chance="100000" countmax="100" /> -- gold coin
+	<item id="1987" chance="100000" > -- bag
+	  <inside>
+		<item id="2189" chance="7000" /> -- wand of cosmic energy
+		<item id="8884" chance="20000"/>
+		<item id="2152" chance1="9500" countmax="7" /> -- platinum coin
+		<item id="2148" chance="100000" countmax="100" /> -- gold coin
+		<item id="2148" chance="100000" countmax="100" /> -- gold coin
+		<item id="2260" chance="6000" /> -- blank rune
+		<item id="8878" chance="10000"/>
+		<item id="2260" chance="5000" /> -- blank rune
+		<item id="8866" chance="10000"/>
+		<item id="2514" chance="40000"/>
+		<item id="5944" chance="2000" countmax="1" /> -- soul orb
+		<item id="6300" chance="800"/> -- death ring
+		<item id="2136" chance="600"/> -- demonbone amulet
+		<item id="7451" chance="300"/> --Shadow Sceptre
+	  </inside>
+	</item>
+  </loot>
+</monster>

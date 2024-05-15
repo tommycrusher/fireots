@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ghastly Dragon" nameDescription="a ghastly dragon" race="undead" experience="6600" speed="290" manacost="0">
+<health now="7800" max="7800"/>
+<look type="351" corpse="6306"/>
+<targetchange interval="3000" chance="10"/>
+<strategy attack="100" defense="0"/>
+<flags>
+	<flag attackable="1"/>
+	<flag hostile="1"/>
+	<flag convinceable="1"/>
+	<flag canpushitems="1"/>
+	<flag canpushcreatures="1"/>
+	<flag targetdistance="1"/>
+	<flag staticattack="90"/>
+	<flag runonhealth="225"/>
+</flags>
+<attacks>
+	<attack name="melee" interval="2000" skill="200" attack="70"/>
+	<attack name="cursecondition" interval="1621" chance="7" range="1" min="-2" max="-1377">
+		<attribute key="areaEffect" value="smallclouds"/>
+	</attack>
+	<attack name="lifedrain" interval="1842" chance="11" target="1" range="7" min="-80" max="-228">
+		<attribute key="areaEffect" value="redshimmer"/>
+	</attack>
+	<attack name="death" interval="1618" chance="10" length="4" spread="3" min="-50" max="-250">
+		<attribute key="areaEffect" value="bluebubble"/>
+	</attack>
+	<attack name="poisoncondition" interval="1141" chance="14" range="7" min="-920" max="-1260">
+		<attribute key="shootEffect" value="earth"/>
+		<attribute key="areaEffect" value="poison"/>
+	</attack>
+	<attack name="speed" interval="1592" chance="12" range="7" speedchange="-720" duration="10000">
+		<attribute key="areaEffect" value="bats"/>
+	</attack>
+	<attack name="death" interval="1283" chance="12" radius="4" target="0" min="0" max="-180">
+		<attribute key="areaEffect" value="mortarea"/>
+	</attack>
+</attacks>
+<defenses armor="45" defense="55"/>
+<elements>
+	<element firePercent="10"/>
+	<element physicalPercent="-10"/>
+	<element icePercent="50"/>
+	<element holyPercent="-15"/>
+	<element energyPercent="-10"/>
+	<element deathPercent="-1"/> 
+</elements>
+<immunities>
+	<immunity paralyze="1"/>
+	<immunity invisible="1"/>
+	<immunity death="1"/>
+		<immunity earth="1"/>
+		<immunity fire="1"/>
+</immunities>
+<voices interval="5000" chance="10">
+	<voice sentence="EMBRACE MY GIFTS!" yell="1"/>
+	<voice sentence="I WILL FEAST ON YOUR SOUL!" yell="1"/>
+</voices>
+<loot>
+	<item id="2148" countmax="99" chance="60000"/> --gold
+	<item id="2148" countmax="99" chance="50000"/> --gold
+	<item id="2148" countmax="70" chance="40000"/> --gold
+	<item id="2152" countmax="2" chance="15000"/> --platinum coin
+	<item id="11303" chance="1680"/> --twin hooks
+	<item id="11362" chance="590"/> --jade hat
+	<item id="11361" chance="11081"/> --undead heart
+	<item id="1987" chance="100000"> --bag
+		<inside>
+			<item id="6500" chance="5980"/> --demonic essence
+			<item id="5944" chance="8520"/> --soul orb
+			<item id="8473" chance="3140"/> --UHP
+			<item id="11234" chance="290"/> --guardian boots
+			<item id="11349" chance="590"/> --spellweaver robe
+			<item id="11221" chance="440"/> --shiny stone
+		</inside>
+	</item>
+</loot>
+</monster>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<monster name="Predator" nameDescription="a predator" race="UNDEAD" experience="20000" speed="950" manacost="0"> 
+    <health now="1880200" max="1880200"/> 
+    <look type="287" corpse="8937"/> 
+    <targetchange interval="5000" chance="50"/> 
+    <strategy attack="99" defense="1"/> 
+    <flags> 
+        <flag attackable="1"/> 
+        <flag hostile="1"/> 
+        <flag canpushitems="1"/> 
+        <flag lightlevel="5"/> 
+        <flag lightcolor="30"/> 
+        <flag canpushcreatures="1"/> 
+        <flag targetdistance="1"/> 
+        <flag staticattack="90"/> 
+        <flag runonhealth="0"/> 
+    </flags> 
+    <attacks>
+		<attack name="melee" interval="2000" min="-1800" max="-2191"/>
+		<attack name="melee" interval="2000" chance="40" range="7" radius="6" target="0" min="-250" max="-1000">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack> 
+		<attack name="speed" interval="800" chance="17" range="7" radius="4" target="1" speedchange="-600" duration="15000">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="greenbubble"/>
+		</attack>
+		<attack name="manadrain" interval="2200" chance="30" radius="5" target="0" min="-5893" max="-6790">
+			<attribute key="areaEffect" value="purpleenergy"/>
+		</attack>
+           <attack name="firecondition" interval="1000" chance="18" range="7" target="1" min="-1000" max="-1500">
+                  <attribute key="areaEffect" value="explosionarea"/>
+                  <attribute key="shootEffect" value="energyball"/>
+            </attack>
+        <attack name="melee" interval="1000" skill="90" attack="50"/> 
+        <attack name="lifedrain" interval="1261" chance="14" target="0" radius="5" min="-925" max="-2074"> 
+            <attribute key="areaEffect" value="redshimmer"/> 
+        </attack>
+		    <attack name="drown" interval="900" chance="21" radius="10" target="0" min="-943" max="-1053">
+		<attribute key="areaEffect" value="watersplash"/>
+    </attack> 
+        <attack name="energy" interval="952" chance="11" target="1" range="7" min="-1185" max="-2921"> 
+            <attribute key="areaEffect" value="energy"/> 
+            <attribute key="shootEffect" value="energyball"/> 
+        </attack>   
+        <attack name="lifedrain" interval="1632" chance="14" length="7" spread="0" min="-1627" max="-1636"> 
+            <attribute key="areaEffect" value="redspark"/> 
+        </attack> 
+    </attacks> 
+    <defenses armor="100" defense="90"> 
+        <defense name="healing" interval="1000" chance="13" min="18000" max="20000"> 
+            <attribute key="areaEffect" value="blueshimmer"/> 
+        </defense> 
+        <defense name="speed" interval="1632" chance="13" speedchange="620" duration="10000"> 
+            <attribute key="areaEffect" value="redshimmer"/> 
+        </defense> 
+    </defenses> 
+    <elements> 
+        <element icePercent="-10"/> 
+        <element firePercent="-10"/> 
+        <element physicalPercent="-10"/> 
+        <element deathPercent="-10"/> 
+        <element holyPercent="-10"/> 
+        <element energyPercent="-10"/> 
+        <element earthPercent="-10"/> 
+    </elements> 
+    <immunities> 
+        <immunity lifedrain="1"/> 
+        <immunity paralyze="1"/> 
+        <immunity drunk="1"/> 
+        <immunity invisible="1"/> 
+    </immunities> 
+    <voices interval="500" chance="10"> 
+        <voice sentence="COLLOCORPUS!"/> 
+    </voices> 
+    <summons maxSummons="4"> 
+        <summon name="Eye of Terror" interval="50" chance="12" max="2"/> 
+    </summons> 
+    <loot>  
+      <item id="2160" countmax="47" chance="100000"/> --cc 
+      <item id="2160" countmax="43" chance="100000"/> --cc 
+      <item id="8306" chance="35000"/> --rs 
+      <item id="3983" chance="25000"/> --bast skirt 
+      <item id="2644" chance="10000"/> --DSL 
+      <item id="6500" countmax="30" chance="80000"/> --ess 
+      <item id="2365" chance="100000">  -- bag 
+        <inside>  
+          <item id="6500" countmax="15" chance="80000"/> --ess 
+          <item id="7735" chance="10000"/> --starwand 
+          <item id="8925" chance="100000"/>  --MPA 
+      	<item id="8300" chance="35000"/> --rs
+      <item id="8850" chance="35000"/> --rs
+      <item id="7722" chance="35000"/> --rs
+      <item id="8903" chance="35000"/> --rs
+          <item id="3976" countmax="14" chance="100000"/> --worm 
+        </inside>  
+      </item>  
+    </loot>  
+  </monster>

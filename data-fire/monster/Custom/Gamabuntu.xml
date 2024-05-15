@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Gamabuntu" nameDescription="Gamabuntu" race="UNDEAD" experience="300000" speed="500" manacost="0">
+	<health now="300000" max="300000"/>
+	<look type="303" head="0" body="0" legs="0" feet="0" corpse="6068"/>
+	<targetchange interval="10000" chance="20"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag staticattack="98"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="3500"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-700" max="-2200"/>
+		<attack name="melee" interval="2000" chance="40" range="7" radius="6" target="0" min="-500" max="-750">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="melee" interval="3000" chance="34" range="7" radius="1" target="1" min="-300" max="-500">
+			<attribute key="shootEffect" value="whirlwindsword"/>
+			<attribute key="areaEffect" value="redspark"/>
+		</attack>
+		<attack name="energy" interval="4000" chance="30" length="8" spread="0" min="-600" max="-850">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="physical" interval="3000" chance="20" range="14" radius="5" target="0" min="-600" max="-1000">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+		<attack name="physical" interval="4000" chance="15" range="7" radius="13" target="0" min="-200" max="-800">
+			<attribute key="areaEffect" value="yellowspark"/>
+		</attack>
+		<attack name="physical" interval="4000" chance="18" radius="14" target="0" min="-300" max="-600">
+			<attribute key="areaEffect" value="bluebubble"/>
+		</attack>
+		<attack name="melee" interval="3000" chance="15" range="7" radius="4" target="0" min="-200" max="-750">
+			<attribute key="areaEffect" value="energyarea"/>
+		</attack>
+	</attacks>
+	<defenses armor="55" defense="65">
+		<defense name="healing" interval="3000" chance="35" min="600" max="1000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="4000" chance="80" speedchange="440" duration="6000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="1"/>
+		<immunity fire="1"/>
+		<immunity poison="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<summons maxSummons="1">
+		<summon name="ghazbaran" interval="4000" chance="20"/>
+	</summons>
+	<voices interval="5000" chance="30">
+	</voices>
+	<loot>
+		<item id="2160" chance="100000" countmax="30" /> <!-- Crystal Coin -->
+		<item id="9981" chance="18000" /> <!-- rusty legs -->
+		<item id="9969" chance="12000" /> <!-- black skull -->
+		<item id="2494" chance="7000" /> <!-- demon armor -->
+		<item id="2003" chance="100000" > <!-- Bag -->
+			<inside>
+				<item id="8855" chance="6000" /> <!-- composite hornbow -->
+				<item id="2393" chance="60000" /> <!-- giant sword -->
+				<item id="2195" chance="14033" /> <!-- Boots of Haste -->
+			</inside>
+		</item>
+	</loot>
+</monster>

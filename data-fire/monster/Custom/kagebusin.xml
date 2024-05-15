@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<monster name="Kage Bushin" nameDescription="Kage Bushin" race="blood" experience="0" speed="300" manacost="0">
+<health now="1000" max="100" />
+<look type="152" head="95" body="116" legs="121" feet="115" addons="3" corpse="3128"/>
+<targetchange interval="2000" chance="10" />
+<strategy attack="0" defense="0" />
+
+<flags>
+<flag summonable="1" />
+<flag attackable="1" />
+<flag hostile="1" />
+<flag illusionable="0" />
+<flag convinceable="0" />
+<flag pushable="0" />
+<flag canpushitems="1" />
+<flag canpushcreatures="1" />
+<flag targetdistance="1" />
+<flag runonhealth="0" />
+</flags>
+
+<attacks>
+<attack name="melee" interval="2000" skill="60" attack="50" />
+</attacks>
+
+<defenses armor="50" defense="50">
+<defense name="speed" interval="1000" chance="9" speedchange="460" duration="6000">
+<attribute key="areaEffect" value="redshimmer" />
+</defense>
+</defenses>
+
+<immunities>
+<immunity physical="0" />
+<immunity energy="1" />
+<immunity fire="1" />
+<immunity poison="1" />
+<immunity lifedrain="0" />
+<immunity paralyze="0" />
+<immunity outfit="0" />
+<immunity drunk="0" />
+<immunity invisible="0" />
+</immunities>
+
+<voices interval="5000" chance="10">
+</voices>
+
+<loot capacity="400">
+</loot>
+</monster> 

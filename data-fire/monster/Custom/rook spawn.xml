@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Rook Spawn" nameDescription="an rook spawn" race="blood" experience="10000" speed="100" manacost="1360">
+	<health now="155000" max="155000"/>
+	<look type="353" corpse="9916"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+        <flag attackable="1"/> 
+        <flag hostile="1"/> 
+        <flag canpushitems="1"/> 
+        <flag lightlevel="5"/> 
+        <flag lightcolor="30"/> 
+        <flag canpushcreatures="1"/> 
+		<flag targetdistance="0"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="8000"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="20"/>
+		<attack name="melee" interval="1500" chance="30" length="8" spread="0" min="-600" max="-720">
+			<attribute key="areaEffect" value="groundshaker"/>
+		</attack>
+		<attack name="melee" interval="800" chance="15" range="7" radius="3" target="0" min="-815" max="-955">
+			<attribute key="areaEffect" value="groundshaker"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="healing" interval="5000" min="550" max="900">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+        </defenses> 
+	<elements>
+		<element holyPercent="30"/>
+		<element deathPercent="-10"/>
+	</elements>
+    <immunities> 
+        <immunity lifedrain="1"/> 
+        <immunity paralyze="1"/> 
+        <immunity drunk="1"/> 
+        <immunity invisible="1"/> 
+    </immunities> 
+	<voices interval="5000" chance="10">
+		<voice sentence="Hastugaas!"/>
+	</voices>
+	<loot>
+		<item id="2160" countmax="1" chance="31000"/><!-- gold coin -->
+	</loot>
+</monster>

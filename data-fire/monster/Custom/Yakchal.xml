@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Yakchal" nameDescription="Yakchal" race="blood" experience="5800" speed="230" manacost="500">
+  <health now="6000" max="6000"/>
+  <look type="149" head="0" body="47" legs="105" feet="105" addons="2" corpse="3128"/>
+  <targetchange interval="2000" chance="5"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag staticattack="50"/>
+    <flag lightlevel="0"/>
+    <flag lightcolor="0"/>
+    <flag targetdistance="5"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="outfit" interval="1000" chance="10" range="7" item="7171" duration="6500">
+       <attribute key="areaEffect" value="blueshimmer"/>
+     </attack>
+    <attack name="melee" interval="2000" min="-400" max="-900"/>
+    <attack name="paralyze" interval="3500" chance="5"/>
+  </attacks>
+  <defenses armor="30" defense="32">
+    <defense name="light healing" interval="2000" chance="60" min="1" max="1000"/>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+ <summons maxSummons="3">
+  <summon name="ice witch" interval="5600" chance="80" max="2" /> 
+  <summon name="frost dragon" interval="5600" chance="80" max="1" /> 
+  </summons>
+  <voices interval="2000" chance="5">
+    <voice sentence="You are mine!"/>
+    <voice sentence="I will make you all pay!"/>
+    <voice sentence="You are responsible for this!"/>
+  </voices>
+	<loot>
+			<item id="2672" countmax="3" chance1="9000" chancemax="0"/>
+			<item id="2149" countmax="100" chance1="6000" chancemax="0"/>
+			<item id="7460" chance="1222"/>
+			<item id="2546" countmax="10" chance1="6000" chancemax="0"/>
+			<item id="1987" chance="10000">
+			<inside>
+					<item id="2148" countmax="108" chance1="100000" chancemax="0"/>
+					<item id="7443" chance="1554"/>
+					<item id="7407" chance="5332"/>
+					<item id="7289" chance="1700"/>
+			</inside>
+		</item>
+	</loot>
+</monster>

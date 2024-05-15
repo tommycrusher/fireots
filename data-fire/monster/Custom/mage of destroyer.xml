@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mage Of Destroyer" nameDescription="a Mage Of Destroyer" race="blood" experience="3050" speed="990" manacost="0">
+<health now="82600" max="82600"/>
+<look type="325" head="94" body="0" legs="0" feet="0" addons="1" corpse="6080"/>
+<targetchange interval="5000" chance="20"/>
+<strategy attack="75" defense="30"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="0"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="95"/>
+<flag runonhealth="300"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" min="-1000" max="-1600"/>
+<attack name="physical" interval="8000" chance="13" radius="8" target="0" min="-1800" max="-1900">
+<attribute key="areaEffect" value="holyarea"/>
+</attack>
+<attack name="strength" interval="1000" chance="12" radius="3" target="0">
+<attribute key="areaEffect" value="blackspark"/>
+</attack>
+<attack name="manadrain" interval="1000" chance="7" length="0" spread="3" min="-600" max="-1600">
+<attribute key="areaEffect" value="energyarea"/>
+</attack>
+<attack name="energy" interval="1000" chance="9" length="8" spread="0" min="-900" max="-1300">
+<attribute key="areaEffect" value="redshimmer"/>
+</attack>
+<attack name="poisoncondition" interval="500" chance="10" length="0" spread="0" min="-2300" max="-2500">
+<attribute key="areaEffect" value="greenspark"/>
+</attack>
+<attack name="lifedrain" interval="600" chance="15" length="8" spread="0" min="-500" max="-1600">
+<attribute key="areaEffect" value="redshimmer"/>
+<attack name="poison" interval="1000" chance="17" range="7" target="1" min="-500" max="-1100">
+    <attribute key="shootEffect" value="poison"/>
+    <attribute key="areaEffect" value="greenspark"/>
+</attack>
+</attack>
+</attacks>
+<defenses armor="100" defense="85">
+<defense name="healing" interval="600" chance="15" min="5000" max="5500">
+<attribute key="areaEffect" value="blueshimmer"/>
+</defense>
+<defense name="speed" interval="2000" chance="8" speedchange="1980" duration="19000">
+<attribute key="areaEffect" value="redshimmer"/>
+</defense>
+</defenses>
+  <elements>
+  <element firePercent="-10"/>
+    <element earthPercent="10"/>
+	  <element energyPercent="15"/>
+	    <element deathPercent="-10"/>
+		  <element holyPercent="50"/>
+		    <element icePercent="10"/>
+			<element psychicalPercent="15"/>
+	</elements>
+  <immunities>
+    <immunity paralyze="1"/>
+    <immunity invisible="1"/>
+	<immunity drunk="1"/>
+  </immunities>
+    <summons maxSummons="3"> 
+        <summon name="ward mage" interval="50" chance="12" max="3"/> 
+    </summons> 
+<loot capacity="5000">
+<item id="2472" countmax="1" chance="1100"/>
+<item id="2492" countmax="1" chance="1500"/>
+<item id="2501" countmax="1" chance="1100"/>
+<item id="2323" countmax="1" chance="800"/>
+<item id="8885" countmax="1" chance="800"/>
+<item id="2470" countmax="1" chance="1400"/>
+<item id="2011" countmax="1" chance="1400"/>
+<item id="6394" countmax="1" chance="3500"/>
+<item id="2142" countmax="1" chance="3500"/>
+<item id="2110" countmax="1" chance="3500"/>
+<item id="2145" countmax="15" chance="12000"/>
+<item id="2239" countmax="1" chance="4000"/>
+<item id="2228" countmax="1" chance="4000"/>
+<item id="2234" countmax="1" chance="4000"/>
+<item id="2154" countmax="1" chance="1500"/>
+<item id="2195" countmax="1" chance="4000"/>
+<item id="2130" countmax="1" chance="2500"/>
+<item id="2125" countmax="1" chance="1500"/>
+<item id="2148" countmax="150" chance="77700"/>
+<item id="2152" countmax="5" chance="7000"/>
+<item id="2124" countmax="1" chance="5500"/>
+<item id="2522" countmax="1" chance="4000"/>
+<item id="2491" countmax="1" chance="11000"/>
+<item id="7429" countmax="1" chance="7000"/>
+<item id="2421" countmax="1" chance="4500"/>
+<item id="2168" countmax="1" chance="13500"/>
+<item id="2432" countmax="1" chance="17000"/>
+<item id="2396" countmax="1" chance="12500"/>
+<item id="2179" countmax="1" chance="8000"/>
+<item id="2470" countmax="1" chance="5000"/>
+<item id="2033" countmax="1" chance="7500"/>
+<item id="2177" countmax="1" chance="1000"/>
+<item id="2514" countmax="1" chance="7500"/>
+<item id="2353" countmax="1" chance="3500"/>
+<item id="2355" countmax="1" chance="1200"/>
+<item id="2354" countmax="1" chance="4500"/>
+<item id="2200" countmax="1" chance="4500"/>
+<item id="1983" countmax="1" chance="2600"/>
+<item id="2123" countmax="1" chance="3500"/>
+<item id="2150" countmax="10" chance="13500"/>
+<item id="2149" countmax="10" chance="15500"/>
+</loot>
+</monster>

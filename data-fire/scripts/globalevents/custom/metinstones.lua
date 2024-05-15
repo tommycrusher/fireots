@@ -40,7 +40,7 @@
 						storage = 20009,
 						secondStorage = 20010,
 						appearEffect = CONST_ME_GROUNDSHAKER
-					},
+					}
 				},
 			
 				positions = {
@@ -48,7 +48,7 @@
 				{x=1032, y=1054, z=7},
 				{x=1089, y=1068, z=7},
 				{x=1054, y=1112, z=7},
-				{x=1084, y=971, z=7},
+				{x=1084, y=971, z=7}
 				},
 
 			stones_days = {
@@ -79,7 +79,7 @@
 					['Saturday'] = {'10:59:20'},
 					['Saturday'] = {'14:59:20'},
 					['Saturday'] = {'17:59:20'},
-					['Saturday'] = {'19:59:20'},
+					['Saturday'] = {'19:59:20'}
 			},
 
 				maxTopPlayers = 6,
@@ -89,8 +89,8 @@
 				pos_od = {x=949,y=1068,z=7}, --lewy gorny rog
 				pos_do = {x=1077,y=1126,z=7}, --prawy dolny rog
 				time = 360, --pierwsze i kazde nastepne losowanie od momentu startu serwera, w minutach
-				chance = 50, --szansa na wylosowanie kamulca
-			}
+				chance = 50 --szansa na wylosowanie kamulca
+			},
 
 			summons = {
 				['Wind Stone'] = {
@@ -161,8 +161,8 @@
 					{4, {'azerus', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'azerus'}},
 					{2, {'Fire Stone', 'Wind Stone', 'Earth Stone', 'Icy Stone'}},
 					{0, {}},
-				},
-			}
+				}
+			},
 			
 			u = 0
 --end config
@@ -299,12 +299,12 @@
 					['Tuesday'] = {'17:59:20'}, 
 					['Thursday'] = {'17:59:20'}, 
 					['Friday'] = {'17:59:20'}, 
-					['Sunday'] = {'17:59:20'}
+					['Sunday'] = {'17:59:20'},
 				}
 			local area = {
 				{1, 1, 1},
 				{1, 1, 1},
-				{1, 1, 1}
+				{1, 1, 1},
 			}
 			local daysOpen = {}			
 			for k, v in ipairs(days) do
@@ -391,7 +391,7 @@
 				end				
 				return true
 			end
-	statStones:register()
+	--statStones:register()
 
 	local eventStones = CreatureEvent("EventStones")
 			local area = {
@@ -401,7 +401,7 @@
 				{1, 1, 1, 1, 1, 1, 1},
 				{0, 1, 1, 1, 1, 1, 0},
 				{0, 0, 1, 1, 1, 0, 0},
-				{1, 0, 0, 1, 0, 0, 1}
+				{1, 0, 0, 1, 0, 0, 1},
 			}
 			
 			local cleanArea = {
@@ -421,7 +421,7 @@
 				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 			}
 
 			function eventStones.onThink(cid, interval)
@@ -467,7 +467,7 @@
 				end
 				return true
 			end
-	eventStones:register()
+	--eventStones:register()
 
 	local deathStones = CreatureEvent("DeathStones")
 			function deathStones.onDeath(cid, corpse, deathList)
@@ -521,4 +521,4 @@
 				doSetStorage(stonesConfig.storage, 0)
 				return true
 			end
-	talkStones:register()
+	--talkStones:register()

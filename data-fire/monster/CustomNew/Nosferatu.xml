@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Nosferatu" nameDescription="a nosferatu" race="undead" experience="9750" speed="280" manacost="0">
+<health now="11500" max="11500"/>
+<look type="351" corpse="11357"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="80" defense="20"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="700"/>
+</flags>
+<attacks>
+<attack name="death" interval="2000" chance="100" min="0" max="-1148">
+	<attribute key="areaEffect" value="blackspark"/>
+</attack>
+<attack name="death" interval="4000" chance="15" range="7" radius="4" min="-525" max="-853">
+	<attribute key="shootEffect" value="suddendeath"/>
+	<attribute key="areaEffect" value="mortarea"/>
+</attack>
+<attack name="poison" interval="3000" chance="11" length="7" min="-380" max="-728">
+	<attribute key="areaEffect" value="yellowbubble"/>
+</attack>
+<attack name="death" interval="2000" chance="11" radius="2" target="0" min="-243" max="-635">
+	<attribute key="areaEffect" value="blackspark"/>
+</attack>
+<attack name="manadrain" interval="1000" chance="7" range="7" min="-145" max="-242">
+	<attribute key="shootEffect" value="holy"/>
+	<attribute key="areaEffect" value="yellowenergy"/>
+</attack>
+<attack name="poisoncondition" interval="3000" chance="10" range="7" radius="5" min="-600" max="-1200">
+	<attribute key="shootEffect" value="poison"/>
+	<attribute key="areaEffect" value="poison"/>
+</attack>
+</attacks>
+<defenses armor="45" defense="45">
+<defense name="speed" interval="2000" chance="25" speedchange="400" duration="5000">
+	<attribute key="areaEffect" value="redshimmer"/>
+</defense>
+</defenses>
+<elements>
+<element firePercent="20"/>
+<element icePercent="65"/>
+<element physicalPercent="-10"/>
+<element holyPercent="-15"/>
+<element energyPercent="-10"/>
+</elements>
+<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+		<immunity earth="1"/>
+		<immunity fire="1"/>
+<immunity death="1"/>
+<immunity lifedrain="1"/>
+<immunity drown="1"/>
+</immunities>
+<summons maxSummons="2">
+<summon name="grim reaper" interval="2000" chance="18" max="2"/>
+</summons>
+<voices interval="5000" chance="10">
+<voice sentence="I WILL FEAST ON YOUR SOUL!" yell="1"/>
+</voices>
+<loot>
+<item id="2148" countmax="96" chance="70000"/> --gold
+<item id="2148" countmax="99" chance="60000"/> --gold
+<item id="2152" countmax="5" chance="25000"/> --plat coin
+<item id="8472" chance="3500"/> --GSP
+<item id="11303" chance="1200"/> --twin hooks
+<item id="8473" chance="8000"/> --UHP
+<item id="11361" chance="3400"/> --undead heart
+<item id="1987" chance="100000"> --bag
+<inside>
+<item id="6500" countmax="5" chance="2000"/> --ess
+<item id="5944" countmax="3" chance="15000"/> --experience orb
+<item id="9810" chance="1000"/> --rusty armor
+<item id="7591" chance="4290"/> --GHP
+</inside>
+</item>
+</loot>
+</monster>

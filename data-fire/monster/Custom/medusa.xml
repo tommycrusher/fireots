@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Medusa" nameDescription="a Medusa" race="blood" experience="9050" speed="200" manacost="0">
+    <health now="14500" max="14500"/>
+    <look type="330" head="78" body="76" legs="114" feet="114" addons="3" corpse="10002"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag staticattack="50"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+      <attack name="melee" interval="1000" min="0" max="-350"/>
+      <attack name="Life Drain" interval="500" min="150" max="-300"/>
+      <attack name="Terra Strike" interval="1000" min="0" max="-350"/>
+    </attacks>
+    <defenses armor="0" defense="0">
+      <defense name="ultimate healing" interval="10000" chance="100" min="500" max="600"/>
+    </defenses>
+    <elements>
+      <element physicalPercent="60"/>
+      <element deathPercent="60"/>
+      <element holyPercent="60"/>
+      <element firePercent="60"/>
+      <element icePercent="60"/>
+      <element earthPercent="60"/>
+      <element energyPercent="60"/>
+    </elements>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="0"/>
+      <immunity fire="0"/>
+      <immunity poison="0"/>
+      <immunity lifedrain="0"/>
+      <immunity paralyze="0"/>
+      <immunity outfit="0"/>
+      <immunity drunk="0"/>
+      <immunity invisible="1"/>
+      <immunity earth="1"/>
+    </immunities>
+    <voices interval="2000" chance="5">
+    </voices>
+    <loot>
+      <item id="2148" countmax="96" chance1="100000" chancemax="0"/>
+      <item id="2152" countmax="2" chance1="100000" chancemax="0"/>
+      <item id="1949" chance="10000"/>
+      <item id="2467" chance="10000"/>
+      <item id="2642" chance="6666"/>
+      <item id="1987" chance="100000">
+        <inside>
+          <item id="2044" chance="6666"/>
+          <item id="2689" countmax="3" chance1="20000" chancemax="0"/>
+          <item id="2401" chance="3333"/>
+          <item id="2166" chance="1428"/>
+          <item id="2536" countmax="1" chance="1428"/>
+       </inside>
+      </item>
+    </loot>
+  </monster>
