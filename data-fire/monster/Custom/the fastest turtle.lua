@@ -101,16 +101,16 @@ monster.loot = {
 	{name = "thunder hammer", chance = 3500},
 	{id = 3955, chance = 5100}, -- voodoo doll
 	{name = "white pearl", chance = 12500, maxCount = 35},
-		{id = 2148, maxCount = 100, chance = 100000}, --Gold
-		{id = 2148, maxCount = 50, chance = 100000}, -- Gold
-		{id = 2152, maxCount = 6, chance = 80000}, --Platinum
-		{id = 2144, maxCount = 28, chance = 7777}, --Black Pearls
-		{id = 7440, chance = 17000}, --Mastermind potion
-		{id = 2323, chance = 4500}, --hat of the made
-		{id = 1987, chance = 100000},
-			{id = 2151, maxCount = 13, chance = 6500}, --Talons
-			{id = 8892, chance = 6555}, --ethno coat
-			{id = 8918, chance = 8200} --Spellbook of dark mysteries
+	{id = 3031, maxCount = 100, chance = 100000}, --Gold
+	{id = 3031, maxCount = 50, chance = 100000}, -- Gold
+	{id = 3035, maxCount = 6, chance = 80000}, --Platinum
+	{id = 3027, maxCount = 28, chance = 7777}, --Black Pearls
+	{id = 7440, chance = 17000}, --Mastermind potion
+	{id = 3210, chance = 4500}, --hat of the made
+	{id = 2854, chance = 100000},
+	{id = 3034, maxCount = 13, chance = 6500}, --Talons
+	{id = 8064, chance = 6555}, --ethno coat
+	{id = 8090, chance = 8200} --Spellbook of dark mysteries
 }
 
 monster.attacks = {

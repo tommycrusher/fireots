@@ -37,14 +37,15 @@ local config = {
 	["Train"] = {x = 1001, y = 1004, z = 7},
 	["Train!"] = {x = 2643, y = 2889, z = 7},
 	["TRAIN"] = {x = 1028, y = 993, z = 7},
-	["TRAIN!"] = {x = 1002, y = 994, z = 7},
+	["TRAIN!"] = {x = 1002, y = 994, z = 7}
     }
 }
 local effects = {39, 35}
 local textto = GlobalEvent("TextTo")
-function textto.onThink(interval, lastExecution)
+function textto.onThink(interval)
     for text, pos in pairs(config.positions) do
-		doSendMagicEffect(pos, effects[math.random(1, #effects)])
+    Position(math.random(1, #pos)):sendMagicEffect(math.random(1, #effects))
+		--doSendMagicEffect(pos, effects[math.random(1, #effects)])
         --doSendAnimatedText(pos, text, math.random(1, 255))doShowTextDialog(cid, itemId, text)
     end
     

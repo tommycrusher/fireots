@@ -1138,10 +1138,18 @@
 		<attribute key="primarytype" value="tools"/>
 		<attribute key="weight" value="850"/>
 	</item>
-	<item id="651" article="a" name="spellwand">
+	<item id="651" article="a" name="star tear">
 		<attribute key="primarytype" value="party items"/>
-		<attribute key="description" value="It might have some strange effects"/>
-		<attribute key="weight" value="200"/>
+		<attribute key="description" value="It might have some strange effects. It can only be wielded properly by sorcerer or druid of level 50 or higher." />
+		<attribute key="weight" value="500" />
+		<attribute key="weaponType" value="wand" />
+		<attribute key="loottype" value="wand" />
+		<attribute key="shootType" value="smallice" />
+		<attribute key="shootType" value="ice" />
+		<attribute key="range" value="5" />
+		<attribute key="attack" value="100" />
+		<attribute key="maxHitChance" value="100" />
+		<attribute key="elementHoly" value="34" />
 	</item>
 	<item id="652" article="a" name="rotten heart of a tree">
 		<attribute key="weight" value="4500"/>
@@ -7659,9 +7667,9 @@
 		<attribute key="charges" value="2"/>
 		<attribute key="weight" value="105"/>
 	</item>
-	<item id="3157" article="a" name="spell rune">
-		<attribute key="primarytype" value="utilities"/>
+	<item id="3157" article="a" name="mana rune">
 		<attribute key="type" value="rune"/>
+		<attribute key="charges" value="1"/>
 		<attribute key="weight" value="120"/>
 	</item>
 	<item id="3158" article="an" name="icicle rune">
@@ -8094,9 +8102,14 @@
 	<item id="3239" article="a" name="crystal arrow">
 		<attribute key="primarytype" value="quest items"/>
 		<attribute key="description" value="This arrow seems not suitable for the use with ordinary bows. It seems to be rotting rapidly"/>
-		<attribute key="duration" value="86400"/>
-		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="100"/>
+		<attribute key="weight" value="1000" />
+		<attribute key="attack" value="95" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="loottype" value="distance" />
+		<attribute key="shootType" value="shiverarrow" />
+		<attribute key="maxHitChance" value="100" />
+		<attribute key="range" value="6" />
+		<attribute key="elementIce" value="34" />
 	</item>
 	<item id="3240" article="a" name="burning heart">
 		<attribute key="primarytype" value="quest items"/>

@@ -56,6 +56,23 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+function OldBackpack(cid, message, keywords, parameters, node)
+ 
+    if(not npcHandler:isFocused(cid)) then
+        return false
+    end
+ 
+    if getPlayerItemCount(cid, 3960) >= 1 and getPlayerStorageValue(cid, 21002) < 0 then
+                npcHandler:say("Thank you very much! This brings back good old memories! Please, as a reward, travel to Kazordoon and ask my old friend {Kroox} to provide you a special dwarven armor.", cid)
+		npcHandler:say("I will mail him about you immediately. Just tell him, his old buddy sam is sending you.", cid)
+                doPlayerSendTextMessage(cid,22,"Congratulations! You earned the achievement \"Backpack Tourist\".")
+   	        setPlayerStorageValue(cid,21002,1)
+                doPlayerRemoveItem(cid, 3960, 1)
+        else
+            npcHandler:say("Thank you for your concern, but I don't think this is my backpack, since you gave it to me already", cid)
+    end
+end
+
 npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
@@ -82,10 +99,10 @@ npcConfig.shop = {
 	{ itemName = "exercise club", clientId = 28554, buy = 262500, count = 500 },
 	{ itemName = "exercise shield", clientId = 44065, buy = 262500, count = 500 },
 	{ itemName = "exercise sword", clientId = 28552, buy = 262500, count = 500 },
-	{ itemName = "fire sword", clientId = 3280, sell = 1000 },
-	{ itemName = "halberd", clientId = 3269, sell = 400 },
+	{ itemName = "fire sword", clientId = 3280, sell = 1000, buy = 13000 },
+	{ itemName = "halberd", clientId = 3269, sell = 400, buy = 1500 },
 	{ itemName = "hand axe", clientId = 3268, buy = 8, sell = 4 },
-	{ itemName = "hatchet", clientId = 3276, sell = 25 },
+	{ itemName = "hatchet", clientId = 3276, sell = 25, buy = 125 },
 	{ itemName = "katana", clientId = 3300, sell = 35 },
 	{ itemName = "lasting exercise axe", clientId = 35286, buy = 7560000, count = 14400 },
 	{ itemName = "lasting exercise bow", clientId = 35288, buy = 7560000, count = 14400 },
@@ -105,6 +122,77 @@ npcConfig.shop = {
 	{ itemName = "throwing knife", clientId = 3298, buy = 25, sell = 2 },
 	{ itemName = "two handed sword", clientId = 3265, buy = 950, sell = 450 },
 	{ itemName = "war hammer", clientId = 3279, buy = 10000, sell = 470 },
+	
+	{ itemName = "royal helmet", clientId = 3392, buy = 40000, sell = 7500 },
+	{ itemName = "warrior helmet", clientId = 3390, buy = 6000, sell = 1470 },
+	{ itemName = "crusader helmet", clientId = 3391, buy = 9000, sell = 470 },
+	{ itemName = "crown helmet", clientId = 3385, sell = 5000 },
+	{ itemName = "devil helmet", clientId = 3356, sell = 4000 },
+	{ itemName = "mystic turban", clientId = 3574, sell = 500 },
+	{ itemName = "chain helmet", clientId = 3352, sell = 35 },
+	{ itemName = "iron helmet", clientId = 3353, sell = 30 },
+	
+	{ itemName = "steel boots", clientId = 3554, sell = 400000 },
+	{ itemName = "boots of haste", clientId = 3079, sell = 40000 },
+	{ itemName = "golden boots", clientId = 3555, sell = 100000 },
+	
+	{ itemName = "magic plate armor", clientId = 3366, sell = 100000 },
+	{ itemName = "dragon scale mail", clientId = 3386, sell = 60000 },
+	{ itemName = "demon armor", clientId = 3388, sell = 90000 },
+	{ itemName = "golden armor", clientId = 3360, sell = 30000 },
+	{ itemName = "crown armor", clientId = 3381, sell = 20000 },
+	{ itemName = "knight armor", clientId = 3370, sell = 5000 },
+	{ itemName = "blue robe", clientId = 3367, sell = 15000 },
+	{ itemName = "plate armor", clientId = 3357, sell = 400 },
+	{ itemName = "brass armor", clientId = 3359, sell = 200 },
+	{ itemName = "chain armor", clientId = 3358, sell = 100 },
+	
+	{ itemName = "golden legs", clientId = 3364, sell = 80000 },
+	{ itemName = "crown legs", clientId = 3382, sell = 15000 },
+	{ itemName = "knight legs", clientId = 3371, sell = 6000 },
+	{ itemName = "plate legs", clientId = 3557, sell = 500 },
+	{ itemName = "brass legs", clientId = 3372, sell = 100 },
+	
+	{ itemName = "mastermind shield", clientId = 3414, sell = 80000 },
+	{ itemName = "demon shield", clientId = 3420, sell = 40000 },
+	{ itemName = "blessed shield", clientId = 3423, sell = 150000 },
+	{ itemName = "great shield", clientId = 3422, sell = 100000 },
+	{ itemName = "vampire shield", clientId = 3434, sell = 25000 },
+	{ itemName = "medusa shield", clientId = 3436, sell = 8000 },
+	{ itemName = "amazon shield", clientId = 3437, sell = 4000 },
+	{ itemName = "crown shield", clientId = 3419, sell = 5000 },
+	{ itemName = "tower shield", clientId = 3428, sell = 4000 },
+	{ itemName = "guardian shield", clientId = 3415, sell = 200 },
+	{ itemName = "beholder shield", clientId = 3418, sell = 1500 },
+	{ itemName = "dwarven shield", clientId = 3425, sell = 100 },
+	
+	{ itemName = "magic longsword", clientId = 3278, sell = 150000 },
+	{ itemName = "warlord sword", clientId = 3296, sell = 100000 },
+	{ itemName = "magic sword", clientId = 3288, sell = 90000 },
+	{ itemName = "giant sword", clientId = 3281, sell = 10000 },
+	{ itemName = "bright sword", clientId = 3295, sell = 16000 },
+	{ itemName = "ice rapier", clientId = 3284, sell = 14000 },
+	{ itemName = "serpent sword", clientId = 3297, sell = 11500 },
+	{ itemName = "broadsword", clientId = 3301, sell = 170 },
+	
+	{ itemName = "dragon lance", clientId = 3302, sell = 10000 },
+	{ itemName = "stonecutter axe", clientId = 3319, sell = 90000 },
+	{ itemName = "guardian halberd", clientId = 3315, sell = 7500 },
+	{ itemName = "fire axe", clientId = 3320, sell = 10000 },
+	{ itemName = "knight axe", clientId = 3318, sell = 5000 },
+	
+	{ itemName = "thunder hammer", clientId = 3309, sell = 90000 },
+	{ itemName = "skull staff", clientId = 3324, sell = 1000 },
+	{ itemName = "dragon hammer", clientId = 3322, sell = 2000 },
+	{ itemName = "clerical mace", clientId = 3311, sell = 200 },
+	{ itemName = "demonrage sword", clientId = 7382, sell = 10000 },
+	{ itemName = "dragonbone staff", clientId = 7430, sell = 1500 },
+	{ itemName = "demonbone", clientId = 7431, sell = 5000 },
+	{ itemName = "dragon slayer", clientId = 7402, sell = 1500 },
+	{ itemName = "chaos mace", clientId = 7427, sell = 5000 },
+	{ itemName = "hammer of warth", clientId = 3332, sell = 20000 },
+	{ itemName = "ruthless axe", clientId = 6553, sell = 35000 },
+	{ itemName = "titan axe", clientId = 7413, sell = 3500 },
 }
 -- Basic
 keywordHandler:addKeyword({ "name" }, StdModule.say, { npcHandler = npcHandler, text = "I am Romella and I will be serving you today." })
@@ -120,8 +208,19 @@ keywordHandler:addKeyword({ "amazons" }, StdModule.say, { npcHandler = npcHandle
 keywordHandler:addKeyword({ "ferumbras" }, StdModule.say, { npcHandler = npcHandler, text = "Make sure to buy some extra weapons before facing that one." })
 keywordHandler:addKeyword({ "excalibug" }, StdModule.say, { npcHandler = npcHandler, text = "I heard the amazons are after it." })
 keywordHandler:addKeyword({ "swamps" }, StdModule.say, { npcHandler = npcHandler, text = "Don't go exploring without weapons. Especially you'll need a machete." })
+
 npcHandler:setMessage(MESSAGE_GREET, "I welcome thee, |PLAYERNAME|! I suppose you are looking for a trade in fine weapons!")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Goodbye and please bring more gold next time <chuckles>. I mean, it would be nice to see you again.")
+
+keywordHandler:addKeyword({'helmets'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy royal (40k), warrior (6k), crusader (9k), crown (5k), devil (4k), chain (35gp) and iron helmets (30gp), also mystic turbans (500gp).'})
+keywordHandler:addKeyword({'boots'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy golden boots (100k), steel boots (40k) and boots of haste (40k).'})
+keywordHandler:addKeyword({'armors'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy golden (30k), crown (20k), knight (5k), lady (7,5k), plate (400gp), brass (200gp) and chain armors (100gp), also mpa (100k), dsm (60k) and blue robes (15k).'})
+keywordHandler:addKeyword({'legs'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy golden (80k), crown (15k), knight (6k), plate (500gp) and brass legs (100gp).'})
+keywordHandler:addKeyword({'shields'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy blessed (150k), great (100k), demon (40k), vampire (25k), medusa (8k), amazon (4k), crown (5k), tower (4k), dragon (3k), guardian (2k), beholder (1k), and dwarven shields (100gp), also mms (80k).'})
+keywordHandler:addKeyword({'swords'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy giant (10k), bright (6k), fire (3k) serpent (1.5k), spike (800gp) and two handed swords (400gp), also ice rapiers (4k), magic longswords (150k), magic swords (90k), warlord swords (100k) broad swords (70gp), short swords (30gp), sabres (25gp) and swords (25gp).'})
+keywordHandler:addKeyword({'axes'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy fire (10k), guardian halberds (7,5k) knight (2k), double (200gp) and battle axes (100gp), also dragon lances (10k), stonecutters axes (90k), halberds (200gp) and hatchets (20gp).'})
+keywordHandler:addKeyword({'clubs'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I buy thunder hammers (90k), war (6k), dragon (2k) and battle hammers (60gp), also skull staffs (10k) and clerical maces (200gp).'})
+
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)
 	npc:sellItem(player, itemId, amount, subType, 0, ignore, inBackpacks)

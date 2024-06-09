@@ -24,6 +24,6 @@ local solaraxe = Weapon(WEAPON_AXE)
 solaraxe.onUseWeapon = function(player, variant)
 	return combat:execute(player, variant)
 end
-solaraxe:id(8925)
+solaraxe:id(8097)
 --starwand:shootType(CONST_ANI_HOLY)
 solaraxe:register()

@@ -1,4 +1,4 @@
-if configManager.getBoolean(configKeys.WEATHER_RAIN) then
+--if configManager.getBoolean(configKeys.WEATHER_RAIN) then
 	local weatherStartup = GlobalEvent("WeatherStartup")
 
 	function weatherStartup.onStartup()
@@ -45,6 +45,6 @@ if configManager.getBoolean(configKeys.WEATHER_RAIN) then
 		return true
 	end
 
---	weatherRain:interval(50) -- less rain = greater value
---	weatherRain:register()
-end
+weatherRain:interval(50) -- less rain = greater value
+weatherRain:register()
+--end

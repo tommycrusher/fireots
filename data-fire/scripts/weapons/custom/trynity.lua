@@ -24,6 +24,6 @@ local trynity = Weapon(WEAPON_CLUB)
 trynity.onUseWeapon = function(player, variant)
 	return combat:execute(player, variant)
 end
-trynity:id(8927)
+trynity:id(8809)
 --starwand:shootType(CONST_ANI_HOLY)
 trynity:register()

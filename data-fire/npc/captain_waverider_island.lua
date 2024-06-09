@@ -54,6 +54,10 @@ local travelNode = keywordHandler:addKeyword({ "liberty bay" }, StdModule.say, {
 travelNode:addChildKeyword({ "yes" }, StdModule.travel, { npcHandler = npcHandler, premium = false, cost = 50, discount = "postman", destination = Position(32349, 32856, 7) })
 travelNode:addChildKeyword({ "no" }, StdModule.say, { npcHandler = npcHandler, reset = true, text = "We would like to serve you some time." })
 
+local travelKeyword = keywordHandler:addKeyword({'enigma'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you seek a passage to Enigma for |TRAVELCOST|?', cost = 250, discount = 'postman'})
+	travelKeyword:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = false, cost = 250, discount = 'postman', destination = Position(941, 980, 6)})
+	travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'We would like to serve you some time.', reset = true})
+
 keywordHandler:addKeyword({ "passage" }, StdModule.say, { npcHandler = npcHandler, text = "Where do you want to go? To {Liberty bay}?" })
 keywordHandler:addKeyword({ "job" }, StdModule.say, { npcHandler = npcHandler, text = "I am the captain of this ship." })
 keywordHandler:addKeyword({ "captain" }, StdModule.say, { npcHandler = npcHandler, text = "I am the captain of this ship." })

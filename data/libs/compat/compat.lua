@@ -73,56 +73,56 @@ end
 function isCreature(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isCreature(cid)' is outdated. Please use the new format 'Creature(cid)'. Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'isCreature(cid)' is outdated. Please use the new format 'Creature(cid)'. Update needed at: Line {}, Source: {}.", line, source)
 	return Creature(cid) ~= nil
 end
 
 function isPlayer(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isPlayer(cid)' is outdated. Please use the new format 'Player(cid)'. Update needed at: Line {}, Source: {}.", line, source)
+--	logger.warn("Deprecation Warning: The function 'isPlayer(cid)' is outdated. Please use the new format 'Player(cid)'. Update needed at: Line {}, Source: {}.", line, source)
 	return Player(cid) ~= nil
 end
 
 function isMonster(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isMonster(cid)' is outdated. Please use the new format 'Monster(cid)'. Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'isMonster(cid)' is outdated. Please use the new format 'Monster(cid)'. Update needed at: Line {}, Source: {}.", line, source)
 	return Monster(cid) ~= nil
 end
 
 function isSummon(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isSummon(cid)' is outdated. Please use the new format 'c:getMaster()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'isSummon(cid)' is outdated. Please use the new format 'c:getMaster()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	return Creature(cid):getMaster() ~= nil
 end
 
 function isNpc(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isNpc(cid)' is outdated. Please use the new format 'Npc(cid)'. Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'isNpc(cid)' is outdated. Please use the new format 'Npc(cid)'. Update needed at: Line {}, Source: {}.", line, source)
 	return Npc(cid) ~= nil
 end
 
 function isItem(uid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isItem(uid)' is outdated. Please use the new format 'Item(uid)'. Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'isItem(uid)' is outdated. Please use the new format 'Item(uid)'. Update needed at: Line {}, Source: {}.", line, source)
 	return Item(uid) ~= nil
 end
 
 function isContainer(uid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'isContainer(uid)' is outdated. Please use the new format 'Container(uid)'. Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'isContainer(uid)' is outdated. Please use the new format 'Container(uid)'. Update needed at: Line {}, Source: {}.", line, source)
 	return Container(uid) ~= nil
 end
 
 function getCreatureName(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureName(cid)' is outdated. Please use the new format 'c:getName()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureName(cid)' is outdated. Please use the new format 'c:getName()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getName() or false
 end
@@ -130,7 +130,7 @@ end
 function getCreatureHealth(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureHealth(cid)' is outdated. Please use the new format 'c:getHealth()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureHealth(cid)' is outdated. Please use the new format 'c:getHealth()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getHealth() or false
 end
@@ -138,7 +138,7 @@ end
 function getCreatureMaxHealth(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureMaxHealth(cid)' is outdated. Please use the new format 'c:getMaxHealth()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureMaxHealth(cid)' is outdated. Please use the new format 'c:getMaxHealth()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getMaxHealth() or false
 end
@@ -146,7 +146,7 @@ end
 function getCreaturePosition(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreaturePosition(cid)' is outdated. Please use the new format 'c:getPosition()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreaturePosition(cid)' is outdated. Please use the new format 'c:getPosition()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getPosition() or false
 end
@@ -154,7 +154,7 @@ end
 function getCreatureOutfit(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureOutfit(cid)' is outdated. Please use the new format 'c:getOutfit()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureOutfit(cid)' is outdated. Please use the new format 'c:getOutfit()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getOutfit() or false
 end
@@ -162,7 +162,7 @@ end
 function getCreatureSpeed(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureSpeed(cid)' is outdated. Please use the new format 'c:getSpeed()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureSpeed(cid)' is outdated. Please use the new format 'c:getSpeed()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getSpeed() or false
 end
@@ -170,7 +170,7 @@ end
 function getCreatureBaseSpeed(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureBaseSpeed(cid)' is outdated. Please use the new format 'c:getBaseSpeed()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureBaseSpeed(cid)' is outdated. Please use the new format 'c:getBaseSpeed()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	return c and c:getBaseSpeed() or false
 end
@@ -178,7 +178,7 @@ end
 function getCreatureTarget(cid)
 	local line = debug.getinfo(2).currentline
 	local source = debug.getinfo(2).source:match("@?(.*)")
-	logger.warn("Deprecation Warning: The function 'getCreatureTarget(cid)' is outdated. Please use the new format 'c:getTarget():getId()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
+	--logger.warn("Deprecation Warning: The function 'getCreatureTarget(cid)' is outdated. Please use the new format 'c:getTarget():getId()', where 'c' refers to a Creature (player or monster). Update needed at: Line {}, Source: {}.", line, source)
 	local c = Creature(cid)
 	if c then
 		local target = c:getTarget()

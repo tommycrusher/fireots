@@ -40,15 +40,15 @@
 						storage = 20009,
 						secondStorage = 20010,
 						appearEffect = CONST_ME_GROUNDSHAKER
-					}
+					},
 				},
 			
-				positions = {
+			positions = {
 				{x=974, y=1082, z=7},
 				{x=1032, y=1054, z=7},
 				{x=1089, y=1068, z=7},
 				{x=1054, y=1112, z=7},
-				{x=1084, y=971, z=7}
+				{x=1084, y=971, z=7},
 				},
 
 			stones_days = {
@@ -79,7 +79,7 @@
 					['Saturday'] = {'10:59:20'},
 					['Saturday'] = {'14:59:20'},
 					['Saturday'] = {'17:59:20'},
-					['Saturday'] = {'19:59:20'}
+					['Saturday'] = {'19:59:20'},
 			},
 
 				maxTopPlayers = 6,
@@ -89,8 +89,8 @@
 				pos_od = {x=949,y=1068,z=7}, --lewy gorny rog
 				pos_do = {x=1077,y=1126,z=7}, --prawy dolny rog
 				time = 360, --pierwsze i kazde nastepne losowanie od momentu startu serwera, w minutach
-				chance = 50 --szansa na wylosowanie kamulca
-			},
+				chance = 50, --szansa na wylosowanie kamulca
+			}
 
 			summons = {
 				['Wind Stone'] = {
@@ -161,8 +161,8 @@
 					{4, {'azerus', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'yeti', 'azerus'}},
 					{2, {'Fire Stone', 'Wind Stone', 'Earth Stone', 'Icy Stone'}},
 					{0, {}},
-				}
-			},
+				},
+			}
 			
 			u = 0
 --end config
@@ -209,8 +209,8 @@
 				doSendMagicEffectInArea(getThingPos(mon), stonesConfig.stones[stone].appearEffect, area)
 				doBroadcastMessage(stone..' have been spawn. Find and defeat it.', MESSAGE_STATUS_WARNING)
 				doCreatureSetStorage(mon, stonesConfig.stones[getCreatureName(mon)].secondStorage, 1)
-				doSetStorage(stonesConfig.stones[getCreatureName(mon)].storage, 1)
-				doSetStorage(stonesConfig.storage, getStorage(stonesConfig.storage) + 1)
+				Game.setStorageValue(stonesConfig.stones[getCreatureName(mon)].storage, 1)
+				Game.setStorageValue(stonesConfig.storage, getStorage(stonesConfig.storage) + 1)
 			end
 			return addEvent(setStone, stonesConfig.time * 60 * 1000, stonesConfig, metin_stones)
 		end	
@@ -330,7 +330,7 @@
 				local pos, name = positions[math.random(#positions)], names[math.random(#names)]
 				
 				if getStorage(stonesConfig.storage) < 0 then
-					doSetStorage(stonesConfig.storage, 0)
+					Game.setStorageValue(stonesConfig.storage, 0)
 				end
 				
 				if getStorage(stonesConfig.storage) + 1 > stonesConfig.maxStones then
@@ -342,7 +342,7 @@
 					
 					if #stonesSum == 0 then
 						if u ~= 1 then
-							doSetStorage(stonesConfig.storage, 0)
+							Game.setStorageValue(stonesConfig.storage, 0)
 							u = 1
 						end
 					else					
@@ -350,9 +350,9 @@
 						local mon = getCreatureByName(stonesSum[rand])
 						if isCreature(mon) then
 							doSendMagicEffect(getThingPos(mon), 10)
-							doSetStorage(stonesConfig.stones[stonesSum[rand]].storage, 0)
-							doSetStorage(stonesConfig.stones[stonesSum[rand]].secondStorage, 1)
-							doSetStorage(stonesConfig.storage, getStorage(stonesConfig.storage) - 1)
+							Game.setStorageValue(stonesConfig.stones[stonesSum[rand]].storage, 0)
+							Game.setStorageValue(stonesConfig.stones[stonesSum[rand]].secondStorage, 1)
+							Game.setStorageValue(stonesConfig.storage, getStorage(stonesConfig.storage) - 1)
 
 							doRemoveCreature(mon)
 							table.remove(stonesSum, rand)
@@ -367,30 +367,30 @@
 					doBroadcastMessage(name..' have been spawn. Find and defeat it.', MESSAGE_STATUS_WARNING)
 					doCreatureSetStorage(monsters, stonesConfig.stones[name].secondStorage, 1)
 
-					doSetStorage(stonesConfig.stones[name].storage, 1)
-					doSetStorage(stonesConfig.storage, getStorage(stonesConfig.storage) + 1)
+					Game.setStorageValue(stonesConfig.stones[name].storage, 1)
+					Game.setStorageValue(stonesConfig.storage, getStorage(stonesConfig.storage) + 1)
 				end
 					--end
 				--end
 				return true
 			end
-	--summonStones:register()
-	--summonStones:interval(8154321)
+	summonStones:register()
+	summonStones:interval(8154321)
 
-	local statStones = CreatureEvent("StatStones")
-			function statStones.onStatsChange(cid, attacker, type, combat, value)
-				local stor = 546849
-				if #getCreatureSummons(cid) > 0 and value > 0 and type == 1 then
-					if isPlayer(attacker) then
-						if exhaustion.check(attacker, stor) ~= true then
-							doPlayerSendTextMessage(attacker, MESSAGE_STATUS_CONSOLE_BLUE, 'You have to kill stone\'s summons until you will be able to kill it.')
-							exhaustion.set(attacker, stor, 5)
-						end
-					end
-					return false
-				end				
-				return true
-			end
+--	local statStones = CreatureEvent("StatStones")
+--			function statStones.onStatsChange(cid, attacker, type, combat, value)
+--				local stor = 546849
+--				if #getCreatureSummons(cid) > 0 and value > 0 and type == 1 then
+--					if isPlayer(attacker) then
+--						if exhaustion.check(attacker, stor) ~= true then
+--							doPlayerSendTextMessage(attacker, MESSAGE_STATUS_CONSOLE_BLUE, 'You have to kill stone\'s summons until you will be able to kill it.')
+--							exhaustion.set(attacker, stor, 5)
+--						end
+--					end
+--					return false
+--				end				
+--				return true
+--			end
 	--statStones:register()
 
 	local eventStones = CreatureEvent("EventStones")
@@ -467,7 +467,7 @@
 				end
 				return true
 			end
-	--eventStones:register()
+	eventStones:register()
 
 	local deathStones = CreatureEvent("DeathStones")
 			function deathStones.onDeath(cid, corpse, deathList)
@@ -475,8 +475,8 @@
 				local i, v = 1, stonesConfig.stones[getCreatureName(cid)]
 				
 				doCreatureSetStorage(cid, v.secondStorage, 1)
-				doSetStorage(v.storage, -1)
-				doSetStorage(stonesConfig.storage, getStorage(stonesConfig.storage) - 1)
+				Game.setStorageValue(v.storage, -1)
+				Game.setStorageValue(stonesConfig.storage, getStorage(stonesConfig.storage) - 1)
 
 				for _, pid in ipairs(deathList) do
 					if isPlayer(pid) then
@@ -500,10 +500,10 @@
 	local startStones = GlobalEvent("EventStones")
 			function startStones.onStartup()				
 				for k, v in pairs(stonesConfig.stones) do
-					doSetStorage(v.storage, -1)
+					Game.setStorageValue(v.storage, -1)
 				end
 
-				doSetStorage(stonesConfig.storage, 0)
+				Game.setStorageValue(stonesConfig.storage, 0)
 
 				return true
 			end
@@ -518,7 +518,8 @@
 					return doPlayerSendCancel(cid, 'Stone Event is already running.')
 				end
 				setStone(stonesConfig, stonesConfig.stones)
-				doSetStorage(stonesConfig.storage, 0)
+				Game.setStorageValue(stonesConfig.storage, 0)
 				return true
 			end
-	--talkStones:register()
+	talkStones:groupType("gamemaster")
+	talkStones:register()
