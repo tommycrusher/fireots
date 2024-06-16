@@ -1139,17 +1139,26 @@
 		<attribute key="weight" value="850"/>
 	</item>
 	<item id="651" article="a" name="star tear">
-		<attribute key="primarytype" value="party items"/>
 		<attribute key="description" value="It might have some strange effects. It can only be wielded properly by sorcerer or druid of level 50 or higher." />
 		<attribute key="weight" value="500" />
 		<attribute key="weaponType" value="wand" />
 		<attribute key="loottype" value="wand" />
 		<attribute key="shootType" value="smallice" />
-		<attribute key="shootType" value="ice" />
 		<attribute key="range" value="5" />
 		<attribute key="attack" value="100" />
-		<attribute key="maxHitChance" value="100" />
+		<attribute key="maxHitChance" value="200" />
 		<attribute key="elementHoly" value="34" />
+		<attribute key="script" value="moveevent;weapon">
+			<attribute key="level" value="50"/>
+			<attribute key="mana" value="15"/>
+			<attribute key="fromDamage" value="107"/>
+			<attribute key="toDamage" value="153"/>
+			<attribute key="weaponType" value="wand"/>
+			<attribute key="wandType" value="ice"/>
+			<attribute key="elementHoly" value="34" />
+			<attribute key="vocation" value="Druid;true, Elder Druid, Sorcerer;true, Master Sorcerer"/>
+			<attribute key="slot" value="hand"/>
+		</attribute>
 	</item>
 	<item id="652" article="a" name="rotten heart of a tree">
 		<attribute key="weight" value="4500"/>
@@ -38406,6 +38415,9 @@
 	<item id="18935" article="a" name="vampire's signet ring">
 		<attribute key="description" value="A ring with a massive, faintly glowing seal, containing the blood of a vampire"/>
 		<attribute key="weight" value="10"/>
+		<attribute key="duration" value="86400"/>
+		<attribute key="showduration" value="1"/>
+		<attribute key="decayTo" value="0"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="slot" value="ring"/>
 		</attribute>

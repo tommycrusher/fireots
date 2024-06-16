@@ -145,5 +145,5 @@ cmake --build linux-release
 
 cd ~
 cd canary
-cp -r build/linux-release/bin/canary .
+ln -r -s build/linux-release/bin/canary .
 sudo chmod +x canary

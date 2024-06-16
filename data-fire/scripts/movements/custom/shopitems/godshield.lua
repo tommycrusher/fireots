@@ -8,6 +8,7 @@ function godsShields.onStepIn(cid, item, position, fromPosition)
 	    return true
 	end
 end
+godsShields:type("stepin")
 godsShields:uid(12517)
 godsShields:register()
 

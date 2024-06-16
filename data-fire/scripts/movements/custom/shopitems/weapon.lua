@@ -8,5 +8,6 @@ function passWeapons.onStepIn(cid, item, position, fromPosition)
 	    return true
 	end
 end
+passWeapons:type("stepin")
 passWeapons:uid(19000)
 passWeapons:register()

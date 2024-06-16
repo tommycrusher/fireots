@@ -8,5 +8,6 @@ function passYalahariAs.onStepIn(cid, item, position, fromPosition)
 	    return true
 	end
 end
+passYalahariAs:type("stepin")
 passYalahariAs:uid(19776)
 passYalahariAs:register()

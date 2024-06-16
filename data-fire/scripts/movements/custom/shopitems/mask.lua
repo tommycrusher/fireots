@@ -8,6 +8,7 @@ function passYalahariMs.onStepIn(cid, item, position, fromPosition)
     	return true
 	end
 end
+passYalahariMs:type("stepin")
 passYalahariMs:uid(19778)
 passYalahariMs:register()
 

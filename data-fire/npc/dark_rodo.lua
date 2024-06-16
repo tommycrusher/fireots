@@ -1,4 +1,4 @@
-local internalNpcName = "Malak"
+local internalNpcName = "Dark Rodo"
 local npcType = Game.createNpcType(internalNpcName)
 local npcConfig = {}
 
@@ -11,12 +11,12 @@ npcConfig.walkInterval = 2000
 npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
-	lookType = 130,
-	lookHead = 39,
-	lookBody = 122,
-	lookLegs = 135,
-	lookFeet = 57,
-	lookAddons = 0,
+	lookType = 133,
+	lookHead = 0,
+	lookBody = 86,
+	lookLegs = 0,
+	lookFeet = 38,
+	lookAddons = 1,
 }
 
 npcConfig.flags = {
@@ -71,8 +71,8 @@ local itemsTable = {
 		{ itemName = "stalagmite rune", clientId = 3179, buy = 12 },
 		{ itemName = "sudden death rune", clientId = 3155, buy = 135 },
 		{ itemName = "ultimate healing rune", clientId = 3160, buy = 175 },
-		{ itemName = "super mana rune", clientId = 3185, buy = 950, sell = 100 },
-		{ itemName = "mana rune", clientId = 3157, buy = 450, sell = 100 },
+		{ itemName = "super mana rune", clientId = 3185, buy = 95000, sell = 100 },
+		{ itemName = "mana rune", clientId = 3157, buy = 45000, sell = 100 },
 		{ itemName = "magic wall", clientId = 3180, buy = 350, sell = 3 },
 		--{ itemName = "dead arrow", clientId = 2263, buy = 300, sell = 3 },
 		{ itemName = "paralyse rune", clientId = 3165, buy = 700, sell = 1 },

@@ -1,4 +1,52 @@
 --if configManager.getBoolean(configKeys.WEATHER_RAIN) then
+	weatherConfig = {
+	    groundEffect = CONST_ME_LOSEENERGY,
+	    fallEffect = CONST_ANI_ICE,
+	    thunderEffect = true,
+	    minDMG = 5,
+	    maxDMG = 10
+	}
+
+	local function sendWeatherEffect(self, groundEffect, fallEffect, thunderEffect)
+	    local position, random = self:getPosition(), math.random
+	    position.x = position.x + random(-4, 4)
+	      position.y = position.y + random(-4, 4)
+
+	    local fromPosition = Position(position.x + 1, position.y, position.z)
+	       fromPosition.x = position.x - 7
+	       fromPosition.y = position.y - 5
+
+	    local tile, getGround
+	    for Z = 1, 7 do
+		fromPosition.z = Z
+		position.z = Z
+
+		tile = Tile(position)
+		if tile then -- If there is a tile, stop checking floors
+		    fromPosition:sendDistanceEffect(position, fallEffect)
+		    position:sendMagicEffect(groundEffect, self)
+
+		    getGround = tile:getGround()
+		    if getGround and ItemType(getGround:getId()):getFluidSource() == 1 then
+		        position:sendMagicEffect(CONST_ME_WATERSPLASH, self)
+		    end
+		    break
+		end
+	    end
+
+	    if thunderEffect and tile then
+		if random(2) == 1 then
+		    local topCreature = tile:getTopCreature()
+
+		    if topCreature and topCreature:isPlayer() then
+		        position:sendMagicEffect(CONST_ME_BIGCLOUDS, self)
+		        doTargetCombatHealth(0, self, COMBAT_ENERGYDAMAGE, -weatherConfig.minDMG, -weatherConfig.maxDMG, CONST_ME_NONE)
+		        self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You were hit by lightning and lost some health.")
+		    end
+		end
+	    end
+	end
+	
 	local weatherStartup = GlobalEvent("WeatherStartup")
 
 	function weatherStartup.onStartup()
@@ -39,7 +87,7 @@
 			local player
 			for i = 1, #players do
 				player = players[i]
-				player:sendWeatherEffect(weatherConfig.groundEffect, weatherConfig.fallEffect, weatherConfig.thunderEffect)
+				sendWeatherEffect(player, weatherConfig.groundEffect, weatherConfig.fallEffect, weatherConfig.thunderEffect)
 			end
 		end
 		return true

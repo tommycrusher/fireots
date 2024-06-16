@@ -8,5 +8,6 @@ function passHidden.onStepIn(cid, item, position, fromPosition)
 	    return true
 	end
 end
+passHidden:type("stepin")
 passHidden:uid(8978)
 passHidden:register()

@@ -462,7 +462,7 @@ function superform2(param)
 end
 
 local epiceq = MoveEvent()
-epiceq:id(7697)
+
 function epiceq.onEquip(cid, item, slot, isCheck)
 	local param = {cid = cid, item = item, slot = slot}
 	local tempvoc = getPlayerVocation(cid) -- get players voc and store it in temp --getPlayerVocation(cid), getPromotedVocation(vocationId)
@@ -514,10 +514,12 @@ function epiceq.onEquip(cid, item, slot, isCheck)
 	end
 	return true --epiceq:callFunction(cid, item.uid, slot, isCheck)
 end
+epiceq:type("equip")
+epiceq:id(18935)
 epiceq:register()
 
 local epicdeeq = MoveEvent()
-epicdeeq:id(7708)
+
 function epicdeeq.onDeEquip(cid, item, slot, isCheck)
 	if isPlayer(cid) and getPlayerStorageValue(cid, 50781) == 1 then
 		--local vocation = getPlayerVocation(cid)
@@ -654,4 +656,6 @@ function epicdeeq.onDeEquip(cid, item, slot, isCheck)
 	--setPlayerStorageValue(cid, storage, 0) -- remove vocation
 	return true--epicdeeq:callFunction(cid, item.uid, slot, isCheck)
 end
+epicdeeq:type("deequip")
+epicdeeq:id(18935)
 epicdeeq:register()

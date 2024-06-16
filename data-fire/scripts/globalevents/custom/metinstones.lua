@@ -293,7 +293,7 @@
 			end
 --end functions
 	local summonStones = GlobalEvent("SummonStones")
-			function summonStones.onThink(interval)
+			function summonStones.onThink()
 
 			local days = {
 					['Tuesday'] = {'17:59:20'}, 
@@ -310,7 +310,7 @@
 			for k, v in ipairs(days) do
 				table.insert(daysOpen, k)
 			end
-				--if isInArray(daysOpen, os.date('%A')) then
+				if isInArray(daysOpen, os.date('%A')) then
 					--if isInArray(configZombieEvent.days[os.date('%A')], os.date('%X', os.time())) then
 
 				local names, stonesSum = {}, {}
@@ -371,11 +371,12 @@
 					Game.setStorageValue(stonesConfig.storage, getStorage(stonesConfig.storage) + 1)
 				end
 					--end
-				--end
+				end
 				return true
 			end
+
+	summonStones:interval(150) --time("18:01") --
 	summonStones:register()
-	summonStones:interval(8154321)
 
 --	local statStones = CreatureEvent("StatStones")
 --			function statStones.onStatsChange(cid, attacker, type, combat, value)

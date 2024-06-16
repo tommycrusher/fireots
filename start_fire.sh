@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIN_PATH=${1:-"./fireots"}
+BIN_PATH=${1:-"./fire"}
 if [ -d "logs" ]
 then
 	echo -e "\e[01;32m Starting server \e[0m"
