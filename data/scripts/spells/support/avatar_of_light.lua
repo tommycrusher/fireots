@@ -45,7 +45,7 @@ spell:mana(1500)
 spell:isPremium(true)
 spell:cooldown(1000) -- Cooldown is calculated on the casting
 spell:groupCooldown(2 * 1000)
-spell:vocation("paladin;true", "royal paladin;true")
+spell:vocation("paladin;true", "royal paladin;true", "robin hood;true")
 spell:hasParams(true)
 spell:isAggressive(false)
 spell:needLearn(true)

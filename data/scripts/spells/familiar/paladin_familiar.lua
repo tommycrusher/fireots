@@ -16,5 +16,5 @@ spell:cooldown(0) -- calculated in CreateFamiliarSpell
 spell:groupCooldown(2 * 1000)
 spell:needLearn(false)
 spell:isAggressive(false)
-spell:vocation("paladin;true", "royal paladin;true")
+spell:vocation("paladin;true", "royal paladin;true", "robin hood;true")
 spell:register()

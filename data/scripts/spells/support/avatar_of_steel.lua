@@ -45,7 +45,7 @@ spell:mana(800)
 spell:isPremium(true)
 spell:cooldown(1000) -- Cooldown is calculated on the casting
 spell:groupCooldown(2 * 1000)
-spell:vocation("knight;true", "elite knight;true")
+spell:vocation("knight;true", "elite knight;true", "lancelot;true")
 spell:hasParams(true)
 spell:isAggressive(false)
 spell:needLearn(true)

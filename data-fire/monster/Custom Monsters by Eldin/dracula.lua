@@ -1,10 +1,10 @@
 local mType = Game.createMonsterType("Dracula")
 local monster = {}
 
-monster.description = "the known dracula"
+monster.description = "the known as dracula"
 monster.experience = 2000
 monster.outfit = {
-	lookType = 68,
+	lookType = 312,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -13,9 +13,25 @@ monster.outfit = {
 	lookMount = 0
 }
 
+monster.raceId = 958
+monster.Bestiary = {
+	class = "Undead",
+	race = BESTY_RACE_UNDEAD,
+	toKill = 1000,
+	FirstUnlock = 50,
+	SecondUnlock = 500,
+	CharmsPoints = 25,
+	Stars = 3,
+	Occurrence = 0,
+	Locations = "Drefia, Ghost Ship between Venore and Darashia, some Ankrahmun Tombs, Lich Hell, \z
+		Serpentine Tower (unreachable), Ghostlands (unreachable). House between Plains of Havoc and Dark Cathedral, \z
+		Hellgate (only during Zevelon Duskbringer raid), Edron Undead Cave, Vengoth Castle (and mountains before door), \z
+		Edron Vampire Crypt.",
+}
+
 monster.health = 5000
 monster.maxHealth = 5000
-monster.race = "undead"
+monster.race = "blood"
 monster.corpse = 2956
 monster.speed = 300
 monster.manaCost = 0
@@ -92,11 +108,13 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 38,
-	armor = 27,
+		defense = 48,
+		armor = 37,
+		mitigation = 1.04,
 	{name ="combat", interval = 1000, chance = 15, type = COMBAT_HEALING, minDamage = 100, maxDamage = 300, effect = CONST_ME_MAGIC_BLUE, target = false},
 	{name ="speed", interval = 2000, chance = 8, speedChange = 480, effect = CONST_ME_MAGIC_RED, target = false, duration = 600},
-	{name ="outfit", interval = 1000, chance = 100, monster = bat, effect = CONST_ME_SHIMMER_BLUE, target = false, duration = 6000}
+	{ name = "outfit", interval = 4000, chance = 10, effect = CONST_ME_GROUNDSHAKER, target = false, duration = 5000, outfitMonster = "vampire" },
+	{ name = "outfit", interval = 4000, chance = 10, effect = CONST_ME_GROUNDSHAKER, target = false, duration = 5000, outfitMonster = "bat" }
 }
 
 monster.elements = {

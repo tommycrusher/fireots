@@ -1,8 +1,8 @@
 local ringDeath = CreatureEvent("RingDeath")
 function ringDeath.onPrepareDeath(cid, lastHitKiller, mostDamageKiller)
-		local temptwo = getPlayerVocation(cid) -- get players voc and store it in temp --
+		local temptwo = getPlayerVocation(cid)
 		if temptwo == 9 then
-			doPlayerSetVocation(cid, 5) -- just incase they die and loose the ring they will not keep the new voc -
+			doPlayerSetVocation(cid, 5)
 		elseif temptwo == 10 then
 			doPlayerSetVocation(cid, 6)
 		elseif temptwo == 11 then

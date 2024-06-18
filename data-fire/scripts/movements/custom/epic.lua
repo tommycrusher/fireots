@@ -1,12 +1,12 @@
 -- Exhausted Settings --
 local exhausted_seconds = 20 
-local exhausted_storagevalue = 18012
 local exh_storageadd = 18013
 local exh_secondsadd = 20
 -- Exhausted Settings END --
-local storage = 18009 -- storage value for the vocation transformation --
+local oldvoc = 18009 -- storage value for the vocation transformation --
 local prostorage = 18010 -- storage value for the promotion transformation --
 local storageadd = 18011 -- storage value for the add --
+local check = 18012
 local sorcerervoc = 9 -- 9 number is the vocation id of an epic master sorcerer in vocations.xml --
 local druidvoc = 10   -- 10 number is the vocation id of a epic elder druid in vocations.xml --
 local paladinvoc = 11 -- 11 number is the vocation id of a epic royal paladin in vocations.xml --
@@ -58,7 +58,6 @@ lookFeet = 95,
 lookAddons = 3
 }
  
-
 -- warning do not modify these settings, unless you want to take mana from player --
 local cointimeinterval = 1000 -- time interval (miliseconds) --
 local numberofcoinused = 1 -- number of mana used or added up during time interval --
@@ -75,8 +74,8 @@ local sorcerringsorb = CONST_ME_FIREATTACK
 
 local druidfirsteffect = CONST_ME_ICEATTACK
 local druidsecondeffect = CONST_ME_ICETORNADO
-local druidflingeffect = CONST_ME_ICETORNADO
-local druidlandeffect = CONST_ME_ICETORNADO
+local druidflingeffect = CONST_ME_ICEATTACK
+local druidlandeffect = CONST_ME_GIANTICE
 local druidringwaste = CONST_ME_FIREWORK_BLUE
 local druidringsorb = CONST_ME_MAGIC_BLUE
 
@@ -98,24 +97,24 @@ local paladinringsorb = CONST_ME_MAGIC_GREEN
 local sorcerercondition = createConditionObject(CONDITION_ATTRIBUTES)
 setConditionParam(sorcerercondition, CONDITION_PARAM_TICKS, -1)            -- the -1 is to allow conditions to run forever -
 setConditionParam(sorcerercondition, CONDITION_PARAM_SKILL_SHIELD, 5)     -- add 5 shielding to current shield skill --
-setConditionParam(sorcerercondition, CONDITION_PARAM_STAT_MAGICLEVEL, 10) -- add 10 levels of magic to the player's current magic level --
-setConditionParam(sorcerercondition, CONDITION_PARAM_STAT_MAXHEALTH, 40)  -- add 100 health to the player's current hp --
-setConditionParam(sorcerercondition, CONDITION_PARAM_STAT_MAXMANA, 100)   -- add 5000 mana to the players current mana --
+setConditionParam(sorcerercondition, CONDITION_PARAM_STAT_MAGICPOINTS, 10) -- add 10 levels of magic to the player's current magic level --
+setConditionParam(sorcerercondition, CONDITION_PARAM_STAT_MAXHITPOINTS, 40)  -- add 100 health to the player's current hp --
+setConditionParam(sorcerercondition, CONDITION_PARAM_STAT_MAXMANAPOINTS, 100)   -- add 5000 mana to the players current mana --
 -- skills of the druid after transformation --
 local druidcondition = createConditionObject(CONDITION_ATTRIBUTES)
 setConditionParam(druidcondition, CONDITION_PARAM_TICKS, -1)			   
 setConditionParam(druidcondition, CONDITION_PARAM_SKILL_SHIELD, 5)
-setConditionParam(druidcondition, CONDITION_PARAM_STAT_MAGICLEVEL, 10)
-setConditionParam(druidcondition, CONDITION_PARAM_STAT_MAXHEALTH, 40)
-setConditionParam(druidcondition, CONDITION_PARAM_STAT_MAXMANA, 100)
+setConditionParam(druidcondition, CONDITION_PARAM_STAT_MAGICPOINTS, 10)
+setConditionParam(druidcondition, CONDITION_PARAM_STAT_MAXHITPOINTS, 40)
+setConditionParam(druidcondition, CONDITION_PARAM_STAT_MAXMANAPOINTS, 100)
 -- skills of the paladin after transformation --
 local paladincondition = createConditionObject(CONDITION_ATTRIBUTES)
 setConditionParam(paladincondition, CONDITION_PARAM_TICKS, -1)
 setConditionParam(paladincondition, CONDITION_PARAM_SKILL_DISTANCE, 10)
 setConditionParam(paladincondition, CONDITION_PARAM_SKILL_SHIELD, 10)
-setConditionParam(paladincondition, CONDITION_PARAM_STAT_MAGICLEVEL, 5)
-setConditionParam(paladincondition, CONDITION_PARAM_STAT_MAXHEALTH, 150)
-setConditionParam(paladincondition, CONDITION_PARAM_STAT_MAXMANA, 80)
+setConditionParam(paladincondition, CONDITION_PARAM_STAT_MAGICPOINTS, 5)
+setConditionParam(paladincondition, CONDITION_PARAM_STAT_MAXHITPOINTS, 150)
+setConditionParam(paladincondition, CONDITION_PARAM_STAT_MAXMANAPOINTS, 80)
 -- skills of the knight after transformation --
 local knightcondition = createConditionObject(CONDITION_ATTRIBUTES)
 setConditionParam(knightcondition, CONDITION_PARAM_TICKS, -1)
@@ -124,9 +123,9 @@ setConditionParam(knightcondition, CONDITION_PARAM_SKILL_CLUB, 15)
 setConditionParam(knightcondition, CONDITION_PARAM_SKILL_SWORD, 15)
 setConditionParam(knightcondition, CONDITION_PARAM_SKILL_AXE, 15)
 setConditionParam(knightcondition, CONDITION_PARAM_SKILL_SHIELD, 15)
-setConditionParam(knightcondition, CONDITION_PARAM_STAT_MAGICLEVEL, 3)
-setConditionParam(knightcondition, CONDITION_PARAM_STAT_MAXHEALTH, 200)
-setConditionParam(knightcondition, CONDITION_PARAM_STAT_MAXMANA, 50)
+setConditionParam(knightcondition, CONDITION_PARAM_STAT_MAGICPOINTS, 3)
+setConditionParam(knightcondition, CONDITION_PARAM_STAT_MAXHITPOINTS, 200)
+setConditionParam(knightcondition, CONDITION_PARAM_STAT_MAXMANAPOINTS, 50)
 -- settings for health and mana regeneration per second --
 local sorcererregen = createConditionObject(CONDITION_REGENERATION)
 setConditionParam(sorcererregen, CONDITION_PARAM_TICKS, -1)
@@ -200,10 +199,10 @@ function superform1(param)
 			doSendMagicEffect(nea, sorcerlandeffect)
 			doSendMagicEffect(sea, sorcerlandeffect)
 			doSendMagicEffect(swa, sorcerlandeffect)
-			doSetCreatureOutfit(param.cid, outfitSorc, -1) -- set new vocation outfit --
-			doAddCondition(param.cid, sorcerercondition)   -- add skills and magic level to new vocation -
-			doAddCondition(param.cid, condition3)          -- add auto mana shield to new vocation --
-			doAddCondition(param.cid, sorcererregen)       -- add regeneration to new vocation --
+			doSetCreatureOutfit(param.cid, outfitSorc, -1)
+			doAddCondition(param.cid, sorcerercondition)
+			doAddCondition(param.cid, condition3)
+			doAddCondition(param.cid, sorcererregen)
 		else if voca == 10 then
 			doSendMagicEffect(pos, druidfirsteffect)
 			doSendMagicEffect(pos, druidsecondeffect)
@@ -225,10 +224,10 @@ function superform1(param)
 			doSendMagicEffect(nea, druidlandeffect)
 			doSendMagicEffect(sea, druidlandeffect)
 			doSendMagicEffect(swa, druidlandeffect)
-			doSetCreatureOutfit(param.cid, outfitDruid, -1)   -- set new vocation outfit --
-			doAddCondition(param.cid, druidcondition)         -- add skills and magic level to new vocation --
-			doAddCondition(param.cid, condition3)             -- add auto mana shield to new vocation --
-			doAddCondition(param.cid, druidregen)             -- add regeneration to new vocation --
+			doSetCreatureOutfit(param.cid, outfitDruid, -1)
+			doAddCondition(param.cid, druidcondition)
+			doAddCondition(param.cid, condition3)
+			doAddCondition(param.cid, druidregen)
 		else if voca == 11 then
 			doSendMagicEffect(pos, paladinfirsteffect)
 			doSendMagicEffect(pos, paladinsecondeffect)
@@ -250,9 +249,9 @@ function superform1(param)
 			doSendMagicEffect(nea, paladinlandeffect)
 			doSendMagicEffect(sea, paladinlandeffect)
 			doSendMagicEffect(swa, paladinlandeffect) 
-			doSetCreatureOutfit(param.cid, outfitPaladin, -1)     -- set new vocation outfit --
-			doAddCondition(param.cid, paladincondition)           -- add skills and magic level to new vocation --
-			doAddCondition(param.cid, paladinregen)               -- add regeneration to new vocation --
+			doSetCreatureOutfit(param.cid, outfitPaladin, -1)
+			doAddCondition(param.cid, paladincondition)
+			doAddCondition(param.cid, paladinregen)
 		else if voca == 12 then
 			doSendMagicEffect(pos, knightfirsteffect)
 			doSendMagicEffect(pos, knightsecondeffect)
@@ -274,9 +273,9 @@ function superform1(param)
 			doSendMagicEffect(nea, knightlandeffect)
 			doSendMagicEffect(sea, knightlandeffect)
 			doSendMagicEffect(swa, knightlandeffect) 
-			doSetCreatureOutfit(param.cid, outfitKnight, -1)      -- set new vocation outfit --
-			doAddCondition(param.cid, knightcondition)            -- add skills and magic level to new vocation --
-			doAddCondition(param.cid, knightregen)                -- add regeneration to new vocation --
+			doSetCreatureOutfit(param.cid, outfitKnight, -1)
+			doAddCondition(param.cid, knightcondition)
+			doAddCondition(param.cid, knightregen)
 		end
 		end
 		end
@@ -290,21 +289,21 @@ function superform1(param)
 
 			local dhp = mhp - chp
 			local dma = mma - cma
-			doCreatureAddHealth(param.cid, dhp)-- param.cid:addHealth(dhp)
-			doPlayerAddMana(param.cid, dma)-- param.cid:addMana(dma)
+			param.cid:addHealth(dhp)-- doCreatureAddHealth(param.cid, dhp)
+			param.cid:addMana(dma)-- doPlayerAddMana(param.cid, dma)
 			setPlayerStorageValue(param.cid, exh_storageadd, os.time() + exh_secondsadd) 
 		end
 		param.crcb = 1
 		param.voca = voca
-		setPlayerStorageValue(param.cid, 50781, 1)
+		setPlayerStorageValue(param.cid, check, 1)
 		addEvent(superform2, 1, param)
 	end
 end
 
 function superform2(param)
-	if param.crca == 1 and param.crcb == 1 and isCreature(param.cid) == true and getPlayerStorageValue(param.cid, 50781) == 1 then
+	if param.crca == 1 and param.crcb == 1 and isCreature(param.cid) == true and getPlayerStorageValue(param.cid, check) == 1 then
 		local pos = getCreaturePosition(param.cid)
-		doPlayerRemoveMoney(param.cid, numberofcoinused) -- this function is global and effects all vocations equally, setting it to negative will remove mana --
+		doPlayerRemoveMoney(param.cid, numberofcoinused)
 
 		if param.voca == 9 then 
 			doSendMagicEffect(pos, sorcerringwaste)
@@ -329,12 +328,8 @@ function superform2(param)
 		if coinleft < numberofcoinused then 
 			param.crca = 0
 			param.crcb = 0
-			setPlayerStorageValue(param.cid, 50781, 0) -- removes storage value of transformation --
-			--old = getPlayerStorageValue(param.cid, storage) -- get players old vocation and assign it to old --
-			--oldpro = getPlayerStorageValue(param.cid, prostorage) -- get players old promotion and assign it to old --
-			--param.cid:setVocation(old)               -- set players vocation using old's value --
-			--setPlayerStorageValue(param.cid, 18009, 0) -- removes storage value --
-			setPlayerStorageValue(param.cid, storageadd, 0) -- removes storage value --
+			setPlayerStorageValue(param.cid, check, 0)
+			setPlayerStorageValue(param.cid, storageadd, 0)
 
 			local pos = getCreaturePosition(param.cid)
 
@@ -358,12 +353,8 @@ function superform2(param)
 		if (isPlayer(param.cid) == FALSE) then
 			param.crca = 0
 			param.crcb = 0
-			setPlayerStorageValue(param.cid, 50781, 0) -- removes storage value of transformation --
-			--old = getPlayerStorageValue(param.cid, storage) -- get players old vocation and assign it to old --
-			--oldpro = getPlayerStorageValue(param.cid, prostorage) -- get players old promotion and assign it to old --
-			--param.cid:setVocation(old)               -- set players vocation using old's value --
-			--setPlayerStorageValue(param.cid, 18009, 0) -- removes storage value --
-			setPlayerStorageValue(param.cid, storageadd, 0) -- removes storage value --
+			setPlayerStorageValue(param.cid, check, 0)
+			setPlayerStorageValue(param.cid, storageadd, 0)
 		end
 
 		if param.voca == 9 then
@@ -455,7 +446,7 @@ function superform2(param)
 		end
 		end
 		else
-			addEvent(superform2, cointimeinterval, param) -- call superform2 based on manatimeinterval settings --
+			addEvent(superform2, cointimeinterval, param)
 		end
 
 	end
@@ -465,13 +456,10 @@ local epiceq = MoveEvent()
 
 function epiceq.onEquip(cid, item, slot, isCheck)
 	local param = {cid = cid, item = item, slot = slot}
-	local tempvoc = getPlayerVocation(cid) -- get players voc and store it in temp --getPlayerVocation(cid), getPromotedVocation(vocationId)
-	local promotion = cid:getVocation(id)
-	local currentcoin = getPlayerMoney(cid) -- get players current coins
-	setPlayerStorageValue(cid, storageadd, 1) -- add storage value --
-	setPlayerStorageValue(cid, storage, tempvoc) -- store players voc in storage for later use --
-	setPlayerStorageValue(cid, prostorage, getPlayerVocation(cid)) -- store players promotion in storage for later use --
-	--oldpro = getPlayerStorageValue(cid, prostorage) -- get players old promotion and assign it to old --
+	local tempvoc = cid:getVocation(id) --getPlayerVocation(cid) --
+	local promotion = cid:getVocation(id):getPromotion()
+	local currentcoin = getPlayerMoney(cid)
+
 	if currentcoin <= coinneededtoexec then
 		doPlayerSendCancel(cid, 'You have not enough money!')
 		if getPlayerVocation(cid) == 9 then
@@ -483,11 +471,16 @@ function epiceq.onEquip(cid, item, slot, isCheck)
 		elseif getPlayerVocation(cid) == 12 then
      			doPlayerSetVocation(cid, 8)
 		end
-	end	 
+	end
+	
+	setPlayerStorageValue(cid, storageadd, 1)
+	setPlayerStorageValue(cid, oldvoc, tempvoc)
+	setPlayerStorageValue(cid, prostorage, getPlayerVocation(cid))
+	
 	local pos = getPlayerPosition(cid)
-	if(os.time() > getPlayerStorageValue(cid, exh_storageadd)) then --  and (currentcoin < coinneededtoexec)
-		if (tempvoc == 1 or tempvoc == 5) then  -- these if and else if statements will check the current voc prior to transformation --
-			doPlayerSetVocation(cid, sorcerervoc) -- if the players vocation == tempvoc then a new vocation will be assigned to the player --
+	if(os.time() > getPlayerStorageValue(cid, exh_storageadd)) then
+		if (tempvoc == 1 or tempvoc == 5) then
+			doPlayerSetVocation(cid, sorcerervoc)
 		elseif (tempvoc == 2 or tempvoc == 6) then
      			doPlayerSetVocation(cid, druidvoc)
 		elseif (tempvoc == 3 or tempvoc == 7) then
@@ -495,10 +488,9 @@ function epiceq.onEquip(cid, item, slot, isCheck)
 		elseif (tempvoc == 4 or tempvoc == 8) then
      			doPlayerSetVocation(cid, knightvoc)
 		end
-		--setPlayerStorageValue(cid, exhausted_storagevalue, os.time() + exhausted_seconds)
-		doCreatureSay(cid, "Rutilus Vox", TALKTYPE_ORANGE_1) -- do animated text while transformation takes place --
+		doCreatureSay(cid, "Rutilus Vox", MESSAGE_POTION)
 		param.crca = 1
-		events[getPlayerGUID(cid)] = addEvent(superform1, 1, param) -- call the function superform1 immediately --
+		events[getPlayerGUID(cid)] = addEvent(superform1, 1, param)
 	else
 		local time = getPlayerStorageValue(cid, exh_storageadd) - os.time()
 		doPlayerSendCancel(cid, 'You cannot use this ring within one minute! It\'s still '.. time ..' seconds!')
@@ -512,25 +504,23 @@ function epiceq.onEquip(cid, item, slot, isCheck)
      			doPlayerSetVocation(cid, 8)
 		end
 	end
-	return true --epiceq:callFunction(cid, item.uid, slot, isCheck)
+	return true
 end
 epiceq:type("equip")
-epiceq:id(18935)
+epiceq:slot("ring")
+epiceq:id(31557)
 epiceq:register()
 
 local epicdeeq = MoveEvent()
 
 function epicdeeq.onDeEquip(cid, item, slot, isCheck)
-	if isPlayer(cid) and getPlayerStorageValue(cid, 50781) == 1 then
-		--local vocation = getPlayerVocation(cid)
+	if isPlayer(cid) and getPlayerStorageValue(cid, check) == 1 then
 		local promotion = cid:getVocation():getPromotion()
-		local old = getPlayerStorageValue(cid, storage) -- get players old vocation and assign it to old --
-		--oldpro = getPlayerStorageValue(cid, prostorage) -- get players old promotion and assign it to old --
-		setPlayerStorageValue(cid, storageadd, 0) -- add storage value --
-		--if oldpro ~= 0 then cid:setVocation(old) end --setPlayerPromotionLevel(cid, 1)               -- set players vocation using old's value --
-		local temptwo = getPlayerVocation(cid) -- get players voc and store it in temp --
+		local old = getPlayerStorageValue(cid, storage)
+		setPlayerStorageValue(cid, storageadd, 0)
+		local temptwo = getPlayerVocation(cid)
 		if temptwo == 9 then
-			doPlayerSetVocation(cid, 5) -- just incase they die and loose the ring they will not keep the new voc -
+			doPlayerSetVocation(cid, 5)
 		elseif temptwo == 10 then
 			doPlayerSetVocation(cid, 6)
 		elseif temptwo == 11 then
@@ -538,8 +528,6 @@ function epicdeeq.onDeEquip(cid, item, slot, isCheck)
 		elseif temptwo == 12 then
 			doPlayerSetVocation(cid, 8)
 		end
-		--setPlayerStorageValue(cid, prostorage, 0) -- remove vocation
-		-- removes the outfit, attributes, super haste, mana shield, hp/mp regeneration --
 		doRemoveCondition(cid, CONDITION_OUTFIT) 
 		doRemoveCondition(cid, CONDITION_ATTRIBUTES)
 		doRemoveCondition(cid, CONDITION_HASTE)
@@ -547,9 +535,9 @@ function epicdeeq.onDeEquip(cid, item, slot, isCheck)
 		doRemoveCondition(cid, CONDITION_REGENERATION)
 
 		local pos = getCreaturePosition(cid)
-		doCreatureSay(cid, "Aufero Meus Donum", TALKTYPE_ORANGE_1) -- do animated text while de-transformation takes place --
-		setPlayerStorageValue(cid, 50781, 0)     -- removes storage value of transformation --
-
+		doCreatureSay(cid, "Aufero Meus Donum", MESSAGE_POTION)
+		setPlayerStorageValue(cid, check, 0)
+		
 		local voca = getPlayerVocation(cid) 
 
 		local nha = {x = pos.x, y = pos.y - 3, z = pos.z, stackpos = 255}
@@ -652,10 +640,9 @@ function epicdeeq.onDeEquip(cid, item, slot, isCheck)
 		end
 	end
 	events[getPlayerGUID(cid)] = stopEvent(superform1)
-	--events[getPlayerGUID(cid)] = stopEvent(superform2)
-	--setPlayerStorageValue(cid, storage, 0) -- remove vocation
-	return true--epicdeeq:callFunction(cid, item.uid, slot, isCheck)
+	return true
 end
 epicdeeq:type("deequip")
-epicdeeq:id(18935)
+epicdeeq:slot("ring")
+epicdeeq:id(31616)
 epicdeeq:register()

@@ -21,7 +21,7 @@ end
 spell:name("Light Healing")
 spell:words("exura")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+spell:vocation("druid;true", "elder druid;true", "ent;true", "paladin;true", "royal paladin;true", "robin hood;true", "sorcerer;true", "master sorcerer;true", "wizzard;true")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_LIGHT_HEALING)
 spell:id(1)
 spell:cooldown(1000)

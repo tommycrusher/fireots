@@ -52,7 +52,7 @@ end
 spell:name("Mass Healing")
 spell:words("exura gran mas res")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true")
+spell:vocation("druid;true", "elder druid;true", "ent;true")
 spell:id(82)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(1 * 1000)

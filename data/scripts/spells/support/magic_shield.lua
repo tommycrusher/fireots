@@ -23,7 +23,7 @@ end
 spell:name("Magic Shield")
 spell:words("utamo vita")
 spell:group("support")
-spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true")
+spell:vocation("druid;true", "elder druid;true", "sorcerer;true", "master sorcerer;true", "ent;true", "wizzard;true")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_MAGIC_SHIELD)
 spell:id(44)
 spell:cooldown(14 * 1000)

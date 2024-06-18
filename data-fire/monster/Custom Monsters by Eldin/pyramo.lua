@@ -69,7 +69,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "ancient amulet", chance = 13500},
+	{id = 3025, chance = 13500}, --ancient amulet
+	{id = 3051, chance = 13500}, --energy ring
 	{id = 2231, chance = 19000}, -- big bone
 	{name = "black pearl", chance = 15000, maxCount = 35},
 	{name = "boots of haste", chance = 14000},
@@ -79,7 +80,6 @@ monster.loot = {
 	{name = "demon shield", chance = 15500},
 	{name = "devil helmet", chance = 11000},
 	{name = "dragon hammer", chance = 34500},
-	{name = "energy ring", chance = 13500},
 	{name = "fire axe", chance = 17000},
 	{name = "giant sword", chance = 12500},
 	{name = "platinum coin", chance = 69900, maxCount = 100},

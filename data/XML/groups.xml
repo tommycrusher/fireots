@@ -115,7 +115,7 @@
 			<flag cansenseinvisibility="1" />
 			<flag ignoredbymonsters="1" />
 			<flag ignoredbynpcs="1" />
-			<flag notgaininfight="1" />
+			<flag notgaininfight="0" />
 			<flag hasinfinitemana="1" />
 			<flag hasinfinitesoul="1" />
 			<flag hasnoexhaustion="1" />
@@ -131,7 +131,7 @@
 			<flag cantalkredprivate="1" />
 			<flag cantalkredchannel="1" />
 			<flag talkorangehelpchannel="1" />
-			<flag notgainexperience="1" />
+			<flag notgainexperience="0" />
 			<flag notgainmana="1" />
 			<flag notgainhealth="1" />
 			<flag notgainskill="1" />

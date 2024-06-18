@@ -1,382 +1,370 @@
-[2024-16-06 16:50:40.806] [info] Canary - Version 3.1.2 
-[2024-16-06 16:50:40.806] [info] A server developed by: OpenTibiaBR Organization 
-[2024-16-06 16:50:40.806] [info] Visit our website for updates, support, and resources: https://docs.opentibiabr.com/ 
-[2024-16-06 16:50:40.807] [info] Setting up thread pool 
-[2024-16-06 16:50:40.807] [info] Running with 16 threads. 
-[2024-16-06 16:50:40.810] [info] Server protocol: 13.32 and 10x allowed! 
-[2024-16-06 16:50:40.810] [info] Establishing database connection...  
-[2024-16-06 16:50:41.462] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-16-06 16:50:41.462] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-16-06 16:50:41.668] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-16-06 16:50:41.668] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-16-06 16:50:41.687] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-16-06 16:50:41.793] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:41.793] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:41.793] [warning] [registerMonsterType.loot] - Monster: Random Noob loot could not correctly be load 
-[2024-16-06 16:50:41.795] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:41.795] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:41.796] [warning] [registerMonsterType.loot] - Monster: Pyramo loot could not correctly be load 
-[2024-16-06 16:50:41.797] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:41.797] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:41.797] [warning] [registerMonsterType.loot] - Monster: Magebomb loot could not correctly be load 
-[2024-16-06 16:50:41.798] [error] [Monsters::deserializeSpell] - Missing outfit monster or item in outfit spell for: Dracula 
-[2024-16-06 16:50:41.798] [warning] Monster: Dracula, Cant load spell: outfit 
-[2024-16-06 16:50:42.259] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.259] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.259] [warning] [registerMonsterType.loot] - Monster: Arkhothep loot could not correctly be load 
-[2024-16-06 16:50:42.261] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.261] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.261] [warning] [registerMonsterType.loot] - Monster: Gamabuntu loot could not correctly be load 
-[2024-16-06 16:50:42.262] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.262] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.263] [warning] [registerMonsterType.loot] - Monster: Devil Flamebeast loot could not correctly be load 
-[2024-16-06 16:50:42.264] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.264] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.264] [warning] [registerMonsterType.loot] - Monster: The Fastest Turtle loot could not correctly be load 
-[2024-16-06 16:50:42.265] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.265] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.265] [warning] [registerMonsterType.loot] - Monster: Donator Demon loot could not correctly be load 
-[2024-16-06 16:50:42.267] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.267] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.267] [warning] [registerMonsterType.loot] - Monster: Yalahar loot could not correctly be load 
-[2024-16-06 16:50:42.271] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item ancient amulet 
-[2024-16-06 16:50:42.271] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-16-06 16:50:42.271] [warning] [registerMonsterType.loot] - Monster: Arthei loot could not correctly be load 
-[2024-16-06 16:50:42.274] [error] [Monsters::deserializeSpell] - Train Shooter unknown or missing parameter on spell with name: phisical 
-[2024-16-06 16:50:42.826] [info] Boosted creature: Faun 
-[2024-16-06 16:50:42.826] [info] Boosted boss: Earl Osam 
-[2024-16-06 16:50:43.594] [warning] [IOMap::loadMap] - Movable item with ID: 9062, in house: 1633, at position: x 1006, y 973, z 8 
-[2024-16-06 16:50:43.594] [warning] [IOMap::loadMap] - Movable item with ID: 9614, in house: 1633, at position: x 1016, y 975, z 8 
-[2024-16-06 16:50:43.596] [warning] [IOMap::loadMap] - Movable item with ID: 9613, in house: 1633, at position: x 1016, y 979, z 8 
-[2024-16-06 16:50:43.596] [warning] [IOMap::loadMap] - Movable item with ID: 9618, in house: 1633, at position: x 1009, y 980, z 6 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 985, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 987, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 985, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 987, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 989, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 989, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 991, z 5 
-[2024-16-06 16:50:43.693] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1050, y 991, z 5 
-[2024-16-06 16:50:44.724] [warning] [IOMap::loadMap] - Movable item with ID: 6355, in house: 1252, at position: x 2974, y 1398, z 7 
-[2024-16-06 16:50:44.724] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
-[2024-16-06 16:50:44.724] [warning] [IOMap::loadMap] - Movable item with ID: 3031, in house: 1252, at position: x 2972, y 1401, z 5 
-[2024-16-06 16:50:44.724] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
-[2024-16-06 16:50:44.724] [warning] [IOMap::loadMap] - Movable item with ID: 7862, in house: 1317, at position: x 2983, y 1393, z 5 
-[2024-16-06 16:50:51.696] [info] Map Loaded fire.otbm (34143x33812) in 8868.545 milliseconds 
-[2024-16-06 16:50:51.839] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
-[2024-16-06 16:50:51.839] [error] Can not find Ortheus 
-[2024-16-06 16:50:51.839] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
-[2024-16-06 16:50:51.839] [error] Can not find Ortheus 
-[2024-16-06 16:50:51.852] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
-[2024-16-06 16:50:51.852] [error] Can not find Ortheus 
-[2024-16-06 16:50:51.872] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-16-06 16:50:51.872] [error] Can not find Dragon Trainer 
-[2024-16-06 16:50:51.874] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-16-06 16:50:51.874] [error] Can not find Dragon Trainer 
-[2024-16-06 16:50:51.874] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.874] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.874] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-16-06 16:50:51.874] [error] Can not find Guardian of the Desert 
-[2024-16-06 16:50:51.875] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-16-06 16:50:51.875] [error] Can not find Guardian of the Desert 
-[2024-16-06 16:50:51.875] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-16-06 16:50:51.875] [error] Can not find Guardian of the Desert 
-[2024-16-06 16:50:51.875] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-16-06 16:50:51.875] [error] Can not find Guardian of the Desert 
-[2024-16-06 16:50:51.875] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.875] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.876] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.876] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.877] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-16-06 16:50:51.877] [error] Can not find Guardian of the Desert 
-[2024-16-06 16:50:51.877] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-16-06 16:50:51.877] [error] Can not find Guardian of the Desert 
-[2024-16-06 16:50:51.878] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.878] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.878] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.878] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.878] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.878] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.878] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.878] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:51.889] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
-[2024-16-06 16:50:51.889] [error] Can not find The Ruthless Herald 
-[2024-16-06 16:50:51.890] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
-[2024-16-06 16:50:51.890] [error] Can not find The Ruthless Herald 
-[2024-16-06 16:50:51.893] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 2597, 984, 7 ) with radius: 16 
-[2024-16-06 16:50:51.898] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-16-06 16:50:51.898] [error] Can not find Animated Pumpkin 
-[2024-16-06 16:50:51.898] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-16-06 16:50:51.898] [error] Can not find Animated Pumpkin 
-[2024-16-06 16:50:51.899] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-16-06 16:50:51.899] [error] Can not find Animated Pumpkin 
-[2024-16-06 16:50:51.899] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-16-06 16:50:51.899] [error] Can not find Animated Pumpkin 
-[2024-16-06 16:50:51.900] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-16-06 16:50:51.900] [error] Can not find Animated Pumpkin 
-[2024-16-06 16:50:51.900] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-16-06 16:50:51.900] [error] Can not find Animated Pumpkin 
-[2024-16-06 16:50:51.940] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:51.940] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.018] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-16-06 16:50:52.019] [error] Can not find Dragon Trainer 
-[2024-16-06 16:50:52.019] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-16-06 16:50:52.019] [error] Can not find Snake Think 
-[2024-16-06 16:50:52.019] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-16-06 16:50:52.019] [error] Can not find Snake Think 
-[2024-16-06 16:50:52.019] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-16-06 16:50:52.019] [error] Can not find Snake Think 
-[2024-16-06 16:50:52.019] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-16-06 16:50:52.019] [error] Can not find Snake Think 
-[2024-16-06 16:50:52.019] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-16-06 16:50:52.019] [error] Can not find Dragon Trainer 
-[2024-16-06 16:50:52.020] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-16-06 16:50:52.020] [error] Can not find Dragon Trainer 
-[2024-16-06 16:50:52.020] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-16-06 16:50:52.020] [error] Can not find Dragon Trainer 
-[2024-16-06 16:50:52.020] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-16-06 16:50:52.020] [error] Can not find Lumenia 
-[2024-16-06 16:50:52.020] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-16-06 16:50:52.020] [error] Can not find Lumenia 
-[2024-16-06 16:50:52.020] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-16-06 16:50:52.020] [error] Can not find Lumenia 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-16-06 16:50:52.021] [error] Can not find Lumenia 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-16-06 16:50:52.021] [error] Can not find Lumenia 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.021] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.021] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.021] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.021] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.021] [error] [Monsters::getMonsterType] - Monster with name the nomad prince not exist 
-[2024-16-06 16:50:52.021] [error] Can not find The Nomad Prince 
-[2024-16-06 16:50:52.028] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 788, 1039, 8 ) with radius: 1 
-[2024-16-06 16:50:52.034] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
-[2024-16-06 16:50:52.034] [error] Can not find Tamerin 
-[2024-16-06 16:50:52.047] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
-[2024-16-06 16:50:52.047] [error] Can not find Tamerin 
-[2024-16-06 16:50:52.108] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 543, 65524, 8 ) with radius: 1196 
-[2024-16-06 16:50:52.108] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 540, 65534, 8 ) with radius: 1198 
-[2024-16-06 16:50:52.112] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
-[2024-16-06 16:50:52.112] [error] Can not find Eye of Terror 
-[2024-16-06 16:50:52.112] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
-[2024-16-06 16:50:52.112] [error] Can not find Eye of Terror 
-[2024-16-06 16:50:52.123] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.123] [error] Can not find Feromous 
-[2024-16-06 16:50:52.123] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.123] [error] Can not find Feromous 
-[2024-16-06 16:50:52.203] [error] [Monsters::getMonsterType] - Monster with name wall not exist 
-[2024-16-06 16:50:52.203] [error] Can not find Wall 
-[2024-16-06 16:50:52.203] [error] [Monsters::getMonsterType] - Monster with name tibia bug not exist 
-[2024-16-06 16:50:52.203] [error] Can not find Tibia Bug 
-[2024-16-06 16:50:52.203] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.203] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.203] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.203] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.203] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.203] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.203] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.203] [error] Can not find Feromous 
-[2024-16-06 16:50:52.204] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.204] [error] Can not find Feromous 
-[2024-16-06 16:50:52.204] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.204] [error] Can not find Feromous 
-[2024-16-06 16:50:52.204] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.204] [error] Can not find Feromous 
-[2024-16-06 16:50:52.204] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.204] [error] Can not find Feromous 
-[2024-16-06 16:50:52.204] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.204] [error] Can not find Feromous 
-[2024-16-06 16:50:52.204] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-16-06 16:50:52.204] [error] Can not find Feromous 
-[2024-16-06 16:50:52.271] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.271] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.271] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.271] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.271] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.271] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.271] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.271] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.271] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-16-06 16:50:52.271] [error] Can not find Murderess Spider 
-[2024-16-06 16:50:52.273] [error] [Monsters::getMonsterType] - Monster with name breeze not exist 
-[2024-16-06 16:50:52.273] [error] Can not find Breeze 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.312] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-16-06 16:50:52.312] [error] Can not find Minion of Vesperoth 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.387] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-16-06 16:50:52.387] [error] Can not find Rook Spawn 
-[2024-16-06 16:50:52.389] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
-[2024-16-06 16:50:52.389] [error] Can not find Nokmir 
-[2024-16-06 16:50:52.389] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
-[2024-16-06 16:50:52.389] [error] Can not find Xorlosh 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Firewall 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Nokmir 
-[2024-16-06 16:50:52.390] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
-[2024-16-06 16:50:52.390] [error] Can not find Xorlosh 
-[2024-16-06 16:50:52.450] [warning] [Houses::loadHousesXML] - Entry not set for house name:  with id: 1349 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 1 with id: 1635 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 2 with id: 1636 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 3 with id: 1637 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 10 with id: 1644 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 11 with id: 1645 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 12 with id: 1646 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 13 with id: 1647 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 14 with id: 1648 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 15 with id: 1649 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 26 with id: 1660 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 29 with id: 1663 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: Forgotten House III with id: 1668 
-[2024-16-06 16:50:52.451] [warning] [Houses::loadHousesXML] - Entry not set for house name: 31 with id: 2373 
-[2024-16-06 16:50:52.469] [info] Loaded house items in 13.154 milliseconds 
-[2024-16-06 16:50:52.469] [error] Can not find Deruno 
-[2024-16-06 16:50:52.469] [error] Can not find Tasker 
-[2024-16-06 16:50:52.469] [error] Can not find Alice 
-[2024-16-06 16:50:52.469] [error] Can not find Bager 
-[2024-16-06 16:50:52.469] [error] Can not find Alice 
-[2024-16-06 16:50:52.469] [error] Can not find Captain 
-[2024-16-06 16:50:52.469] [error] Can not find Eryn 
-[2024-16-06 16:50:52.469] [error] Can not find Johnny 
-[2024-16-06 16:50:52.469] [error] Can not find Bank 
-[2024-16-06 16:50:52.469] [error] Can not find Capitao Coruja 
-[2024-16-06 16:50:52.469] [error] Can not find Monge 
-[2024-16-06 16:50:52.469] [error] Can not find Alice 
-[2024-16-06 16:50:52.469] [error] Can not find Nimral 
-[2024-16-06 16:50:52.470] [error] Can not find Dimral 
-[2024-16-06 16:50:52.470] [error] Can not find Eryn 
-[2024-16-06 16:50:52.470] [error] Can not find Capitao Coruja 
-[2024-16-06 16:50:52.470] [error] Can not find Alice 
-[2024-16-06 16:50:52.470] [error] Can not find Dalrl 
-[2024-16-06 16:50:52.470] [error] Can not find Ticker Seller 
-[2024-16-06 16:50:52.470] [error] Can not find Bager 
-[2024-16-06 16:50:52.470] [error] Can not find Bager 
-[2024-16-06 16:50:52.470] [error] Can not find Djinn Shop 
-[2024-16-06 16:50:52.470] [error] Can not find Bowman 
-[2024-16-06 16:50:52.470] [error] Can not find Bager 
-[2024-16-06 16:50:52.470] [error] Can not find Zboczony Pustelnik 
-[2024-16-06 16:50:52.470] [error] Can not find Tigtram 
-[2024-16-06 16:50:52.470] [error] Can not find Lodziarz 
-[2024-16-06 16:50:52.470] [error] Can not find Ticker Seller 
-[2024-16-06 16:50:52.470] [error] Can not find Carthin 
-[2024-16-06 16:50:52.470] [error] Can not find Tarak 
-[2024-16-06 16:50:52.470] [error] Can not find Tarak 
-[2024-16-06 16:50:52.470] [error] Can not find helmut 
-[2024-16-06 16:50:52.470] [error] Can not find Alice 
-[2024-16-06 16:50:52.470] [error] Can not find helmut 
-[2024-16-06 16:50:52.490] [info] Initializing gamestate... 
-[2024-16-06 16:50:52.694] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-16-06 16:50:52.694] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-16-06 16:50:52.694] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-16-06 16:50:52.694] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-16-06 16:50:57.698] [warning] [Item::CreateItem] Item with id '858', in position '( 291, 2265, 7 )' not exists in the appearances.dat and cannot be created. 
-[2024-16-06 16:50:59.379] [info] [World Change] The Dream Courts today's boss is: Alptramun! 
-[2024-16-06 16:51:01.698] [info] [World Change] Fury Gate has arrived in Darashia! 
-[2024-16-06 16:51:01.726] [info] [World Change] Nightmare Isle is active in North of Ankrahmun 
-[2024-16-06 16:51:01.726] [info] Yasir: not this time 
-[2024-16-06 16:51:01.969] [info] Checking Global: No duplicate values found. 
-[2024-16-06 16:51:01.969] [info] Checking GlobalStorage: No duplicate values found. 
-[2024-16-06 16:51:01.978] [info] Checking Storage: No duplicate values found. 
-[2024-16-06 16:51:01.978] [info] Spawning Hirelings 
-[2024-16-06 16:51:02.610] [info] Rashid arrived at Carlin 
-[2024-16-06 16:51:02.611] [info] Loaded all modules, server starting up... 
-[2024-16-06 16:51:02.611] [info] Fire OTS server online! 
-[2024-16-06 16:51:02.611] [info] Map Loaded alptramun.otbm (34143x33812) in 0.258 milliseconds 
-[2024-16-06 16:51:02.612] [info] Map Loaded darashia.otbm (33305x32376) in 0.132 milliseconds 
-[2024-16-06 16:51:02.612] [info] Map Loaded ankrahmun-north.otbm (33267x32686) in 0.2 milliseconds 
-[2024-16-06 16:51:07.860] [info] Tommy has logged in. (Protocol: 1332) 
-[2024-16-06 16:51:08.033] [warning] Duplicate unique id: 12345 
-[2024-16-06 16:55:33.662] [info] SIGHUP received, reloading config files... 
-[2024-16-06 16:55:33.663] [info] Reloaded config 
-[2024-16-06 16:55:33.665] [info] Reloaded raids 
-[2024-16-06 16:55:34.099] [info] Reloaded items 
-[2024-16-06 16:55:34.100] [info] Reloaded mounts 
-[2024-16-06 16:55:34.101] [info] Reloaded events 
-[2024-16-06 16:55:34.101] [info] Reloaded chatchannels 
-[2024-16-06 16:55:34.128] [info] Reloaded core.lua 
+[2024-18-06 19:09:19.277] [info] Canary - Version 3.1.2 
+[2024-18-06 19:09:19.278] [info] A server developed by: OpenTibiaBR Organization 
+[2024-18-06 19:09:19.278] [info] Visit our website for updates, support, and resources: https://docs.opentibiabr.com/ 
+[2024-18-06 19:09:19.278] [info] Setting up thread pool 
+[2024-18-06 19:09:19.278] [info] Running with 16 threads. 
+[2024-18-06 19:09:19.280] [info] Server protocol: 13.32 and 10x allowed! 
+[2024-18-06 19:09:19.280] [info] Establishing database connection...  
+[2024-18-06 19:09:19.913] [error] Vocation overflow for spell: Bruise Bane 
+[2024-18-06 19:09:20.067] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-18-06 19:09:20.067] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-18-06 19:09:20.394] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-18-06 19:09:20.394] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-18-06 19:09:20.403] [error] Lua Script Error Detected
+---------------------------------------
+Interface: Scripts Interface
+Script ID: /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/creaturescripts/customs/ringcheck.lua
+Error Description: .../data-fire/scripts/creaturescripts/customs/ringcheck.lua:20: attempt to call method 'interval' (a nil value)
+stack traceback:
+	[C]: in function 'interval'
+	.../data-fire/scripts/creaturescripts/customs/ringcheck.lua:20: in main chunk
+---------------------------------------
+ 
+[2024-18-06 19:09:20.403] [error] /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/creaturescripts/customs/ringcheck.lua 
+[2024-18-06 19:09:20.403] [error]  
+[2024-18-06 19:09:20.424] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-18-06 19:09:21.061] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
+[2024-18-06 19:09:21.061] [warning] [registerMonsterType.loot] - Monster: The Fastest Turtle loot could not correctly be load 
+[2024-18-06 19:09:21.072] [error] [Monsters::deserializeSpell] - Train Shooter unknown or missing parameter on spell with name: phisical 
+[2024-18-06 19:09:21.647] [info] Boosted creature: Furious Troll 
+[2024-18-06 19:09:21.647] [info] Boosted boss: Abyssador 
+[2024-18-06 19:09:22.576] [warning] [IOMap::loadMap] - Movable item with ID: 9062, in house: 1633, at position: x 1006, y 973, z 8 
+[2024-18-06 19:09:22.577] [warning] [IOMap::loadMap] - Movable item with ID: 9614, in house: 1633, at position: x 1016, y 975, z 8 
+[2024-18-06 19:09:22.578] [warning] [IOMap::loadMap] - Movable item with ID: 9613, in house: 1633, at position: x 1016, y 979, z 8 
+[2024-18-06 19:09:22.579] [warning] [IOMap::loadMap] - Movable item with ID: 9618, in house: 1633, at position: x 1009, y 980, z 6 
+[2024-18-06 19:09:22.685] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 985, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 987, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 985, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 987, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 989, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 989, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 991, z 5 
+[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1050, y 991, z 5 
+[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 6355, in house: 1252, at position: x 2974, y 1398, z 7 
+[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
+[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 3031, in house: 1252, at position: x 2972, y 1401, z 5 
+[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
+[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 7862, in house: 1317, at position: x 2983, y 1393, z 5 
+[2024-18-06 19:09:31.398] [info] Map Loaded fire.otbm (34143x33812) in 9749.974 milliseconds 
+[2024-18-06 19:09:31.551] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
+[2024-18-06 19:09:31.551] [error] Can not find Ortheus 
+[2024-18-06 19:09:31.551] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
+[2024-18-06 19:09:31.551] [error] Can not find Ortheus 
+[2024-18-06 19:09:31.565] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
+[2024-18-06 19:09:31.565] [error] Can not find Ortheus 
+[2024-18-06 19:09:31.586] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-18-06 19:09:31.586] [error] Can not find Dragon Trainer 
+[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-18-06 19:09:31.589] [error] Can not find Dragon Trainer 
+[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.589] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-18-06 19:09:31.589] [error] Can not find Guardian of the Desert 
+[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-18-06 19:09:31.589] [error] Can not find Guardian of the Desert 
+[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-18-06 19:09:31.590] [error] Can not find Guardian of the Desert 
+[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-18-06 19:09:31.590] [error] Can not find Guardian of the Desert 
+[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.590] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.590] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.592] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-18-06 19:09:31.592] [error] Can not find Guardian of the Desert 
+[2024-18-06 19:09:31.592] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-18-06 19:09:31.592] [error] Can not find Guardian of the Desert 
+[2024-18-06 19:09:31.592] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.592] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.593] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.593] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.593] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.593] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.593] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.593] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.604] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
+[2024-18-06 19:09:31.604] [error] Can not find The Ruthless Herald 
+[2024-18-06 19:09:31.606] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
+[2024-18-06 19:09:31.606] [error] Can not find The Ruthless Herald 
+[2024-18-06 19:09:31.609] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 2597, 984, 7 ) with radius: 16 
+[2024-18-06 19:09:31.615] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-18-06 19:09:31.615] [error] Can not find Animated Pumpkin 
+[2024-18-06 19:09:31.615] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-18-06 19:09:31.615] [error] Can not find Animated Pumpkin 
+[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
+[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
+[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
+[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
+[2024-18-06 19:09:31.660] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.660] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-18-06 19:09:31.744] [error] Can not find Dragon Trainer 
+[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
+[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
+[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
+[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
+[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-18-06 19:09:31.744] [error] Can not find Dragon Trainer 
+[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-18-06 19:09:31.745] [error] Can not find Dragon Trainer 
+[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-18-06 19:09:31.745] [error] Can not find Dragon Trainer 
+[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-18-06 19:09:31.745] [error] Can not find Lumenia 
+[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-18-06 19:09:31.745] [error] Can not find Lumenia 
+[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-18-06 19:09:31.745] [error] Can not find Lumenia 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-18-06 19:09:31.746] [error] Can not find Lumenia 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-18-06 19:09:31.746] [error] Can not find Lumenia 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name the nomad prince not exist 
+[2024-18-06 19:09:31.746] [error] Can not find The Nomad Prince 
+[2024-18-06 19:09:31.753] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 788, 1039, 8 ) with radius: 1 
+[2024-18-06 19:09:31.760] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
+[2024-18-06 19:09:31.760] [error] Can not find Tamerin 
+[2024-18-06 19:09:31.774] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
+[2024-18-06 19:09:31.774] [error] Can not find Tamerin 
+[2024-18-06 19:09:31.838] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 543, 65524, 8 ) with radius: 1196 
+[2024-18-06 19:09:31.839] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 540, 65534, 8 ) with radius: 1198 
+[2024-18-06 19:09:31.843] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
+[2024-18-06 19:09:31.843] [error] Can not find Eye of Terror 
+[2024-18-06 19:09:31.843] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
+[2024-18-06 19:09:31.843] [error] Can not find Eye of Terror 
+[2024-18-06 19:09:31.855] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.855] [error] Can not find Feromous 
+[2024-18-06 19:09:31.855] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.855] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name wall not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Wall 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name tibia bug not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Tibia Bug 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-18-06 19:09:31.938] [error] Can not find Feromous 
+[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
+[2024-18-06 19:09:32.010] [error] [Monsters::getMonsterType] - Monster with name breeze not exist 
+[2024-18-06 19:09:32.010] [error] Can not find Breeze 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
+[2024-18-06 19:09:32.137] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
+[2024-18-06 19:09:32.137] [error] Can not find Nokmir 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Xorlosh 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-18-06 19:09:32.138] [error] Can not find Firewall 
+[2024-18-06 19:09:32.139] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
+[2024-18-06 19:09:32.139] [error] Can not find Nokmir 
+[2024-18-06 19:09:32.139] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
+[2024-18-06 19:09:32.139] [error] Can not find Xorlosh 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name:  with id: 1349 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 1 with id: 1635 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 2 with id: 1636 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 3 with id: 1637 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 10 with id: 1644 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 11 with id: 1645 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 12 with id: 1646 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 13 with id: 1647 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 14 with id: 1648 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 15 with id: 1649 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 26 with id: 1660 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 29 with id: 1663 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: Forgotten House III with id: 1668 
+[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 31 with id: 2373 
+[2024-18-06 19:09:32.226] [info] Loaded house items in 15.979 milliseconds 
+[2024-18-06 19:09:32.227] [error] Can not find Deruno 
+[2024-18-06 19:09:32.227] [error] Can not find Tasker 
+[2024-18-06 19:09:32.227] [error] Can not find Alice 
+[2024-18-06 19:09:32.227] [error] Can not find Bager 
+[2024-18-06 19:09:32.227] [error] Can not find Alice 
+[2024-18-06 19:09:32.227] [error] Can not find Captain 
+[2024-18-06 19:09:32.227] [error] Can not find Eryn 
+[2024-18-06 19:09:32.227] [error] Can not find Johnny 
+[2024-18-06 19:09:32.227] [error] Can not find Bank 
+[2024-18-06 19:09:32.227] [error] Can not find Capitao Coruja 
+[2024-18-06 19:09:32.227] [error] Can not find Monge 
+[2024-18-06 19:09:32.227] [error] Can not find Alice 
+[2024-18-06 19:09:32.227] [error] Can not find Nimral 
+[2024-18-06 19:09:32.227] [error] Can not find Dimral 
+[2024-18-06 19:09:32.227] [error] Can not find Eryn 
+[2024-18-06 19:09:32.227] [error] Can not find Capitao Coruja 
+[2024-18-06 19:09:32.227] [error] Can not find Alice 
+[2024-18-06 19:09:32.227] [error] Can not find Dalrl 
+[2024-18-06 19:09:32.227] [error] Can not find Ticker Seller 
+[2024-18-06 19:09:32.227] [error] Can not find Bager 
+[2024-18-06 19:09:32.227] [error] Can not find Bager 
+[2024-18-06 19:09:32.227] [error] Can not find Djinn Shop 
+[2024-18-06 19:09:32.227] [error] Can not find Bowman 
+[2024-18-06 19:09:32.227] [error] Can not find Bager 
+[2024-18-06 19:09:32.227] [error] Can not find Zboczony Pustelnik 
+[2024-18-06 19:09:32.227] [error] Can not find Tigtram 
+[2024-18-06 19:09:32.227] [error] Can not find Lodziarz 
+[2024-18-06 19:09:32.227] [error] Can not find Ticker Seller 
+[2024-18-06 19:09:32.227] [error] Can not find Carthin 
+[2024-18-06 19:09:32.227] [error] Can not find Tarak 
+[2024-18-06 19:09:32.227] [error] Can not find Tarak 
+[2024-18-06 19:09:32.227] [error] Can not find helmut 
+[2024-18-06 19:09:32.227] [error] Can not find Alice 
+[2024-18-06 19:09:32.227] [error] Can not find helmut 
+[2024-18-06 19:09:32.249] [info] Initializing gamestate... 
+[2024-18-06 19:09:32.467] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-18-06 19:09:32.468] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-18-06 19:09:32.468] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-18-06 19:09:32.468] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-18-06 19:09:37.836] [warning] [Item::CreateItem] Item with id '858', in position '( 291, 2265, 7 )' not exists in the appearances.dat and cannot be created. 
+[2024-18-06 19:09:39.665] [info] [World Change] The Dream Courts today's boss is: Malofur Mangrinder! 
+[2024-18-06 19:09:42.558] [info] [World Change] Fury Gate has arrived in Darashia! 
+[2024-18-06 19:09:42.583] [info] [World Change] Nightmare Isle is active in West of Darashia 
+[2024-18-06 19:09:42.583] [info] [World Change] Yasir has arrived in Carlin today! 
+[2024-18-06 19:09:42.948] [info] Checking Global: No duplicate values found. 
+[2024-18-06 19:09:42.949] [info] Checking GlobalStorage: No duplicate values found. 
+[2024-18-06 19:09:42.956] [info] Checking Storage: No duplicate values found. 
+[2024-18-06 19:09:42.956] [info] Spawning Hirelings 
+[2024-18-06 19:09:43.672] [info] Rashid arrived at Liberty Bay 
+[2024-18-06 19:09:43.673] [info] Loaded all modules, server starting up... 
+[2024-18-06 19:09:43.674] [info] Fire OTS server online! 
+[2024-18-06 19:09:43.674] [info] Map Loaded malofur_mangrinder.otbm (34143x33812) in 0.272 milliseconds 
+[2024-18-06 19:09:43.674] [info] Map Loaded darashia.otbm (33305x32376) in 0.139 milliseconds 
+[2024-18-06 19:09:43.674] [info] Map Loaded darashia-west.otbm (34143x33812) in 0.237 milliseconds 
+[2024-18-06 19:09:43.675] [info] Map Loaded carlin.otbm (32404x31824) in 0.296 milliseconds 
+[2024-18-06 19:09:43.944] [info] Varo Kamon has logged in. (Protocol: 1332) 
+[2024-18-06 19:09:44.011] [warning] Duplicate unique id: 12345 
+[2024-18-06 19:09:44.011] [warning] Duplicate unique id: 12345 
+[2024-18-06 19:09:44.209] [warning] Duplicate unique id: 12345 
+[2024-18-06 19:10:05.571] [info] Varo Kamon has logged out 
+[2024-18-06 19:10:06.883] [info] Varo Kamon has logged in. (Protocol: 1332) 
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+[2024-18-06 19:26:09.358] [info] Varo Kamon has logged out 
+[2024-18-06 19:26:16.594] [info] Varo Kamon has logged in. (Protocol: 1332) 
+[2024-18-06 19:27:18.703] [info] Varo Kamon has logged out 
+[2024-18-06 19:27:19.990] [info] Varo Kamon has logged in. (Protocol: 1332) 
+[2024-18-06 19:29:20.433] [info] Broadcasted message: There seems to be a big gnarlhoud gang in Zao Steppe. 
+[2024-18-06 19:29:39.434] [info] Broadcasted message: The gnarlhounds seem to multiply by the minute. 
+[2024-18-06 19:31:19.435] [info] Broadcasted message: The gnarlhounds roam free in the Zao Steppe. Watch out! 

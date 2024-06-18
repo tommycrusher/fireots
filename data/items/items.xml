@@ -22276,7 +22276,7 @@
 	<item id="8097" article="a" name="solar axe">
 		<attribute key="primarytype" value="axe weapons"/>
 		<attribute key="weaponType" value="axe"/>
-		<attribute key="attack" value="52"/>
+		<attribute key="attack" value="72"/>
 		<attribute key="extradef" value="3"/>
 		<attribute key="defense" value="29"/>
 		<attribute key="weight" value="11000"/>
@@ -22318,7 +22318,7 @@
 	<item id="8099" article="a" name="dark trinity mace">
 		<attribute key="primarytype" value="club weapons"/>
 		<attribute key="weaponType" value="club"/>
-		<attribute key="attack" value="51"/>
+		<attribute key="attack" value="81"/>
 		<attribute key="extradef" value="-1"/>
 		<attribute key="defense" value="32"/>
 		<attribute key="weight" value="9900"/>
@@ -22414,7 +22414,7 @@
 	<item id="8104" article="the" name="calamity">
 		<attribute key="weaponType" value="sword"/>
 		<attribute key="slotType" value="two-handed"/>
-		<attribute key="attack" value="51"/>
+		<attribute key="attack" value="71"/>
 		<attribute key="defense" value="35"/>
 		<attribute key="weight" value="6800"/>
 		<attribute key="script" value="moveevent;weapon">
@@ -38415,9 +38415,6 @@
 	<item id="18935" article="a" name="vampire's signet ring">
 		<attribute key="description" value="A ring with a massive, faintly glowing seal, containing the blood of a vampire"/>
 		<attribute key="weight" value="10"/>
-		<attribute key="duration" value="86400"/>
-		<attribute key="showduration" value="1"/>
-		<attribute key="decayTo" value="0"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="slot" value="ring"/>
 		</attribute>
@@ -58889,10 +58886,6 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="transformequipto" value="31616"/>
 		<attribute key="weight" value="90"/>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="220"/>
-			<attribute key="slot" value="ring"/>
-		</attribute>
 	</item>
 	<item id="31558" article="a" name="red goanna scale">
 		<attribute key="primarytype" value="creature products"/>
@@ -59208,14 +59201,10 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentfire" value="6"/>
-		<attribute key="duration" value="3600"/>
+		<attribute key="duration" value="86400"/>
 		<attribute key="transformdeequipto" value="31557"/>
 		<attribute key="decayTo" value="31621"/>
 		<attribute key="weight" value="90"/>
-		<attribute key="script" value="moveevent">
-			<attribute key="level" value="220"/>
-			<attribute key="slot" value="ring"/>
-		</attribute>
 	</item>
 	<item id="31617" name="winged boots">
 		<attribute key="primarytype" value="boots"/>

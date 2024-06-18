@@ -12,7 +12,7 @@ end
 spell:name("Cure Poison")
 spell:words("exana pox")
 spell:group("healing")
-spell:vocation("druid;true", "elder druid;true", "knight;true", "elite knight;true", "paladin;true", "royal paladin;true", "sorcerer;true", "master sorcerer;true")
+spell:vocation("druid;true", "elder druid;true", "ent;true", "knight;true", "elite knight;true", "lancelot;true", "paladin;true", "royal paladin;true", "robin hood;true", "sorcerer;true", "master sorcerer;true", "wizzard;true")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_CURE_POISON)
 spell:id(29)
 spell:cooldown(6000)

@@ -1,9 +1,10 @@
 local ringCheck = CreatureEvent("RingCheck")
+
 function ringCheck.onThink(cid, interval)
 	if isPlayer(cid) and getPlayerStorageValue(cid, 50781) < 1 then
-		local temptwo = getPlayerVocation(cid) -- get players voc and store it in temp --
+		local temptwo = getPlayerVocation(cid)
 		if temptwo == 9 then
-			doPlayerSetVocation(cid, 5) -- just incase they die and loose the ring they will not keep the new voc -
+			doPlayerSetVocation(cid, 5)
 		elseif temptwo == 10 then
 			doPlayerSetVocation(cid, 6)
 		elseif temptwo == 11 then
@@ -14,5 +15,7 @@ function ringCheck.onThink(cid, interval)
 	else
 		return true
 	end
-end 
+end
+
+--ringCheck:interval(1000)
 ringCheck:register()

@@ -44,7 +44,7 @@ end
 spell:name("Sharpshooter")
 spell:words("utito tempo san")
 spell:group("support", "focus")
-spell:vocation("paladin;true", "royal paladin;true")
+spell:vocation("paladin;true", "royal paladin;true", "robin hood;true")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_SHARPSHOOTER)
 spell:id(135)
 spell:cooldown(10 * 1000)

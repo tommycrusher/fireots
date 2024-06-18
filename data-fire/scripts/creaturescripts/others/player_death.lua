@@ -9,6 +9,17 @@ function playerDeath.onDeath(player, corpse, killer, mostDamageKiller, unjustifi
 	if not deathListEnabled then
 		return
 	end
+	
+	local temptwo = player:getVocation(id)
+	if temptwo == 9 then
+		player:setVocation(5)
+	elseif temptwo == 10 then
+		player:setVocation(6)
+	elseif temptwo == 11 then
+		player:setVocation(7)
+	elseif temptwo == 12 then
+		player:setVocation(8)
+	end
 
 	local byPlayer = 0
 	local killerName

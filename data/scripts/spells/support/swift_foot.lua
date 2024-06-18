@@ -56,7 +56,7 @@ end
 spell:name("Swift Foot")
 spell:words("utamo tempo san")
 spell:group("support", "focus")
-spell:vocation("paladin;true", "royal paladin;true")
+spell:vocation("paladin;true", "royal paladin;true", "robin hood;true")
 spell:castSound(SOUND_EFFECT_TYPE_SPELL_SWIFT_FOOT)
 spell:id(134)
 spell:cooldown(10 * 1000)
