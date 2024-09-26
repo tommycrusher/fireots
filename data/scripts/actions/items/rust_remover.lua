@@ -74,7 +74,7 @@ function rustRemover.onUse(player, item, fromPosition, target, toPosition, isHot
 		return true
 	end
 
-	local randomChance = math.random(10000)
+	local randomChance = math.random(1000)
 	local index = false
 
 	if targetItem[1].chance >= randomChance then

@@ -45,11 +45,11 @@ local textto = GlobalEvent("TextTo")
 function textto.onThink(interval)
     for text, pos in pairs(config.positions) do
     Position(math.random(1, #pos)):sendMagicEffect(math.random(1, #effects))
-		doSendMagicEffect(pos, effects[math.random(1, #effects)])
+		--doSendMagicEffect(pos, effects[math.random(1, #effects)])
         --doSendAnimatedText(pos, text, math.random(1, 255))doShowTextDialog(cid, itemId, text)
     end
     
     return TRUE
 end
-textto:interval(1000)
-textto:register() 
+--textto:interval(1000)
+--textto:register() 

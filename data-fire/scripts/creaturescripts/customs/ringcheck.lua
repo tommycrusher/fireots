@@ -1,7 +1,7 @@
 local ringCheck = CreatureEvent("RingCheck")
 
 function ringCheck.onThink(cid, interval)
-	if isPlayer(cid) and getPlayerStorageValue(cid, 50781) < 1 then
+	if isPlayer(cid) and getPlayerStorageValue(cid, 18012) < 1 then
 		local temptwo = getPlayerVocation(cid)
 		if temptwo == 9 then
 			doPlayerSetVocation(cid, 5)

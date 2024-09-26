@@ -3,7 +3,7 @@ local exhausted_seconds = 20
 local exh_storageadd = 18013
 local exh_secondsadd = 20
 -- Exhausted Settings END --
-local oldvoc = 18009 -- storage value for the vocation transformation --
+local storage = 18009 -- storage value for the vocation transformation --
 local prostorage = 18010 -- storage value for the promotion transformation --
 local storageadd = 18011 -- storage value for the add --
 local check = 18012
@@ -456,10 +456,12 @@ local epiceq = MoveEvent()
 
 function epiceq.onEquip(cid, item, slot, isCheck)
 	local param = {cid = cid, item = item, slot = slot}
-	local tempvoc = cid:getVocation(id) --getPlayerVocation(cid) --
-	local promotion = cid:getVocation(id):getPromotion()
+	local tempvoc = getPlayerVocation(cid)
+	local promotion = cid:getVocation(id)
 	local currentcoin = getPlayerMoney(cid)
-
+	setPlayerStorageValue(cid, storageadd, 1)
+	setPlayerStorageValue(cid, storage, tempvoc)
+	setPlayerStorageValue(cid, prostorage, getPlayerVocation(cid))
 	if currentcoin <= coinneededtoexec then
 		doPlayerSendCancel(cid, 'You have not enough money!')
 		if getPlayerVocation(cid) == 9 then
@@ -471,12 +473,7 @@ function epiceq.onEquip(cid, item, slot, isCheck)
 		elseif getPlayerVocation(cid) == 12 then
      			doPlayerSetVocation(cid, 8)
 		end
-	end
-	
-	setPlayerStorageValue(cid, storageadd, 1)
-	setPlayerStorageValue(cid, oldvoc, tempvoc)
-	setPlayerStorageValue(cid, prostorage, getPlayerVocation(cid))
-	
+	end	 
 	local pos = getPlayerPosition(cid)
 	if(os.time() > getPlayerStorageValue(cid, exh_storageadd)) then
 		if (tempvoc == 1 or tempvoc == 5) then

@@ -1,370 +1,646 @@
-[2024-18-06 19:09:19.277] [info] Canary - Version 3.1.2 
-[2024-18-06 19:09:19.278] [info] A server developed by: OpenTibiaBR Organization 
-[2024-18-06 19:09:19.278] [info] Visit our website for updates, support, and resources: https://docs.opentibiabr.com/ 
-[2024-18-06 19:09:19.278] [info] Setting up thread pool 
-[2024-18-06 19:09:19.278] [info] Running with 16 threads. 
-[2024-18-06 19:09:19.280] [info] Server protocol: 13.32 and 10x allowed! 
-[2024-18-06 19:09:19.280] [info] Establishing database connection...  
-[2024-18-06 19:09:19.913] [error] Vocation overflow for spell: Bruise Bane 
-[2024-18-06 19:09:20.067] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-18-06 19:09:20.067] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-18-06 19:09:20.394] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-18-06 19:09:20.394] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-18-06 19:09:20.403] [error] Lua Script Error Detected
+[2024-26-09 06:30:31.486] [info] Canary - Version 3.1.2 
+[2024-26-09 06:30:31.486] [info] A server developed by: OpenTibiaBR Organization 
+[2024-26-09 06:30:31.486] [info] Visit our website for updates, support, and resources: https://docs.opentibiabr.com/ 
+[2024-26-09 06:30:31.487] [info] Setting up thread pool 
+[2024-26-09 06:30:31.487] [info] Running with 16 threads. 
+[2024-26-09 06:30:31.489] [info] Server protocol: 13.32 and 10x allowed! 
+[2024-26-09 06:30:31.489] [info] Establishing database connection...  
+[2024-26-09 06:30:31.887] [info] Optimizing table tile_store... [Success] 
+[2024-26-09 06:30:31.887] [info] Optimizing table players_online... [Success] 
+[2024-26-09 06:30:32.742] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-26-09 06:30:32.742] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-26-09 06:30:32.791] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: dragoninvasion.lua 
+[2024-26-09 06:30:32.807] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 3002 in range from uid: 3002, to uid: 3002, for script: demonquest.lua 
+[2024-26-09 06:30:32.807] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: demonquest.lua 
+[2024-26-09 06:30:32.807] [warning] [registerLuaItemEvent] - Duplicate registered item with id: 12318 in range from id: 12318, to id: 12318, for script: replica.lua 
+[2024-26-09 06:30:32.807] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: replica.lua 
+[2024-26-09 06:30:32.817] [warning] [registerLuaItemEvent] - Duplicate registered item with id: 7720 in range from id: 7720, to id: 7720, for script: exp.lua 
+[2024-26-09 06:30:32.817] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: exp.lua 
+[2024-26-09 06:30:32.817] [warning] [registerLuaActionEvent] duplicate registered item with aid: 0 in range from aid: 0, to aid: 0, for script: ownbp.lua 
+[2024-26-09 06:30:32.817] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: ownbp.lua 
+[2024-26-09 06:30:32.818] [warning] [registerLuaItemEvent] - Duplicate registered item with id: 9564 in range from id: 9564, to id: 9564, for script: snakesys.lua 
+[2024-26-09 06:30:32.818] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: snakesys.lua 
+[2024-26-09 06:30:32.819] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: desert quest.lua 
+[2024-26-09 06:30:32.843] [warning] [registerLuaItemEvent] - Duplicate registered item with id: 2785 in range from id: 14756, to id: 2805, for script: construction_kits.lua 
+[2024-26-09 06:30:32.850] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 15901 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 15902 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 15903 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 15904 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 17756 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 17757 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 19000 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.851] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 19778 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5003 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5004 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5006 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5007 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5008 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5009 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5017 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5101 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5102 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5103 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5104 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5105 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5106 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5107 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5108 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5109 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5110 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5111 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5610 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5611 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5612 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5614 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5615 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5616 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5617 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5618 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5791 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5915 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5916 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5917 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 5997 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7100 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7110 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7369 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7370 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7371 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7409 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7420 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7438 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7454 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7500 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7501 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7502 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7503 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7510 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7511 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7512 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7513 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7891 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7894 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7899 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7900 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7965 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 7966 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8000 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8200 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8201 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8202 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8203 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8206 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8207 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8208 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8209 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8210 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8211 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8212 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8213 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8214 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.871] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 8858 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.872] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 12000 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1001 in range from uid: 1001, to uid: 1001, for script: demon_oak_gravestone.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: demon_oak_gravestone.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1004 in range from uid: 1004, to uid: 1003, for script: demon_oak_chest.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1002 in range from uid: 1004, to uid: 1003, for script: demon_oak_chest.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1005 in range from uid: 1004, to uid: 1003, for script: demon_oak_chest.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1003 in range from uid: 1004, to uid: 1003, for script: demon_oak_chest.lua 
+[2024-26-09 06:30:32.887] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: demon_oak_chest.lua 
+[2024-26-09 06:30:32.888] [warning] [registerLuaActionEvent] duplicate registered item with aid: 23700 in range from aid: 23700, to aid: 23701, for script: yalahar_machine_war_golems.lua 
+[2024-26-09 06:30:32.888] [warning] [registerLuaActionEvent] duplicate registered item with aid: 23701 in range from aid: 23700, to aid: 23701, for script: yalahar_machine_war_golems.lua 
+[2024-26-09 06:30:32.888] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: yalahar_machine_war_golems.lua 
+[2024-26-09 06:30:32.888] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 3090 in range from uid: 3088, to uid: 3090, for script: reward.lua 
+[2024-26-09 06:30:32.889] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1009 in range from uid: 1009, to uid: 1006, for script: brother_lever.lua 
+[2024-26-09 06:30:32.889] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1007 in range from uid: 1009, to uid: 1006, for script: brother_lever.lua 
+[2024-26-09 06:30:32.889] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1008 in range from uid: 1009, to uid: 1006, for script: brother_lever.lua 
+[2024-26-09 06:30:32.889] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1006 in range from uid: 1009, to uid: 1006, for script: brother_lever.lua 
+[2024-26-09 06:30:32.889] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: brother_lever.lua 
+[2024-26-09 06:30:32.895] [warning] [registerLuaUniqueEvent] duplicate registered item with uid: 1010 in range from uid: 1010, to uid: 1010, for script: lever.lua 
+[2024-26-09 06:30:32.895] [warning] [registerLuaEvent] missing id/aid/uid/position for one script event, for script: lever.lua 
+[2024-26-09 06:30:32.895] [warning] [registerLuaItemEvent] - Duplicate registered item with id: 8300 in range from id: 8300, to id: 8306, for script: soils2.lua 
+[2024-26-09 06:30:32.920] [warning] [registerLuaItemEvent] - Duplicate registered item with id: 12318 in range from id: 12548, to id: 20274, for script: mounts.lua 
+[2024-26-09 06:30:33.048] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-26-09 06:30:33.048] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-26-09 06:30:33.067] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
+[2024-26-09 06:30:33.627] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
+[2024-26-09 06:30:33.628] [warning] [registerMonsterType.loot] - Monster: The Fastest Turtle loot could not correctly be load 
+[2024-26-09 06:30:33.637] [error] [Monsters::deserializeSpell] - Train Shooter unknown or missing parameter on spell with name: phisical 
+[2024-26-09 06:30:34.181] [info] Boosted creature: Braindeath 
+[2024-26-09 06:30:34.244] [info] Boosted boss: Timira The Many-Headed 
+[2024-26-09 06:30:35.653] [warning] [IOMap::loadMap] - Movable item with ID: 9062, in house: 1633, at position: x 1006, y 973, z 8 
+[2024-26-09 06:30:35.653] [warning] [IOMap::loadMap] - Movable item with ID: 9614, in house: 1633, at position: x 1016, y 975, z 8 
+[2024-26-09 06:30:35.655] [warning] [IOMap::loadMap] - Movable item with ID: 9613, in house: 1633, at position: x 1016, y 979, z 8 
+[2024-26-09 06:30:35.655] [warning] [IOMap::loadMap] - Movable item with ID: 9618, in house: 1633, at position: x 1009, y 980, z 6 
+[2024-26-09 06:30:35.751] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 985, z 5 
+[2024-26-09 06:30:35.751] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 987, z 5 
+[2024-26-09 06:30:35.751] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 985, z 5 
+[2024-26-09 06:30:35.751] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 987, z 5 
+[2024-26-09 06:30:35.752] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 989, z 5 
+[2024-26-09 06:30:35.752] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 989, z 5 
+[2024-26-09 06:30:35.752] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 991, z 5 
+[2024-26-09 06:30:35.752] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1050, y 991, z 5 
+[2024-26-09 06:30:36.762] [warning] [IOMap::loadMap] - Movable item with ID: 6355, in house: 1252, at position: x 2974, y 1398, z 7 
+[2024-26-09 06:30:36.762] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
+[2024-26-09 06:30:36.762] [warning] [IOMap::loadMap] - Movable item with ID: 3031, in house: 1252, at position: x 2972, y 1401, z 5 
+[2024-26-09 06:30:36.762] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
+[2024-26-09 06:30:36.762] [warning] [IOMap::loadMap] - Movable item with ID: 7862, in house: 1317, at position: x 2983, y 1393, z 5 
+[2024-26-09 06:30:43.932] [info] Map Loaded fire.otbm (34143x33812) in 9686.73 milliseconds 
+[2024-26-09 06:30:46.054] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
+[2024-26-09 06:30:46.054] [error] Can not find Ortheus 
+[2024-26-09 06:30:46.054] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
+[2024-26-09 06:30:46.054] [error] Can not find Ortheus 
+[2024-26-09 06:30:46.067] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
+[2024-26-09 06:30:46.067] [error] Can not find Ortheus 
+[2024-26-09 06:30:46.085] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-26-09 06:30:46.085] [error] Can not find Dragon Trainer 
+[2024-26-09 06:30:46.088] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-26-09 06:30:46.088] [error] Can not find Dragon Trainer 
+[2024-26-09 06:30:46.088] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.088] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.088] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-26-09 06:30:46.088] [error] Can not find Guardian of the Desert 
+[2024-26-09 06:30:46.088] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-26-09 06:30:46.088] [error] Can not find Guardian of the Desert 
+[2024-26-09 06:30:46.089] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-26-09 06:30:46.089] [error] Can not find Guardian of the Desert 
+[2024-26-09 06:30:46.089] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-26-09 06:30:46.089] [error] Can not find Guardian of the Desert 
+[2024-26-09 06:30:46.089] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.089] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.089] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.089] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.090] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 219, 210, 7 ) with radius: 5 
+[2024-26-09 06:30:46.090] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 276, 212, 7 ) with radius: 5 
+[2024-26-09 06:30:46.090] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-26-09 06:30:46.090] [error] Can not find Guardian of the Desert 
+[2024-26-09 06:30:46.091] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
+[2024-26-09 06:30:46.091] [error] Can not find Guardian of the Desert 
+[2024-26-09 06:30:46.091] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 292, 224, 7 ) with radius: 5 
+[2024-26-09 06:30:46.091] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 274, 226, 7 ) with radius: 5 
+[2024-26-09 06:30:46.091] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.091] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.091] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.091] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.091] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.091] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.092] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.092] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.102] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
+[2024-26-09 06:30:46.102] [error] Can not find The Ruthless Herald 
+[2024-26-09 06:30:46.104] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
+[2024-26-09 06:30:46.104] [error] Can not find The Ruthless Herald 
+[2024-26-09 06:30:46.107] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 2597, 984, 7 ) with radius: 16 
+[2024-26-09 06:30:46.112] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-26-09 06:30:46.112] [error] Can not find Animated Pumpkin 
+[2024-26-09 06:30:46.112] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-26-09 06:30:46.112] [error] Can not find Animated Pumpkin 
+[2024-26-09 06:30:46.113] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-26-09 06:30:46.113] [error] Can not find Animated Pumpkin 
+[2024-26-09 06:30:46.113] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-26-09 06:30:46.113] [error] Can not find Animated Pumpkin 
+[2024-26-09 06:30:46.113] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-26-09 06:30:46.113] [error] Can not find Animated Pumpkin 
+[2024-26-09 06:30:46.113] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
+[2024-26-09 06:30:46.113] [error] Can not find Animated Pumpkin 
+[2024-26-09 06:30:46.154] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.154] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.230] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-26-09 06:30:46.230] [error] Can not find Dragon Trainer 
+[2024-26-09 06:30:46.230] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-26-09 06:30:46.230] [error] Can not find Snake Think 
+[2024-26-09 06:30:46.230] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-26-09 06:30:46.230] [error] Can not find Snake Think 
+[2024-26-09 06:30:46.230] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-26-09 06:30:46.230] [error] Can not find Snake Think 
+[2024-26-09 06:30:46.230] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
+[2024-26-09 06:30:46.230] [error] Can not find Snake Think 
+[2024-26-09 06:30:46.231] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-26-09 06:30:46.231] [error] Can not find Dragon Trainer 
+[2024-26-09 06:30:46.231] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-26-09 06:30:46.231] [error] Can not find Dragon Trainer 
+[2024-26-09 06:30:46.231] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
+[2024-26-09 06:30:46.231] [error] Can not find Dragon Trainer 
+[2024-26-09 06:30:46.232] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-26-09 06:30:46.232] [error] Can not find Lumenia 
+[2024-26-09 06:30:46.232] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-26-09 06:30:46.232] [error] Can not find Lumenia 
+[2024-26-09 06:30:46.232] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-26-09 06:30:46.232] [error] Can not find Lumenia 
+[2024-26-09 06:30:46.232] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-26-09 06:30:46.232] [error] Can not find Lumenia 
+[2024-26-09 06:30:46.232] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
+[2024-26-09 06:30:46.232] [error] Can not find Lumenia 
+[2024-26-09 06:30:46.232] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.232] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.233] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.233] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.233] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.233] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.233] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.233] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.233] [error] [Monsters::getMonsterType] - Monster with name the nomad prince not exist 
+[2024-26-09 06:30:46.233] [error] Can not find The Nomad Prince 
+[2024-26-09 06:30:46.239] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 788, 1039, 8 ) with radius: 1 
+[2024-26-09 06:30:46.245] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
+[2024-26-09 06:30:46.245] [error] Can not find Tamerin 
+[2024-26-09 06:30:46.258] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
+[2024-26-09 06:30:46.258] [error] Can not find Tamerin 
+[2024-26-09 06:30:46.319] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 543, 65524, 8 ) with radius: 1196 
+[2024-26-09 06:30:46.319] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 540, 65534, 8 ) with radius: 1198 
+[2024-26-09 06:30:46.323] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
+[2024-26-09 06:30:46.323] [error] Can not find Eye of Terror 
+[2024-26-09 06:30:46.323] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
+[2024-26-09 06:30:46.323] [error] Can not find Eye of Terror 
+[2024-26-09 06:30:46.334] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.334] [error] Can not find Feromous 
+[2024-26-09 06:30:46.334] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.334] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name wall not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Wall 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name tibia bug not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Tibia Bug 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.411] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
+[2024-26-09 06:30:46.411] [error] Can not find Feromous 
+[2024-26-09 06:30:46.476] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.476] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.476] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.476] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.476] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.476] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.476] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.476] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.476] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
+[2024-26-09 06:30:46.476] [error] Can not find Murderess Spider 
+[2024-26-09 06:30:46.477] [error] [Monsters::getMonsterType] - Monster with name breeze not exist 
+[2024-26-09 06:30:46.477] [error] Can not find Breeze 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.516] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
+[2024-26-09 06:30:46.516] [error] Can not find Minion of Vesperoth 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.591] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
+[2024-26-09 06:30:46.591] [error] Can not find Rook Spawn 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Nokmir 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Xorlosh 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.593] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.593] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Firewall 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Nokmir 
+[2024-26-09 06:30:46.594] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
+[2024-26-09 06:30:46.594] [error] Can not find Xorlosh 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name:  with id: 1349 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 1 with id: 1635 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 2 with id: 1636 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 3 with id: 1637 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 10 with id: 1644 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 11 with id: 1645 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 12 with id: 1646 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 13 with id: 1647 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 14 with id: 1648 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 15 with id: 1649 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 26 with id: 1660 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 29 with id: 1663 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: Forgotten House III with id: 1668 
+[2024-26-09 06:30:46.986] [warning] [Houses::loadHousesXML] - Entry not set for house name: 31 with id: 2373 
+[2024-26-09 06:30:47.137] [info] Loaded house items in 77.14 milliseconds 
+[2024-26-09 06:30:48.259] [error] Can not find Deruno 
+[2024-26-09 06:30:48.260] [error] Can not find Tasker 
+[2024-26-09 06:30:48.260] [error] Can not find Alice 
+[2024-26-09 06:30:48.260] [error] Can not find Bager 
+[2024-26-09 06:30:48.260] [error] Can not find Alice 
+[2024-26-09 06:30:48.260] [error] Can not find Captain 
+[2024-26-09 06:30:48.260] [error] Can not find Eryn 
+[2024-26-09 06:30:48.260] [error] Can not find Johnny 
+[2024-26-09 06:30:48.260] [error] Can not find Bank 
+[2024-26-09 06:30:48.260] [error] Can not find Capitao Coruja 
+[2024-26-09 06:30:48.260] [error] Can not find Monge 
+[2024-26-09 06:30:48.260] [error] Can not find Alice 
+[2024-26-09 06:30:48.260] [error] Can not find Nimral 
+[2024-26-09 06:30:48.260] [error] Can not find Dimral 
+[2024-26-09 06:30:48.260] [error] Can not find Eryn 
+[2024-26-09 06:30:48.260] [error] Can not find Capitao Coruja 
+[2024-26-09 06:30:48.261] [error] Can not find Alice 
+[2024-26-09 06:30:48.261] [error] Can not find Dalrl 
+[2024-26-09 06:30:48.261] [error] Can not find Ticker Seller 
+[2024-26-09 06:30:48.261] [error] Can not find Bager 
+[2024-26-09 06:30:48.261] [error] Can not find Bager 
+[2024-26-09 06:30:48.261] [error] Can not find Djinn Shop 
+[2024-26-09 06:30:48.261] [error] Can not find Bowman 
+[2024-26-09 06:30:48.261] [error] Can not find Bager 
+[2024-26-09 06:30:48.261] [error] Can not find Zboczony Pustelnik 
+[2024-26-09 06:30:48.261] [error] Can not find Tigtram 
+[2024-26-09 06:30:48.261] [error] Can not find Lodziarz 
+[2024-26-09 06:30:48.261] [error] Can not find Ticker Seller 
+[2024-26-09 06:30:48.261] [error] Can not find Carthin 
+[2024-26-09 06:30:48.261] [error] Can not find Tarak 
+[2024-26-09 06:30:48.261] [error] Can not find Tarak 
+[2024-26-09 06:30:48.261] [error] Can not find helmut 
+[2024-26-09 06:30:48.261] [error] Can not find Alice 
+[2024-26-09 06:30:48.261] [error] Can not find helmut 
+[2024-26-09 06:30:48.308] [info] Initializing gamestate... 
+[2024-26-09 06:30:48.521] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-26-09 06:30:48.521] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-26-09 06:30:48.522] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-26-09 06:30:48.522] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
+[2024-26-09 06:30:53.499] [warning] [Item::CreateItem] Item with id '858', in position '( 291, 2265, 7 )' not exists in the appearances.dat and cannot be created. 
+[2024-26-09 06:30:55.212] [info] [World Change] The Dream Courts today's boss is: Alptramun! 
+[2024-26-09 06:30:57.521] [info] [World Change] Fury Gate has arrived in Venore! 
+[2024-26-09 06:30:57.544] [info] [World Change] Nightmare Isle is active in North of Darashia 
+[2024-26-09 06:30:57.545] [info] [World Change] Yasir has arrived in Ankrahmun today! 
+[2024-26-09 06:30:57.783] [info] Checking Global: No duplicate values found. 
+[2024-26-09 06:30:57.783] [info] Checking GlobalStorage: No duplicate values found. 
+[2024-26-09 06:30:57.790] [info] Checking Storage: No duplicate values found. 
+[2024-26-09 06:30:57.791] [info] Spawning Hirelings 
+[2024-26-09 06:30:58.696] [info] Rashid arrived at Ankrahmun 
+[2024-26-09 06:30:58.697] [info] Loaded all modules, server starting up... 
+[2024-26-09 06:30:58.698] [info] Fire OTS server online! 
+[2024-26-09 06:30:58.713] [info] Map Loaded alptramun.otbm (34143x33812) in 15.887 milliseconds 
+[2024-26-09 06:30:58.714] [info] Map Loaded venore.otbm (32839x32092) in 0.196 milliseconds 
+[2024-26-09 06:30:58.714] [info] Map Loaded darashia-north.otbm (33227x32282) in 0.206 milliseconds 
+[2024-26-09 06:30:58.714] [info] Map Loaded ankrahmun.otbm (33112x32895) in 0.452 milliseconds 
+> Broadcasted message: "This game is to be fun, but play it for long hours can be harmful to health. Take care!".
+[2024-26-09 06:50:32.675] [info] Broadcasted message: There seems to be a big gnarlhoud gang in Zao Steppe. 
+[2024-26-09 06:50:51.675] [info] Broadcasted message: The gnarlhounds seem to multiply by the minute. 
+[2024-26-09 06:52:31.676] [info] Broadcasted message: The gnarlhounds roam free in the Zao Steppe. Watch out! 
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "Remember to visit the forum for the latest information about released patches. http://fireots.pl/forum".
+[2024-26-09 07:23:32.679] [info] Broadcasted message: Many aggressive beasts are roaming south of Ab'Dendriel! Take care! 
+> Broadcasted message: "Playing Tibia is a combination of having an angel on your shoulder and the devil in your head.".
+[2024-26-09 07:30:31.592] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 07:31:31.489] [info] CLEAN: Removed 4 items from 3 tiles in 0 seconds 
+[2024-26-09 07:31:31.490] [info] Saving server... 
+[2024-26-09 07:31:31.773] [info] Server saved in 283.95 milliseconds. 
+[2024-26-09 07:31:31.774] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "By pressing Alt + F8 you can check your current Framerate.".
+> Broadcasted message: "Although you are allowed to attack people on PvP worlds, there is a 99.9999% chance you will get hunted for it.".
+> Broadcasted message: "If you die, you loose items, skills and experience. But if you don't hunt, you'll never get them back".
+[2024-26-09 08:25:32.834] [info] Broadcasted message: Let da mashing begin! Cyclops riot east of Thais. 
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+[2024-26-09 08:30:31.492] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 08:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 08:31:31.489] [info] Saving server... 
+[2024-26-09 08:31:31.656] [info] Server saved in 166.671 milliseconds. 
+[2024-26-09 08:31:31.656] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "Don't throw empty backpacks on the floor, that's what trashcans are for! If you litter, we will take all backpacks out of the game and there will be no more backpacks, ever.".
+> Broadcasted message: "Don't throw empty backpacks on the floor, that's what trashcans are for! If you litter, we will take all backpacks out of the game and there will be no more backpacks, ever.".
+> Broadcasted message: "Invite friends to play, make a guild, make money, find rare items, become a legend.".
+[2024-26-09 09:06:32.839] [info] Broadcasted message: Forrest animals spread out close to Ab'Dendriel! 
+> Broadcasted message: "Invite friends to play, make a guild, make money, find rare items, become a legend.".
+> Broadcasted message: "Playing Tibia is a combination of having an angel on your shoulder and the devil in your head.".
+[2024-26-09 09:30:31.493] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 09:31:31.493] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 09:31:31.493] [info] Saving server... 
+[2024-26-09 09:31:31.662] [info] Server saved in 169.48 milliseconds. 
+[2024-26-09 09:31:31.662] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "The most important thing in Tibia is not to be the guy with the most high level, is be the guy with the most best friends".
+> Broadcasted message: "Never believe in a cloning items by Ctrl + L or Ctrl + Q.".
+> Broadcasted message: "Remember to visit the forum for the latest information about released patches. http://fireots.pl/forum".
+> Broadcasted message: "Visit the official homepage on a regular basis to have an overview of the latest news.".
+[2024-26-09 10:29:32.846] [info] Broadcasted message: Barbarians are gathering at Bittermor. They seem to be up to something. 
+[2024-26-09 10:29:51.846] [info] Broadcasted message: The barbarian pack is roaming around in Bittermor. 
+> Broadcasted message: "Tired of getting your private channel full of casted spells? Put #s infront of your spellhotkeys (example: #s exori vis), then your spells will only appear in default channel!".
+[2024-26-09 10:30:31.494] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 10:31:31.492] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 10:31:31.493] [info] Saving server... 
+[2024-26-09 10:31:31.619] [info] Server saved in 126.874 milliseconds. 
+[2024-26-09 10:31:31.619] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "Please think twice before you kill a dog. They just want to be your friend!".
+> Broadcasted message: "Invite friends to play, make a guild, make money, find rare items, become a legend.".
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "The most important thing in Tibia is not to be the guy with the most high level, is be the guy with the most best friends".
+[2024-26-09 11:20:32.854] [info] Broadcasted message: Something is moving in the depths of the sea around Liberty Bay 
+[2024-26-09 11:20:51.854] [info] Broadcasted message: Numerous Quara fins have been sighted in the seas around Liberty Bay. 
+[2024-26-09 11:21:31.855] [info] Broadcasted message: Quara emerged from the sea to attack Liberty Bay. 
+> Broadcasted message: "If you die, you loose items, skills and experience. But if you don't hunt, you'll never get them back".
+[2024-26-09 11:30:31.492] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 11:31:31.490] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 11:31:31.490] [info] Saving server... 
+[2024-26-09 11:31:31.625] [info] Server saved in 135.239 milliseconds. 
+[2024-26-09 11:31:31.625] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "You will never forget your first dragon.".
+> Broadcasted message: "Never believe in a cloning items by Ctrl + L or Ctrl + Q.".
+> Broadcasted message: "Your account has been banned! This is a joke but this would be real if you use third party software!".
+> Broadcasted message: "You will never forget your first dragon.".
+> Broadcasted message: "Please think twice before you kill a dog. They just want to be your friend!".
+[2024-26-09 12:30:31.493] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 12:31:31.493] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 12:31:31.493] [info] Saving server... 
+[2024-26-09 12:31:31.637] [info] Server saved in 144.034 milliseconds. 
+[2024-26-09 12:31:31.637] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "Help the server by either donating or bumping our advertisement thread on tibia.net.pl".
+> Broadcasted message: "With great power comes great responsibility".
+[2024-26-09 13:04:33.874] [info] Broadcasted message: Beware of Ocyakao! 
+> Broadcasted message: "Although you are allowed to attack people on PvP worlds, there is a 99.9999% chance you will get hunted for it.".
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "Playing Tibia is a combination of having an angel on your shoulder and the devil in your head.".
+[2024-26-09 13:30:31.493] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 13:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 13:31:31.489] [info] Saving server... 
+[2024-26-09 13:31:31.625] [info] Server saved in 135.386 milliseconds. 
+[2024-26-09 13:31:31.625] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "The most important thing in Tibia is not to be the guy with the most high level, is be the guy with the most best friends".
+> Broadcasted message: "Got spammed? Hold Ctrl+W in order to clear your gamescreen from text!".
+> Broadcasted message: "Help the server by either donating or bumping our advertisement thread on tibia.net.pl".
+> Broadcasted message: "Please think twice before you kill a dog. They just want to be your friend!".
+> Broadcasted message: "Got spammed? Hold Ctrl+W in order to clear your gamescreen from text!".
+[2024-26-09 14:30:31.493] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 14:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 14:31:31.489] [info] Saving server... 
+[2024-26-09 14:31:31.646] [info] Server saved in 156.856 milliseconds. 
+[2024-26-09 14:31:31.646] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "Don't throw empty backpacks on the floor, that's what trashcans are for! If you litter, we will take all backpacks out of the game and there will be no more backpacks, ever.".
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "Facebook users beware you can get hacked trough it, never accept or visit sites or links you dont trust.".
+[2024-26-09 15:06:32.887] [info] Broadcasted message: Unusual frequent scarab sightings at the gates of Ankrahmun 
+[2024-26-09 15:07:31.888] [info] Broadcasted message: Ancient scarabs are leading an attack on Ankrahmun. 
+> Broadcasted message: "If you die, you loose items, skills and experience. But if you don't hunt, you'll never get them back".
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+[2024-26-09 15:30:31.493] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 15:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 15:31:31.489] [info] Saving server... 
+[2024-26-09 15:31:31.626] [info] Server saved in 136.753 milliseconds. 
+[2024-26-09 15:31:31.626] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "Invite friends to play, make a guild, make money, find rare items, become a legend.".
+> Broadcasted message: "This game is to be fun, but play it for long hours can be harmful to health. Take care!".
+> Broadcasted message: "With great power comes great responsibility".
+[2024-26-09 16:08:32.899] [info] Broadcasted message: A massive orc force is gathering at the gates of Zzaion. 
+[2024-26-09 16:09:01.899] [info] Broadcasted message: Orc reinforcements have arrived at the gates of Zzaion! The gates are under heavy attack!. 
+[2024-26-09 16:09:31.900] [info] Broadcasted message: More orc reinforcements have arrived at the gates of Zzaion! The gates are under heavy attack!. 
+[2024-26-09 16:10:01.899] [info] Broadcasted message: The gates to Zzaion have been breached! Orcs are invading the city!. 
+[2024-26-09 16:10:31.900] [info] Broadcasted message: More orcs have arrived in Zzaion! The city is under attack! Strong lizard leaders have come to defend the city. 
+> Broadcasted message: "Your account has been banned! This is a joke but this would be real if you use third party software!".
+> Broadcasted message: "Help the server by either donating or bumping our advertisement thread on tibia.net.pl".
+[2024-26-09 16:30:31.492] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 16:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 16:31:31.489] [info] Saving server... 
+[2024-26-09 16:31:31.602] [info] Server saved in 112.778 milliseconds. 
+[2024-26-09 16:31:31.602] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "Facebook users beware you can get hacked trough it, never accept or visit sites or links you dont trust.".
+> Broadcasted message: "You will never forget your first dragon.".
+[2024-26-09 17:11:32.905] [info] Broadcasted message: Lizards Sentinels seem to attack Port Hope from Chor. 
+[2024-26-09 17:13:32.905] [info] Broadcasted message: Lizards are advancing to Port Hope from Chor. 
+> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
+> Broadcasted message: "By pressing Alt + F8 you can check your current Framerate.".
+[2024-26-09 17:30:31.492] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 17:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 17:31:31.489] [info] Saving server... 
+[2024-26-09 17:31:31.653] [info] Server saved in 163.473 milliseconds. 
+[2024-26-09 17:31:31.653] [info] Server save complete. Next save in 1 hour! 
+> Broadcasted message: "This game is to be fun, but play it for long hours can be harmful to health. Take care!".
+> Broadcasted message: "Your account has been banned! This is a joke but this would be real if you use third party software!".
+> Broadcasted message: "Visit the official homepage on a regular basis to have an overview of the latest news.".
+[2024-26-09 18:14:32.910] [info] Broadcasted message: Something bad is happening deep, deep down under Banuta. 
+[2024-26-09 18:14:51.910] [info] Broadcasted message: Something is sizzling deep under many sheets of soil in Banuta. 
+[2024-26-09 18:16:32.910] [info] Broadcasted message: Hordes of slippery spawns slither in Deeper Banuta! 
+> Broadcasted message: "Remember to visit the forum for the latest information about released patches. http://fireots.pl/forum".
+[2024-26-09 18:23:58.189] [info] Tommy has logged in. (Protocol: 1332) 
+[2024-26-09 18:24:21.809] [error] Lua Script Error Detected
 ---------------------------------------
 Interface: Scripts Interface
-Script ID: /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/creaturescripts/customs/ringcheck.lua
-Error Description: .../data-fire/scripts/creaturescripts/customs/ringcheck.lua:20: attempt to call method 'interval' (a nil value)
+Script ID: /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/actions/custom/other/rail.lua:callback
+Function: luaAddEvent
+Error Description: Argument #3 is unsafe
+Stack Trace:
+Argument #3 is unsafe
 stack traceback:
-	[C]: in function 'interval'
-	.../data-fire/scripts/creaturescripts/customs/ringcheck.lua:20: in main chunk
+	[C]: in function 'addEvent'
+	.../fireots/data-fire/scripts/actions/custom/other/rail.lua:64: in function <.../fireots/data-fire/scripts/actions/custom/other/rail.lua:57>
 ---------------------------------------
  
-[2024-18-06 19:09:20.403] [error] /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/creaturescripts/customs/ringcheck.lua 
-[2024-18-06 19:09:20.403] [error]  
-[2024-18-06 19:09:20.424] [warning] [setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future 
-[2024-18-06 19:09:21.061] [warning] [LootFunctions::luaLootSetIdFromName] - Non-unique loot item energy ring 
-[2024-18-06 19:09:21.061] [warning] [registerMonsterType.loot] - Monster: The Fastest Turtle loot could not correctly be load 
-[2024-18-06 19:09:21.072] [error] [Monsters::deserializeSpell] - Train Shooter unknown or missing parameter on spell with name: phisical 
-[2024-18-06 19:09:21.647] [info] Boosted creature: Furious Troll 
-[2024-18-06 19:09:21.647] [info] Boosted boss: Abyssador 
-[2024-18-06 19:09:22.576] [warning] [IOMap::loadMap] - Movable item with ID: 9062, in house: 1633, at position: x 1006, y 973, z 8 
-[2024-18-06 19:09:22.577] [warning] [IOMap::loadMap] - Movable item with ID: 9614, in house: 1633, at position: x 1016, y 975, z 8 
-[2024-18-06 19:09:22.578] [warning] [IOMap::loadMap] - Movable item with ID: 9613, in house: 1633, at position: x 1016, y 979, z 8 
-[2024-18-06 19:09:22.579] [warning] [IOMap::loadMap] - Movable item with ID: 9618, in house: 1633, at position: x 1009, y 980, z 6 
-[2024-18-06 19:09:22.685] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 985, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 987, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 985, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 987, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1048, y 989, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 989, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1049, y 991, z 5 
-[2024-18-06 19:09:22.686] [warning] [IOMap::loadMap] - Movable item with ID: 3583, in house: 14, at position: x 1050, y 991, z 5 
-[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 6355, in house: 1252, at position: x 2974, y 1398, z 7 
-[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
-[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 3031, in house: 1252, at position: x 2972, y 1401, z 5 
-[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 763, in house: 1252, at position: x 2972, y 1401, z 5 
-[2024-18-06 19:09:23.747] [warning] [IOMap::loadMap] - Movable item with ID: 7862, in house: 1317, at position: x 2983, y 1393, z 5 
-[2024-18-06 19:09:31.398] [info] Map Loaded fire.otbm (34143x33812) in 9749.974 milliseconds 
-[2024-18-06 19:09:31.551] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
-[2024-18-06 19:09:31.551] [error] Can not find Ortheus 
-[2024-18-06 19:09:31.551] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
-[2024-18-06 19:09:31.551] [error] Can not find Ortheus 
-[2024-18-06 19:09:31.565] [error] [Monsters::getMonsterType] - Monster with name ortheus not exist 
-[2024-18-06 19:09:31.565] [error] Can not find Ortheus 
-[2024-18-06 19:09:31.586] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-18-06 19:09:31.586] [error] Can not find Dragon Trainer 
-[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-18-06 19:09:31.589] [error] Can not find Dragon Trainer 
-[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.589] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-18-06 19:09:31.589] [error] Can not find Guardian of the Desert 
-[2024-18-06 19:09:31.589] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-18-06 19:09:31.589] [error] Can not find Guardian of the Desert 
-[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-18-06 19:09:31.590] [error] Can not find Guardian of the Desert 
-[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-18-06 19:09:31.590] [error] Can not find Guardian of the Desert 
-[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.590] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.590] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.590] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.592] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-18-06 19:09:31.592] [error] Can not find Guardian of the Desert 
-[2024-18-06 19:09:31.592] [error] [Monsters::getMonsterType] - Monster with name guardian of the desert not exist 
-[2024-18-06 19:09:31.592] [error] Can not find Guardian of the Desert 
-[2024-18-06 19:09:31.592] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.592] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.593] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.593] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.593] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.593] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.593] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.593] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.604] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
-[2024-18-06 19:09:31.604] [error] Can not find The Ruthless Herald 
-[2024-18-06 19:09:31.606] [error] [Monsters::getMonsterType] - Monster with name the ruthless herald not exist 
-[2024-18-06 19:09:31.606] [error] Can not find The Ruthless Herald 
-[2024-18-06 19:09:31.609] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 2597, 984, 7 ) with radius: 16 
-[2024-18-06 19:09:31.615] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-18-06 19:09:31.615] [error] Can not find Animated Pumpkin 
-[2024-18-06 19:09:31.615] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-18-06 19:09:31.615] [error] Can not find Animated Pumpkin 
-[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
-[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
-[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
-[2024-18-06 19:09:31.616] [error] [Monsters::getMonsterType] - Monster with name animated pumpkin not exist 
-[2024-18-06 19:09:31.616] [error] Can not find Animated Pumpkin 
-[2024-18-06 19:09:31.660] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.660] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-18-06 19:09:31.744] [error] Can not find Dragon Trainer 
-[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
-[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
-[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
-[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name snake think not exist 
-[2024-18-06 19:09:31.744] [error] Can not find Snake Think 
-[2024-18-06 19:09:31.744] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-18-06 19:09:31.744] [error] Can not find Dragon Trainer 
-[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-18-06 19:09:31.745] [error] Can not find Dragon Trainer 
-[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name dragon trainer not exist 
-[2024-18-06 19:09:31.745] [error] Can not find Dragon Trainer 
-[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-18-06 19:09:31.745] [error] Can not find Lumenia 
-[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-18-06 19:09:31.745] [error] Can not find Lumenia 
-[2024-18-06 19:09:31.745] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-18-06 19:09:31.745] [error] Can not find Lumenia 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-18-06 19:09:31.746] [error] Can not find Lumenia 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name lumenia not exist 
-[2024-18-06 19:09:31.746] [error] Can not find Lumenia 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.746] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.746] [error] [Monsters::getMonsterType] - Monster with name the nomad prince not exist 
-[2024-18-06 19:09:31.746] [error] Can not find The Nomad Prince 
-[2024-18-06 19:09:31.753] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 788, 1039, 8 ) with radius: 1 
-[2024-18-06 19:09:31.760] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
-[2024-18-06 19:09:31.760] [error] Can not find Tamerin 
-[2024-18-06 19:09:31.774] [error] [Monsters::getMonsterType] - Monster with name tamerin not exist 
-[2024-18-06 19:09:31.774] [error] Can not find Tamerin 
-[2024-18-06 19:09:31.838] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 543, 65524, 8 ) with radius: 1196 
-[2024-18-06 19:09:31.839] [warning] [SpawnsMonster::loadFromXml] - Empty spawn at position: ( 540, 65534, 8 ) with radius: 1198 
-[2024-18-06 19:09:31.843] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
-[2024-18-06 19:09:31.843] [error] Can not find Eye of Terror 
-[2024-18-06 19:09:31.843] [error] [Monsters::getMonsterType] - Monster with name eye of terror not exist 
-[2024-18-06 19:09:31.843] [error] Can not find Eye of Terror 
-[2024-18-06 19:09:31.855] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.855] [error] Can not find Feromous 
-[2024-18-06 19:09:31.855] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.855] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name wall not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Wall 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name tibia bug not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Tibia Bug 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:31.938] [error] [Monsters::getMonsterType] - Monster with name feromous not exist 
-[2024-18-06 19:09:31.938] [error] Can not find Feromous 
-[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:32.008] [error] [Monsters::getMonsterType] - Monster with name murderess spider not exist 
-[2024-18-06 19:09:32.008] [error] Can not find Murderess Spider 
-[2024-18-06 19:09:32.010] [error] [Monsters::getMonsterType] - Monster with name breeze not exist 
-[2024-18-06 19:09:32.010] [error] Can not find Breeze 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.053] [error] [Monsters::getMonsterType] - Monster with name minion of vesperoth not exist 
-[2024-18-06 19:09:32.053] [error] Can not find Minion of Vesperoth 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.135] [error] [Monsters::getMonsterType] - Monster with name rook spawn not exist 
-[2024-18-06 19:09:32.135] [error] Can not find Rook Spawn 
-[2024-18-06 19:09:32.137] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
-[2024-18-06 19:09:32.137] [error] Can not find Nokmir 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Xorlosh 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.138] [error] [Monsters::getMonsterType] - Monster with name firewall not exist 
-[2024-18-06 19:09:32.138] [error] Can not find Firewall 
-[2024-18-06 19:09:32.139] [error] [Monsters::getMonsterType] - Monster with name nokmir not exist 
-[2024-18-06 19:09:32.139] [error] Can not find Nokmir 
-[2024-18-06 19:09:32.139] [error] [Monsters::getMonsterType] - Monster with name xorlosh not exist 
-[2024-18-06 19:09:32.139] [error] Can not find Xorlosh 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name:  with id: 1349 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 1 with id: 1635 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 2 with id: 1636 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 3 with id: 1637 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 10 with id: 1644 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 11 with id: 1645 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 12 with id: 1646 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 13 with id: 1647 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 14 with id: 1648 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 15 with id: 1649 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 26 with id: 1660 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 29 with id: 1663 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: Forgotten House III with id: 1668 
-[2024-18-06 19:09:32.203] [warning] [Houses::loadHousesXML] - Entry not set for house name: 31 with id: 2373 
-[2024-18-06 19:09:32.226] [info] Loaded house items in 15.979 milliseconds 
-[2024-18-06 19:09:32.227] [error] Can not find Deruno 
-[2024-18-06 19:09:32.227] [error] Can not find Tasker 
-[2024-18-06 19:09:32.227] [error] Can not find Alice 
-[2024-18-06 19:09:32.227] [error] Can not find Bager 
-[2024-18-06 19:09:32.227] [error] Can not find Alice 
-[2024-18-06 19:09:32.227] [error] Can not find Captain 
-[2024-18-06 19:09:32.227] [error] Can not find Eryn 
-[2024-18-06 19:09:32.227] [error] Can not find Johnny 
-[2024-18-06 19:09:32.227] [error] Can not find Bank 
-[2024-18-06 19:09:32.227] [error] Can not find Capitao Coruja 
-[2024-18-06 19:09:32.227] [error] Can not find Monge 
-[2024-18-06 19:09:32.227] [error] Can not find Alice 
-[2024-18-06 19:09:32.227] [error] Can not find Nimral 
-[2024-18-06 19:09:32.227] [error] Can not find Dimral 
-[2024-18-06 19:09:32.227] [error] Can not find Eryn 
-[2024-18-06 19:09:32.227] [error] Can not find Capitao Coruja 
-[2024-18-06 19:09:32.227] [error] Can not find Alice 
-[2024-18-06 19:09:32.227] [error] Can not find Dalrl 
-[2024-18-06 19:09:32.227] [error] Can not find Ticker Seller 
-[2024-18-06 19:09:32.227] [error] Can not find Bager 
-[2024-18-06 19:09:32.227] [error] Can not find Bager 
-[2024-18-06 19:09:32.227] [error] Can not find Djinn Shop 
-[2024-18-06 19:09:32.227] [error] Can not find Bowman 
-[2024-18-06 19:09:32.227] [error] Can not find Bager 
-[2024-18-06 19:09:32.227] [error] Can not find Zboczony Pustelnik 
-[2024-18-06 19:09:32.227] [error] Can not find Tigtram 
-[2024-18-06 19:09:32.227] [error] Can not find Lodziarz 
-[2024-18-06 19:09:32.227] [error] Can not find Ticker Seller 
-[2024-18-06 19:09:32.227] [error] Can not find Carthin 
-[2024-18-06 19:09:32.227] [error] Can not find Tarak 
-[2024-18-06 19:09:32.227] [error] Can not find Tarak 
-[2024-18-06 19:09:32.227] [error] Can not find helmut 
-[2024-18-06 19:09:32.227] [error] Can not find Alice 
-[2024-18-06 19:09:32.227] [error] Can not find helmut 
-[2024-18-06 19:09:32.249] [info] Initializing gamestate... 
-[2024-18-06 19:09:32.467] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-18-06 19:09:32.468] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-18-06 19:09:32.468] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-18-06 19:09:32.468] [warning] [Monster::Monster] - Unknown event name: WrathOfTheEmperorBossDeath 
-[2024-18-06 19:09:37.836] [warning] [Item::CreateItem] Item with id '858', in position '( 291, 2265, 7 )' not exists in the appearances.dat and cannot be created. 
-[2024-18-06 19:09:39.665] [info] [World Change] The Dream Courts today's boss is: Malofur Mangrinder! 
-[2024-18-06 19:09:42.558] [info] [World Change] Fury Gate has arrived in Darashia! 
-[2024-18-06 19:09:42.583] [info] [World Change] Nightmare Isle is active in West of Darashia 
-[2024-18-06 19:09:42.583] [info] [World Change] Yasir has arrived in Carlin today! 
-[2024-18-06 19:09:42.948] [info] Checking Global: No duplicate values found. 
-[2024-18-06 19:09:42.949] [info] Checking GlobalStorage: No duplicate values found. 
-[2024-18-06 19:09:42.956] [info] Checking Storage: No duplicate values found. 
-[2024-18-06 19:09:42.956] [info] Spawning Hirelings 
-[2024-18-06 19:09:43.672] [info] Rashid arrived at Liberty Bay 
-[2024-18-06 19:09:43.673] [info] Loaded all modules, server starting up... 
-[2024-18-06 19:09:43.674] [info] Fire OTS server online! 
-[2024-18-06 19:09:43.674] [info] Map Loaded malofur_mangrinder.otbm (34143x33812) in 0.272 milliseconds 
-[2024-18-06 19:09:43.674] [info] Map Loaded darashia.otbm (33305x32376) in 0.139 milliseconds 
-[2024-18-06 19:09:43.674] [info] Map Loaded darashia-west.otbm (34143x33812) in 0.237 milliseconds 
-[2024-18-06 19:09:43.675] [info] Map Loaded carlin.otbm (32404x31824) in 0.296 milliseconds 
-[2024-18-06 19:09:43.944] [info] Varo Kamon has logged in. (Protocol: 1332) 
-[2024-18-06 19:09:44.011] [warning] Duplicate unique id: 12345 
-[2024-18-06 19:09:44.011] [warning] Duplicate unique id: 12345 
-[2024-18-06 19:09:44.209] [warning] Duplicate unique id: 12345 
-[2024-18-06 19:10:05.571] [info] Varo Kamon has logged out 
-[2024-18-06 19:10:06.883] [info] Varo Kamon has logged in. (Protocol: 1332) 
-> Broadcasted message: "~ KONKURS  na  FireOTS ! ~  Zrob Najlepszy Screen Z Eventu  #  Do Wygrania 20 PKT do SMS Shopu  # Masz Pomysl?, Nie Marnuj Go!.  Screeny Wrzucajcie na Nasze Forum !  Wiecej Informacji Na Stronie Glownej. Pozdrawiamy.".
-[2024-18-06 19:26:09.358] [info] Varo Kamon has logged out 
-[2024-18-06 19:26:16.594] [info] Varo Kamon has logged in. (Protocol: 1332) 
-[2024-18-06 19:27:18.703] [info] Varo Kamon has logged out 
-[2024-18-06 19:27:19.990] [info] Varo Kamon has logged in. (Protocol: 1332) 
-[2024-18-06 19:29:20.433] [info] Broadcasted message: There seems to be a big gnarlhoud gang in Zao Steppe. 
-[2024-18-06 19:29:39.434] [info] Broadcasted message: The gnarlhounds seem to multiply by the minute. 
-[2024-18-06 19:31:19.435] [info] Broadcasted message: The gnarlhounds roam free in the Zao Steppe. Watch out! 
+[2024-26-09 18:24:26.739] [error] Lua Script Error Detected
+---------------------------------------
+Interface: Scripts Interface
+Script ID: /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/actions/custom/other/rail.lua:callback
+Function: luaAddEvent
+Error Description: Argument #3 is unsafe
+Stack Trace:
+Argument #3 is unsafe
+stack traceback:
+	[C]: in function 'addEvent'
+	.../fireots/data-fire/scripts/actions/custom/other/rail.lua:64: in function <.../fireots/data-fire/scripts/actions/custom/other/rail.lua:57>
+---------------------------------------
+ 
+[2024-26-09 18:24:35.856] [error] Lua Script Error Detected
+---------------------------------------
+Interface: Scripts Interface
+Script ID: /var/www/vhosts/fireots.pl/fireots/data-fire/scripts/actions/custom/other/rail.lua:callback
+Function: luaAddEvent
+Error Description: Argument #3 is unsafe
+Stack Trace:
+Argument #3 is unsafe
+stack traceback:
+	[C]: in function 'addEvent'
+	.../fireots/data-fire/scripts/actions/custom/other/rail.lua:64: in function <.../fireots/data-fire/scripts/actions/custom/other/rail.lua:57>
+---------------------------------------
+ 
+[2024-26-09 18:24:55.690] [info] Tommy has logged out 
+[2024-26-09 18:24:57.346] [info] Tommy has logged in. (Protocol: 1332) 
+> Broadcasted message: "This game is to be fun, but play it for long hours can be harmful to health. Take care!".
+[2024-26-09 18:30:31.498] [info] The server will save all accounts within 60 seconds. You might lag or freeze for 5 seconds, please find a safe place. 
+[2024-26-09 18:31:31.489] [info] CLEAN: Removed 0 items from 0 tiles in 0 seconds 
+[2024-26-09 18:31:31.489] [info] Saving server... 
+[2024-26-09 18:31:31.689] [info] Server saved in 199.934 milliseconds. 
+[2024-26-09 18:31:31.689] [info] Server save complete. Next save in 1 hour! 

@@ -1253,7 +1253,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -1268,7 +1268,7 @@
 			<attribute key="level" value="45"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="665" article="a" name="fiery barbarian axe">
@@ -1327,7 +1327,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -1342,7 +1342,7 @@
 			<attribute key="level" value="65"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="670" article="a" name="fiery clerical mace">
@@ -1414,7 +1414,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="675" article="a" name="small enchanted sapphire">
@@ -1487,7 +1487,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -1561,7 +1561,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -1648,7 +1648,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="694" article="a" name="bed">
@@ -2275,7 +2275,7 @@
 			<attribute key="level" value="45"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="784" article="an" name="earth barbarian axe">
@@ -2334,7 +2334,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -2421,7 +2421,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="794" article="an" name="energy spike sword">
@@ -2477,7 +2477,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -2555,7 +2555,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -2642,7 +2642,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="811" article="a" name="terra mantle">
@@ -8271,7 +8271,7 @@
 			<attribute key="level" value="20"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3266" article="a" name="battle axe">
@@ -8399,7 +8399,7 @@
 			<attribute key="level" value="25"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3276" article="a" name="hatchet">
@@ -8439,7 +8439,7 @@
 			<attribute key="level" value="140"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3279" article="a" name="war hammer">
@@ -8460,7 +8460,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3280" article="a" name="fire sword">
@@ -8498,7 +8498,7 @@
 			<attribute key="level" value="55"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3282" article="a" name="morning star">
@@ -8697,7 +8697,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3297" article="a" name="serpent sword">
@@ -8767,7 +8767,7 @@
 		</attribute>
 		<attribute key="script" value="moveevent;weapon">
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3302" article="a" name="dragon lance">
@@ -8810,7 +8810,7 @@
 			<attribute key="level" value="95"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3304" article="a" name="crowbar">
@@ -9206,7 +9206,7 @@
 			<attribute key="level" value="25"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3329" article="a" name="daramian axe">
@@ -9268,7 +9268,7 @@
 			<attribute key="level" value="65"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3333" article="a" name="crystal mace">
@@ -9324,7 +9324,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3336" article="a" name="studded club">
@@ -9444,7 +9444,7 @@
 			<attribute key="level" value="65"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="3343" article="a" name="lich staff">
@@ -17966,7 +17966,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="6528" article="an" name="infernal bolt">
@@ -18093,7 +18093,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item fromid="6556" toid="6557" article="a" name="tic-tac-toe token">
@@ -19366,7 +19366,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7381" article="a" name="mammoth whopper">
@@ -19401,7 +19401,7 @@
 			<attribute key="level" value="60"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7383" article="a" name="relic sword">
@@ -19480,7 +19480,7 @@
 			<attribute key="level" value="40"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7387" article="a" name="diamond sceptre">
@@ -19565,7 +19565,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7392" article="an" name="orcish maul">
@@ -19643,7 +19643,7 @@
 			<attribute key="level" value="45"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7403" article="a" name="berserker">
@@ -19664,7 +19664,7 @@
 			<attribute key="level" value="65"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7404" article="an" name="assassin dagger">
@@ -19706,7 +19706,7 @@
 			<attribute key="level" value="70"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7406" article="a" name="blacksteel sword">
@@ -19728,7 +19728,7 @@
 			<attribute key="level" value="35"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7407" article="a" name="haunted blade">
@@ -19749,7 +19749,7 @@
 			<attribute key="level" value="30"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7408" article="a" name="wyvern fang">
@@ -19851,7 +19851,7 @@
 			<attribute key="level" value="40"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7414" article="an" name="abyss hammer">
@@ -19873,7 +19873,7 @@
 			<attribute key="level" value="60"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7415" article="a" name="cranial basher">
@@ -20047,7 +20047,7 @@
 			<attribute key="level" value="85"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7424" article="a" name="lunar staff">
@@ -20129,7 +20129,7 @@
 			<attribute key="level" value="55"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7429" article="a" name="blessed sceptre">
@@ -20278,7 +20278,7 @@
 			<attribute key="level" value="45"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7437" article="a" name="sapphire hammer">
@@ -20375,7 +20375,7 @@
 			<attribute key="level" value="25"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7450" article="a" name="hammer of prophecy">
@@ -20388,7 +20388,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7451" article="a" name="shadow sceptre">
@@ -20429,7 +20429,7 @@
 			<attribute key="level" value="30"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7453" article="an" name="executioner">
@@ -20450,7 +20450,7 @@
 			<attribute key="level" value="85"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="7454" article="a" name="glorious axe">
@@ -21788,7 +21788,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8054" article="an" name="earthborn titan armor">
@@ -21814,7 +21814,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8056" article="an" name="oceanborn leviathan armor">
@@ -21894,7 +21894,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="85"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8062" article="a" name="robe of the underworld">
@@ -22045,7 +22045,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8079" article="an" name="icy rainbow shield">
@@ -22059,7 +22059,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8080" article="a" name="sparking rainbow shield">
@@ -22092,7 +22092,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8082" article="an" name="underworld rod">
@@ -22312,7 +22312,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8099" article="a" name="dark trinity mace">
@@ -22367,7 +22367,7 @@
 			<attribute key="level" value="100"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8102" article="an" name="emerald sword">
@@ -22421,7 +22421,7 @@
 			<attribute key="level" value="100"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8105" name="remains of an earth elemental">
@@ -23475,7 +23475,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="80"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="8863" article="a" name="yalahari leg piece">
@@ -27170,7 +27170,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="10390" article="a" name="Zaoan sword">
@@ -27205,7 +27205,7 @@
 			<attribute key="level" value="55"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="10392" article="a" name="twin hooks">
@@ -27226,7 +27226,7 @@
 			<attribute key="level" value="20"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="10393" article="a" name="dead wailing widow">
@@ -28809,7 +28809,7 @@
 			<attribute key="level" value="58"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="11658" name="draken sulphur">
@@ -28952,7 +28952,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="11687" article="a" name="royal scale robe">
@@ -28985,7 +28985,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="80"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="11689" article="an" name="elite draken helmet">
@@ -31888,7 +31888,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="13994" article="a" name="depth lorica">
@@ -31946,7 +31946,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="150"/>
 			<attribute key="slot" value="feet"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="13998" article="a" name="depth scutum">
@@ -31979,7 +31979,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="185"/>
 			<attribute key="slot" value="legs"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="14000" article="an" name="ornate shield">
@@ -32001,7 +32001,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="130"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="14001" article="an" name="ornate mace">
@@ -34118,7 +34118,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="150"/>
 			<attribute key="slot" value="head"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="16110" article="a" name="prismatic armor">
@@ -34226,7 +34226,7 @@
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="150"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="16117" article="a" name="muck rod">
@@ -35984,7 +35984,7 @@
 			<attribute key="level" value="50"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="17829" article="a" name="buckle">
@@ -39813,7 +39813,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -39835,7 +39835,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -39843,9 +39843,9 @@
 		<attribute key="primarytype" value="sword weapons"/>
 		<attribute key="weaponType" value="sword"/>
 		<attribute key="skillsword" value="1"/>
-		<attribute key="attack" value="52"/>
+		<attribute key="attack" value="72"/>
 		<attribute key="extradef" value="3"/>
-		<attribute key="defense" value="31"/>
+		<attribute key="defense" value="37"/>
 		<attribute key="weight" value="5500"/>
 		<attribute key="imbuementslot" value="1">
 			<attribute key="elemental damage" value="3"/>
@@ -39855,10 +39855,10 @@
 			<attribute key="skillboost sword" value="3"/>
 		</attribute>
 		<attribute key="script" value="moveevent;weapon">
-			<attribute key="level" value="250"/>
+			<attribute key="level" value="150"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -39873,7 +39873,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20068" article="an" name="umbral slayer">
@@ -39894,7 +39894,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20069" article="an" name="umbral master slayer">
@@ -39916,7 +39916,7 @@
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20070" article="a" name="crude umbral axe">
@@ -39975,7 +39975,7 @@
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -39990,7 +39990,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20074" article="an" name="umbral chopper">
@@ -40011,7 +40011,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20075" article="an" name="umbral master chopper">
@@ -40033,7 +40033,7 @@
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20076" article="a" name="crude umbral mace">
@@ -40047,7 +40047,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -40069,7 +40069,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -40092,7 +40092,7 @@
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -40107,7 +40107,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20080" article="an" name="umbral hammer">
@@ -40128,7 +40128,7 @@
 			<attribute key="level" value="120"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20081" article="an" name="umbral master hammer">
@@ -40150,7 +40150,7 @@
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="20082" article="a" name="crude umbral bow">
@@ -41924,7 +41924,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="21179" article="a" name="glooth blade">
@@ -41941,7 +41941,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="21180" article="a" name="glooth axe">
@@ -41958,7 +41958,7 @@
 			<attribute key="level" value="75"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="21181" name="RESERVED SPRITE"/>
@@ -44021,7 +44021,7 @@ Awarded by TibiaMagazine.com.ve"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="head"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22128" article="an" name="enchanted werewolf helmet">
@@ -44085,7 +44085,7 @@ Awarded by TibiaMagazine.com.ve"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="necklace"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22133" name="remains of owin">
@@ -44514,7 +44514,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22519" article="a" name="fireheart hauberk">
@@ -44540,7 +44540,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22521" article="an" name="earthheart cuirass">
@@ -44566,7 +44566,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22523" article="an" name="earthheart platemail">
@@ -44592,7 +44592,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22525" article="a" name="thunderheart hauberk">
@@ -44618,7 +44618,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22527" article="a" name="frostheart cuirass">
@@ -44644,7 +44644,7 @@ Awarded by TibiaMisterios.com.br"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="22529" article="a" name="frostheart platemail">
@@ -46507,7 +46507,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="150"/>
 			<attribute key="slot" value="necklace"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="23529" name="ring of blue plasma">
@@ -46590,7 +46590,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="100"/>
 			<attribute key="slot" value="ring"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="23535" article="an" name="energy bar" plural="energy bars">
@@ -46649,7 +46649,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="150"/>
 			<attribute key="slot" value="necklace"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="23545" article="an" name="energy drink" plural="energy drinks">
@@ -51617,7 +51617,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -51638,7 +51638,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="27451" article="an" name="axe of destruction">
@@ -51657,7 +51657,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -51678,7 +51678,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="27453" article="a" name="mace of destruction">
@@ -51697,7 +51697,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -51718,7 +51718,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="27455" article="a" name="bow of destruction">
@@ -52491,7 +52491,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -54114,7 +54114,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="300"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="28720" name="falcon greaves">
@@ -54197,7 +54197,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="300"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="28724" article="a" name="falcon battleaxe">
@@ -54220,7 +54220,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="300"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="28725" article="a" name="falcon mace">
@@ -54243,7 +54243,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="300"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -55399,7 +55399,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="230"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="29420" article="a" name="shoulder plate">
@@ -55443,7 +55443,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -55466,7 +55466,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="200"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -55608,7 +55608,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="180"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="29431" article="a" name="spirit guide">
@@ -57215,7 +57215,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="220"/>
 			<attribute key="slot" value="feet"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="30395" name="cobra club">
@@ -57236,7 +57236,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="220"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -57258,7 +57258,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="220"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -57282,7 +57282,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="270"/>
 			<attribute key="slot" value="head"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="30398" name="cobra sword">
@@ -57303,7 +57303,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="220"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -58962,7 +58962,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="230"/>
 			<attribute key="slot" value="head"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="31578" article="a" name="bear skin">
@@ -59023,7 +59023,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="220"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -59188,7 +59188,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="250"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="31615" article="a" name="pick">
@@ -61630,7 +61630,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="180"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="32617" article="a" name="fabulous legs">
@@ -63870,7 +63870,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="400"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -63895,7 +63895,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="400"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34084" article="a" name="soulbiter">
@@ -63921,7 +63921,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="400"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -63946,7 +63946,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="400"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34086" article="a" name="soulcrusher">
@@ -63972,7 +63972,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="400"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -63997,7 +63997,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="400"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34088" article="a" name="soulbleeder">
@@ -64209,7 +64209,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="slot" value="feet"/>
 			<attribute key="level" value="400"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34098" name="pair of soulstalkers">
@@ -64246,7 +64246,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="slot" value="shield"/>
 			<attribute key="level" value="400"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34100" name="Katex' blood">
@@ -64562,7 +64562,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="250"/>
 			<attribute key="slot" value="hand"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34155" article="a" name="lion longsword">
@@ -64585,7 +64585,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -64631,7 +64631,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="270"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="34158" article="a" name="lion amulet">
@@ -64946,7 +64946,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -64969,7 +64969,7 @@ hands of its owner. Granted by TibiaRoyal.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -65791,7 +65791,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="150"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="35515" article="a" name="throwing axe">
@@ -65813,7 +65813,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="150"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -65825,7 +65825,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="130"/>
 			<attribute key="slot" value="legs"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="35517" name="bast legs">
@@ -67236,7 +67236,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="270"/>
 			<attribute key="slot" value="shield"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36657" article="a" name="eldritch claymore">
@@ -67259,7 +67259,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36658" article="a" name="gilded eldritch claymore">
@@ -67283,7 +67283,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36659" article="a" name="eldritch warmace">
@@ -67306,7 +67306,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36660" article="a" name="gilded eldritch warmace">
@@ -67330,7 +67330,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -67354,7 +67354,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36662" article="a" name="gilded eldritch greataxe">
@@ -67378,7 +67378,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 			<attribute key="level" value="270"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36663" article="a" name="eldritch cuirass">
@@ -67398,7 +67398,7 @@ former students at the Noodles Academy. Awarded by TibiaLabs.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="250"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="36664" article="a" name="eldritch bow">
@@ -71237,7 +71237,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="400"/>
 			<attribute key="slot" value="armor"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="39148" article="a" name="spiritthorn helmet">
@@ -71262,7 +71262,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="400"/>
 			<attribute key="slot" value="head"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="39149" article="an" name="alicorn headguard">
@@ -71412,7 +71412,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="300"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -71435,7 +71435,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="300"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -71458,7 +71458,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="300"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -71663,7 +71663,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="400"/>
 			<attribute key="slot" value="ring"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="39178" article="a" name="charged spiritthorn ring">
@@ -71686,7 +71686,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="400"/>
 			<attribute key="slot" value="ring"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="39179" article="a" name="spiritthorn ring">
@@ -72027,7 +72027,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="necklace"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="39234" article="an" name="enchanted turtle amulet">
@@ -72046,7 +72046,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="200"/>
 			<attribute key="slot" value="necklace"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="39235" article="a" name="turtle amulet">
@@ -73829,7 +73829,7 @@ Granted by TibiaGoals.com"/>
 		<attribute key="script" value="moveevent">
 			<attribute key="level" value="250"/>
 			<attribute key="slot" value="head"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="40589" name="stitched mutant hide legs">
@@ -75027,7 +75027,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -75050,7 +75050,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -75073,7 +75073,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -75096,7 +75096,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -75119,7 +75119,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -75142,7 +75142,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 			<attribute key="slot" value="hand"/>
 		</attribute>
 	</item>
@@ -75167,7 +75167,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="43871" article="a" name="grand sanguine razor">
@@ -75191,7 +75191,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="sword"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="43872" article="a" name="sanguine bludgeon">
@@ -75215,7 +75215,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="43873" article="a" name="grand sanguine bludgeon">
@@ -75239,7 +75239,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="club"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="43874" article="a" name="sanguine battleaxe">
@@ -75263,7 +75263,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="43875" article="a" name="grand sanguine battleaxe">
@@ -75287,7 +75287,7 @@ Granted by TibiaGoals.com"/>
 			<attribute key="level" value="600"/>
 			<attribute key="unproperly" value="true"/>
 			<attribute key="weaponType" value="axe"/>
-			<attribute key="vocation" value="Knight;true, Elite Knight"/>
+			<attribute key="vocation" value="Knight;true, Elite Knight, Lancelot"/>
 		</attribute>
 	</item>
 	<item id="43876" article="a" name="sanguine legs">

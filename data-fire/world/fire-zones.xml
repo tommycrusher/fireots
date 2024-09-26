@@ -1,2 +1,4 @@
 <?xml version="1.0"?>
-<zones />
+<zones>
+	<zone name="1" zoneid="1" />
+</zones>
