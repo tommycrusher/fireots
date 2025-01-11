@@ -2,8 +2,8 @@ local dracoInvasion = Action()
 
 function dracoInvasion.onUse(cid, item, frompos, item2, topos)
 	if getPlayerAccess(cid) ~=0 then
-		topleft={x=132, y=2116, z=7}
-		bottonright={x=154, y=2130, z=7}
+		topleft={x=138, y=2072, z=7}
+		bottonright={x=175, y=2089, z=7}
 		maxmonsters= 10
 
 		checking={x=topleft.x, y=topleft.y, z=topleft.z} --Do Not Change
@@ -41,4 +41,5 @@ function dracoInvasion.onUse(cid, item, frompos, item2, topos)
 	end
 	return true
 end
+dracoInvasion:aid(9003)
 dracoInvasion:register()

@@ -10,5 +10,5 @@ function snakeSys.onUse(cid, item, frompos, item2, topos)
 		doPlayerSendTextMessage(cid,25,'Please wait.')
 	end
 end
-snakeSys:id(9564)
+snakeSys:id(8648)
 snakeSys:register()

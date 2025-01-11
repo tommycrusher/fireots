@@ -8,5 +8,5 @@ function replica.onUse(cid, item, fromPosition, itemEx, toPosition)
             end
         end
 end
-replica:id(12318)
+replica:aid(12318)
 replica:register()

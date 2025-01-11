@@ -1,54 +1,39 @@
--- pvp arena lever
+local setting = {
+	centerRoom = { x = 1046, y = 988, z = 9 },
+	range = 10,
+}
 
-function onUse(cid, item, frompos, item2, topos)
-	if item.uid == 7001 and item.itemid == 1945 then
-		player1pos = {x=1040, y=987, z=8, stackpos=253}
-		player1 = getThingfromPos(player1pos)
+local playerPositions = {
+	{ fromPos = { x = 1040, y = 987, z = 8 }, toPos = { x = 1041, y = 988, z = 9 } }, -- Player 2
+	{ fromPos = { x = 1040, y = 989, z = 8 }, toPos = { x = 1052, y = 988, z = 9 } }, -- Player 1
+}
 
-		player2pos = {x=1040, y=989, z=8, stackpos=253}
-		player2 = getThingfromPos(player2pos)
+local positions = {}
+local arenalever = Action()
 
-		if player1.itemid > 0 and player2.itemid > 0 then
-			arenalevel = 200
-			player1level = getPlayerLevel(player1.uid)
-			player2level = getPlayerLevel(player2.uid)
-
-			if player1level >= arenalevel and player2level >= arenalevel then
-				for arenax = 1041, 1052 do
-					for arenay = 985, 991 do
-						arenapos = {x=arenax, y=arenay, z=9, stackpos=253}
-						arenacreature = getThingfromPos(arenapos)
-
-						if arenacreature.itemid > 0 then
-							doPlayerSendCancel(cid,"Wait for current duel to end.")
-							return 1
-						end
-					end
-				end
-
-				nplayer1pos = {x=1043, y=988, z=9}
-				nplayer2pos = {x=1050, y=988, z=9}
-
-				doSendMagicEffect(player1pos,2)
-				doSendMagicEffect(player2pos,2)
-
-				doTeleportThing(player1.uid,nplayer1pos)
-				doTeleportThing(player2.uid,nplayer2pos)
-
-				doSendMagicEffect(nplayer1pos,10)
-				doSendMagicEffect(nplayer2pos,10)
-
-				doPlayerSendTextMessage(player1.uid,18,"FIGHT!")
-				doPlayerSendTextMessage(player2.uid,18,"FIGHT!")
+function arenalever.onUse(player, item, fromPosition, target, toPosition, monster, isHotkey)
+	if toPosition == Position(1040, 988, 8) and item.uid == 7001 and item.itemid == 1945 then
+		if roomIsOccupied(setting.centerRoom, false, setting.range, setting.range) then
+			player:say("Please wait for the fighters come out of the arena.", TALKTYPE_MONSTER_SAY)
+			return true
+		end
+		for i = 1, #playerPositions do
+			local creature = Tile(playerPositions[i].fromPos):getTopCreature()
+			if creature and creature:getPlayer() then
+				creature:teleportTo(playerPositions[i].toPos)
+				creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			elseif not creature then
+				player:say("You need 2 players for enter in the arena.", TALKTYPE_MONSTER_SAY)
+				return true
 			else
-				doPlayerSendCancel(cid,"Both fighters must have level 200.")
+				player:say("You need 2 players for enter in the arena.", TALKTYPE_MONSTER_SAY)
+				return true
 			end
-		else
-			doPlayerSendCancel(cid,"You need 2 players for a duel.")
 		end
 	else
-		return FALSE
-   	end
-
-	return TRUE
+		return false
+	end
+	return true
 end
+arenalever:uid(7001)
+arenalever:register()

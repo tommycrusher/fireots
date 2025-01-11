@@ -60,7 +60,7 @@ function rail.onUse(player, item, fromPosition, target, toPosition, isHotkey) --
 		end
 		doTeleportThing(player, fromPosition, false)
 		player:setMoveLocked(true)--doCreatureSetNoMove(cid, true)
-	doChangeSpeed(cid, PLAYERSPEED)
+	doChangeSpeed(player, PLAYERSPEED)
 		addEvent(moveTrain, SPEED, player, fromPosition, item.actionid-500)
 		player:setMoveLocked(false)
 		return true

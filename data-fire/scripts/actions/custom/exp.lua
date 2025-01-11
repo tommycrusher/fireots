@@ -13,5 +13,5 @@ if getPlayerLevel(cid) < 500 then
  doCreatureSay(cid, "You must be lower level then 500 to use this scroll", TALKTYPE_ORANGE_1)
  end
  end
-expScroll:id(7720)
+expScroll:id(8176)
 expScroll:register()

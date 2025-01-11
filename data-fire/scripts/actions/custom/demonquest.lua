@@ -13,5 +13,5 @@ function demonicQuest.onUse(cid, item, frompos, item2, topos)
 	end
 	return TRUE
 end
-demonicQuest:uid(3002)
+demonicQuest:aid(3002)
 demonicQuest:register()

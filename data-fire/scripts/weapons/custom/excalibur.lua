@@ -24,6 +24,6 @@ local excalibur = Weapon(WEAPON_SWORD)
 excalibur.onUseWeapon = function(player, variant)
 	return combat:execute(player, variant)
 end
-excalibur:id(8980)
+excalibur:id(8152)
 --starwand:shootType(CONST_ANI_HOLY)
 excalibur:register()

@@ -11,5 +11,5 @@ function ownBP.onUse(cid, item, fromPosition, itemEx, toPosition)
   end
   
 end
-ownBP:aid(owner)
+ownBP:aid(getPlayerGUID(cid))
 ownBP:register()
