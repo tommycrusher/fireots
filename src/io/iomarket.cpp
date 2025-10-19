@@ -179,7 +179,7 @@ void IOMarket::processExpiredOffers(DBResult_ptr result, bool) {
 					}
 
 					if (tier != 0) {
-						item->setAttribute(ItemAttribute_t::TIER, tier);
+						item->setTier(tier);
 					}
 
 					tmpAmount -= stackCount;
@@ -199,7 +199,7 @@ void IOMarket::processExpiredOffers(DBResult_ptr result, bool) {
 					}
 
 					if (tier != 0) {
-						item->setAttribute(ItemAttribute_t::TIER, tier);
+						item->setTier(tier);
 					}
 				}
 			}
