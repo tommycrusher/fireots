@@ -1,4 +1,4 @@
-# Define and setup CanaryLib main library target
+# Define and setup FireotsLib main library target
 add_library(${PROJECT_NAME}_lib)
 setup_target(${PROJECT_NAME}_lib)
 
