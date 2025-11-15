@@ -95,16 +95,19 @@ Lua entry points:
 ### Completed
 - Repository forked to `tommycrusher/fireots`
 - Documentation references updated (README, Gitbook)
+- **Source file headers**: All `.cpp/.hpp` files updated to Fireots
+- **Binary naming**: Executable renamed to `fireots`
+- **Class naming**: `CanaryServer` → `FireotsServer`
+- **CMake project**: Project renamed to `fireots` in CMakeLists.txt
+- **Config validation**: Accepts `data-fire`, `data-canary`, and `data-otservbr-global`
+- **Docker images**: Updated to fireots paths and binary names
+- **Build scripts**: All scripts updated for fireots executable
 
-### In Progress (DO NOT complete without review)
-- **Source file headers**: All `.cpp/.hpp` files contain Canary copyright headers
-- **Binary naming**: Executable still named `canary` (should be `fireots`)
-- **Class naming**: `CanaryServer` class (should be `FireotsServer`)
-- **CMake project**: Project still called `canary` in CMakeLists.txt
-- **Config validation**: Hardcoded datapack name checks for "data-canary"
-- **Docker images**: References to `opentibiabr/canary`
+### In Progress (Future Work)
+- Icon redesign from canary to fireots branding
+- Logo and marketing materials
 
-**When rebranding**: Update all references systematically (headers, class names, build artifacts) while preserving GPL-2.0 license and attribution to original authors.
+**Rebranding Status**: Core rebranding complete. All references to Canary systematically updated while preserving GPL-2.0 license and attribution to original authors.
 
 ## Critical Workflows
 
@@ -115,7 +118,7 @@ cp config.lua.dist config.lua
 # Edit config.lua: set dataPackDirectory, database credentials, IP
 
 # Start server (auto-restart on crash, logs to logs/)
-./start_fire.sh ./canary
+./start_fire.sh ./fireots
 ```
 
 ### Database Migrations

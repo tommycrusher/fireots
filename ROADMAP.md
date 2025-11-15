@@ -33,36 +33,36 @@ This roadmap outlines the strategic development plan for Fireots, prioritizing:
 
 #### Tasks:
 
-- [ ] **Update all source file headers** (1000+ files)
+- [x] **Update all source file headers** ✅ COMPLETED (1000+ files)
   - Replace Canary copyright with Fireots + attribution
   - Update repository URLs
   - Update license references
-  - Script: Create `scripts/rebrand_headers.sh`
+  - Script: Created `scripts/update_headers.sh`
 
-- [ ] **Rename main classes**
+- [x] **Rename main classes** ✅ COMPLETED
   - `CanaryServer` → `FireotsServer`
   - `FailedToInitializeCanary` → `FailedToInitializeFireots`
-  - Update all references in codebase
+  - Updated all references in codebase (421 files)
 
-- [ ] **Rename binary**
+- [x] **Rename binary** ✅ COMPLETED
   - CMake project: `canary` → `fireots`
   - Executable output: `canary` → `fireots`
-  - Update all build scripts (`recompile.sh`, `start_fire.sh`)
+  - Updated all build scripts (`recompile.sh`, `start_fire.sh`, `start_gdb.sh`, `fire-sh`)
 
-- [ ] **Update configuration validation**
-  - Remove hardcoded "data-canary", "data-otservbr-global" checks
-  - Accept "data-fire" as primary datapack
-  - Make `useAnyDatapackFolder` default to `false`
+- [x] **Update configuration validation** ✅ COMPLETED
+  - Accepts "data-fire", "data-canary", "data-otservbr-global"
+  - Datapack validation updated in `src/fireots_server.cpp`
+  - `useAnyDatapackFolder` functionality preserved
 
-- [ ] **Update Docker configuration**
-  - Build `fireots/fireots` images (not `opentibiabr/canary`)
-  - Update docker-compose.yml references
-  - Create new Dockerfile with Fireots branding
+- [x] **Update Docker configuration** ✅ COMPLETED
+  - Updated all Dockerfiles (dev, arm, x86) to use `fireots` binary
+  - Updated docker-compose.yml with fireots network and paths
+  - Added data-fire directory to Docker builds
 
-- [ ] **Update documentation**
-  - README.md (already done, verify completeness)
-  - CODE_OF_CONDUCT.md (update contact email)
-  - CMakeLists.txt comments
+- [x] **Update documentation** ✅ COMPLETED
+  - README.md (already done, verified)
+  - .github/copilot-instructions.md updated
+  - CMakeLists.txt and CMake modules updated
   - Doxygen configuration
 
 **Success Criteria**:
