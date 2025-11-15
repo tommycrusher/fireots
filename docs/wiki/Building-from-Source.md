@@ -474,5 +474,5 @@ See `docker/Dockerfile.dev` for containerized build example.
 
 ---
 
-**Last Updated**: November 15, 2025  
+**Last Updated**: November 15, 2025
 **Fireots Version**: 1.5.0-rebrand

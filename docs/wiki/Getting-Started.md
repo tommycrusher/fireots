@@ -187,7 +187,7 @@ Connect to your database and create a test account:
 USE fireots;
 
 -- Create account
-INSERT INTO accounts (name, password, email) 
+INSERT INTO accounts (name, password, email)
 VALUES ('test', SHA1('test'), 'test@fireots.local');
 
 -- Create player character
@@ -249,6 +249,6 @@ Based on [opentibiabr/canary](https://github.com/opentibiabr/canary) - credit to
 
 ---
 
-**Estimated completion time**: 30 minutes  
-**Last updated**: November 15, 2025  
+**Estimated completion time**: 30 minutes
+**Last updated**: November 15, 2025
 **Fireots version**: 1.5.0-rebrand
