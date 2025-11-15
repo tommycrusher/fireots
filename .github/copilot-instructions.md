@@ -103,11 +103,16 @@ Lua entry points:
 - **Docker images**: Updated to fireots paths and binary names
 - **Build scripts**: All scripts updated for fireots executable
 
-### In Progress (Future Work)
-- Icon redesign from canary to fireots branding
-- Logo and marketing materials
+### Completed (Icon & Branding)
+- Icon redesign from canary to fireots branding ✅
+  - New fire/phoenix themed icon (SVG source + multi-format outputs)
+  - Comprehensive branding guidelines documented
+  - Automated icon generation script created
 
-**Rebranding Status**: Core rebranding complete. All references to Canary systematically updated while preserving GPL-2.0 license and attribution to original authors.
+### Future Work
+- Logo and marketing materials (full logo with text, banners, social media assets)
+
+**Rebranding Status**: Core rebranding complete including new icon. All references to Canary systematically updated while preserving GPL-2.0 license and attribution to original authors.
 
 ## Critical Workflows
 
