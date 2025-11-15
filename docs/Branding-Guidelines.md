@@ -89,9 +89,12 @@ Fireots uses **two versions** of the phoenix logo optimized for different use ca
 - Sizes: 16px to 256px
 
 **Formats**:
-- Primary: SVG (`cmake/fireots_icon.svg`)
-- Windows: ICO (`cmake/fireots.ico`) - 16x16, 32x32, 48x48, 64x64
-- Web: PNG (`docs/assets/fireots-icon-*.png`)
+- **Full Detail**: PNG (`docs/assets/fireots-logo-full.png`) - 1200x673 photorealistic
+- **Vector Detail**: SVG (`docs/assets/fireots-phoenix-logo.svg`) - 600x600 hand-crafted
+- **Simplified Icon**: SVG (`cmake/fireots_icon.svg`) - 64x64 optimized
+- **Windows**: ICO (`cmake/fireots.ico`) - 16,32,48,64 multi-resolution
+- **Web Icons**: PNG (`docs/assets/fireots-icon-*.png`) - 7 sizes (16-512px)
+- **Favicon**: ICO (`docs/assets/favicon.ico`) - 16,32 for websites
 
 ### Logo Variants
 
