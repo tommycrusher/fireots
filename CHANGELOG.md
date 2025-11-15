@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0-rebrand] - 2025-11-15
+
 ### Added
 - Comprehensive project documentation (FIREOTS.md, ROADMAP.md, UPSTREAM_INTEGRATION.md)
 - AI agent instructions (.github/copilot-instructions.md)
