@@ -31,19 +31,19 @@ check_architecture() {
 	fi
 }
 
-# Function to configure Canary
-setup_canary() {
+# Function to configure Fireots
+setup_fireots() {
 	if [ -d "build" ]; then
 		cd build
 	else
 		mkdir -p build && cd build
-		info "Canary has already been configured, skipping this step..."
+		info "Fireots has already been configured, skipping this step..."
 	fi
 }
 
-# Function to build Canary
-build_canary() {
-	info "Configuring Canary..."
+# Function to build Fireots
+build_fireots() {
+	info "Configuring Fireots..."
 	if [[ $ARCHITECTUREVALUE == 1 ]]; then
 		export VCPKG_FORCE_SYSTEM_BINARIES=1
 	fi
@@ -90,13 +90,13 @@ build_canary() {
 
 # Function to move the generated executable
 move_executable() {
-	local executable_name="canary"
+	local executable_name="fireots"
 	cd ..
 	if [ -e "$executable_name" ]; then
 		info "Saving old build"
 		mv ./"$executable_name" ./"$executable_name".old
 	fi
-	info "Moving the generated executable to the canary folder directory..."
+	info "Moving the generated executable to the fireots folder directory..."
 	cp ./build/linux-release/bin/"$executable_name" ./"$executable_name"
 	info "Build completed successfully!"
 }
@@ -105,9 +105,9 @@ move_executable() {
 main() {
 	check_command "cmake"
 	check_architecture
-	setup_canary
+	setup_fireots
 
-	if build_canary; then
+	if build_fireots; then
 		move_executable
 	else
 		echo -e "\033[31m[ERROR]\033[0m Build failed..."

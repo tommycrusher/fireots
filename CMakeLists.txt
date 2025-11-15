@@ -22,12 +22,12 @@ set(VCPKG_FEATURE_FLAGS "versions")
 set(VCPKG_BUILD_TYPE "release")
 
 # *****************************************************************************
-# Project canary
+# Project fireots
 # *****************************************************************************
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    project(canary-debug)
+    project(fireots-debug)
 else()
-    project(canary)
+    project(fireots)
 endif()
 
 
