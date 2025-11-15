@@ -4,7 +4,7 @@ This directory contains legacy datapacks that have been superseded by `data-fire
 
 ## data-canary-legacy/
 
-**Archived:** 2025-11-15  
+**Archived:** 2025-11-15
 **Reason:** Obsolete demo/example code
 
 ### Analysis Summary

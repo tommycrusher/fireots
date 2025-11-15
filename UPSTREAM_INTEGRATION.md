@@ -494,3 +494,130 @@ git diff
 git add <file>
 git cherry-pick --continue
 ```
+
+---
+
+## Latest Analysis (2025-11-15)
+
+### Automated Commit Categorization
+
+**Analysis Script**: `scripts/analyze_upstream.sh`  
+**Output**: `upstream_analysis_20251115.txt`
+
+#### Distribution
+
+| Category | Count | %  | Priority |
+|----------|-------|----| ---------|
+| 🔴 CRITICAL | 46 | 7.4% | **IMMEDIATE** |
+| 🟠 HIGH | 154 | 24.7% | **THIS WEEK** |
+| 🟡 MEDIUM | 124 | 19.9% | **THIS MONTH** |
+| 🟢 LOW | 5 | 0.8% | **OPTIONAL** |
+| ⚪ OTHER | 294 | 47.2% | **EVALUATE** |
+| **TOTAL** | **623** | **100%** | - |
+
+#### Critical Commits (46 total)
+
+Top security/crash fixes identified:
+
+1. `0d253f833` - **Gamestore exploit fix** (duplicate purchases)
+2. `52cd7c32b` - nullptr checks in game functions
+3. `eea450fd1` - House auction nullptr
+4. `fc4ad93d5` - Player trade nullptr
+5. `73fff359a` - InstantSpell nullptr
+6. `cf8700680` - Bank deposit nullptr
+7. `e2b898e16` - ReplaceThing bounds checks
+8. `995bf7f33` - Combat/spell tile nullptr
+9. `873b275b3` - Cyclopedia tracker crash (uint8_t limit)
+10. `9a8f7f6a5` - Shop cleanup crash
+
+**Action**: Create `integration/upstream-critical` branch and cherry-pick these 10 commits first.
+
+#### High Priority (154 total)
+
+Categories:
+- Player systems: 45 commits (login, stash, hotkeys, quests)
+- Monster logic: 28 commits (movement, spawning, AI)
+- Item systems: 31 commits (market, trade, tiers)
+- Quest fixes: 18 commits (tracking, persistence, requirements)
+- Performance: 12 commits (memory, optimization)
+- Other fixes: 20 commits
+
+**Action**: Review and selectively cherry-pick after critical fixes complete.
+
+#### Medium Priority (124 total)
+
+Notable features:
+- `6777872e4` - Custom loot system for monsters
+- `dacc38f97` - Loot highlight visual effect
+- `86c5a7df4` - Test migration to GoogleTest (⚠️ we use boost::ut)
+- `3c7b7debb` - Player storage optimization
+
+**Action**: Evaluate each for Fireots compatibility and value.
+
+### Integration Timeline (Proposed)
+
+```mermaid
+gantt
+    title Upstream Integration Roadmap
+    dateFormat  YYYY-MM-DD
+    section Phase 1
+    Critical Fixes (46)    :2025-11-16, 2d
+    section Phase 2  
+    High Priority (50-100) :2025-11-18, 5d
+    section Phase 3
+    Features (20-40)       :2025-11-23, 14d
+    section Phase 4
+    Infrastructure (5-10)  :2025-12-07, 7d
+```
+
+**Estimated completion**: December 14, 2025 (4 weeks)  
+**Target integration**: 121-196 commits (19-31% of total)
+
+### Next Steps
+
+1. ✅ Fetch upstream (`git fetch upstream`) - DONE
+2. ✅ Run analysis script - DONE
+3. ✅ Categorize commits - DONE
+4. ⏳ Create integration branch: `git checkout -b integration/upstream-critical`
+5. ⏳ Cherry-pick critical commits (start with gamestore exploit)
+6. ⏳ Test each integration thoroughly
+7. ⏳ Document in CHANGELOG.md
+8. ⏳ Merge to main after validation
+
+### Command Reference
+
+```bash
+# Create integration branch
+git checkout -b integration/upstream-critical
+
+# Cherry-pick specific commit
+git cherry-pick 0d253f833  # gamestore exploit
+
+# If conflicts (expected due to Fireots rebranding):
+git status  # See conflicts
+# Resolve manually (keep Fireots naming)
+git add <resolved-files>
+git cherry-pick --continue
+
+# Test build
+cmake --build build/linux-release
+
+# Run server
+./build/linux-release/fireots
+
+# If successful, continue with next commit
+git cherry-pick 52cd7c32b  # nullptr checks
+
+# When batch complete:
+git push origin integration/upstream-critical
+# Create PR for review
+```
+
+### Progress Tracking
+
+- [ ] Phase 1: Critical (46 commits) - **0/46 complete**
+- [ ] Phase 2: High Priority (50-100 commits) - **0/100 complete**
+- [ ] Phase 3: Features (20-40 commits) - **0/40 complete**
+- [ ] Phase 4: Infrastructure (5-10 commits) - **0/10 complete**
+
+**Last Updated**: 2025-11-15
