@@ -6,8 +6,8 @@ This guide helps you migrate from OTServBR-Global to Fireots.
 
 Fireots is forked from **Canary**, which itself is a fork of **OTServBR-Global**. Most OTServBR configurations are compatible, but some modernization changes are required.
 
-**Migration Difficulty**: ⭐⭐⭐☆☆ (Moderate)  
-**Estimated Time**: 1-2 hours  
+**Migration Difficulty**: ⭐⭐⭐☆☆ (Moderate)
+**Estimated Time**: 1-2 hours
 **Data Loss Risk**: Low (with backups)
 
 ---
@@ -608,6 +608,6 @@ Your OTServBR server is now running on Fireots.
 
 ---
 
-**Last Updated**: November 15, 2025  
-**Fireots Version**: 1.5.0-rebrand  
+**Last Updated**: November 15, 2025
+**Fireots Version**: 1.5.0-rebrand
 **OTServBR Compatibility**: Based on Canary fork (upstream tracking)

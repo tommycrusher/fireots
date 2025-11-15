@@ -115,18 +115,18 @@ function lever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     if item.itemid ~= 1945 then
         return false
     end
-    
+
     -- Define teleport destination
     local destination = Position(100, 100, 7)
-    
+
     -- Teleport player
     player:teleportTo(destination)
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have been teleported!")
-    
+
     -- Toggle lever
     item:transform(1946)  -- Change to "used" lever graphic
     item:decay()  -- Auto-reset after some time
-    
+
     return true
 end
 
@@ -165,7 +165,7 @@ Or use auto-discovery by directory structure (recommended).
     <!-- Health and combat -->
     <health now="7200" max="7200"/>
     <look type="35" head="0" body="0" legs="0" feet="0" corpse="5995"/>
-    
+
     <!-- Loot -->
     <loot>
         <item name="gold coin" countmax="198" chance="100000"/>
@@ -175,7 +175,7 @@ Or use auto-discovery by directory structure (recommended).
         <item name="fire sword" chance="7500"/>
         <item name="molten plate" chance="5000"/>
     </loot>
-    
+
     <!-- Abilities and attacks -->
     <attacks>
         <attack name="melee" interval="2000" min="-250" max="-450"/>
@@ -187,7 +187,7 @@ Or use auto-discovery by directory structure (recommended).
             <attribute key="shootEffect" value="fire"/>
         </attack>
     </attacks>
-    
+
     <!-- Defenses -->
     <defenses armor="45" defense="60">
         <defense name="healing" interval="2000" chance="15" min="150" max="250">
@@ -197,24 +197,24 @@ Or use auto-discovery by directory structure (recommended).
             <attribute key="areaEffect" value="redshimmer"/>
         </defense>
     </defenses>
-    
+
     <!-- Immunities -->
     <immunities>
         <immunity fire="1"/>
         <immunity paralyze="1"/>
         <immunity invisible="1"/>
     </immunities>
-    
+
     <!-- Behavior -->
     <voices interval="5000" chance="10">
         <voice sentence="BURN!"/>
         <voice sentence="Feel my wrath!"/>
     </voices>
-    
+
     <summons maxSummons="2">
         <summon name="fire elemental" interval="2000" chance="15"/>
     </summons>
-    
+
     <!-- Flags -->
     <flags>
         <flag summonable="0"/>
@@ -312,9 +312,9 @@ local function creatureSayCallback(cid, type, msg)
     if not npcHandler:isFocused(cid) then
         return false
     end
-    
+
     local player = Player(cid)
-    
+
     if msgcontains(msg, "quest") then
         if player:getStorageValue(1000) < 1 then
             npcHandler:say("I need you to retrieve a {magic sword} from the dragon cave. Will you help me?", cid)
@@ -328,7 +328,7 @@ local function creatureSayCallback(cid, type, msg)
         npcHandler:say("Thank you! Take this map. It shows the cave location.", cid)
         npcHandler.topic[cid] = 0
     end
-    
+
     return true
 end
 
@@ -363,10 +363,10 @@ function fireBlade.onUse(player, item, fromPosition, target, toPosition, isHotke
     if not target:isCreature() then
         return false
     end
-    
+
     -- Fire damage on hit
     doTargetCombatHealth(0, target, COMBAT_FIREDAMAGE, -100, -200, CONST_ME_FIREATTACK)
-    
+
     return true
 end
 
@@ -480,17 +480,17 @@ local questChest = Action()
 function questChest.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     local questStorage = 5000
     local rewardItem = 2160  -- Crystal coin
-    
+
     if player:getStorageValue(questStorage) == 1 then
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The chest is empty.")
         return true
     end
-    
+
     -- Give reward
     player:addItem(rewardItem, 1)
     player:setStorageValue(questStorage, 1)  -- Mark as looted
     player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a crystal coin!")
-    
+
     return true
 end
 
@@ -555,7 +555,7 @@ data-fire/scripts/
    ```lua
    -- Bad
    if player:getStorageValue(1000) == 1 and player:getStorageValue(1000) == 1 then
-   
+
    -- Good
    local questState = player:getStorageValue(1000)
    if questState == 1 and questState == 1 then
@@ -588,5 +588,5 @@ data-fire/scripts/
 
 ---
 
-**Last Updated**: November 15, 2025  
+**Last Updated**: November 15, 2025
 **Fireots Version**: 1.5.0-rebrand

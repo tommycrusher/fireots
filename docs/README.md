@@ -94,16 +94,16 @@ We welcome documentation improvements! When contributing:
 ```cpp
 /**
  * @brief Brief description of the function
- * 
+ *
  * Detailed description with usage notes and examples.
  * Can span multiple lines.
- * 
+ *
  * @param player The player performing the action
  * @param item The item being used
  * @return true if action succeeded, false otherwise
- * 
+ *
  * @throws std::runtime_error if player is invalid
- * 
+ *
  * @example
  * auto result = useItem(player, item);
  * if (result) {
@@ -165,5 +165,5 @@ Documentation is licensed under GPL-2.0, same as the Fireots project.
 
 ---
 
-**Last Updated**: November 15, 2025  
+**Last Updated**: November 15, 2025
 **Fireots Version**: 1.5.0-rebrand

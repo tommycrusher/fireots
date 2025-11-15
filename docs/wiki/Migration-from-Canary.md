@@ -6,8 +6,8 @@ This guide helps you migrate an existing Canary server to Fireots.
 
 Fireots is a fork of Canary with rebranding and custom features. Most Canary configurations and datapacks are **compatible**, but some changes are required.
 
-**Migration Difficulty**: ⭐⭐☆☆☆ (Easy)  
-**Estimated Time**: 30-60 minutes  
+**Migration Difficulty**: ⭐⭐☆☆☆ (Easy)
+**Estimated Time**: 30-60 minutes
 **Data Loss Risk**: Low (with backups)
 
 ---
@@ -441,6 +441,6 @@ Your Canary server is now running on Fireots! Report any issues on GitHub.
 
 ---
 
-**Last Updated**: November 15, 2025  
-**Fireots Version**: 1.5.0-rebrand  
+**Last Updated**: November 15, 2025
+**Fireots Version**: 1.5.0-rebrand
 **Canary Compatibility**: v3.0+ (623 commits behind upstream)

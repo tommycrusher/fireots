@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Fireots Icon - Phoenix/Fire Theme -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="fireGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6600;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff3300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="emberGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffaa00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6600;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle (dark) -->
+  <circle cx="32" cy="32" r="30" fill="#1a1a1a" stroke="#333333" stroke-width="2"/>
+
+  <!-- Flame base (bottom) -->
+  <path d="M 32 50 Q 25 45, 22 38 Q 20 32, 22 26 Q 24 22, 28 20 L 32 18 L 36 20 Q 40 22, 42 26 Q 44 32, 42 38 Q 39 45, 32 50 Z"
+        fill="url(#fireGradient)" opacity="0.9"/>
+
+  <!-- Inner flame (middle) -->
+  <path d="M 32 42 Q 28 38, 27 32 Q 26 28, 28 24 L 32 22 L 36 24 Q 38 28, 37 32 Q 36 38, 32 42 Z"
+        fill="url(#emberGradient)" opacity="0.8"/>
+
+  <!-- Flame tip (top) -->
+  <path d="M 32 24 Q 30 22, 30 18 Q 30 15, 32 14 Q 34 15, 34 18 Q 34 22, 32 24 Z"
+        fill="#ffdd00" opacity="0.9"/>
+
+  <!-- Embers/particles -->
+  <circle cx="24" cy="28" r="1.5" fill="#ffaa00" opacity="0.7"/>
+  <circle cx="40" cy="30" r="1.2" fill="#ffaa00" opacity="0.6"/>
+  <circle cx="28" cy="36" r="1" fill="#ff6600" opacity="0.5"/>
+  <circle cx="38" cy="34" r="1.3" fill="#ff6600" opacity="0.6"/>
+
+  <!-- Letter "F" stylized (optional - can be removed) -->
+  <text x="32" y="48" font-family="Arial, sans-serif" font-size="16" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" opacity="0.3">F</text>
+</svg>
