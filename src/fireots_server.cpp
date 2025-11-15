@@ -327,11 +327,11 @@ void FireotsServer::loadModules() {
 	// If "USE_ANY_DATAPACK_FOLDER" is set to true then you can choose any datapack folder for your server
 	const auto useAnyDatapack = g_configManager().getBoolean(USE_ANY_DATAPACK_FOLDER, __FUNCTION__);
 	auto datapackName = g_configManager().getString(DATA_DIRECTORY, __FUNCTION__);
-	if (!useAnyDatapack && (datapackName != "data-fire" && datapackName != "data-canary" && datapackName != "data-otservbr-global")) {
+	if (!useAnyDatapack && (datapackName != "data-fire")) {
 		throw FailedToInitializeFireots(fmt::format(
 			"The datapack folder name '{}' is wrong, please select valid "
-			"datapack name 'data-fire', 'data-canary' or 'data-otservbr-global' "
-			"or enable in config.lua to use any datapack folder",
+			"datapack name 'data-fire' or enable in config.lua to use any datapack folder. "
+			"Legacy datapacks (data-canary, data-otservbr-global) have been archived.",
 			datapackName
 		));
 	}
