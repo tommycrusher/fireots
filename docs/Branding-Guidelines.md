@@ -42,9 +42,11 @@ Fireots emerged from Canary as a reborn project with focus on:
 
 ## Logo Design
 
-### Icon (64x64 .ico)
+Fireots uses **two versions** of the phoenix logo optimized for different use cases:
 
-**File**: `cmake/fireots.ico`
+### 1. Full Detail Logo (Large Sizes)
+
+**File**: `docs/assets/fireots-phoenix-logo.svg`
 
 **Design Elements**:
 - Majestic phoenix with outstretched wings in flight
@@ -56,6 +58,35 @@ Fireots emerged from Canary as a reborn project with focus on:
 - Scattered ember particles and sparkles throughout
 - Dark purple/navy background for dramatic contrast
 - Golden yellow sun with radial gradient
+
+**Usage**:
+- Documentation headers (large)
+- Website banners
+- Social media posts
+- Promotional materials
+- Print materials
+- Sizes: 512px and above
+
+### 2. Simplified Icon (Small Sizes)
+
+**File**: `cmake/fireots_icon.svg`
+
+**Design Elements**:
+- Simplified phoenix silhouette optimized for 16-64px
+- Clear, recognizable shape at small sizes
+- Two visible eyes with golden highlights
+- Prominent curved beak pointing upward
+- Wider tail with 5 feather strands for better visibility
+- Reduced detail but maintains character
+- Same color scheme as full logo
+- High contrast for clarity
+
+**Usage**:
+- Application icon (.ico)
+- Favicons
+- Taskbar/dock icons
+- Small UI elements
+- Sizes: 16px to 256px
 
 **Formats**:
 - Primary: SVG (`cmake/fireots_icon.svg`)
