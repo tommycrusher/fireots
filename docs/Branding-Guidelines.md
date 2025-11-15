@@ -47,10 +47,15 @@ Fireots emerged from Canary as a reborn project with focus on:
 **File**: `cmake/fireots.ico`
 
 **Design Elements**:
-- Stylized flame shape (abstract phoenix)
-- Orange-to-red gradient (fire theme)
-- Dark background for contrast
-- Optional "F" lettermark
+- Majestic phoenix with outstretched wings in flight
+- Central sun/moon orb providing dramatic backlight
+- Left wing: Orange gradient (symbolizing rebirth, energy)
+- Right wing: Red gradient (symbolizing power, passion)
+- Detailed feather layers for depth and realism
+- Rising flames from tail feathers
+- Scattered ember particles and sparkles throughout
+- Dark purple/navy background for dramatic contrast
+- Golden yellow sun with radial gradient
 
 **Formats**:
 - Primary: SVG (`cmake/fireots_icon.svg`)
