@@ -1,10 +1,10 @@
 /**
- * Canary - A free and open-source MMORPG server emulator
+ * Fireots - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/opentibiabr/canary
- * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
- * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
- * Website: https://docs.opentibiabr.com/
+ * Repository: https://github.com/tommycrusher/fireots
+ * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
+ * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
+ * Website: https://docs.fireots.pl/
  */
 
 #pragma once
@@ -200,7 +200,7 @@ private:
 	phmap::btree_multiset<std::shared_ptr<Task>, Task::Compare> scheduledTasks;
 	phmap::parallel_flat_hash_map_m<uint64_t, std::shared_ptr<Task>> scheduledTasksRef;
 
-	friend class CanaryServer;
+	friend class FireotsServer;
 };
 
 constexpr auto g_dispatcher = Dispatcher::getInstance;
