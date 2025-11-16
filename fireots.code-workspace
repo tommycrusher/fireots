@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"svg.preview.mode": "svg",
+		"svg.preview.background": "transparent",
+		"svg.preview.backgroundSaveTo": "Workspace",
+		"svg.completion.showAdvanced": true,
+		"svg.completion.showDeprecated": false,
+		"svg.minify.cleanupAttrs": true,
+		"svg.minify.removeComments": true,
+		"xml.format.enabled": true,
+		"xml.format.splitAttributes": "preserve",
+		"xml.validation.enabled": true,
+		"files.associations": {
+			"*.svg": "xml"
+		},
+		"pasteImage.defaultName": "Y-MM-DD-HH-mm-ss",
+		"pasteImage.path": "${projectRoot}/docs/assets",
+		"pasteImage.prefix": "fireots-"
+	}
+}
