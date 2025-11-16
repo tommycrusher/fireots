@@ -1,6 +1,6 @@
 -- Core settings
--- Note: Fireots uses "data-fire" as the primary datapack
--- Legacy datapacks (data-otservbr-global, data-canary) are archived in archive/
+-- Note: Fireots uses "data-fire" as the primary and only supported datapack
+-- Legacy datapacks have been archived to archive/ for historical reference
 -- If "useAnyDatapackFolder" is set to true then you can choose any datapack folder for your server
 useAnyDatapackFolder = false
 dataPackDirectory = "data-fire"

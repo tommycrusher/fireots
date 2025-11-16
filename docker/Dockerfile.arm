@@ -37,9 +37,7 @@ VOLUME [ "/data" ]
 COPY --from=build /srv/build/linux-release/bin/fireots /bin/fireots
 COPY LICENSE *.sql key.pem /fireots/
 COPY data /fireots/data
-COPY data-canary /fireots/data-canary
 COPY data-fire /fireots/data-fire
-COPY data-otservbr-global /fireots/data-otservbr-global
 COPY config.lua.dist /fireots/config.lua
 
 WORKDIR /fireots

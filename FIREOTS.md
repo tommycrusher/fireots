@@ -47,8 +47,8 @@ Fireots is a modern, high-performance C++ MMORPG server emulator designed for Ti
 
 - **Commits ahead of upstream**: 13 (Fireots-specific improvements)
 - **Commits behind upstream**: 623 (potential features to evaluate)
-- **Active rebranding**: In progress from Canary to Fireots
-- **Primary datapack**: `data-fire/` (consolidating `data-canary/`)
+- **Rebranding**: Complete (Canary → Fireots)
+- **Datapack**: `data-fire/` (legacy datapacks archived)
 
 ---
 

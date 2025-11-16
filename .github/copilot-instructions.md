@@ -28,10 +28,10 @@ See `src/lib/di/README.md` for patterns. **Never use raw singletons** - always i
 ### Data Organization (Critical for Development)
 **DO NOT MODIFY** `data/` - core Lua libraries shared across all datapacks:
 - `data/` - Core framework: libs, events, scripts base (immutable)
-- `data-fire/` - **Primary target** for Fire-specific content (monsters, scripts, world, migrations)
-- `data-canary/` - Legacy Canary datapack (to be merged into data-fire)
+- `data-fire/` - **Primary and only** supported datapack (monsters, scripts, world, migrations)
+- Legacy datapacks archived in `archive/` for historical reference
 
-**Roadmap goal**: Consolidate `data-canary/` into `data-fire/` as single unified datapack while keeping `data/` untouched.
+**Consolidation complete**: `data-fire/` is the unified datapack. Legacy content archived.
 
 Config file `config.lua` selects active datapack via `dataPackDirectory` (default: `"data-fire"`).
 
