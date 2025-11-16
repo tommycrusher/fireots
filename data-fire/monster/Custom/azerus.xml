@@ -1,70 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Azerus" nameDescription="azerus" race="blood" experience="6000" speed="360" manacost="0">
-	<health now="7500" max="7500"/>
-	<look type="309" head="19" body="96" legs="21" feet="81" corpse="0"/>
-	<targetchange interval="5000" chance="8"/>
-	<strategy attack="100" defense="0"/>
-	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="85"/>
-		<flag runonhealth="0"/>
-	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="130" attack="130"/>
-		<attack name="energy" interval="1000" chance="11" length="8" spread="0" min="-250" max="-819">
-			<attribute key="areaEffect" value="purpleenergy"/>
-		</attack>
-		<attack name="manadrain" interval="2000" chance="50" radius="5" target="0" min="-1999" max="-5000">
-			<attribute key="areaEffect" value="stun"/>
-		</attack>
-		<attack name="fire" interval="1000" chance="60" radius="5" target="1" min="-50" max="-900">
-			<attribute key="areaEffect" value="firearea"/>
-		</attack>
-		<attack name="lifedrain" interval="2000" chance="5" radius="7" target="0" min="0" max="-540">
-			<attribute key="areaEffect" value="poff"/>
-		</attack>
-	</attacks>
-	<defenses armor="70" defense="65">
-		<defense name="healing" interval="1000" chance="11" min="400" max="900"/>
-	</defenses>
-	<elements>
-		<element icePercent="10"/>
-		<element energyPercent="10"/>
-		<element earthPercent="10"/>
-		<element holyPercent="10"/>
-		<element deathPercent="10"/>
-		<element firePercent="20"/>
-		<element drownPercent="-15"/>
-	</elements>
-	<immunities>
-		<immunity lifedrain="1"/>
+<monster name="Azerus" nameDescription="an azerus" race="blood" experience="10000" speed="340" manacost="0">
+<health now="15000" max="15000"/>
+<look type="309" head="20" body="30" legs="40" feet="50" corpse="6080"/>
+<targetchange interval="2000" chance="70"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="4"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" min="-963" max="-4106"/>
+<attack name="earth" interval="110000" chance="100" radius="11" target="0" min="-1864" max="-1122">
+<attribute key="areaEffect" value="carniphila"/>
+</attack>
+<attack name="death" interval="120000" chance="100" radius="11" target="0" min="-1748" max="-1977">
+<attribute key="areaEffect" value="mortarea"/>
+</attack>
+<attack name="manadrain" interval="2500" chance="30" range="7" radius="5" min="-1986" max="-2035">
+		<attribute key="shootEffect" value="energyball"/>
+		<attribute key="areaEffect" value="watersplash"/>
+</attack>
+<attack name="fire" interval="2100" chance="30" range="7" min="-1096" max="-1385">
+		<attribute key="shootEffect" value="flamingarrow"/>
+		<attribute key="areaEffect" value="fire"/>
+</attack>
+<attack name="energy" interval="2200" chance="44" range="7" min="-1057" max="-1301">
+		<attribute key="shootEffect" value="flasharrow"/>
+		<attribute key="areaEffect" value="energy"/>
+</attack>
+<attack name="death" interval="1900" chance="41" range="7" min="-1075" max="-1375">
+		<attribute key="shootEffect" value="suddendeath"/>
+		<attribute key="areaEffect" value="mortarea"/>
+</attack>
+<attack name="ice" interval="2000" chance="41" range="7" min="-1075" max="-1375">
+		<attribute key="shootEffect" value="shiverarrow"/>
+		<attribute key="areaEffect" value="iceattack"/>
+</attack>
+</attacks>
+<defenses armor="97" defense="116">
+    <defense name="healing" interval="6000" chance="100" min="853" max="1135">
+      <attribute key="areaEffect" value="holyarea"/>
+    </defense>
+  </defenses>
+<elements>
+<element deathPercent="30"/>
+<element energyPercent="60"/>
+<element earthPercent="40"/>
+<element firePercent="60"/>
+<element icePercent="30"/>
+</elements>
+<immunities>
+<immunity lifedrain="1"/>
 		<immunity paralyze="1"/>
 		<immunity invisible="1"/>
-	</immunities>
-	<voices interval="5000" chance="0">
-		<voice sentence="??" yell="1"/>
-		<voice sentence="??" yell="1"/>
-	</voices>
-	<loot>
-		<item id="2148" countmax="100" chance1="80000" chancemax="8"/>
-		<item id="2148" countmax="100" chance1="80000" chancemax="10"/>
-		<item id="2160" countmax="3" chance1="100000" chancemax="0"/>
-		<item id="2143" countmax="7" chance1="3000" chancemax="0"/> --White pearl
-		<item id="2514" chance="1650"/> --mastermind shield
-		<item id="7590" chance="7000"/> --great mana potion
-		<item id="7591" chance="7000"/> --great health potion
-		<item id="1987" chance="100000">
-		<inside>
-			<item id="7368" countmax="25" chance="100000"/> --stars
-		</inside>
-		</item>
-	</loot>
+		<immunity earth="1"/>
+		<immunity fire="1"/>
+<immunity outfit="1"/>
+<immunity drunk="1"/>
+</immunities>
+  <summons maxSummons="2">
+    <summon name="demon" interval="300" chance="22" max="4"/>
+  </summons>
 </monster>
