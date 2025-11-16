@@ -46,8 +46,9 @@ at [this link](https://github.com/opentibiabr/canary/blob/master/CODE_OF_CONDUCT
 
 ### Getting **Started**
 
-* [Gitbook](https://docs.fireots.pl/projects/fireots).
-* [Wiki](https://github.com/tommycrusher/fireots/wiki).
+* [Documentation](docs/wiki/) - Getting started guides, migration, datapack documentation
+* [Build Setup](BUILD_SETUP.md) - Complete guide for building Fireots
+* [Gitbook](https://docs.fireots.pl/projects/fireots) - External documentation portal
 
 ### Issues
 
