@@ -1,5 +1,6 @@
 # OpenTibia - Fireots
 
+<<<<<<< HEAD
 [![GitHub issues](https://img.shields.io/github/issues/tommycrusher/fireots)](https://github.com/tommycrusher/fireots/issues)
 [![GitHub pull request](https://img.shields.io/github/issues-pr/tommycrusher/fireots)](https://github.com/tommycrusher/fireots/pulls)
 [![Contributors](https://img.shields.io/github/contributors/tommycrusher/fireots.svg?style=flat-square)](https://github.com/tommycrusher/fireots/graphs/contributors)
@@ -11,10 +12,18 @@
 
 ## Builds
 
+=======
+[![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?style=flat-square&logo=discord)](https://discord.gg/gvTj5sh9Mp)
+>>>>>>> upstream/main
 [![Build - Ubuntu](https://github.com/opentibiabr/canary/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-ubuntu.yml)
 [![Build - Windows - CMake](https://github.com/opentibiabr/canary/actions/workflows/build-windows-cmake.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-windows-cmake.yml)
 [![Build - Windows - Solution](https://github.com/opentibiabr/canary/actions/workflows/build-windows-solution.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-windows-solution.yml)
+[![Build - Docker](https://github.com/opentibiabr/canary/actions/workflows/build-docker.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-docker.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=opentibiabr_canary&metric=alert_status)](https://sonarcloud.io/dashboard?id=opentibiabr_canary)
+![GitHub repo size](https://img.shields.io/github/repo-size/opentibiabr/canary)
+[![GitHub](https://img.shields.io/github/license/opentibiabr/canary)](https://github.com/opentibiabr/canary/blob/main/LICENSE)
 
+<<<<<<< HEAD
 ## Docker
 
 `docker pull opentibiabr/canary:latest`<br><br>
@@ -36,29 +45,47 @@ source of the Fire, so that it will be the first repository to use this engine.
 
 To connect to the server and to take a stable experience, you can
 use [mehah's otclient](https://github.com/mehah/otclient)
+=======
+OpenTibiaBR - Canary is a free and open-source MMORPG server emulator written in C++. It is a fork of the [OTServBR-Global](https://github.com/opentibiabr/otservbr-global) project. To connect to the server and to take a stable experience, you can use [mehah's otclient](https://github.com/mehah/otclient)
+>>>>>>> upstream/main
 or [tibia client](https://github.com/dudantas/tibia-client/releases/latest) and if you want to edit something, check
-our [customized tools](https://docs.opentibiabr.com/opentibiabr/downloads/tools).
+our [customized tools](https://docs.opentibiabr.com/opentibiabr/downloads/tools). If you want to edit the map, use our own [remere's map editor](https://github.com/opentibiabr/remeres-map-editor/).
 
-If you want edit the map, use the [own remere's map editor](https://github.com/opentibiabr/remeres-map-editor/).
+## Getting Started
 
-You are subject to our code of conduct, read
-at [this link](https://github.com/opentibiabr/canary/blob/master/CODE_OF_CONDUCT.md).
+- [Gitbook](https://docs.opentibiabr.com/opentibiabr/projects/canary).
+- [Wiki](https://github.com/opentibiabr/canary/wiki).
 
-### Getting **Started**
+## Running Tests
 
+<<<<<<< HEAD
 * [Documentation](docs/wiki/) - Getting started guides, migration, datapack documentation
 * [Build Setup](BUILD_SETUP.md) - Complete guide for building Fireots
 * [Gitbook](https://docs.fireots.pl/projects/fireots) - External documentation portal
+=======
+Tests can be run directly from the repository root using CMake test presets:
+>>>>>>> upstream/main
 
-### Issues
+```bash
+# Configure and build tests for your platform
+cmake --preset linux-debug && cmake --build --preset linux-debug
 
+<<<<<<< HEAD
 We use the [issue tracker on GitHub](https://github.com/tommycrusher/fireots/issues). Keep in mind that everyone who is
 watching the repository gets notified by e-mail when there is an activity, so be thoughtful and avoid writing comments
 that aren't meant for an issue (e.g. "+1"). If you'd like for an issue to be fixed faster, you should either fix it
 yourself and submit a pull request, or place a bounty on the issue.
+=======
+# Run all tests
+ctest --preset linux-debug
+>>>>>>> upstream/main
 
-### Pull requests
+# For other platforms use:
+# ctest --preset macos-debug
+# ctest --preset windows-debug
+```
 
+<<<<<<< HEAD
 Before [creating a pull request](https://github.com/tommycrusher/fireots/pulls) please keep in mind:
 
 * Do not send Pull Request changing the map, as we can't review the changes it's better to use
@@ -70,9 +97,15 @@ Before [creating a pull request](https://github.com/tommycrusher/fireots/pulls) 
 * There are people that doesn't play the game on the official server, so explain your changes to help understand what
   are you changing and why.
 * Avoid opening a Pull Request to just update one line of an xml file.
+=======
+For detailed testing information including adding tests and framework usage, see [tests/README.md](tests/README.md).
 
-### Special Thanks
+## Support
+>>>>>>> upstream/main
 
+If you need help, please visit our [discord](https://discord.gg/gvTj5sh9Mp). Our issue tracker is not a support forum, and using it as one will result in your issue being closed.
+
+<<<<<<< HEAD
 * Fireots partners
 * OpenTibiaBR crew (majesty, gpedro, eduardo dantas, foot)
 * [our contributors](https://github.com/opentibiabr/canary/graphs/contributors)
@@ -84,10 +117,28 @@ Before [creating a pull request](https://github.com/tommycrusher/fireots/pulls) 
 * [otland/forgottenserver](https://github.com/otland/forgottenserver) and contributors
 * [saiyansking/optimized_forgottenserver](https://github.com/SaiyansKing/optimized_forgottenserver) and contributors
 * if we forget someone, we apologize by forgot you. but you know, **forgot**tenserver.
+=======
+## Contributing
+>>>>>>> upstream/main
 
-### **Sponsors**
+Here are some ways you can contribute:
 
+<<<<<<< HEAD
 See our [donate page](https://fireots.com/home/donate)
+=======
+- [Issue Tracker](https://github.com/opentibiabr/canary/issues/new/choose).
+- [Pull Request](https://github.com/opentibiabr/canary/pulls).
+
+You are subject to our code of conduct, read at [this link](https://github.com/opentibiabr/canary/blob/main/CODE_OF_CONDUCT.md).
+
+## Special Thanks
+
+- Our contributors ([Canary](https://github.com/opentibiabr/canary/graphs/contributors) | [OTServBR-Global](https://github.com/opentibiabr/otservbr-global/graphs/contributors)).
+
+## Sponsors
+
+See our [donate page](https://docs.opentibiabr.com/home/donate).
+>>>>>>> upstream/main
 
 ## Project supported by JetBrains
 
@@ -98,6 +149,7 @@ other open-source initiatives.
   <img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg" alt="JetBrains" width="150" />
 </a>
 
+<<<<<<< HEAD
 ## Project supported by [TNT Cloud](https://tntcloudbr.com.br/)
 
 Thanks for supporting our open-source project with your game cloud hosting services.
@@ -107,6 +159,9 @@ Thanks for supporting our open-source project with your game cloud hosting servi
 </a>
 
 ### Partners
+=======
+## Partners
+>>>>>>> upstream/main
 
 [![Comming soon]
 

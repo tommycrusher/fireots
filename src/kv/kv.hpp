@@ -1,10 +1,10 @@
 /**
- * Fireots - A free and open-source MMORPG server emulator
+ * Canary - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/tommycrusher/fireots
- * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
- * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
- * Website: https://docs.fireots.pl/
+ * Repository: https://github.com/opentibiabr/canary
+ * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
+ * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
+ * Website: https://docs.opentibiabr.com/
  */
 
 #pragma once
@@ -18,13 +18,14 @@
 	#include <unordered_set>
 	#include <iomanip>
 	#include <list>
+	#include <utility>
 #endif
 
-#include "lib/logging/logger.hpp"
 #include "kv/value_wrapper.hpp"
 
 class KV : public std::enable_shared_from_this<KV> {
 public:
+	virtual ~KV() = default;
 	virtual void set(const std::string &key, const std::initializer_list<ValueWrapper> &init_list) = 0;
 	virtual void set(const std::string &key, const std::initializer_list<std::pair<const std::string, ValueWrapper>> &init_list) = 0;
 	virtual void set(const std::string &key, const ValueWrapper &value) = 0;
@@ -48,8 +49,8 @@ public:
 	static std::string generateUUID() {
 		std::lock_guard<std::mutex> lock(mutex_);
 
-		auto now = std::chrono::system_clock::now().time_since_epoch();
-		auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now).count();
+		const auto now = std::chrono::system_clock::now().time_since_epoch();
+		const auto milliseconds = std::chrono::duration_cast<std::chrono::milliseconds>(now).count();
 
 		if (milliseconds != lastTimestamp_) {
 			counter_ = 0;
@@ -86,13 +87,24 @@ public:
 	std::optional<ValueWrapper> get(const std::string &key, bool forceLoad = false) override;
 
 	void flush() override {
-		KV::flush();
-		std::scoped_lock lock(mutex_);
-		store_.clear();
+		std::vector<std::pair<std::string, ValueWrapper>> snapshot;
+		{
+			std::scoped_lock lock(mutex_);
+			snapshot.reserve(store_.size() + pendingEvictions_.size());
+			for (const auto &[k, v] : store_) {
+				snapshot.emplace_back(k, v.first);
+			}
+			snapshot.insert(snapshot.end(), pendingEvictions_.begin(), pendingEvictions_.end());
+			store_.clear();
+			pendingEvictions_.clear();
+		}
+		for (const auto &[k, v] : snapshot) {
+			save(k, v);
+		}
 	}
 
-	std::shared_ptr<KV> scoped(const std::string &scope) override final;
-	std::unordered_set<std::string> keys(const std::string &prefix = "");
+	std::shared_ptr<KV> scoped(const std::string &scope) final;
+	std::unordered_set<std::string> keys(const std::string &prefix = "") override;
 
 protected:
 	phmap::parallel_flat_hash_map<std::string, std::pair<ValueWrapper, std::list<std::string>::iterator>> getStore() {
@@ -113,16 +125,19 @@ protected:
 
 private:
 	void setLocked(const std::string &key, const ValueWrapper &value);
+	void processEvictions();
 
 	phmap::parallel_flat_hash_map<std::string, std::pair<ValueWrapper, std::list<std::string>::iterator>> store_;
 	std::list<std::string> lruQueue_;
 	std::mutex mutex_;
+	// Evicted entries pending persistence; accessed under mutex_
+	std::vector<std::pair<std::string, ValueWrapper>> pendingEvictions_;
 };
 
 class ScopedKV final : public KV {
 public:
-	ScopedKV(Logger &logger, KVStore &rootKV, const std::string &prefix) :
-		logger(logger), rootKV_(rootKV), prefix_(prefix) { }
+	ScopedKV(Logger &logger, KVStore &rootKV, std::string prefix) :
+		logger(logger), rootKV_(rootKV), prefix_(std::move(prefix)) { }
 
 	void set(const std::string &key, const std::initializer_list<ValueWrapper> &init_list) override {
 		rootKV_.set(buildKey(key), init_list);
@@ -140,7 +155,7 @@ public:
 
 	template <typename T>
 	T get(const std::string &key, bool forceLoad = false) {
-		auto optValue = get(key, forceLoad);
+		const auto optValue = get(key, forceLoad);
 		if (optValue.has_value()) {
 			return optValue->get<T>();
 		}
@@ -151,7 +166,7 @@ public:
 		return rootKV_.saveAll();
 	}
 
-	std::shared_ptr<KV> scoped(const std::string &scope) override final {
+	std::shared_ptr<KV> scoped(const std::string &scope) override {
 		logger.trace("ScopedKV::scoped({})", buildKey(scope));
 		return std::make_shared<ScopedKV>(logger, rootKV_, buildKey(scope));
 	}

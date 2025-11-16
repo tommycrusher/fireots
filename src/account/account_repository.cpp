@@ -7,8 +7,6 @@
  * Website: https://docs.fireots.pl/
  */
 
-#include "pch.hpp"
-
 #include "account/account_repository.hpp"
 
 #include "lib/di/container.hpp"

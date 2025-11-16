@@ -24,7 +24,7 @@ struct GuildRank {
 
 using GuildRank_ptr = std::shared_ptr<GuildRank>;
 
-class Guild : public Bankable {
+class Guild final : public Bankable {
 public:
 	Guild(uint32_t initId, std::string initName) :
 		name(std::move(initName)), id(initId) { }
@@ -32,9 +32,10 @@ public:
 	void addMember(const std::shared_ptr<Player> &player);
 	void removeMember(const std::shared_ptr<Player> &player);
 
-	bool isGuild() {
+	bool isGuild() override {
 		return true;
 	}
+
 	void setOnline(bool value) override {
 		online = value;
 	}
@@ -71,7 +72,7 @@ public:
 		return ranks;
 	}
 
-	GuildRank_ptr getRankById(uint32_t id);
+	GuildRank_ptr getRankById(uint32_t id) const;
 	GuildRank_ptr getRankByName(const std::string &name) const;
 	GuildRank_ptr getRankByLevel(uint8_t level) const;
 	void addRank(uint32_t id, const std::string &name, uint8_t level);

@@ -9,7 +9,7 @@
 
 #pragma once
 
-enum ItemAttribute_t : uint64_t {
+enum class ItemAttribute_t : uint64_t {
 	NONE = 0,
 	ACTIONID = 1,
 	UNIQUEID = 2,
@@ -46,6 +46,7 @@ enum ItemAttribute_t : uint64_t {
 	LOOTMESSAGE_SUFFIX = 33,
 	STORE_INBOX_CATEGORY = 34,
 	OBTAINCONTAINER = 35,
+	AUGMENTS = 36,
 };
 
 enum ItemDecayState_t : uint8_t {

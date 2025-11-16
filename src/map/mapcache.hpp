@@ -10,12 +10,12 @@
 #pragma once
 
 #include "items/items_definitions.hpp"
-#include "utils/qtreenode.hpp"
+#include "utils/mapsector.hpp"
 
 class Map;
 class Tile;
 class Item;
-class Position;
+struct Position;
 class FileStream;
 
 #pragma pack(1)
@@ -47,7 +47,7 @@ struct BasicItem {
 private:
 	void hash(size_t &h) const;
 
-	friend class BasicTile;
+	friend struct BasicTile;
 };
 
 struct BasicTile {
@@ -79,58 +79,43 @@ private:
 
 #pragma pack()
 
-struct Floor {
-	explicit Floor(uint8_t z) :
-		z(z) { }
-
-	std::shared_ptr<Tile> getTile(uint16_t x, uint16_t y) const {
-		std::shared_lock sl(mutex);
-		return tiles[x & FLOOR_MASK][y & FLOOR_MASK].first;
-	}
-
-	void setTile(uint16_t x, uint16_t y, std::shared_ptr<Tile> tile) {
-		tiles[x & FLOOR_MASK][y & FLOOR_MASK].first = tile;
-	}
-
-	std::shared_ptr<BasicTile> getTileCache(uint16_t x, uint16_t y) const {
-		std::shared_lock sl(mutex);
-		return tiles[x & FLOOR_MASK][y & FLOOR_MASK].second;
-	}
-
-	void setTileCache(uint16_t x, uint16_t y, const std::shared_ptr<BasicTile> &newTile) {
-		tiles[x & FLOOR_MASK][y & FLOOR_MASK].second = newTile;
-	}
-
-	uint8_t getZ() const {
-		return z;
-	}
-
-	auto &getMutex() const {
-		return mutex;
-	}
-
-private:
-	std::pair<std::shared_ptr<Tile>, std::shared_ptr<BasicTile>> tiles[FLOOR_SIZE][FLOOR_SIZE] = {};
-	mutable std::shared_mutex mutex;
-	uint8_t z { 0 };
-};
-
 class MapCache {
 public:
 	virtual ~MapCache() = default;
 
 	void setBasicTile(uint16_t x, uint16_t y, uint8_t z, const std::shared_ptr<BasicTile> &BasicTile);
 
-	std::shared_ptr<BasicItem> tryReplaceItemFromCache(const std::shared_ptr<BasicItem> &ref);
+	std::shared_ptr<BasicItem> tryReplaceItemFromCache(const std::shared_ptr<BasicItem> &ref) const;
 
-	void flush();
+	void flush() const;
+
+	/**
+	 * Creates a map sector.
+	 * \returns A pointer to that map sector.
+	 */
+	MapSector* createMapSector(uint32_t x, uint32_t y);
+	MapSector* getBestMapSector(uint32_t x, uint32_t y);
+
+	/**
+	 * Gets a map sector.
+	 * \returns A pointer to that map sector.
+	 */
+	MapSector* getMapSector(const uint32_t x, const uint32_t y) {
+		const auto it = mapSectors.find(x / SECTOR_SIZE | y / SECTOR_SIZE << 16);
+		return it != mapSectors.end() ? &it->second : nullptr;
+	}
+
+	const MapSector* getMapSector(const uint32_t x, const uint32_t y) const {
+		const auto it = mapSectors.find(x / SECTOR_SIZE | y / SECTOR_SIZE << 16);
+		return it != mapSectors.end() ? &it->second : nullptr;
+	}
 
 protected:
-	std::shared_ptr<Tile> getOrCreateTileFromCache(const std::unique_ptr<Floor> &floor, uint16_t x, uint16_t y);
+	std::shared_ptr<Tile> getOrCreateTileFromCache(const std::shared_ptr<Floor> &floor, uint16_t x, uint16_t y);
 
-	QTreeNode root;
+	std::unordered_map<uint32_t, MapSector> mapSectors;
 
 private:
-	void parseItemAttr(const std::shared_ptr<BasicItem> &BasicItem, std::shared_ptr<Item> item);
+	void parseItemAttr(const std::shared_ptr<BasicItem> &BasicItem, const std::shared_ptr<Item> &item) const;
 	std::shared_ptr<Item> createItem(const std::shared_ptr<BasicItem> &BasicItem, Position position);
 };

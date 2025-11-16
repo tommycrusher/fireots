@@ -9,6 +9,8 @@
 
 #pragma once
 
+#include "utils/const.hpp"
+
 // Enums
 // Connection and networkmessage.
 enum { FORCE_CLOSE = true };
@@ -55,7 +57,8 @@ enum SessionEndInformations : uint8_t {
 
 enum Resource_t : uint8_t {
 	RESOURCE_BANK = 0x00,
-	RESOURCE_INVENTORY = 0x01,
+	RESOURCE_INVENTORY_MONEY = 0x01,
+	RESOURCE_INVENTORY_CURRENCY_CUSTOM = 0x02,
 	RESOURCE_PREY_CARDS = 0x0A,
 	RESOURCE_TASK_HUNTING = 0x32,
 	RESOURCE_FORGE_DUST = 0x46,
@@ -64,7 +67,16 @@ enum Resource_t : uint8_t {
 	RESOURCE_LESSER_GEMS = 0x51,
 	RESOURCE_REGULAR_GEMS = 0x52,
 	RESOURCE_GREATER_GEMS = 0x53,
+	RESOURCE_LESSER_FRAGMENT = 0x54,
+	RESOURCE_GREATER_FRAGMENT = 0x55,
 	RESOURCE_WHEEL_OF_DESTINY = 0x56
+};
+
+enum CharmResource_t : uint8_t {
+	RESOURCE_CHARM = 0x1E,
+	RESOURCE_MINOR_CHARM = 0x1F,
+	RESOURCE_MAX_CHARM = 0x20,
+	RESOURCE_MAX_MINOR_CHARM = 0x21
 };
 
 enum InspectObjectTypes : uint8_t {
@@ -105,21 +117,22 @@ enum ImpactAnalyzerAndTracker_t : uint8_t {
 	ANALYZER_DAMAGE_RECEIVED = 2
 };
 
-enum Supply_Stash_Actions_t : uint8_t {
-	SUPPLY_STASH_ACTION_STOW_ITEM = 0,
-	SUPPLY_STASH_ACTION_STOW_CONTAINER = 1,
-	SUPPLY_STASH_ACTION_STOW_STACK = 2,
-	SUPPLY_STASH_ACTION_WITHDRAW = 3
+enum Stash_Actions_t : uint8_t {
+	STASH_ACTION_STOW_ITEM = 0,
+	STASH_ACTION_STOW_CONTAINER = 1,
+	STASH_ACTION_STOW_STACK = 2,
+	STASH_ACTION_WITHDRAW = 3
 };
 
 struct HighscoreCharacter {
-	HighscoreCharacter(std::string name, uint64_t points, uint32_t id, uint32_t rank, uint16_t level, uint8_t vocation) :
+	HighscoreCharacter(std::string name, uint64_t points, uint32_t id, uint32_t rank, uint16_t level, uint8_t vocation, std::string loyaltyTitle) :
 		name(std::move(name)),
 		points(points),
 		id(id),
 		rank(rank),
 		level(level),
-		vocation(vocation) { }
+		vocation(vocation),
+		loyaltyTitle(std::move(loyaltyTitle)) { }
 
 	std::string name;
 	uint64_t points;
@@ -127,4 +140,5 @@ struct HighscoreCharacter {
 	uint32_t rank;
 	uint16_t level;
 	uint8_t vocation;
+	std::string loyaltyTitle;
 };

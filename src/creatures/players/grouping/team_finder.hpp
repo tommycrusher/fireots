@@ -14,7 +14,7 @@
  * This class is responsible control and manage the team finder feature.
  **/
 
-class TeamFinder {
+class TeamFinder final {
 public:
 	TeamFinder() = default;
 	TeamFinder(uint16_t initMinLevel, uint16_t initMaxLevel, uint8_t initVocationIDs, uint16_t initTeamSlots, uint16_t initFreeSlots, bool initPartyBool, uint32_t initTimestamp, uint8_t initTeamType, uint16_t initBossID, uint16_t initHunt_type, uint16_t initHunt_area, uint16_t initQuestID, uint32_t initLeaderGuid, std::map<uint32_t, uint8_t> initMembersMap) :
@@ -31,8 +31,8 @@ public:
 		hunt_area(initHunt_area),
 		questID(initQuestID),
 		leaderGuid(initLeaderGuid),
-		membersMap(initMembersMap) { }
-	virtual ~TeamFinder() = default;
+		membersMap(std::move(initMembersMap)) { }
+	~TeamFinder() = default;
 
 	uint16_t minLevel = 0;
 	uint16_t maxLevel = 0;

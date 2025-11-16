@@ -98,7 +98,7 @@ npcConfig.shop = {
 	{ itemName = "diamond", clientId = 32770, sell = 15000 },
 	{ itemName = "dragon figurine", clientId = 30053, sell = 45000 },
 	{ itemName = "gemmed figurine", clientId = 24392, sell = 3500 },
-	{ itemName = "giant amethyst", clientId = 30061, sell = 60000 },
+	{ itemName = "giant amethyst", clientId = 32622, sell = 60000 },
 	{ itemName = "giant emerald", clientId = 30060, sell = 90000 },
 	{ itemName = "giant ruby", clientId = 30059, sell = 70000 },
 	{ itemName = "giant sapphire", clientId = 30061, sell = 50000 },
@@ -151,7 +151,7 @@ npcConfig.shop = {
 	{ itemName = "violet crystal shard", clientId = 16120, sell = 1500 },
 	{ itemName = "watermelon tourmaline", clientId = 33780, sell = 230000 },
 	{ itemName = "wedding ring", clientId = 3004, buy = 990 },
-	{ itemName = "white pearl", clientId = 3026, buy = 320 },
+	{ itemName = "white pearl", clientId = 3026, buy = 320, sell = 160 },
 	{ itemName = "white silk flower", clientId = 34008, sell = 9000 },
 }
 

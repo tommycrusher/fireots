@@ -6,26 +6,46 @@
  * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
  * Website: https://docs.fireots.pl/
  */
+
 #pragma once
 
-#include "lib/logging/logger.hpp"
+#include "BS_thread_pool.hpp"
 
 class ThreadPool {
 public:
-	explicit ThreadPool(Logger &logger);
+	explicit ThreadPool(Logger &logger, const uint32_t threadCount = std::thread::hardware_concurrency());
 
 	// Ensures that we don't accidentally copy it
 	ThreadPool(const ThreadPool &) = delete;
-	ThreadPool operator=(const ThreadPool &) = delete;
+	ThreadPool &operator=(const ThreadPool &) = delete;
 
-	void start();
-	void shutdown();
-	asio::io_context &getIoContext();
-	void addLoad(const std::function<void(void)> &load);
+	static ThreadPool &getInstance();
 
-	uint16_t getNumberOfThreads() const {
-		return nThreads;
+	template <typename F>
+	void detach_task(F &&f) {
+		pool->detach_task(std::forward<F>(f));
 	}
+
+	template <typename F>
+	auto submit_loop(std::size_t first, std::size_t last, F &&f) {
+		return pool->submit_loop(first, last, std::forward<F>(f));
+	}
+
+	template <typename F, typename... Args>
+	auto submit_task(F &&f, Args &&... args) {
+		return pool->submit_task(std::forward<F>(f), std::forward<Args>(args)...);
+	}
+
+	void wait_for_tasks() {
+		pool->wait();
+	}
+
+	auto get_thread_count() const noexcept {
+		return pool->get_thread_count();
+	}
+
+	void start() const;
+	void shutdown();
 
 	static int16_t getThreadId() {
 		static std::atomic_int16_t lastId = -1;
@@ -37,13 +57,20 @@ public:
 		}
 
 		return id;
-	};
+	}
+
+	bool isStopped() const {
+		return stopped;
+	}
 
 private:
-	Logger &logger;
-	asio::io_context ioService;
-	std::vector<std::jthread> threads;
-	asio::io_context::work work { ioService };
+	std::mutex mutex;
+	std::condition_variable condition;
 
-	uint16_t nThreads = 0;
+	Logger &logger;
+	std::atomic<bool> stopped { false };
+
+	std::unique_ptr<BS::thread_pool<BS::tp::none>> pool;
 };
+
+constexpr auto g_threadPool = ThreadPool::getInstance;

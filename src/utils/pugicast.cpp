@@ -6,8 +6,6 @@
  * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
  * Website: https://docs.fireots.pl/
  */
-#include "pch.hpp"
-#include "lib/logging/log_with_spd_log.hpp"
 
 namespace pugi {
 	void logError(const std::string &str) {

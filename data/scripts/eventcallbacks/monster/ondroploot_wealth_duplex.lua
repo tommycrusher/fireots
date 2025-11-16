@@ -1,4 +1,4 @@
-local callback = EventCallback()
+local callback = EventCallback("MonsterOnDropLootWealthDuplex")
 
 function callback.monsterOnDropLoot(monster, corpse)
 	local player = Player(corpse:getCorpseOwner())
@@ -51,19 +51,19 @@ function callback.monsterOnDropLoot(monster, corpse)
 		return
 	end
 
+	local existingSuffix = corpse:getAttribute(ITEM_ATTRIBUTE_LOOTMESSAGE_SUFFIX) or ""
+
 	if configManager.getBoolean(configKeys.PARTY_SHARE_LOOT_BOOSTS) and rolls > 1 then
-		msgSuffix = msgSuffix .. " (active wealth duplex, " .. rolls .. " extra rolls)"
+		msgSuffix = string.len(existingSuffix) > 0 and string.format(", active wealth duplex %s extra rolls", rolls) or string.format("active wealth duplex %s extra rolls", rolls)
 	else
-		msgSuffix = msgSuffix .. " (active wealth duplex)"
+		msgSuffix = string.len(existingSuffix) > 0 and ", active wealth duplex" or "active wealth duplex"
 	end
 
 	local lootTable = {}
 	for _ = 1, rolls do
-		lootTable = mType:generateLootRoll({ factor = factor, gut = false }, lootTable)
+		lootTable = mType:generateLootRoll({ factor = factor, gut = false }, lootTable, player)
 	end
 	corpse:addLoot(lootTable)
-
-	local existingSuffix = corpse:getAttribute(ITEM_ATTRIBUTE_LOOTMESSAGE_SUFFIX) or ""
 	corpse:setAttribute(ITEM_ATTRIBUTE_LOOTMESSAGE_SUFFIX, existingSuffix .. msgSuffix)
 end
 

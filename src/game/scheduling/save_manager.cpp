@@ -1,8 +1,22 @@
-#include "pch.hpp"
+/**
+ * Canary - A free and open-source MMORPG server emulator
+ * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
+ * Repository: https://github.com/opentibiabr/canary
+ * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
+ * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
+ * Website: https://docs.opentibiabr.com/
+ */
 
-#include "game/game.hpp"
 #include "game/scheduling/save_manager.hpp"
+
+#include "config/configmanager.hpp"
+#include "creatures/players/grouping/guild.hpp"
+#include "game/game.hpp"
+#include "io/ioguild.hpp"
 #include "io/iologindata.hpp"
+#include "kv/kv.hpp"
+#include "lib/di/container.hpp"
+#include "creatures/players/player.hpp"
 
 SaveManager::SaveManager(ThreadPool &threadPool, KVStore &kvStore, Logger &logger, Game &game) :
 	threadPool(threadPool), kv(kvStore), logger(logger), game(game) { }
@@ -14,21 +28,57 @@ SaveManager &SaveManager::getInstance() {
 void SaveManager::saveAll() {
 	Benchmark bm_saveAll;
 	logger.info("Saving server...");
-	const auto players = game.getPlayers();
-
+	Benchmark bm_players;
+	const auto &players = game.getPlayers();
+	std::vector<std::pair<std::future<void>, std::string>> pending;
+	const auto asyncSave = g_configManager().getBoolean(TOGGLE_SAVE_ASYNC);
+	logger.info("Saving {} players... (Async: {})", players.size(), asyncSave ? "Enabled" : "Disabled");
+	std::vector<std::future<void>> futures;
 	for (const auto &[_, player] : players) {
 		player->loginPosition = player->getPosition();
-		doSavePlayer(player);
+
+		auto fut = threadPool.submit_task([this, player] {
+			doSavePlayer(player);
+		});
+		pending.emplace_back(std::move(fut), player->getName());
 	}
 
-	auto guilds = game.getGuilds();
+	for (auto &[future, name] : pending) {
+		try {
+			future.get();
+		} catch (const std::exception &e) {
+			logger.error("Failed to save player {}: {}", name, e.what());
+		}
+	}
+
+	double duration_players = bm_players.duration();
+	if (duration_players > 1000.0) {
+		logger.info("Players saved in {:.2f} seconds.", duration_players / 1000.0);
+	} else {
+		logger.info("Players saved in {} milliseconds.", duration_players);
+	}
+
+	Benchmark bm_guilds;
+	const auto &guilds = game.getGuilds();
 	for (const auto &[_, guild] : guilds) {
 		saveGuild(guild);
+	}
+	double duration_guilds = bm_guilds.duration();
+	if (duration_guilds > 1000.0) {
+		logger.info("Guilds saved in {:.2f} seconds.", duration_guilds / 1000.0);
+	} else {
+		logger.info("Guilds saved in {} milliseconds.", duration_guilds);
 	}
 
 	saveMap();
 	saveKV();
-	logger.info("Server saved in {} milliseconds.", bm_saveAll.duration());
+
+	double duration_saveAll = bm_saveAll.duration();
+	if (duration_saveAll > 1000.0) {
+		logger.info("Server saved in {:.2f} seconds.", duration_saveAll / 1000.0);
+	} else {
+		logger.info("Server saved in {} milliseconds.", duration_saveAll);
+	}
 }
 
 void SaveManager::scheduleAll() {
@@ -36,12 +86,12 @@ void SaveManager::scheduleAll() {
 	m_scheduledAt = scheduledAt;
 
 	// Disable save async if the config is set to false
-	if (!g_configManager().getBoolean(TOGGLE_SAVE_ASYNC, __FUNCTION__)) {
+	if (!g_configManager().getBoolean(TOGGLE_SAVE_ASYNC)) {
 		saveAll();
 		return;
 	}
 
-	threadPool.addLoad([this, scheduledAt]() {
+	threadPool.detach_task([this, scheduledAt]() {
 		if (m_scheduledAt.load() != scheduledAt) {
 			logger.warn("Skipping save for server because another save has been scheduled.");
 			return;
@@ -58,7 +108,7 @@ void SaveManager::schedulePlayer(std::weak_ptr<Player> playerPtr) {
 	}
 
 	// Disable save async if the config is set to false
-	if (!g_configManager().getBoolean(TOGGLE_SAVE_ASYNC, __FUNCTION__)) {
+	if (!g_configManager().getBoolean(TOGGLE_SAVE_ASYNC)) {
 		if (g_game().getGameState() == GAME_STATE_NORMAL) {
 			logger.debug("Saving player {}.", playerToSave->getName());
 		}
@@ -69,7 +119,7 @@ void SaveManager::schedulePlayer(std::weak_ptr<Player> playerPtr) {
 	logger.debug("Scheduling player {} for saving.", playerToSave->getName());
 	auto scheduledAt = std::chrono::steady_clock::now();
 	m_playerMap[playerToSave->getGUID()] = scheduledAt;
-	threadPool.addLoad([this, playerPtr, scheduledAt]() {
+	threadPool.detach_task([this, playerPtr, scheduledAt]() {
 		auto player = playerPtr.lock();
 		if (!player) {
 			logger.debug("Skipping save for player because player is no longer online.");
@@ -107,7 +157,7 @@ bool SaveManager::doSavePlayer(std::shared_ptr<Player> player) {
 }
 
 bool SaveManager::savePlayer(std::shared_ptr<Player> player) {
-	if (player->isOnline()) {
+	if (player->isOnline() && g_game().getGameState() != GAME_STATE_SHUTDOWN) {
 		schedulePlayer(player);
 		return true;
 	}
