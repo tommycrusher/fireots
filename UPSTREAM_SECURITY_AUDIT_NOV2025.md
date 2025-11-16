@@ -33,7 +33,7 @@ This audit reviewed 100 recent commits from upstream Canary repository and ident
 **Commit**: `301e1cd35`
 **Severity**: 🔴 CRITICAL - Use-After-Free
 
-**Problem**: 
+**Problem**:
 - Lua GC could call `__gc` metamethod multiple times on same object
 - `shared_ptr::reset()` called twice = double-free = crash/corruption
 
@@ -66,7 +66,7 @@ new (objPtr) std::shared_ptr<SharedObject>();
 **Commit**: `cb905e5ea`
 **Severity**: 🔴 CRITICAL
 
-**Problem**: 
+**Problem**:
 - Inconsistent lock acquisition order in KVStore
 - Thread A locks mutex1→mutex2, Thread B locks mutex2→mutex1
 - Classic deadlock scenario
