@@ -36,21 +36,15 @@ configure_linking(${PROJECT_NAME})
 
 # Compiler warnings and options
 if(UNIX)
-    if(CMAKE_BUILD_TYPE
-       STREQUAL
-       "Debug"
-    )
-        target_compile_options(
-            ${PROJECT_NAME}_lib
-            PRIVATE -Wall
-                    -Wextra
-                    -Wpedantic
-        )
-        target_compile_options(
-            ${PROJECT_NAME}
-            PRIVATE -Wall
-                    -Wextra
-                    -Wpedantic
-        )
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        target_compile_options(${PROJECT_NAME}_lib PRIVATE -Wall -Wextra -Wpedantic)
+        target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
     endif()
+endif()
+
+if(MSVC)
+    target_compile_options(${PROJECT_NAME}_lib PRIVATE /W4 /permissive- /Zc:preprocessor /Zc:__cplusplus /MP)
+    target_compile_options(${PROJECT_NAME} PRIVATE /W4 /permissive- /Zc:preprocessor /Zc:__cplusplus /MP)
+    target_compile_definitions(${PROJECT_NAME}_lib PRIVATE _WIN32_WINNT=0x0A00)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE _WIN32_WINNT=0x0A00)
 endif()

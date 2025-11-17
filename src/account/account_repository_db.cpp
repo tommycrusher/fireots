@@ -199,7 +199,21 @@ bool AccountRepositoryDB::load(const std::string &query, std::unique_ptr<Account
 	acc->sessionExpires = result->getNumber<time_t>("expires");
 	acc->premiumDaysPurchased = result->getNumber<uint32_t>("premdays_purchased");
 	acc->creationTime = result->getNumber<uint32_t>("creation");
-	acc->premiumRemainingDays = acc->premiumLastDay > getTimeNow() ? (acc->premiumLastDay - getTimeNow()) / 86400 : 0;
+
+	// Load premdays from database - this is the actual premium days count
+	uint32_t premDaysFromDB = result->getNumber<uint32_t>("premdays");
+
+	// If premdays > 0, use it directly. Otherwise fallback to calculating from lastday
+	if (premDaysFromDB > 0) {
+		acc->premiumRemainingDays = premDaysFromDB;
+		// Update lastday to match premdays if not already set correctly
+		if (acc->premiumLastDay <= getTimeNow()) {
+			acc->premiumLastDay = getTimeNow() + (premDaysFromDB * 86400);
+		}
+	} else {
+		// Fallback to old behavior for accounts without premdays set
+		acc->premiumRemainingDays = acc->premiumLastDay > getTimeNow() ? (acc->premiumLastDay - getTimeNow()) / 86400 : 0;
+	}
 
 	setupLoyaltyInfo(acc);
 

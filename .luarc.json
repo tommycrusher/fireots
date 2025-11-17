@@ -1,5 +1,5 @@
 {
-  "workspace.maxPreload": 10000,
+  "workspace.maxPreload": 20000,
   "workspace.ignoreDir": ["build", ".git", "vcpkg_installed"],
   "workspace.preloadFileSize": 50,
   "workspace.checkThirdParty": false,

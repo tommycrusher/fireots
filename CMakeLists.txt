@@ -44,26 +44,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS
 # *****************************************************************************
 # Project fireots
 # *****************************************************************************
-<<<<<<< HEAD
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    project(fireots-debug)
+    project(fireots-debug LANGUAGES CXX)
 else()
-    project(fireots)
-=======
-if(CMAKE_BUILD_TYPE
-   STREQUAL
-   "Debug"
-)
-    project(
-        canary-debug
-        LANGUAGES CXX
-    )
-else()
-    project(
-        canary
-        LANGUAGES CXX
-    )
->>>>>>> upstream/main
+    project(fireots LANGUAGES CXX)
 endif()
 
 # *****************************************************************************
@@ -190,10 +174,15 @@ include(CTest)
 if(BUILD_TESTING)
     log_option_enabled("tests")
     add_subdirectory(tests)
-<<<<<<< HEAD
-=======
     enable_testing()
 else()
     log_option_disabled("tests")
->>>>>>> upstream/main
+endif()
+
+# MSVC specific compile options and definitions
+if(MSVC)
+    add_compile_definitions(_WIN32_WINNT=0x0A00)
+    add_compile_options(/W4 /permissive- /Zc:preprocessor /Zc:__cplusplus)
+    # Enable multi-processor compilation
+    add_compile_options(/MP)
 endif()
