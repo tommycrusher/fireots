@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ---
 version: '3.8'
 name: fireots
+=======
+name: otbr
+>>>>>>> upstream/main
 services:
   database:
     image: mariadb:latest

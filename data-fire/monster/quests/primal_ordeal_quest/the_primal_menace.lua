@@ -24,7 +24,6 @@ local thePrimalMenaceConfig = {
 		CountGrowthPerHazard = 1.05,
 		CountMax = 6,
 
-		HpRateOnSpawn = 0.7,
 		MonsterPool = {
 			"Emerald Tortoise (Primal)",
 			"Gore Horn (Primal)",
@@ -163,14 +162,8 @@ local function initialize(monster)
 end
 
 -- Functions for the fight
-mType.onAppear = function(monster, creature)
-	if monster:getId() == creature:getId() then
-		initialize(monster)
-	end
-
-	if monster:getType():isRewardBoss() then
-		monster:setReward(true)
-	end
+mType.onSpawn = function(monster, spawnPosition)
+	initialize(monster)
 end
 
 local function getHazardPoints(monster)
@@ -291,8 +284,6 @@ local function spawnMonster(monsterId, spawnPosition)
 		MonsterId = primalMonster:getId(),
 		Created = os.time(),
 	}
-	local monsterMaxHealth = primalMonster:getMaxHealth()
-	primalMonster:setHealth(monsterMaxHealth * thePrimalMenaceConfig.MonsterConfig.HpRateOnSpawn)
 
 	local primalBeasts = monster:getStorageValue(thePrimalMenaceConfig.Storage.PrimalBeasts)
 	table.insert(primalBeasts, primalBeastEntry)

@@ -14,8 +14,6 @@
 #include "lib/di/container.hpp"
 
 class IOMarket {
-	using StatisticsMap = std::map<uint16_t, std::map<uint8_t, MarketStatistics>>;
-
 public:
 	IOMarket() = default;
 
@@ -28,7 +26,7 @@ public:
 	static MarketOfferList getOwnOffers(MarketAction_t action, uint32_t playerId);
 	static HistoryMarketOfferList getOwnHistory(MarketAction_t action, uint32_t playerId);
 
-	static void processExpiredOffers(DBResult_ptr result, bool);
+	static void processExpiredOffers(const DBResult_ptr &result, bool);
 	static void checkExpiredOffers();
 
 	static uint32_t getPlayerOfferCount(uint32_t playerId);
@@ -43,10 +41,11 @@ public:
 
 	void updateStatistics();
 
-	StatisticsMap getPurchaseStatistics() const {
+	using StatisticsMap = std::map<uint16_t, std::map<uint8_t, MarketStatistics>>;
+	const StatisticsMap &getPurchaseStatistics() const {
 		return purchaseStatistics;
 	}
-	StatisticsMap getSaleStatistics() const {
+	const StatisticsMap &getSaleStatistics() const {
 		return saleStatistics;
 	}
 

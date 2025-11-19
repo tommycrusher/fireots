@@ -7,34 +7,34 @@
  * Website: https://docs.fireots.pl/
  */
 
-#include "pch.hpp"
 #include "io/iomap.hpp"
+
 #include "game/movement/teleport.hpp"
 #include "game/game.hpp"
 #include "io/filestream.hpp"
 
 /*
-	OTBM_ROOTV1
-	|
-	|--- OTBM_MAP_DATA
-	|	|
-	|	|--- OTBM_TILE_AREA
-	|	|	|--- OTBM_TILE
-	|	|	|--- OTBM_TILE_SQUARE (not implemented)
-	|	|	|--- OTBM_TILE_REF (not implemented)
-	|	|	|--- OTBM_HOUSETILE
-	|	|
-	|	|--- OTBM_SPAWNS (not implemented)
-	|	|	|--- OTBM_SPAWN_AREA (not implemented)
-	|	|	|--- OTBM_MONSTER (not implemented)
-	|	|
-	|	|--- OTBM_TOWNS
-	|	|	|--- OTBM_TOWN
-	|	|
-	|	|--- OTBM_WAYPOINTS
-	|		|--- OTBM_WAYPOINT
-	|
-	|--- OTBM_ITEM_DEF (not implemented)
+    OTBM_ROOTV1
+    |
+    |--- OTBM_MAP_DATA
+    |	|
+    |	|--- OTBM_TILE_AREA
+    |	|	|--- OTBM_TILE
+    |	|	|--- OTBM_TILE_SQUARE (not implemented)
+    |	|	|--- OTBM_TILE_REF (not implemented)
+    |	|	|--- OTBM_HOUSETILE
+    |	|
+    |	|--- OTBM_SPAWNS (not implemented)
+    |	|	|--- OTBM_SPAWN_AREA (not implemented)
+    |	|	|--- OTBM_MONSTER (not implemented)
+    |	|
+    |	|--- OTBM_TOWNS
+    |	|	|--- OTBM_TOWN
+    |	|
+    |	|--- OTBM_WAYPOINTS
+    |		|--- OTBM_WAYPOINT
+    |
+    |--- OTBM_ITEM_DEF (not implemented)
 */
 
 void IOMap::loadMap(Map* map, const Position &pos) {
@@ -58,7 +58,7 @@ void IOMap::loadMap(Map* map, const Position &pos) {
 	uint32_t majorVersionItems = stream.getU32();
 	stream.getU32(); // minorVersionItems
 
-	if (version > 2) {
+	if (version > 5) {
 		throw IOMapException("Unknown OTBM version detected.");
 	}
 
@@ -77,7 +77,7 @@ void IOMap::loadMap(Map* map, const Position &pos) {
 
 	map->flush();
 
-	g_logger().info("Map Loaded {} ({}x{}) in {} milliseconds", map->path.filename().string(), map->width, map->height, bm_mapLoad.duration());
+	g_logger().debug("Map Loaded {} ({}x{}) in {} milliseconds", map->path.filename().string(), map->width, map->height, bm_mapLoad.duration());
 }
 
 void IOMap::parseMapDataAttributes(FileStream &stream, Map* map) {
@@ -122,8 +122,6 @@ void IOMap::parseTileArea(FileStream &stream, Map &map, const Position &pos) {
 		const uint16_t base_y = stream.getU16();
 		const uint8_t base_z = stream.getU8();
 
-		bool tileIsStatic = false;
-
 		while (stream.startNode()) {
 			const uint8_t tileType = stream.getU8();
 			if (tileType != OTBM_HOUSETILE && tileType != OTBM_TILE) {
@@ -137,7 +135,7 @@ void IOMap::parseTileArea(FileStream &stream, Map &map, const Position &pos) {
 
 			const uint16_t x = base_x + tileCoordsX + pos.x;
 			const uint16_t y = base_y + tileCoordsY + pos.y;
-			const uint8_t z = static_cast<uint8_t>(base_z + pos.z);
+			const auto z = static_cast<uint8_t>(base_z + pos.z);
 
 			if (tileType == OTBM_HOUSETILE) {
 				tile->houseId = stream.getU32();
@@ -165,19 +163,15 @@ void IOMap::parseTileArea(FileStream &stream, Map &map, const Position &pos) {
 				const uint16_t id = stream.getU16();
 				const auto &iType = Item::items[id];
 
-				if (!tile->isHouse() || (!iType.isBed() && !iType.isTrashHolder())) {
-					if (iType.blockSolid) {
-						tileIsStatic = true;
-					}
-
+				if (!tile->isHouse() || !iType.isBed()) {
 					const auto item = std::make_shared<BasicItem>();
 					item->id = id;
 
 					if (tile->isHouse() && iType.movable) {
 						g_logger().warn("[IOMap::loadMap] - "
-										"Movable item with ID: {}, in house: {}, "
-										"at position: x {}, y {}, z {}",
-										id, tile->houseId, x, y, z);
+						                "Movable item with ID: {}, in house: {}, "
+						                "at position: x {}, y {}, z {}",
+						                id, tile->houseId, x, y, z);
 					} else if (iType.isGroundTile()) {
 						tile->ground = map.tryReplaceItemFromCache(item);
 					} else {
@@ -191,13 +185,7 @@ void IOMap::parseTileArea(FileStream &stream, Map &map, const Position &pos) {
 				switch (type) {
 					case OTBM_ITEM: {
 						const uint16_t id = stream.getU16();
-
 						const auto &iType = Item::items[id];
-
-						if (iType.blockSolid) {
-							tileIsStatic = true;
-						}
-
 						const auto item = std::make_shared<BasicItem>();
 						item->id = id;
 
@@ -209,9 +197,9 @@ void IOMap::parseTileArea(FileStream &stream, Map &map, const Position &pos) {
 							// nothing
 						} else if (tile->isHouse() && iType.movable) {
 							g_logger().warn("[IOMap::loadMap] - "
-											"Movable item with ID: {}, in house: {}, "
-											"at position: x {}, y {}, z {}",
-											id, tile->houseId, x, y, z);
+							                "Movable item with ID: {}, in house: {}, "
+							                "at position: x {}, y {}, z {}",
+							                id, tile->houseId, x, y, z);
 						} else if (iType.isGroundTile()) {
 							tile->ground = map.tryReplaceItemFromCache(item);
 						} else {

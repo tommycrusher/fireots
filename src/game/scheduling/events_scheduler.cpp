@@ -7,15 +7,14 @@
  * Website: https://docs.fireots.pl/
  */
 
-#include "pch.hpp"
+#include "game/scheduling/events_scheduler.hpp"
 
 #include "config/configmanager.hpp"
-#include "game/scheduling/events_scheduler.hpp"
 #include "lua/scripts/scripts.hpp"
 
 bool EventsScheduler::loadScheduleEventFromXml() {
 	pugi::xml_document doc;
-	auto folder = g_configManager().getString(CORE_DIRECTORY, __FUNCTION__) + "/XML/events.xml";
+	auto folder = g_configManager().getString(CORE_DIRECTORY) + "/XML/events.xml";
 	if (!doc.load_file(folder.c_str())) {
 		printXMLError(__FUNCTION__, folder, doc.load_file(folder.c_str()));
 		consoleHandlerExit();
@@ -27,7 +26,6 @@ bool EventsScheduler::loadScheduleEventFromXml() {
 	int daysMath = ((timePtr->tm_year + 1900) * 365) + ((timePtr->tm_mon + 1) * 30) + (timePtr->tm_mday);
 
 	// Keep track of loaded scripts to check for duplicates
-	int count = 0;
 	phmap::flat_hash_set<std::string_view> loadedScripts;
 	std::map<std::string, EventRates> eventsOnSameDay;
 	for (const auto &eventNode : doc.child("events").children()) {

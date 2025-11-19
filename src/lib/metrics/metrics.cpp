@@ -8,7 +8,8 @@
  * Website: https://docs.fireots.pl/
  */
 
-	#include "metrics.hpp"
+	#include "lib/metrics/metrics.hpp"
+
 	#include "lib/di/container.hpp"
 
 using namespace metrics;
