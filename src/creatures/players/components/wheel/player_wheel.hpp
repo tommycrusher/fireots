@@ -11,6 +11,7 @@
 
 #include "creatures/creatures_definitions.hpp"
 #include "creatures/players/components/wheel/wheel_definitions.hpp"
+#include "creatures/players/components/wheel/wheel_spells.hpp"
 
 class Creature;
 class IOWheel;
@@ -33,10 +34,6 @@ enum class WheelGemSupremeModifier_t : uint8_t;
 enum CombatType_t : uint8_t;
 enum skills_t : int8_t;
 enum Vocation_t : uint16_t;
-
-namespace WheelSpells {
-	struct Bonus;
-}
 
 struct PlayerWheelMethodsBonusData {
 	// Raw value. Example: 1 == 1
