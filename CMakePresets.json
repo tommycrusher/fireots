@@ -28,7 +28,6 @@
       "description": "Windows Release Build",
       "generator": "Visual Studio 17 2022",
       "cacheVariables": {
-        "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg_fireots/scripts/buildsystems/vcpkg.cmake",
         "VCPKG_TARGET_TRIPLET": "x64-windows-static",
         "BUILD_TESTING": "OFF",
         "VCPKG_FORCE_SYSTEM_BINARIES": "ON"
