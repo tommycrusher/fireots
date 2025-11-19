@@ -33,14 +33,13 @@ RUN export VCPKG_ROOT=/opt/vcpkg/ && cmake --preset linux-release && cmake --bui
 FROM ubuntu:23.04
 VOLUME [ "/data" ]
 
-COPY --from=build /srv/build/linux-release/bin/canary /bin/canary
-COPY LICENSE *.sql key.pem /canary/
-COPY data /canary/data
-COPY data-canary /canary/data-canary
-COPY data-otservbr-global /canary/data-otservbr-global
-COPY config.lua.dist /canary/config.lua
+COPY --from=build /srv/build/linux-release/bin/fireots /bin/fireots
+COPY LICENSE *.sql key.pem /fireots/
+COPY data /fireots/data
+COPY data-fire /fireots/data-fire
+COPY config.lua.dist /fireots/config.lua
 
-WORKDIR /canary
+WORKDIR /fireots
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	mariadb-client curl \
@@ -51,4 +50,4 @@ COPY docker/data/01-test_account.sql 01-test_account.sql
 COPY docker/data/02-test_account_players.sql 02-test_account_players.sql
 COPY docker/data/start.sh start.sh
 
-ENTRYPOINT ["/canary/start.sh"]
+ENTRYPOINT ["/fireots/start.sh"]

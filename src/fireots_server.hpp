@@ -1,10 +1,10 @@
 /**
- * Canary - A free and open-source MMORPG server emulator
+ * Fireots - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/opentibiabr/canary
- * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
- * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
- * Website: https://docs.opentibiabr.com/
+ * Repository: https://github.com/tommycrusher/fireots
+ * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
+ * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
+ * Website: https://docs.fireots.pl/
  */
 
 #pragma once
@@ -14,13 +14,13 @@
 
 class Logger;
 
-class FailedToInitializeCanary : public std::exception {
+class FailedToInitializeFireots : public std::exception {
 private:
 	std::string message;
 
 public:
 	// Constructor accepts a specific message
-	explicit FailedToInitializeCanary(const std::string &msg) :
+	explicit FailedToInitializeFireots(const std::string &msg) :
 		message("Canary load couldn't be completed. " + msg) { }
 
 	// Override the what() method from std::exception
@@ -29,9 +29,9 @@ public:
 	}
 };
 
-class CanaryServer {
+class FireotsServer {
 public:
-	explicit CanaryServer(
+	explicit FireotsServer(
 		Logger &logger,
 		RSA &rsa,
 		ServiceManager &serviceManager

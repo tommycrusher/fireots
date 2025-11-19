@@ -1,10 +1,10 @@
 /**
- * Canary - A free and open-source MMORPG server emulator
+ * Fireots - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/opentibiabr/canary
- * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
- * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
- * Website: https://docs.opentibiabr.com/
+ * Repository: https://github.com/tommycrusher/fireots
+ * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
+ * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
+ * Website: https://docs.fireots.pl/
  */
 
 #include "pch.hpp"
@@ -143,10 +143,11 @@ bool Bank::deposit(const std::shared_ptr<Bank> destination) {
 	if (!bankable) {
 		return false;
 	}
-	if (bankable->getPlayer() == nullptr) {
+	auto player = bankable->getPlayer();
+	if (!player) {
 		return false;
 	}
-	auto amount = bankable->getPlayer()->getMoney();
+	auto amount = player->getMoney();
 	return deposit(destination, amount);
 }
 
@@ -158,11 +159,13 @@ bool Bank::deposit(const std::shared_ptr<Bank> destination, uint64_t amount) {
 	if (!bankable) {
 		return false;
 	}
-	if (!g_game().removeMoney(bankable->getPlayer(), amount)) {
+	const auto &player = bankable->getPlayer();
+	if (!player) {
 		return false;
 	}
-	if (bankable->getPlayer() != nullptr) {
-		g_metrics().addCounter("balance_decrease", amount, { { "player", bankable->getPlayer()->getName() }, { "context", "bank_deposit" } });
+	if (!g_game().removeMoney(player, amount)) {
+		return false;
 	}
+	g_metrics().addCounter("balance_decrease", amount, { { "player", player->getName() }, { "context", "bank_deposit" } });
 	return destination->credit(amount);
 }

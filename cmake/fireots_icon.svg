@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Fireots Icon - Simplified Phoenix (optimized for 16-64px) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Sun gradient -->
+    <radialGradient id="sun" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#ffeb3b"/>
+      <stop offset="60%" style="stop-color:#ffa726"/>
+      <stop offset="100%" style="stop-color:#ff6f00;stop-opacity:0.8"/>
+    </radialGradient>
+    
+    <!-- Body gradient -->
+    <linearGradient id="body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8f00"/>
+      <stop offset="50%" style="stop-color:#ff6f00"/>
+      <stop offset="100%" style="stop-color:#e53935"/>
+    </linearGradient>
+    
+    <!-- Left wing (orange) -->
+    <linearGradient id="wingL" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#ffb74d"/>
+      <stop offset="50%" style="stop-color:#ff9800"/>
+      <stop offset="100%" style="stop-color:#ff6f00"/>
+    </linearGradient>
+    
+    <!-- Right wing (red) -->
+    <linearGradient id="wingR" x1="100%" y1="0%" x2="0%" y2="50%">
+      <stop offset="0%" style="stop-color:#ef5350"/>
+      <stop offset="50%" style="stop-color:#e53935"/>
+      <stop offset="100%" style="stop-color:#c62828"/>
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Dark background -->
+  <rect width="64" height="64" fill="#2c2541"/>
+  
+  <!-- Sun/Moon -->
+  <circle cx="32" cy="28" r="14" fill="url(#sun)" opacity="0.95" filter="url(#glow)"/>
+  
+  <!-- LEFT WING (orange) - simplified with fewer feathers -->
+  <g opacity="0.95">
+    <!-- Outer feather layer -->
+    <path d="M 22 32 Q 8 28, 4 22 Q 2 18, 4 14 L 10 18 Q 14 22, 18 28 Z" 
+          fill="url(#wingL)" stroke="#ff6f00" stroke-width="0.5"/>
+    <!-- Middle feather -->
+    <path d="M 24 34 Q 14 32, 10 28 Q 8 26, 9 23 L 14 26 Q 18 29, 22 32 Z" 
+          fill="url(#wingL)" stroke="#ff8f00" stroke-width="0.4"/>
+    <!-- Inner feather -->
+    <path d="M 26 36 Q 18 34, 14 31 L 18 33 Q 22 35, 25 37 Z" 
+          fill="#ffa726" stroke="#ffb74d" stroke-width="0.3"/>
+  </g>
+  
+  <!-- RIGHT WING (red) - simplified -->
+  <g opacity="0.95">
+    <!-- Outer feather -->
+    <path d="M 42 32 Q 56 28, 60 22 Q 62 18, 60 14 L 54 18 Q 50 22, 46 28 Z" 
+          fill="url(#wingR)" stroke="#c62828" stroke-width="0.5"/>
+    <!-- Middle feather -->
+    <path d="M 40 34 Q 50 32, 54 28 Q 56 26, 55 23 L 50 26 Q 46 29, 42 32 Z" 
+          fill="url(#wingR)" stroke="#d32f2f" stroke-width="0.4"/>
+    <!-- Inner feather -->
+    <path d="M 38 36 Q 46 34, 50 31 L 46 33 Q 42 35, 39 37 Z" 
+          fill="#ef5350" stroke="#e57373" stroke-width="0.3"/>
+  </g>
+  
+  <!-- PHOENIX BODY (center) -->
+  <g filter="url(#glow)">
+    <!-- Head (larger, more defined) -->
+    <ellipse cx="32" cy="30" rx="4" ry="5" fill="url(#body)"/>
+    
+    <!-- Beak (curved upward, more prominent) -->
+    <path d="M 32 28 Q 34 27, 35 28 L 32 29 Z" fill="#ff5722"/>
+    
+    <!-- Eyes (both visible) -->
+    <circle cx="30.5" cy="29.5" r="0.8" fill="#1a1a1a"/>
+    <circle cx="33.5" cy="29.5" r="0.8" fill="#1a1a1a"/>
+    <circle cx="30.5" cy="29.5" r="0.3" fill="#ffeb3b"/>
+    <circle cx="33.5" cy="29.5" r="0.3" fill="#ffeb3b"/>
+    
+    <!-- Neck -->
+    <ellipse cx="32" cy="35" rx="3.5" ry="5" fill="url(#body)" opacity="0.95"/>
+    
+    <!-- Body/chest -->
+    <ellipse cx="32" cy="40" rx="4.5" ry="5" fill="url(#body)" opacity="0.9"/>
+  </g>
+  
+  <!-- TAIL (wider, more spread out) -->
+  <g opacity="0.85" filter="url(#glow)">
+    <!-- Left tail feather -->
+    <path d="M 30 44 Q 28 50, 26 56 Q 25 59, 26 62" 
+          fill="none" stroke="url(#body)" stroke-width="2" stroke-linecap="round"/>
+    <!-- Center tail feather (main) -->
+    <path d="M 32 44 Q 32 51, 32 58 Q 32 61, 32 63" 
+          fill="none" stroke="url(#body)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Right tail feather -->
+    <path d="M 34 44 Q 36 50, 38 56 Q 39 59, 38 62" 
+          fill="none" stroke="url(#body)" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Additional outer tail feathers for width -->
+    <path d="M 29 45 Q 26 52, 23 58" 
+          fill="none" stroke="#ff9800" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+    <path d="M 35 45 Q 38 52, 41 58" 
+          fill="none" stroke="#e53935" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Flame effects at tail base -->
+  <g opacity="0.6">
+    <path d="M 30 43 Q 29 40, 30 38" fill="none" stroke="#ffeb3b" stroke-width="0.8"/>
+    <path d="M 34 43 Q 35 40, 34 38" fill="none" stroke="#ffeb3b" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Ember particles (simplified for small size) -->
+  <g opacity="0.7">
+    <circle cx="16" cy="24" r="1" fill="#ff9800"/>
+    <circle cx="48" cy="24" r="1" fill="#ef5350"/>
+    <circle cx="24" cy="36" r="0.8" fill="#ffa726"/>
+    <circle cx="40" cy="36" r="0.8" fill="#e57373"/>
+    <circle cx="28" cy="48" r="1.2" fill="#ff6f00"/>
+    <circle cx="36" cy="48" r="1.2" fill="#c62828"/>
+  </g>
+  
+  <!-- Sparkles -->
+  <g opacity="0.5">
+    <circle cx="32" cy="26" r="0.5" fill="#ffffff"/>
+    <circle cx="20" cy="20" r="0.4" fill="#ffeb3b"/>
+    <circle cx="44" cy="20" r="0.4" fill="#ffeb3b"/>
+  </g>
+</svg>

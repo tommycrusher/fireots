@@ -1,10 +1,10 @@
 /**
- * Canary - A free and open-source MMORPG server emulator
+ * Fireots - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/opentibiabr/canary
- * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
- * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
- * Website: https://docs.opentibiabr.com/
+ * Repository: https://github.com/tommycrusher/fireots
+ * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
+ * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
+ * Website: https://docs.fireots.pl/
  */
 
 #include "pch.hpp"
@@ -178,6 +178,11 @@ std::shared_ptr<Tile> Map::getLoadedTile(uint16_t x, uint16_t y, uint8_t z) {
 }
 
 std::shared_ptr<Tile> Map::getTile(uint16_t x, uint16_t y, uint8_t z) {
+	// Check if the coordinates are valid
+	if (x == 0 && y == 0 && z == 0) {
+		return nullptr;
+	}
+
 	if (z >= MAP_MAX_LAYERS) {
 		return nullptr;
 	}

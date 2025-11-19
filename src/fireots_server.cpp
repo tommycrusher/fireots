@@ -1,15 +1,15 @@
 /**
- * Canary - A free and open-source MMORPG server emulator
+ * Fireots - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/opentibiabr/canary
- * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
- * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
- * Website: https://docs.opentibiabr.com/
+ * Repository: https://github.com/tommycrusher/fireots
+ * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
+ * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
+ * Website: https://docs.fireots.pl/
  */
 
 #include "pch.hpp"
 
-#include "canary_server.hpp"
+#include "fireots_server.hpp"
 
 #include "declarations.hpp"
 #include "creatures/players/grouping/familiars.hpp"
@@ -33,7 +33,7 @@
 
 #include "core.hpp"
 
-CanaryServer::CanaryServer(
+FireotsServer::FireotsServer(
 	Logger &logger,
 	RSA &rsa,
 	ServiceManager &serviceManager
@@ -54,7 +54,7 @@ CanaryServer::CanaryServer(
 #endif
 }
 
-int CanaryServer::run() {
+int FireotsServer::run() {
 	g_dispatcher().addEvent(
 		[this] {
 			try {
@@ -110,7 +110,7 @@ int CanaryServer::run() {
 				}
 
 				loaderStatus = LoaderStatus::LOADED;
-			} catch (FailedToInitializeCanary &err) {
+			} catch (FailedToInitializeFireots &err) {
 				loaderStatus = LoaderStatus::FAILED;
 				logger.error(err.what());
 
@@ -123,7 +123,7 @@ int CanaryServer::run() {
 
 			loaderStatus.notify_one();
 		},
-		"CanaryServer::run"
+		"FireotsServer::run"
 	);
 
 	loaderStatus.wait(LoaderStatus::LOADING);
@@ -142,7 +142,7 @@ int CanaryServer::run() {
 	return EXIT_SUCCESS;
 }
 
-void CanaryServer::setWorldType() {
+void FireotsServer::setWorldType() {
 	const std::string worldType = asLowerCaseString(g_configManager().getString(WORLD_TYPE, __FUNCTION__));
 	if (worldType == "pvp") {
 		g_game().setWorldType(WORLD_TYPE_PVP);
@@ -151,7 +151,7 @@ void CanaryServer::setWorldType() {
 	} else if (worldType == "pvp-enforced") {
 		g_game().setWorldType(WORLD_TYPE_PVP_ENFORCED);
 	} else {
-		throw FailedToInitializeCanary(
+		throw FailedToInitializeFireots(
 			fmt::format(
 				"Unknown world type: {}, valid world types are: pvp, no-pvp and pvp-enforced",
 				g_configManager().getString(WORLD_TYPE, __FUNCTION__)
@@ -162,7 +162,7 @@ void CanaryServer::setWorldType() {
 	logger.debug("World type set as {}", asUpperCaseString(worldType));
 }
 
-void CanaryServer::loadMaps() const {
+void FireotsServer::loadMaps() const {
 	try {
 		g_game().loadMainMap(g_configManager().getString(MAP_NAME, __FUNCTION__));
 
@@ -172,11 +172,11 @@ void CanaryServer::loadMaps() const {
 		}
 		Zone::refreshAll();
 	} catch (const std::exception &err) {
-		throw FailedToInitializeCanary(err.what());
+		throw FailedToInitializeFireots(err.what());
 	}
 }
 
-void CanaryServer::setupHousesRent() {
+void FireotsServer::setupHousesRent() {
 	RentPeriod_t rentPeriod;
 	std::string strRentPeriod = asLowerCaseString(g_configManager().getString(HOUSE_RENT_PERIOD, __FUNCTION__));
 
@@ -195,7 +195,7 @@ void CanaryServer::setupHousesRent() {
 	g_game().map.houses.payHouses(rentPeriod);
 }
 
-void CanaryServer::logInfos() {
+void FireotsServer::logInfos() {
 #if defined(GIT_RETRIEVED_STATE) && GIT_RETRIEVED_STATE
 	logger.debug("{} - Version [{}] dated [{}]", ProtocolStatus::SERVER_NAME, SERVER_RELEASE_VERSION, GIT_COMMIT_DATE_ISO8601);
 	#if GIT_IS_DIRTY
@@ -223,7 +223,7 @@ void CanaryServer::logInfos() {
  * \param MF_GRAYED Disable the "x" (force close) button
  * \param MF_ENABLED Enable the "x" (force close) button
  */
-void CanaryServer::toggleForceCloseButton() {
+void FireotsServer::toggleForceCloseButton() {
 #ifdef OS_WINDOWS
 	const HWND hwnd = GetConsoleWindow();
 	const HMENU hmenu = GetSystemMenu(hwnd, FALSE);
@@ -231,7 +231,7 @@ void CanaryServer::toggleForceCloseButton() {
 #endif
 }
 
-void CanaryServer::badAllocationHandler() {
+void FireotsServer::badAllocationHandler() {
 	// Use functions that only use stack allocation
 	g_logger().error("Allocation failed, server out of memory, "
 					 "decrease the size of your map or compile in 64 bits mode");
@@ -244,7 +244,7 @@ void CanaryServer::badAllocationHandler() {
 	exit(-1);
 }
 
-std::string CanaryServer::getPlatform() {
+std::string FireotsServer::getPlatform() {
 #if defined(__amd64__) || defined(_M_X64)
 	return "x64";
 #elif defined(__i386__) || defined(_M_IX86) || defined(_X86_)
@@ -256,7 +256,7 @@ std::string CanaryServer::getPlatform() {
 #endif
 }
 
-std::string CanaryServer::getCompiler() {
+std::string FireotsServer::getCompiler() {
 	std::string compiler;
 #if defined(__clang__)
 	return compiler = fmt::format("Clang++ {}.{}.{}", __clang_major__, __clang_minor__, __clang_patchlevel__);
@@ -269,7 +269,7 @@ std::string CanaryServer::getCompiler() {
 #endif
 }
 
-void CanaryServer::loadConfigLua() {
+void FireotsServer::loadConfigLua() {
 	std::string configName = "config.lua";
 	// Check if config or config.dist exist
 	std::ifstream c_test("./" + configName);
@@ -300,16 +300,16 @@ void CanaryServer::loadConfigLua() {
 #endif
 }
 
-void CanaryServer::initializeDatabase() {
+void FireotsServer::initializeDatabase() {
 	logger.info("Establishing database connection... ");
 	if (!Database::getInstance().connect()) {
-		throw FailedToInitializeCanary("Failed to connect to database!");
+		throw FailedToInitializeFireots("Failed to connect to database!");
 	}
 	logger.debug("MySQL Version: {}", Database::getClientVersion());
 
 	logger.debug("Running database manager...");
 	if (!DatabaseManager::isDatabaseSetup()) {
-		throw FailedToInitializeCanary(fmt::format(
+		throw FailedToInitializeFireots(fmt::format(
 			"The database you have specified in {} is empty, please import the schema.sql to your database.",
 			g_configManager().getConfigFileLua()
 		));
@@ -323,15 +323,15 @@ void CanaryServer::initializeDatabase() {
 	}
 }
 
-void CanaryServer::loadModules() {
+void FireotsServer::loadModules() {
 	// If "USE_ANY_DATAPACK_FOLDER" is set to true then you can choose any datapack folder for your server
 	const auto useAnyDatapack = g_configManager().getBoolean(USE_ANY_DATAPACK_FOLDER, __FUNCTION__);
 	auto datapackName = g_configManager().getString(DATA_DIRECTORY, __FUNCTION__);
-	if (!useAnyDatapack && (datapackName != "data-canary" && datapackName != "data-otservbr-global" || datapackName != "data-otservbr-global" && datapackName != "data-canary")) {
-		throw FailedToInitializeCanary(fmt::format(
+	if (!useAnyDatapack && (datapackName != "data-fire")) {
+		throw FailedToInitializeFireots(fmt::format(
 			"The datapack folder name '{}' is wrong, please select valid "
-			"datapack name 'data-canary' or 'data-otservbr-global "
-			"or enable in config.lua to use any datapack folder",
+			"datapack name 'data-fire' or enable in config.lua to use any datapack folder. "
+			"Legacy datapacks (data-canary, data-otservbr-global) have been archived.",
 			datapackName
 		));
 	}
@@ -378,14 +378,14 @@ void CanaryServer::loadModules() {
 	g_ioprey().initializeTaskHuntOptions();
 }
 
-void CanaryServer::modulesLoadHelper(bool loaded, std::string moduleName) {
+void FireotsServer::modulesLoadHelper(bool loaded, std::string moduleName) {
 	logger.debug("Loading {}", moduleName);
 	if (!loaded) {
-		throw FailedToInitializeCanary(fmt::format("Cannot load: {}", moduleName));
+		throw FailedToInitializeFireots(fmt::format("Cannot load: {}", moduleName));
 	}
 }
 
-void CanaryServer::shutdown() {
+void FireotsServer::shutdown() {
 	g_dispatcher().shutdown();
 	g_metrics().shutdown();
 	inject<ThreadPool>().shutdown();
