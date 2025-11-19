@@ -400,7 +400,6 @@ database_backup
 
 # CLION
 cmake-build-*
-<<<<<<< HEAD
 data-fire/world/otservbr.otbm
 fire_old
 fire
@@ -409,8 +408,5 @@ old map/fire.otbm
 data-fire/world/fire.otbm
 data/output.txt
 /vcpkg
-data/output.txt
 data-fire/world/working/fire.otbm
-=======
 compile_commands.json
->>>>>>> upstream/main

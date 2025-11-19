@@ -12,6 +12,3 @@ dofile(DATA_DIRECTORY .. "/lib/tables/load.lua")
 
 -- Custom library
 dofile(DATA_DIRECTORY .. "/lib/custom/load.lua")
-
--- Functions library
-dofile(DATA_DIRECTORY .. "/lib/functions/load.lua")

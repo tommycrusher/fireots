@@ -33,15 +33,8 @@ COPY recompile.sh CMakeLists.txt CMakePresets.json vcpkg.json ./
 RUN ./recompile.sh "/opt"
 
 # Stage 3: execute
-<<<<<<< HEAD
-FROM ubuntu:23.04 AS prod
+FROM ubuntu:24.04 AS prod
 COPY --from=build /srv/build/build/linux-release/bin/fireots /bin/fireots
 WORKDIR /srv/fireots
 ENTRYPOINT ["/srv/fireots/start.sh", "fireots"]
-=======
-FROM ubuntu:24.04 AS prod
-COPY --from=build /srv/build/build/linux-release/bin/canary /bin/canary
-WORKDIR /srv/canary
-ENTRYPOINT ["/srv/canary/start.sh", "canary"]
->>>>>>> upstream/main
 
