@@ -19,17 +19,8 @@ add_subdirectory(security)
 add_subdirectory(server)
 add_subdirectory(utils)
 
-<<<<<<< HEAD:cmake/modules/FireotsLib.cmake
 # Add more global sources - please add preferably in the sub_directory CMakeLists.
 target_sources(${PROJECT_NAME}_lib PRIVATE fireots_server.cpp)
-=======
-# Add more global sources - please add preferably in the sub_directory
-# CMakeLists.
-target_sources(
-    ${PROJECT_NAME}_lib
-    PRIVATE canary_server.cpp
-)
->>>>>>> upstream/main:cmake/modules/CanaryLib.cmake
 
 # Conditional Precompiled Headers
 if(USE_PRECOMPILED_HEADER)
