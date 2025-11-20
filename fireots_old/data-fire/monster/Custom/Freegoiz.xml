@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Freegoiz" tp="1" nameDescription="a Freegoiz" race="blood" experience="20000" speed="500" manacost="0">
+    <health now="95000" max="95000"/>
+    <look type="110" head="20" body="30" legs="40" feet="50" corpse="3055"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag staticattack="50"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+            <attack name="physical" interval="2000" chance="100" range="7" radius="4" target="1" min="-150" max="-1500">
+                    <attribute key="shootEffect" value="energy"/>
+	            <attribute key="areaEffect" value="blackspark"/>
+            </attack>
+            <attack name="melee" interval="2000" chance="19" range="7" radius="3" target="0" min="-0" max="-700">
+	            <attribute key="areaEffect" value="poff"/>
+            </attack>
+            <attack name="melee" interval="2000" skill="3000" attack="1500" /> 
+    </attacks>
+    <defenses armor="300" defense="300">
+      <defense name="light healing" interval="5000" chance="80" min="40" max="85"/>
+    </defenses>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="1"/>
+      <immunity fire="0"/>
+      <immunity poison="0"/>
+      <immunity lifedrain="0"/>
+      <immunity paralyze="1"/>
+      <immunity outfit="0"/>
+      <immunity drunk="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="2000" chance="5">
+      <voice sentence="OOO RZESZ TYYYYY!"/>
+      <voice sentence="ZACHCIALO CI SIE SCYTHE NOOBIEE!!!"/>
+      <voice sentence="AARRRHHHHG.. BEDZIESZ MOJJJ!"/>
+    </voices>
+	<loot>
+    <item id="7591" chance="17325" /><!-- great health potion -->
+    <item id="2152" countmax="24" chance="10775" /><!-- platinum coin -->
+    <item id="2148" countmax="97" chance="58950" /><!-- gold coin -->
+    <item id="9808" chance="65825" /><!-- rusty armor -->
+    <item id="2515" chance="9825" /><!-- guardian shield -->
+    <item id="7840" countmax="99" chance="8750" /><!-- flaming arrow -->
+    <item id="2127" chance="29825" /><!-- emerald bangle -->
+    <item id="1988" chance="100000"><!-- bag -->
+        <inside>
+            <item id="2153" chance="17825" /><!-- violet gem -->
+            <item id="2381" chance="28500" /><!-- halberd -->
+            <item id="2156" chance="20500" /><!-- red gem -->
+            <item id="7590" chance="20000" /><!-- great mana potion -->
+            <item id="2528" chance="15175" /><!-- tower shield -->
+            <item id="6529" countmax="49" chance="14575" /><!-- infernal bolt -->
+            <item id="9971" chance="17825" /><!-- gold ingot -->
+            <item id="2452" chance="36500" /><!-- heavy mace -->
+            <item id="2154" chance="25825" /><!-- yellow gem -->
+            <item id="2427" chance="17825" /><!-- guardian halberd -->
+            <item id="8891" chance="12500" /><!-- paladin armor -->
+            <item id="7368" countmax="50" chance="8450" /><!-- assassin star -->
+            <item id="2158" chance="17825" /><!-- blue gem -->
+            <item id="7439" chance="18650" /><!-- berserk potion -->
+            <item id="5944" countmax="5" chance="12775" /><!-- soul orb -->
+            <item id="8928" chance="4500" /><!-- obsidian truncheon -->
+            <item id="5954" countmax="2" chance="9175" /><!-- demon horn -->
+            <item id="7632" countmax="2" chance="23175" /><!-- giant shimmering pearl -->
+            <item id="8473" chance="12000" /><!-- ultimate health potion -->
+            <item id="2547" countmax="82" chance="8950" /><!-- power bolt -->
+            <item id="2155" chance="20500" /><!-- green gem -->
+            <item id="7421" chance="5825" /><!-- onyx flail -->
+            <item id="7440" chance="18650" /><!-- mastermind potion -->
+            <item id="8889" chance="1025" /><!-- skullcracker armor -->
+            <item id="2520" chance="7175" /><!-- demon shield -->
+            <item id="8929" chance="1825" /><!-- the stomper -->
+            <item id="2514" chance="2500" /><!-- mastermind shield -->
+            <item id="7387" chance="4500" /><!-- diamond sceptre -->
+            <item id="2519" chance="8500" /><!-- crown shield -->
+            <item id="8472" chance="5325" /><!-- great spirit potion -->
+            <item id="7431" chance="1025" /><!-- demonbone -->
+        </inside>
+    </item>
+</loot>
+  </monster>

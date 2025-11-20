@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pelzacz" nameDescription="an pelzacz" race="blood" experience="10000" speed="725" manacost="1360">
+	<health now="75000" max="75000"/>
+	<look type="356" corpse="6012"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+        <flag attackable="1"/> 
+        <flag hostile="1"/> 
+        <flag canpushitems="1"/> 
+        <flag lightlevel="5"/> 
+        <flag lightcolor="30"/> 
+        <flag canpushcreatures="1"/> 
+		<flag targetdistance="5"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="8000"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="20"/>
+		<attack name="physical" interval="800" range="7" min="-1200" max="-2060">
+			<attribute key="shootEffect" value="eartharrow"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="healing" interval="500" min="550" max="900">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+        </defenses> 
+	<elements>
+		<element holyPercent="30"/>
+		<element deathPercent="-10"/>
+	</elements>
+    <immunities> 
+        <immunity lifedrain="1"/> 
+        <immunity paralyze="1"/> 
+        <immunity drunk="1"/> 
+        <immunity invisible="1"/> 
+    </immunities> 
+	<voices interval="5000" chance="10">
+		<voice sentence="Tha'shi Ab'Dendriel!"/>
+		<voice sentence="Feel the sting of my arrows!"/>
+		<voice sentence="Thy blood will quench the soil's thirst!"/>
+		<voice sentence="Evicor guide my arrow."/>
+		<voice sentence="Your existence will end here!"/>
+	</voices>
+	<loot>
+		<item id="2160" countmax="3" chance="31000"/><!-- gold coin -->
+	</loot>
+</monster>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Arekf" nameDescription="an arekf" race="venom" experience="1" speed="560" manacost="0">
+  <health now="220" max="220"/>
+  <look type="145" head="114" body="132" legs="132" feet="132" addons="3" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+  </flags>
+  <attacks>
+	<attack name="melee" interval="2000" min="-400" max="-1311" poison="190"/>
+	<attack name="earth" interval="2000" chance="21" range="7" radius="4" target="1" min="-3" max="-14">
+	<attribute key="areaEffect" value="poison"/>
+	</attack>
+	<attack name="earth" interval="3000" chance="27" length="4" spread="3" min="-7" max="-9">
+	<attribute key="areaEffect" value="yellowbubble"/>
+	</attack>
+
+	<attack name="speed" interval="2000" chance="20" range="1" target="1" radius="4" speedchange="-900" duration="20000">
+	<attribute key="areaEffect" value="poison"/>
+	</attack>
+</attacks>
+  <defenses armor="55" defense="45">
+    <defense name="healing" interval="1000" chance="8" min="475" max="895">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="17" speedchange="360" duration="6000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+		<element firePercent="30"/>
+		<element energyPercent="-10"/>
+		<element icePercent="15"/>
+		<element holyPercent="-10"/>
+		<element deathPercent="20"/>
+</elements>
+  <immunities>
+    <immunity earth="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="600" chance="20">
+    <voice sentence="Jestem naap!"/>
+    <voice sentence="Zostalem wezwany przeze mnie!"/>
+    <voice sentence="Lubie ziemniaki!"/>
+
+  </voices>
+<loot>
+<item id="2148" chance="100000" countmax="100" /> -- gold coin
+<item id="2148" chance="70000" countmax="80" /> -- gold coin
+<item id="8843" chance="30000" countmax="10" /> -- cebula
+<item id="2235" chance="20000" /> -- moldy cheese
+<item id="2237" chance="10000" /> -- dirty cape
+<item id="2416" chance="3333" /> -- crowbar
+<item id="2225" chance="4000" /> -- piece of iron
+<item id="6500" chance="2000" /> -- demonic essence
+<item id="2444" chance="700" /> -- hammer of wrath
+<item id="2477" chance="2000" /> -- knight legs
+<item id="1987" chance="100000" > -- bag
+<inside>
+<item id="7365" chance="5000" countmax="11" /> -- onyx arrow
+<item id="2148" chance="10000" countmax="51" /> -- gold coin
+	<item id="2492" chance="400" /> -- DSM
+	<item id="2645" chance="700" /> -- steel boots
+	<item id="8840" chance="20000" countmax="15" /> -- toooskafka
+	<item id="2417" chance="6667" /> -- battle hammer
+	<item id="2509" chance="10000" /> -- steel shield
+	<item id="5944" chance="4538" countmax="1" /> -- soul orb
+	<item id="5877" chance="900" countmax="1" /> -- royal steel
+	<item id="5878" chance="900" countmax="1" /> -- hell steel
+	<item id="5879" chance="900" countmax="1" /> -- draconian steel
+	<item id="2079" chance="600" /> -- war horn
+	<item id="9810" chance="650" /> -- rare rusty armor
+	<item id="2209" chance="3222" /> -- club ring
+</inside>
+</item>
+</loot>
+</monster>

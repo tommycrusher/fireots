@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Castle King" nameDescription="the lord of the castle" race="venom" experience="10" speed="840" manacost="0">
+	<health now="225000" max="225000"/>
+  <look type="332" head="38" body="77" legs="113" feet="113" corpse="3128" addons="3"/>
+	<targetchange interval="2000" chance="10"/>
+	<strategy attack="105" defense="55"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="3000"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="150" attack="295" ice="500"/>
+		<attack name="lifedrain" interval="1000" chance="13" radius="8" target="0" min="-400" max="-800">
+			<attribute key="areaEffect" value="mortarea"/>
+		</attack>
+		<attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-1900" duration="60000">
+			<attribute key="areaEffect" value="icearea"/>
+		</attack>
+		<attack name="physical" interval="1000" chance="12" radius="3" target="0">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="fire" interval="1000" chance="34" range="7" radius="7" target="1" min="-300" max="-1200">
+			<attribute key="shootEffect" value="earth"/>
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</attack>
+		<attack name="manadrain" interval="1000" chance="7" length="0" spread="3" min="-600" max="-800">
+			<attribute key="areaEffect" value="energyarea"/>
+		</attack>
+		<attack name="physical" interval="1000" chance="7" length="8" spread="3" min="-300" max="-900"/>
+		<attack name="energy" interval="1000" chance="9" length="8" spread="0" min="-500" max="-1200">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-500" max="-800">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="188" defense="145">
+		<defense name="healing" interval="1000" chance="15" min="1000" max="5000"/>
+		<defense name="healing" interval="1000" chance="25" min="2000" max="3000"/>
+		<defense name="speed" interval="1000" chance="8" speedchange="1901" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="0"/>
+		<immunity energy="1"/>
+		<immunity fire="1"/>
+		<immunity poison="1"/>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity outfit="1"/>
+		<immunity drunk="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+     	<voice sentence="You fear the pain, I can intensified it!"/>
+     	<voice sentence="Castle King is comming!"/>
+     	<voice sentence="Castle is mine, do you want it?"/>
+     	<voice sentence="TABUM I CACH YOU.."/>
+	</voices>
+	<loot capacity="5000">
+		<item id="2157" countmax="5" chance="3500"/><!--golden nugget-->
+		<item id="7730" countmax="1" chance="6500"/><!--blue legs-->
+		<item id="11113" countmax="1" chance="16500"/><!--blue legs-->
+	</loot>
+</monster>

@@ -1,0 +1,10 @@
+#! /bin/bash
+cd /var/www/vhosts/fireots.pl/fireots/
+ulimit -c unlimited
+i=1
+while [ $i -le 99999000 ]
+do
+./fire > ./data/output.txt
+i=`expr $i + 1`
+done
+

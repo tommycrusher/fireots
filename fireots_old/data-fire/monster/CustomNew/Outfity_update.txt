@@ -1,0 +1,22 @@
+Anio³:
+0 	0 	0 	0 	325 	1
+
+Archanio³:
+0 	0 	94 	0 	325	1
+
+Ob³¹kany wyznawca:
+114 	79 	0 	0 	289 	3
+
+
+
+S³uga Diab³a:
+114 	94 	114 	114 	145 	3
+
+Adept Wê¿a:
+0 	0 	0 	0 	268 	1
+
+Nathil:
+0 	0 	0 	94 	268 	3
+
+Starzec:
+21 	114 	19 	0 	153 	1

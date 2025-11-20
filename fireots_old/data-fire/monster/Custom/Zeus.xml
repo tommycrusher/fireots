@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Hell Demon" tp="1" nameDescription="a Zeus" race="blood" experience="50000" speed="375" manacost="0">
+    <health now="200000" max="200000"/>
+    <look type="12" head="20" body="30" legs="40" feet="50" corpse="2916"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag staticattack="45"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="0"/>
+    </flags>
+    <attacks>
+      <attack name="melee" interval="2000" min="-1500" max="-3000"/>
+      <attack name="fire field" interval="7500" chance="75"/>
+      <attack name="great fireball" interval="3000" chance="50" min="-300" max="-750"/>
+      <attack name="manadrain" interval="4000" chance="30"/>
+    </attacks>
+    <defenses armor="56" defense="60">
+      <defense name="light healing" interval="1000" chance="60" min="20" max="70"/>
+    </defenses>
+    <immunities>
+      <immunity physical="0"/>
+      <immunity energy="1"/>
+      <immunity fire="1"/>
+      <immunity poison="1"/>
+      <immunity lifedrain="0"/>
+      <immunity paralyze="1"/>
+      <immunity outfit="0"/>
+      <immunity drunk="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <summons maxSummons="20">
+      <summon name="Fire Elemental" interval="1000" chance="10"/>
+    </summons>
+    <voices interval="2000" chance="5">
+      <voice sentence="DEATH TO EVERYONE!!!"/>
+      <voice sentence="MUAHAHAHAHA!"/>
+    </voices>
+    <loot>
+      <item id="2160" countmax="10" chance1="500" chancemax="0"/>
+      <item id="2393" chance="1000"/>
+      <item id="2470" chance="2000"/>
+      <item id="2523" chance="1333"/>
+      <item id="7405" chance="1333"/>
+      <item id="7411" chance="1333"/>
+      <item id="7421" chance="1333"/>
+      <item id="2158" chance="10000"/>
+      <item id="2319" chance="9000"/>
+      <item id="2495" chance="50000"/>
+      <item id="2153" chance="50000"/>
+      <item id="2472" chance="1857"/>
+      <item id="1987" chance="33333">
+        <inside>
+          <item id="2469" chance="1"/>
+          <item id="2402" chance="5000"/>
+          <item id="2390" chance="2000"/>
+          <item id="2646" chance="3333"/>
+          <item id="2400" chance="1"/>
+        </inside>
+      </item>
+    </loot>
+  </monster>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Eye of Terror" nameDescription="an eye of terror" race="undead" experience="200" speed="820" manacost="0">
+	<health now="15000" max="500000"/>
+	<look type="256" corpse="7256"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="3"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="paralyze" interval="1000" chance="40" target="1">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="drunk" interval="1000" chance="15" range="7" radius="1" target="1">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	  <elements>
+  <element deathPercent="-50"/>
+  <element physicalPercent="-10"/>
+  </elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+		<immunity earth="1"/>
+		<immunity fire="1"/>
+	</immunities>
+	<summons maxSummons="4">
+		<summon name="gazer" interval="2000" chance="20"/>
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="I will turn you into something usefull!"/>
+		<voice sentence="You have disturbed my thoughts!"/>
+	</voices>
+  <loot>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="2148" countmax="52" chance1="100000" chancemax="0"/>
+    <item id="2181" chance="1333" />
+    <item id="2509" chance="3333"/>
+	<item id="2509" countmax="1" chance="6000"/>
+    <item id="2445" chance="400"/>
+    <item id="2181" chance="1333" /> 
+    <item id="3972" chance="600"/>
+	<item id="7884" chance="40000"/>
+    <item id="2451" chance="300"/>
+    <item id="3972" chance="100"/>
+    <item id="1987" chance="90000">
+      <inside>
+        <item id="2512" countmax="1" chance="3000"/>
+        <item id="2518" chance="1000"/>
+        <item id="2397" chance="6666"/>
+		<item id="7885" chance="50000"/>
+		<item id="8912" chance="60000"/>
+		<item id="7886" chance="30000"/>
+        <item id="5898" chance="556" countmax="1" /> 
+		<item id="2377" countmax="1" chance="6000"/>
+        <item id="2175" chance="1000"/>
+		<item id="8869" chance="10000"/>
+        <item id="2394" countmax="1" chance="10000"/>
+        <item id="2148" countmax="32" chance="80000"/>
+        <item id="2423" chance="5000"/>
+        <item id="2391" chance="1333"/>
+		<item id="7850" countmax="18" chance="70000"/>
+      </inside>
+    </item>
+  </loot>
+</monster>

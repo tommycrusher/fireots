@@ -1,0 +1,3 @@
+echo Starting FireWave Server 13.32....
+sleep 0
+screen -A -m -d -S fire ./fire-sh

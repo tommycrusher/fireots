@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <monster name="Son of Verminor" nameDescription="Son of Verminor" race="venom" experience="5900" speed="320" manacost="0">
+  <health now="8500" max="8500" /> 
+  <look type="19" head="0" body="0" legs="0" feet="0" corpse="1496" /> 
+  <targetchange interval="2000" chance="0" /> 
+  <strategy attack="100" defense="0" />
+
+ <flags>
+  <flag summonable="0" /> 
+  <flag attackable="1" /> 
+  <flag hostile="1" /> 
+  <flag illusionable="0" /> 
+  <flag convinceable="0" /> 
+  <flag pushable="0" /> 
+  <flag canpushitems="1" /> 
+  <flag canpushcreatures="0" /> 
+  <flag targetdistance="1" /> 
+  <flag runonhealth="0" /> 
+  </flags>
+
+ <attacks>
+  <attack name="melee" interval="2000" skill="72" attack="56" />
+  <attack name="groundshaker" interval="6200" chance="80" min="200" max="-230" />	
+  </attacks>
+
+  <defenses armor="23" defense="32" >
+  <defense name="outfit" interval="4200" monster="rat" duration="6000">
+  <attribute key="areaEffect" value="blueshimmer" /> 
+  </defense>
+<defense name="outfit" interval="4200" monster="larva" duration="6000">
+  <attribute key="areaEffect" value="blueshimmer" /> 
+  </defense>
+<defense name="outfit" interval="4200"  monster="scorpion" duration="6000">
+  <attribute key="areaEffect" value="blueshimmer" /> 
+  </defense>
+  </defenses>
+
+ <immunities>
+  <immunity physical="0" /> 
+  <immunity energy="0" /> 
+  <immunity fire="0" /> 
+  <immunity poison="1" /> 
+  <immunity lifedrain="0" /> 
+  <immunity paralyze="0" /> 
+  <immunity outfit="0" /> 
+  <immunity drunk="0" /> 
+  <immunity invisible="1" /> 
+  </immunities>
+
+ <summons maxSummons="2">
+  <summon name="slime" interval="8200" chance="65" max="2" /> 
+  </summons>
+
+  </monster>

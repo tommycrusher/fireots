@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<monster name="Player Killer" nameDescription="a player killer(Level 102). He is a Royal Paladin. He is Member of PK SQD" race="blood" experience="15000" speed="450" manacost="0"> 
+  <health now="17000" max="17000"/> 
+  <look type="128" head="20" body="30" legs="40" feet="50" corpse="6080"/> 
+  <targetchange interval="20000" chance="0"/> 
+  <strategy attack="100" defense="100"/> 
+  <flags> 
+    <flag summonable="0"/> 
+    <flag attackable="1"/> 
+    <flag hostile="1"/> 
+    <flag illusionable="0"/> 
+    <flag convinceable="0"/> 
+    <flag pushable="1"/> 
+    <flag canpushitems="1"/> 
+    <flag staticattack="100"/> 
+    <flag lightlevel="233"/> 
+    <flag lightcolor="35"/> 
+    <flag targetdistance="3"/> 
+    <flag runonhealth="500"/> 
+    <flag skull="3" /> 
+  </flags> 
+  <attacks> 
+    <attack name="physical" interval="2000" chance="100" range="6" min="-200" max="-1320"> 
+      <attribute key="shootEffect" value="arrow"/> 
+    </attack> 
+    <attack name="PKspellMonster" interval="2000" chance="100"/> 
+  </attacks> 
+  <defenses armor="27" defense="52" /> 
+     <elements>
+	<element deathPercent="50"/>
+	<element earthPercent="30"/>
+	<element firePercent="30"/>
+	<element physicalPercent="50"/>
+	<element icePercent="15"/>
+	<element holyPercent="100"/>
+    </elements>
+    <immunities> 
+    <immunity physical="0"/> 
+    <immunity energy="0"/> 
+    <immunity fire="0"/> 
+    <immunity poison="0"/> 
+    <immunity lifedrain="10"/> 
+    <immunity paralyze="0"/> 
+    <immunity outfit="0"/> 
+    <immunity drunk="1"/> 
+    <immunity invisible="1"/> 
+  </immunities> 
+  <loot> 
+    <item id="2148" countmax="20" chance1="100000" chancemax="0"/> 
+    <item id="1949" chance="10000"/> 
+    <item id="2467" chance="10000"/> 
+    <item id="2642" chance="6666"/> 
+    <item id="1987" chance="100000"> 
+      <inside> 
+        <item id="2044" chance="6666"/> 
+        <item id="2689" countmax="3" chance1="20000" chancemax="0"/> 
+        <item id="2401" chance="3333"/> 
+        <item id="2166" chance="1428"/> 
+      </inside> 
+    </item> 
+  </loot> 
+</monster>
