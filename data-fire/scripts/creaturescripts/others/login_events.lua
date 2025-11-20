@@ -1,3 +1,5 @@
+-- TEMPORARILY DISABLED FOR DEBUGGING
+--[[
 local loginEvents = CreatureEvent("LoginEvents")
 function loginEvents.onLogin(player)
 	local events = {
@@ -15,3 +17,4 @@ function loginEvents.onLogin(player)
 end
 
 loginEvents:register()
+]]--

@@ -1,3 +1,5 @@
+-- TEMPORARILY DISABLED FOR DEBUGGING
+--[[
 dofile(CORE_DIRECTORY .. "/libs/systems/blessing.lua")
 
 local adventurerBlessingLogin = CreatureEvent("AdventurerBlessingLogin")
@@ -7,3 +9,4 @@ function adventurerBlessingLogin.onLogin(player)
 end
 
 adventurerBlessingLogin:register()
+]]--

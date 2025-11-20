@@ -363,6 +363,7 @@ local questTable = {
 	{ storageName = "TheWhiteRavenMonastery.Door", storage = Storage.Quest.U7_24.TheWhiteRavenMonastery.Door, storageValue = 1 },
 }
 
+--[[ TEMPORARILY DISABLED FOR LOGIN DEBUGGING
 -- from Position: (33201, 31762, 1)
 -- to Position: (33356, 31309, 4)
 local function playerFreeQuestStart(playerId, index)
@@ -393,6 +394,9 @@ local function playerFreeQuestStart(playerId, index)
 
 	addEvent(playerFreeQuestStart, 500, playerId, index)
 end
+]]--
+
+--[[ TEMPORARILY DISABLED FOR LOGIN DEBUGGING
 
 local freeQuests = CreatureEvent("FreeQuests")
 
@@ -410,3 +414,4 @@ function freeQuests.onLogin(player)
 end
 
 freeQuests:register()
+]]--

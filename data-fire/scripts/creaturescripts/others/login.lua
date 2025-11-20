@@ -1,3 +1,20 @@
+-- MINIMAL LOGIN SCRIPT FOR DEBUGGING
+-- Temporarily disabled all custom logic to isolate login issues
+local playerLogin = CreatureEvent("PlayerLogin")
+
+function playerLogin.onLogin(player)
+	-- Just send a simple welcome message
+	player:sendTextMessage(MESSAGE_LOGIN, "Welcome to FireOTS! Login successful.")
+	
+	-- Open basic channels
+	player:openChannel(3) -- World chat
+	
+	return true
+end
+
+playerLogin:register()
+
+--[[ DISABLED - Custom FireOTS login logic (restore after login works)
 local playerLogin = CreatureEvent("PlayerLogin")
 
 function playerLogin.onLogin(player)
@@ -41,3 +58,4 @@ function playerLogin.onLogin(player)
 end
 
 playerLogin:register()
+]]--
