@@ -33,7 +33,7 @@ RUN ./recompile.sh "/opt"
 
 # Stage 3: execute
 FROM ubuntu:23.04 AS prod
-COPY --from=build /srv/build/build/linux-release/bin/canary /bin/canary
-WORKDIR /srv/canary
-ENTRYPOINT ["/srv/canary/start.sh", "canary"]
+COPY --from=build /srv/build/build/linux-release/bin/fireots /bin/fireots
+WORKDIR /srv/fireots
+ENTRYPOINT ["/srv/fireots/start.sh", "fireots"]
 
