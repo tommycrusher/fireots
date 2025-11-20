@@ -47,8 +47,8 @@ Fireots is a modern, high-performance C++ MMORPG server emulator designed for Ti
 
 - **Commits ahead of upstream**: 13 (Fireots-specific improvements)
 - **Commits behind upstream**: 623 (potential features to evaluate)
-- **Rebranding**: Complete (Canary → Fireots)
-- **Datapack**: `data-fire/` (legacy datapacks archived)
+- **Active rebranding**: In progress from Canary to Fireots
+- **Primary datapack**: `data-fire/` (consolidating `data-canary/`)
 
 ---
 
@@ -368,7 +368,7 @@ fireots/
 - Forward declarations: `declarations.hpp`
 
 **C++ Code Style:**
-- Classes: `PascalCase` (e.g., `FireotsServer`, `Player`)
+- Classes: `PascalCase` (e.g., `CanaryServer`, `Player`)
 - Methods: `camelCase` (e.g., `getLevel()`, `addExperience()`)
 - Variables: `camelCase` (e.g., `playerName`, `itemCount`)
 - Constants: `UPPER_SNAKE_CASE` (e.g., `MAX_PLAYERS`)
@@ -836,7 +836,7 @@ registerMethod(L, "Item", "setCustomPower", luaItemSetCustomPower);
 ```bash
 ./start_gdb.sh
 # Inside GDB:
-(gdb) break FireotsServer::run
+(gdb) break CanaryServer::run
 (gdb) run
 (gdb) backtrace
 ```
@@ -952,20 +952,20 @@ Fireots is a fork of Canary with ongoing rebranding. **Do not complete rebrandin
 **Action**: Requires bulk find-replace script + legal review
 
 #### Binary and Class Naming
-| Item | Current | Target | Status |
-|------|---------|--------|--------|
-| Executable | `fireots` | `fireots` | ✅ Complete |
-| Main class | `FireotsServer` | `FireotsServer` | ✅ Complete |
-| Exception | `FailedToInitializeFireots` | `FailedToInitializeFireots` | ✅ Complete |
+| Item | Current | Target | Files Affected |
+|------|---------|--------|----------------|
+| Executable | `canary` | `fireots` | CMakeLists.txt, scripts |
+| Main class | `CanaryServer` | `FireotsServer` | src/canary_server.{cpp,hpp} |
+| Exception | `FailedToInitializeCanary` | `FailedToInitializeFireots` | src/canary_server.hpp |
 
 #### Configuration Validation
-**File**: `src/fireots_server.cpp:330`
+**File**: `src/canary_server.cpp:330`
 
-**Updated**:
+**Current**:
 ```cpp
-if (!useAnyDatapack && (datapackName != "data-fire" &&
-    datapackName != "data-canary" && datapackName != "data-otservbr-global")) {
-    throw FailedToInitializeFireots("Invalid datapack");
+if (!useAnyDatapack && (datapackName != "data-canary" &&
+    datapackName != "data-otservbr-global")) {
+    throw FailedToInitializeCanary("Invalid datapack");
 }
 ```
 
@@ -1000,32 +1000,29 @@ if (!useAnyDatapack && datapackName != "data-fire") {
 
 ```bash
 #!/bin/bash
-# rebrand.sh - Systematic rebranding script (✅ COMPLETED)
+# rebrand.sh - Systematic rebranding script
 
-# 1. Update source file headers (✅ Done)
+# 1. Update source file headers
 find src/ tests/ -type f \( -name "*.cpp" -o -name "*.hpp" \) -exec sed -i 's/Canary - A free and open-source/Fireots - A free and open-source/' {} +
 
-# 2. Rename main class (✅ Done)
-sed -i 's/CanaryServer/FireotsServer/g' src/**/*.{cpp,hpp}
-git mv src/canary_server.cpp src/fireots_server.cpp
-git mv src/canary_server.hpp src/fireots_server.hpp
+# 2. Rename main class
+sed -i 's/CanaryServer/FireotsServer/g' src/canary_server.{cpp,hpp} src/main.cpp
+mv src/canary_server.cpp src/fireots_server.cpp
+mv src/canary_server.hpp src/fireots_server.hpp
 
-# 3. Update CMakeLists.txt (✅ Done)
+# 3. Update CMakeLists.txt
 sed -i 's/project(canary)/project(fireots)/' CMakeLists.txt
 sed -i 's/canary-debug/fireots-debug/' CMakeLists.txt
 
-# 4. Update scripts (✅ Done)
-sed -i 's/canary/fireots/g' recompile.sh start_fire.sh start_gdb.sh fire-sh
+# 4. Update scripts
+sed -i 's/canary/fireots/g' recompile.sh start_fire.sh
 
-# 5. Update Docker (✅ Done)
-sed -i 's/canary/fireots/g' docker/Dockerfile.* docker/docker-compose.yml
-
-# 6. Rename resource files (✅ Done)
-git mv cmake/canary.rc cmake/fireots.rc
-git mv cmake/canary.ico cmake/fireots.ico
+# 5. Update URLs
+find . -type f -exec sed -i 's|https://github.com/opentibiabr/canary|https://github.com/tommycrusher/fireots|g' {} +
+find . -type f -exec sed -i 's|docs.opentibiabr.com|docs.fireots.pl|g' {} +
 ```
 
-**✅ Rebranding completed on branch feature/rebrand-fireots**
+**⚠️ Do not run without backup and team approval!**
 
 ---
 

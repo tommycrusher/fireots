@@ -28,10 +28,10 @@ See `src/lib/di/README.md` for patterns. **Never use raw singletons** - always i
 ### Data Organization (Critical for Development)
 **DO NOT MODIFY** `data/` - core Lua libraries shared across all datapacks:
 - `data/` - Core framework: libs, events, scripts base (immutable)
-- `data-fire/` - **Primary and only** supported datapack (monsters, scripts, world, migrations)
-- Legacy datapacks archived in `archive/` for historical reference
+- `data-fire/` - **Primary target** for Fire-specific content (monsters, scripts, world, migrations)
+- `data-canary/` - Legacy Canary datapack (to be merged into data-fire)
 
-**Consolidation complete**: `data-fire/` is the unified datapack. Legacy content archived.
+**Roadmap goal**: Consolidate `data-canary/` into `data-fire/` as single unified datapack while keeping `data/` untouched.
 
 Config file `config.lua` selects active datapack via `dataPackDirectory` (default: `"data-fire"`).
 
@@ -95,24 +95,16 @@ Lua entry points:
 ### Completed
 - Repository forked to `tommycrusher/fireots`
 - Documentation references updated (README, Gitbook)
-- **Source file headers**: All `.cpp/.hpp` files updated to Fireots
-- **Binary naming**: Executable renamed to `fireots`
-- **Class naming**: `CanaryServer` → `FireotsServer`
-- **CMake project**: Project renamed to `fireots` in CMakeLists.txt
-- **Config validation**: Accepts `data-fire`, `data-canary`, and `data-otservbr-global`
-- **Docker images**: Updated to fireots paths and binary names
-- **Build scripts**: All scripts updated for fireots executable
 
-### Completed (Icon & Branding)
-- Icon redesign from canary to fireots branding ✅
-  - New fire/phoenix themed icon (SVG source + multi-format outputs)
-  - Comprehensive branding guidelines documented
-  - Automated icon generation script created
+### In Progress (DO NOT complete without review)
+- **Source file headers**: All `.cpp/.hpp` files contain Canary copyright headers
+- **Binary naming**: Executable still named `canary` (should be `fireots`)
+- **Class naming**: `CanaryServer` class (should be `FireotsServer`)
+- **CMake project**: Project still called `canary` in CMakeLists.txt
+- **Config validation**: Hardcoded datapack name checks for "data-canary"
+- **Docker images**: References to `opentibiabr/canary`
 
-### Future Work
-- Logo and marketing materials (full logo with text, banners, social media assets)
-
-**Rebranding Status**: Core rebranding complete including new icon. All references to Canary systematically updated while preserving GPL-2.0 license and attribution to original authors.
+**When rebranding**: Update all references systematically (headers, class names, build artifacts) while preserving GPL-2.0 license and attribution to original authors.
 
 ## Critical Workflows
 
@@ -123,7 +115,7 @@ cp config.lua.dist config.lua
 # Edit config.lua: set dataPackDirectory, database credentials, IP
 
 # Start server (auto-restart on crash, logs to logs/)
-./start_fire.sh ./fireots
+./start_fire.sh ./canary
 ```
 
 ### Database Migrations

@@ -25,57 +25,51 @@ This roadmap outlines the strategic development plan for Fireots, prioritizing:
 ### Priority: CRITICAL
 **Goal**: Establish Fireots identity and clean technical debt
 
-### 1.1 Complete Rebranding ✅
+### 1.1 Complete Rebranding 🔴
 
-**Status**: **COMPLETED** (Released as v1.5.0-rebrand on 2025-11-15)
 **Estimated Effort**: 2-3 days
-**Actual Effort**: 1 day
+**Blocker**: None
 **Impact**: High (project identity)
 
 #### Tasks:
 
-- [x] **Update all source file headers** ✅ COMPLETED (1000+ files)
+- [ ] **Update all source file headers** (1000+ files)
   - Replace Canary copyright with Fireots + attribution
   - Update repository URLs
   - Update license references
-  - Script: Created `scripts/update_headers.sh`
+  - Script: Create `scripts/rebrand_headers.sh`
 
-- [x] **Rename main classes** ✅ COMPLETED
+- [ ] **Rename main classes**
   - `CanaryServer` → `FireotsServer`
   - `FailedToInitializeCanary` → `FailedToInitializeFireots`
-  - Updated all references in codebase (421 files)
+  - Update all references in codebase
 
-- [x] **Rename binary** ✅ COMPLETED
+- [ ] **Rename binary**
   - CMake project: `canary` → `fireots`
   - Executable output: `canary` → `fireots`
-  - Updated all build scripts (`recompile.sh`, `start_fire.sh`, `start_gdb.sh`, `fire-sh`)
+  - Update all build scripts (`recompile.sh`, `start_fire.sh`)
 
-- [x] **Update configuration validation** ✅ COMPLETED
-  - Accepts "data-fire", "data-canary", "data-otservbr-global"
-  - Datapack validation updated in `src/fireots_server.cpp`
-  - `useAnyDatapackFolder` functionality preserved
+- [ ] **Update configuration validation**
+  - Remove hardcoded "data-canary", "data-otservbr-global" checks
+  - Accept "data-fire" as primary datapack
+  - Make `useAnyDatapackFolder` default to `false`
 
-- [x] **Update Docker configuration** ✅ COMPLETED
-  - Updated all Dockerfiles (dev, arm, x86) to use `fireots` binary
-  - Updated docker-compose.yml with fireots network and paths
-  - Added data-fire directory to Docker builds
+- [ ] **Update Docker configuration**
+  - Build `fireots/fireots` images (not `opentibiabr/canary`)
+  - Update docker-compose.yml references
+  - Create new Dockerfile with Fireots branding
 
-- [x] **Update documentation** ✅ COMPLETED
-  - README.md (already done, verified)
-  - .github/copilot-instructions.md updated
-  - CMakeLists.txt and CMake modules updated
+- [ ] **Update documentation**
+  - README.md (already done, verify completeness)
+  - CODE_OF_CONDUCT.md (update contact email)
+  - CMakeLists.txt comments
   - Doxygen configuration
 
 **Success Criteria**:
-- [x] All "Canary" references in code replaced (except historical attribution)
-- [x] Binary builds as `fireots`
-- [x] Docker images tagged as `fireots/fireots:latest`
-- [x] No broken links in documentation
-
-**Release**: v1.5.0-rebrand (2025-11-15)
-- 6 commits merged from feature/rebrand-fireots branch
-- 433 files changed (5662 insertions, 2113 deletions)
-- See [REBRAND_SUMMARY.md](REBRAND_SUMMARY.md) for detailed report
+- All "Canary" references in code replaced (except historical attribution)
+- Binary builds as `fireots`
+- Docker images tagged as `fireots/fireots:latest`
+- No broken links in documentation
 
 ---
 
@@ -121,72 +115,67 @@ This roadmap outlines the strategic development plan for Fireots, prioritizing:
 
 ---
 
-### 1.3 Datapack Consolidation ✅
+### 1.3 Datapack Consolidation Planning 🟡
 
-**Status**: **COMPLETED** (2025-11-16)
 **Estimated Effort**: 5-7 days (planning + execution)
-**Actual Effort**: 6 hours (analysis revealed no merge needed)
-**Impact**: High (simplified maintenance, removed obsolete code)
-**Final Cleanup**: All references removed from config, Dockerfiles, and documentation
+**Blocker**: None
+**Impact**: High (simplifies maintenance)
 
-#### Analysis Phase ✅ COMPLETED:
+#### Analysis Phase (2 days):
 
-- [x] **Inventory data-canary/ content**
-  - 136 files total: 66 monsters, 1 NPC, 57 scripts, 4 libs, 2 migrations, 2 raids
-  - 19MB world file (canary.otbm)
-  - All content analyzed for uniqueness
+- [ ] **Inventory data-canary/ content**
+  - Monster count: `find data-canary/monster -name "*.xml" | wc -l`
+  - NPC count: `find data-canary/npc -name "*.xml" | wc -l`
+  - Script count: `find data-canary/scripts -name "*.lua" | wc -l`
+  - Unique features (e.g., custom systems)
 
-- [x] **Inventory data-fire/ content**
-  - 4,958 files: 1,578 monsters, 1,048 NPCs, 1,924 scripts
-  - 23 libs, 45 migrations, 88 raids
-  - Complete production datapack
+- [ ] **Inventory data-fire/ content**
+  - Same metrics as data-canary
+  - Identify Fire-specific customizations
+  - Document dependencies
 
-- [x] **Analyze unique content**
-  - 22 unique scripts in data-canary (all obsolete examples)
-  - 2 "unique" monsters (actually older versions of fire monsters)
-  - All libs/migrations are example/demo code
+- [ ] **Identify conflicts**
+  - Duplicate monster IDs
+  - Conflicting quest storage IDs
+  - Incompatible script organization
 
-- [x] **Create decision matrix**
-  | Content Type | data-canary | data-fire | Decision |
+- [ ] **Create consolidation matrix**
+  | Content Type | data-canary | data-fire | Strategy |
   |--------------|-------------|-----------|----------|
-  | Monsters     | 66          | 1,578     | SKIP - all exist in fire (better versions) |
-  | NPCs         | 1           | 1,048     | SKIP - demo NPC only |
-  | Scripts      | 57 (22 unique) | 1,924  | SKIP - all are examples/demos |
-  | Libs         | 4 (43 lines) | 4 (3,131 lines) | SKIP - fire has complete versions |
-  | Migrations   | 2 (empty)   | 45        | SKIP - example only |
+  | Monsters     | 500         | 300       | Merge, resolve ID conflicts |
+  | NPCs         | 150         | 100       | Merge, keep Fire versions |
+  | Scripts      | 1000        | 500       | Reorganize, deduplicate |
 
-#### Key Findings:
+#### Execution Phase (5 days):
 
-**data-canary is 100% obsolete demo/example code**:
-- Monsters: All exist in fire with better stats (Shadowpelt: 6000 HP in fire vs 5000 in canary)
-- Scripts: Examples like "ExampleQuest", demo items (birdcage, christmas_bundle)
-- Libs: storages.lua 43 lines vs fire's 3,131 lines
-- Migrations: Empty examples vs fire's 45 production migrations
+- [ ] **Merge non-conflicting content**
+  - Copy unique monsters from data-canary
+  - Copy unique NPCs
+  - Merge lib/ utilities
 
-#### Execution Phase ✅ COMPLETED:
+- [ ] **Resolve conflicts**
+  - Renumber conflicting IDs
+  - Choose superior implementations
+  - Document decisions in CONSOLIDATION.md
 
-- [x] **Archive data-canary**
-  - Moved to `archive/data-canary-legacy/`
-  - Created `archive/README.md` with analysis summary
-  - No files merged (fire datapack is complete)
+- [ ] **Update references**
+  - Fix script paths
+  - Update spawn files
+  - Update quest references
 
-- [x] **Update configuration**
-  - `config.lua.dist`: Default changed to `data-fire`
-  - `fireots_server.cpp`: Removed data-canary from validation
-  - Added note about archived datapacks
+- [ ] **Testing**
+  - Server startup (no Lua errors)
+  - Monster spawning
+  - NPC dialogs
+  - Quest completion
 
-- [x] **Update documentation**
-  - Created `DATAPACK_CONSOLIDATION_CORRECTED.md` with full analysis
-  - Updated this roadmap section
+- [ ] **Remove data-canary/**
+  - Archive to `archive/data-canary-legacy/`
+  - Update config validation
+  - Update README
 
-**Success Criteria**: ✅ ALL MET
-- [x] Single `data-fire/` datapack in production use
-- [x] No merge needed - fire is complete and superior
-- [x] data-canary archived with comprehensive documentation
-- [x] Config updated to use data-fire by default
-- [x] Server validates only data-fire (or custom with useAnyDatapackFolder)
-
-**Result**: Consolidation simplified to archival - no actual merge needed. Fire datapack confirmed as complete, production-ready codebase.
+**Success Criteria**:
+- Single `data-fire/` datapack
 - No `data-canary/` references in code
 - All features functional
 - Documentation updated
@@ -645,232 +634,6 @@ Code quality improvements, architectural changes.
 Formatting, comments, documentation.
 
 **Action**: Low priority, batch with other changes.
-
----
-
----
-
-## Phase 6: Systematic Error Remediation (Q1 2026)
-
-### Priority: MEDIUM
-**Goal**: Resolve 908 script warnings from server startup logs
-**Estimated Effort**: 1-2 weeks
-**Impact**: Medium (code quality, forward compatibility)
-
-### Status: NOT STARTED
-**Analysis completed**: 2025-11-19
-**Source**: `data/output.txt` (6751 lines, server startup logs)
-
-### 6.1 Error Categories
-
-#### 6.1.1 Duplicate UID Registrations (71 warnings)
-**Priority**: MEDIUM
-**Effort**: 2-3 days
-
-**File**: `data-fire/scripts/actions/quests/quest_reward_common.lua`
-- **Issue**: UIDs 5003-12000 registered multiple times
-- **Cause**: Single script uses broad UID range (5000-12000) conflicting with individual quest scripts
-- **Impact**: Quest rewards may not trigger correctly, duplicate event handlers
-- **Solution Options**:
-  1. Consolidate all quest rewards into quest_reward_common.lua
-  2. Split UID ranges into non-overlapping segments per quest
-  3. Migrate to AID-based system instead of UIDs
-
-**Example warnings**:
-```
-[registerLuaUniqueEvent] duplicate registered item with uid: 5003 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua
-[registerLuaUniqueEvent] duplicate registered item with uid: 5004 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua
-```
-
-**Affected UIDs**: 5003, 5004, 5006, 5007, 5008, 5009, 5017, 5101-5104, 5150-5154, 5200-5210, 5301-5312, etc.
-
----
-
-#### 6.1.2 Teleport Duplicate UIDs (8 warnings)
-**Priority**: LOW
-**Effort**: 1 hour
-
-**File**: `data-fire/scripts/actions/other/teleport_item.lua`
-- **Issue**: UIDs 15001-20000 range overlaps with individual teleport scripts
-- **Cause**: Broad teleport handler conflicts with specific teleport implementations
-- **Impact**: Some teleports may not function, event handler confusion
-- **Solution**: Narrow teleport_item.lua UID range or use itemid registration
-
-**Example warnings**:
-```
-[registerLuaUniqueEvent] duplicate registered item with uid: 15901 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua
-[registerLuaUniqueEvent] duplicate registered item with uid: 17756 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua
-```
-
-**Affected UIDs**: 15901, 15902, 15903, 15904, 17756, 17757, 19000, 19778
-
----
-
-#### 6.1.3 Concoctions Duplicate Item IDs (40 warnings)
-**Priority**: LOW
-**Effort**: 2 hours
-
-**File**: `data/scripts/actions/items/concoctions.lua`
-- **Issue**: Concoction item IDs 36723-36742 registered twice (once in data/, once in data-fire/)
-- **Cause**: Script exists in both core data/ and custom data-fire/ directories
-- **Impact**: Event handlers registered multiple times, potential double-triggers
-- **Solution**: Remove duplicate script from data-fire/ or data/, ensure single registration
-
-**Example warnings**:
-```
-[registerLuaItemEvent] - Duplicate registered item with id: 36726 in range from id: 36726, to id: 36726, for script: concoctions.lua
-[registerLuaItemEvent] - Duplicate registered item with id: 36723 in range from id: 36723, to id: 36723, for script: concoctions.lua
-```
-
-**Affected Item IDs**: 36723-36742 (20 concoction types)
-
----
-
-#### 6.1.4 Deprecated Function Calls (5 warnings)
-**Priority**: HIGH
-**Effort**: 30 minutes
-
-**Pattern**: `setCombatCondition()` → `Combat.addCondition()`
-- **Issue**: Legacy function renamed in upstream Canary
-- **Cause**: Scripts not updated to new API
-- **Impact**: Forward compatibility - function will be removed in future Canary releases
-- **Solution**: Simple find/replace across affected scripts
-
-**Example warnings**:
-```
-[setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future
-```
-
-**Action Required**:
-```bash
-# Find all usages
-grep -r "setCombatCondition" data-fire/scripts/
-
-# Replace with Combat.addCondition
-# Update function signature as needed
-```
-
----
-
-#### 6.1.5 Duplicate Move Events (50+ warnings)
-**Priority**: LOW
-**Effort**: 1 day
-
-**Files**: 
-- `epic.lua`, `cake.lua`, `bath_tub.lua`, `decay.lua`, `trap.lua`, `dough.lua`
-- Various custom movement scripts
-
-**Issue**: Movement event item IDs registered multiple times
-**Cause**: 
-  1. Scripts in both data/ and data-fire/
-  2. Overlapping item ID ranges
-  3. Multiple script files handling same items
-
-**Example warnings**:
-```
-[registerEvent] duplicate move event found: 31557, for script: epic.lua
-[registerEvent] duplicate move event found: 6278, for script: cake.lua
-[registerEvent] duplicate move event found: 3944, for script: trap.lua
-```
-
-**Solution**: Audit movement scripts, consolidate or separate by item ID ranges
-
----
-
-#### 6.1.6 Missing Event Registration Data (700+ warnings)
-**Priority**: LOW
-**Effort**: Review needed
-
-**Pattern**: `[registerLuaEvent] missing id, aid, uid or position for script: X.lua`
-**Issue**: Scripts registered without proper ID/UID/position identifiers
-**Cause**: Generic registration fallback mechanism
-**Impact**: Unclear - may be intentional catch-all handlers
-**Solution**: Review each script to determine if explicit IDs needed
-
-**Common files**:
-- All files from categories 6.1.1-6.1.5 also generate "missing" warnings
-- May be expected behavior for catch-all event handlers
-
----
-
-### 6.2 Remediation Plan
-
-#### Phase 6.2.1: High Priority Fixes (Week 1)
-1. **Update deprecated function calls** (30 mins)
-   - Replace `setCombatCondition` → `Combat.addCondition`
-   - Test spell system functionality
-   - Commit: "fix: Update deprecated setCombatCondition to Combat.addCondition"
-
-#### Phase 6.2.2: Medium Priority Fixes (Week 1)
-2. **Quest UID consolidation** (2 days)
-   - Analyze quest_reward_common.lua architecture
-   - Decide: consolidate vs split vs migrate to AID
-   - Implement chosen solution
-   - Test quest reward system
-   - Commit: "fix: Resolve duplicate UID registrations in quest system"
-
-#### Phase 6.2.3: Low Priority Fixes (Week 2)
-3. **Concoctions duplicate removal** (2 hours)
-   - Identify which script to keep (data/ vs data-fire/)
-   - Remove duplicate, update path references if needed
-   - Test concoction functionality
-   - Commit: "fix: Remove duplicate concoctions script registration"
-
-4. **Teleport UID narrowing** (1 hour)
-   - Narrow teleport_item.lua UID range to avoid conflicts
-   - Update documentation for UID allocation
-   - Commit: "fix: Narrow teleport_item UID range to prevent conflicts"
-
-5. **Movement event audit** (1 day)
-   - List all movement scripts and their item ID ranges
-   - Consolidate or separate as appropriate
-   - Document movement event architecture
-   - Commit: "fix: Consolidate duplicate movement event registrations"
-
-#### Phase 6.2.4: Documentation (Ongoing)
-6. **Update UID/AID allocation docs** (2 hours)
-   - Document reserved UID ranges per system
-   - Create UID allocation policy for new content
-   - Add to docs/ directory
-
----
-
-### 6.3 Success Criteria
-
-- [x] **Analysis complete**: All 908 warnings categorized ✅
-- [ ] **Deprecated functions**: 0 setCombatCondition warnings
-- [ ] **Quest UIDs**: 0 duplicate UID warnings for quest system
-- [ ] **Concoctions**: 0 duplicate item ID warnings
-- [ ] **Movement events**: <10 duplicate warnings (intentional only)
-- [ ] **Server startup**: Clean logs with only informational messages
-- [ ] **Testing**: All affected systems verified functional
-
----
-
-### 6.4 Risk Assessment
-
-**Low Risk**: Most warnings are code quality issues, not functional blockers
-- Server currently runs successfully despite warnings
-- No reported gameplay issues from warning sources
-- Changes are isolated to script registration logic
-
-**Testing Required**:
-- Quest reward chest opening and item distribution
-- Teleport functionality across all UID ranges
-- Concoction crafting and usage
-- Movement-based triggers (decay, traps, dough, etc.)
-
----
-
-### 6.5 Dependencies
-
-**Requires**:
-- Understanding of Lua event registration system
-- Map knowledge for UID/position validation
-- Quest system architecture documentation (may need to create)
-
-**Blocks**:
-- None (can proceed in parallel with other phases)
 
 ---
 

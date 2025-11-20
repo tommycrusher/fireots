@@ -22,22 +22,22 @@ find src/ tests/ -type f \( -name "*.cpp" -o -name "*.hpp" \) | while read -r fi
         sed -i 's/Canary - A free and open-source MMORPG server emulator/Fireots - A free and open-source MMORPG server emulator/' "$file"
         ((COUNT++)) || true
     fi
-
+    
     # Step 2: Update repository URL
     if grep -q "Repository: https://github.com/opentibiabr/canary" "$file"; then
         sed -i 's|Repository: https://github.com/opentibiabr/canary|Repository: https://github.com/tommycrusher/fireots|' "$file"
     fi
-
-    # Step 3: Update license URL
+    
+    # Step 3: Update license URL  
     if grep -q "License: https://github.com/opentibiabr/canary/blob/main/LICENSE" "$file"; then
         sed -i 's|License: https://github.com/opentibiabr/canary/blob/main/LICENSE|License: https://github.com/tommycrusher/fireots/blob/main/LICENSE|' "$file"
     fi
-
+    
     # Step 4: Update contributors URL
     if grep -q "Contributors: https://github.com/opentibiabr/canary/graphs/contributors" "$file"; then
         sed -i 's|Contributors: https://github.com/opentibiabr/canary/graphs/contributors|Contributors: https://github.com/tommycrusher/fireots/graphs/contributors|' "$file"
     fi
-
+    
     # Step 5: Update website URL
     if grep -q "Website: https://docs.opentibiabr.com/" "$file"; then
         sed -i 's|Website: https://docs.opentibiabr.com/|Website: https://docs.fireots.pl/|' "$file"
