@@ -7,8 +7,8 @@ AscendingFerumbrasConfig = {
 	centerRoom = Position(33392, 31473, 14), -- Center Room
 	exitPosition = Position(33266, 31479, 14), -- Exit Position
 	newPos = Position(33392, 31479, 14), -- Player Position on room
-	days = 5,
+	days = 3,
 	range = 20,
 	time = 60, -- time in minutes to remove the player
-	vortex = 20121,
+	vortex = 23726,
 }

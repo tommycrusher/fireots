@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Claustrophobic Inferno.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 32000
 monster.maxHealth = 32000
 monster.race = "blood"
@@ -98,7 +94,7 @@ monster.loot = {
 	{ name = "giant sword", chance = 2860 },
 	{ name = "magma boots", chance = 2290 },
 	{ name = "stone skin amulet", chance = 570 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

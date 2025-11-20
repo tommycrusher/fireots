@@ -1,4 +1,4 @@
-dofile(CORE_DIRECTORY .. "/libs/systems/blessing.lua")
+dofile(CORE_DIRECTORY .. "/modules/scripts/blessings/blessings.lua")
 
 local blessingCharms = Action()
 

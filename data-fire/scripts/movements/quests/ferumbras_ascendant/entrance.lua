@@ -1,11 +1,11 @@
 local config = {
-	[1] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Razzagorn },
-	[2] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Ragiaz },
-	[3] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Zamulosh },
-	[4] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Mazoran },
-	[5] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Tarbaz },
-	[6] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Shulgrax },
-	[7] = { storage = Storage.Quest.U10_90.FerumbrasAscension.Plagirath },
+	[1] = { storage = Storage.FerumbrasAscension.Razzagorn },
+	[2] = { storage = Storage.FerumbrasAscension.Ragiaz },
+	[3] = { storage = Storage.FerumbrasAscension.Zamulosh },
+	[4] = { storage = Storage.FerumbrasAscension.Mazoran },
+	[5] = { storage = Storage.FerumbrasAscension.Tarbaz },
+	[6] = { storage = Storage.FerumbrasAscension.Shulgrax },
+	[7] = { storage = Storage.FerumbrasAscension.Plagirath },
 }
 
 local entrance = MoveEvent()
@@ -15,23 +15,15 @@ function entrance.onStepIn(creature, item, position, fromPosition)
 	if not player then
 		return true
 	end
-
-	if player:getLevel() < 150 then
-		player:teleportTo(fromPosition)
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You need to be at least level 150 to enter.")
-		return true
-	end
-
-	local complete = true
+	local complete = false
 	for i = 1, #config do
 		local storage = config[i].storage
 		if player:getStorageValue(storage) ~= 1 then
 			complete = false
-			break
+		else
+			complete = true
 		end
 	end
-
 	if item:getActionId() == 24837 then
 		if complete then
 			player:teleportTo(Position(33275, 32390, 9))
@@ -43,7 +35,7 @@ function entrance.onStepIn(creature, item, position, fromPosition)
 			return true
 		end
 	elseif item:getActionId() == 24838 then
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Access) < 1 then
+		if player:getStorageValue(Storage.FerumbrasAscension.Access) < 1 then
 			player:teleportTo(Position(33275, 32390, 8))
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "This portal is not yet strong enough to breach the destination dimension.")

@@ -1,4 +1,4 @@
-local callback = EventCallback("MonsterPostDropLootAnalyzer")
+local callback = EventCallback()
 
 function callback.monsterPostDropLoot(monster, corpse)
 	local player = Player(corpse:getCorpseOwner())

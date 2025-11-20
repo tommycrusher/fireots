@@ -1,23 +1,23 @@
 local bosses = {
 	["fury of the emperor"] = {
 		position = Position(33048, 31085, 15),
-		storage = Storage.Quest.U8_6.WrathOfTheEmperor.Bosses.Fury,
+		storage = GlobalStorage.WrathOfTheEmperor.Bosses.Fury,
 	},
 	["wrath of the emperor"] = {
 		position = Position(33094, 31087, 15),
-		storage = Storage.Quest.U8_6.WrathOfTheEmperor.Bosses.Wrath,
+		storage = GlobalStorage.WrathOfTheEmperor.Bosses.Wrath,
 	},
 	["scorn of the emperor"] = {
 		position = Position(33095, 31110, 15),
-		storage = Storage.Quest.U8_6.WrathOfTheEmperor.Bosses.Scorn,
+		storage = GlobalStorage.WrathOfTheEmperor.Bosses.Scorn,
 	},
 	["spite of the emperor"] = {
 		position = Position(33048, 31111, 15),
-		storage = Storage.Quest.U8_6.WrathOfTheEmperor.Bosses.Spite,
+		storage = GlobalStorage.WrathOfTheEmperor.Bosses.Spite,
 	},
 }
 
-local bossesKill = CreatureEvent("WrathOfTheEmperorBossDeath")
+local bossesKill = CreatureEvent("WrathOfTheEmperorBossDeat")
 function bossesKill.onDeath(creature)
 	local bossConfig = bosses[creature:getName():lower()]
 	if not bossConfig then

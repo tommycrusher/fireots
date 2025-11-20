@@ -25,7 +25,6 @@ local function revertItem(position, itemId, transformId)
 end
 
 local ferumbrasAscendantFlowerPuzzle = Action()
-
 function ferumbrasAscendantFlowerPuzzle.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 9110 then
 		for a = 1, #flowerPositions do
@@ -35,13 +34,11 @@ function ferumbrasAscendantFlowerPuzzle.onUse(player, item, fromPosition, target
 				return true
 			end
 		end
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.FlowerPuzzleTimer) >= 1 then
+		if Game.getStorageValue(GlobalStorage.FerumbrasAscendant.FlowerPuzzleTimer) >= 1 then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The portal still activated.")
 		else
-			player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.FlowerPuzzleTimer, 1)
-			addEvent(function()
-				player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.FlowerPuzzleTimer, 0)
-			end, 30 * 1000)
+			Game.setStorageValue(GlobalStorage.FerumbrasAscendant.FlowerPuzzleTimer, 1)
+			addEvent(Game.setStorageValue, 30 * 1000, GlobalStorage.FerumbrasAscendant.FlowerPuzzleTimer, 0)
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "A portal forms as two beams of a strange construction dividing this room move towards each other.")
 			for x = 33475, 33479 do
 				local pos = Position(x, 32698, 14)

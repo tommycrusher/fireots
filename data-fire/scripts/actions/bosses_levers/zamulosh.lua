@@ -29,5 +29,5 @@ local zamuloshSummons = {
 }
 
 local lever = BossLever(config)
-lever:position(Position(33680, 32740, 11))
+lever:uid(1026)
 lever:register()

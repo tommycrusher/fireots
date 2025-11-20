@@ -1,40 +1,44 @@
-local mType = Game.createMonsterType("Goshnar's Megalomania Blue")
+local mType = Game.createMonsterType("Goshnar's Megalomania")
 local monster = {}
 
-monster.name = "Goshnar's Megalomania"
 monster.description = "Goshnar's Megalomania"
-monster.experience = 3000000
+monster.experience = 200000
 monster.outfit = {
-	lookType = 1337,
+	lookType = 1308,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
+	lookMount = 0,
 }
 
-monster.health = 620000
-monster.maxHealth = 620000
+monster.events = {
+	"SoulwarsBossDeath",
+}
+
+monster.health = 500000
+monster.maxHealth = 500000
 monster.race = "undead"
 monster.corpse = 33889
-monster.speed = 0
+monster.speed = 165
 monster.manaCost = 0
-monster.maxSummons = 4
+
+monster.changeTarget = {
+	interval = 2000,
+	chance = 10,
+}
 
 monster.bosstiary = {
 	bossRaceId = 1969,
 	bossRace = RARITY_NEMESIS,
 }
 
-monster.changeTarget = {
-	interval = 4000,
-	chance = 10,
-}
-
 monster.strategiesTarget = {
-	nearest = 80,
+	nearest = 70,
 	health = 10,
 	damage = 10,
-}
-
-monster.events = {
-	"GoshnarsHatredBuff",
-	"MegalomaniaDeath",
+	random = 10,
 }
 
 monster.flags = {
@@ -47,7 +51,7 @@ monster.flags = {
 	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
-	staticAttackChance = 80,
+	staticAttackChance = 95,
 	targetDistance = 1,
 	runHealth = 0,
 	healthHidden = false,
@@ -55,11 +59,20 @@ monster.flags = {
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
 	canWalkOnPoison = true,
+	pet = false,
 }
 
 monster.light = {
 	level = 0,
 	color = 0,
+}
+
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{ name = "dreadful harvester", chance = 40, interval = 1000, count = 2 },
+		{ name = "aspect of power", chance = 50, interval = 1000, count = 2 },
+	},
 }
 
 monster.voices = {
@@ -97,14 +110,19 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = -400, maxDamage = -2225 },
-	{ name = "megalomania blue", interval = 6000, chance = 100, target = true },
-	{ name = "combat", interval = 30000, chance = 100, type = COMBAT_LIFEDRAIN, minDamage = -1000, maxDamage = -1500, length = 8, radius = 5, spread = 0, effect = CONST_ME_PINK_ENERGY_SPARK, target = true },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -8000 },
+	{ name = "combat", interval = 2000, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -2950, maxDamage = -4400, range = 7, radius = 3, shootEffect = CONST_ANI_DEATH, effect = CONST_ME_MORTAREA, target = true },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_DEATHDAMAGE, minDamage = -3000, maxDamage = -5500, length = 8, spread = 0, effect = CONST_ME_INSECTS, target = false },
+	{ name = "singlecloudchain", interval = 6000, chance = 40, minDamage = -3300, maxDamage = -5500, range = 6, effect = CONST_ME_ENERGYHIT, target = true },
+	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_DEATHDAMAGE, minDamage = -3300, maxDamage = -5200, length = 10, spread = 0, effect = CONST_ME_BLUE_GHOST, target = false },
 }
 
 monster.defenses = {
-	defense = 55,
-	armor = 55,
+	defense = 160,
+	armor = 160,
+	mitigation = 8.40,
+	{ name = "speed", interval = 1000, chance = 20, speedChange = 500, effect = CONST_ME_MAGIC_RED, target = false, duration = 10000 },
+	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_HEALING, minDamage = 2250, maxDamage = 4250, effect = CONST_ME_MAGIC_BLUE, target = false },
 }
 
 monster.elements = {
@@ -127,19 +145,18 @@ monster.immunities = {
 	{ type = "bleed", condition = false },
 }
 
-local intervalBetweenExecutions = 10000
+mType.onThink = function(monster, interval) end
 
-local zone = Zone.getByName("boss.goshnar's-megalomania-purple")
-local zonePositions = zone:getPositions()
-
-mType.onThink = function(monsterCallback, interval)
-	monsterCallback:onThinkGoshnarTormentCounter(interval, 36, intervalBetweenExecutions, SoulWarQuest.levers.goshnarsMegalomania.boss.position)
-	monsterCallback:onThinkMegalomaniaWhiteTiles(interval, zonePositions, 8000)
-	monsterCallback:goshnarsDefenseIncrease("cleansed-sanity-action")
+mType.onAppear = function(monster, creature)
+	if monster:getType():isRewardBoss() then
+		monster:setReward(true)
+	end
 end
 
-mType.onDisappear = function(monster, creature)
-	creature:removeGoshnarsMegalomaniaMonsters(zone)
-end
+mType.onDisappear = function(monster, creature) end
+
+mType.onMove = function(monster, creature, fromPosition, toPosition) end
+
+mType.onSay = function(monster, creature, type, message) end
 
 mType:register(monster)

@@ -1,53 +1,32 @@
 /**
- * Fireots - A free and open-source MMORPG server emulator
+ * Canary - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2023 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/tommycrusher/fireots
- * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
- * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
- * Website: https://docs.fireots.pl/
+ * Repository: https://github.com/opentibiabr/canary
+ * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
+ * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
+ * Website: https://docs.opentibiabr.com/
  */
 #include "pch.hpp"
 
-#include <gtest/gtest.h>
+#include <boost/ut.hpp>
 
 #include "lib/logging/in_memory_logger.hpp"
 #include "security/rsa.hpp"
 
-class RSATest : public ::testing::Test {
-protected:
-	static void SetUpTestSuite() {
-		previousContainer = DI::getTestContainer();
+using namespace boost::ut;
+
+suite<"security"> rsaTest = [] {
+	test("RSA::start logs error for missing .pem file") = [] {
+		di::extension::injector<> injector {};
 		DI::setTestContainer(&InMemoryLogger::install(injector));
-		logger = &dynamic_cast<InMemoryLogger &>(DI::get<Logger>());
-	}
 
-	static void TearDownTestSuite() {
-		DI::setTestContainer(previousContainer);
-	}
+		DI::create<RSA &>().start();
 
-	void SetUp() override {
-		logger = &logger->reset();
-	}
+		auto &logger = dynamic_cast<InMemoryLogger &>(injector.create<Logger &>());
 
-	static InMemoryLogger &testLogger() {
-		return *logger;
-	}
-
-private:
-	inline static di::extension::injector<> injector {};
-	inline static di::extension::injector<>* previousContainer { nullptr };
-	inline static InMemoryLogger* logger { nullptr };
+		expect(eq(1, logger.logs.size()) >> fatal);
+		expect(
+			eq(std::string { "error" }, logger.logs[0].level) and eq(std::string { "File key.pem not found or have problem on loading... Setting standard rsa key\n" }, logger.logs[0].message)
+		);
+	};
 };
-
-TEST_F(RSATest, StartLogsErrorForMissingPemFile) {
-	DI::create<RSA &>().start();
-
-	auto &logger = testLogger();
-
-	ASSERT_EQ(1u, logger.logs.size());
-	EXPECT_EQ(std::string { "error" }, logger.logs[0].level);
-	EXPECT_EQ(
-		std::string { "File key.pem not found or have problem on loading... Setting standard rsa key\n" },
-		logger.logs[0].message
-	);
-}

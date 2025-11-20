@@ -1,17 +1,15 @@
 /**
- * Fireots - A free and open-source MMORPG server emulator
+ * Canary - A free and open-source MMORPG server emulator
  * Copyright (©) 2019-2024 OpenTibiaBR <opentibiabr@outlook.com>
- * Repository: https://github.com/tommycrusher/fireots
- * License: https://github.com/tommycrusher/fireots/blob/main/LICENSE
- * Contributors: https://github.com/tommycrusher/fireots/graphs/contributors
- * Website: https://docs.fireots.pl/
+ * Repository: https://github.com/opentibiabr/canary
+ * License: https://github.com/opentibiabr/canary/blob/main/LICENSE
+ * Contributors: https://github.com/opentibiabr/canary/graphs/contributors
+ * Website: https://docs.opentibiabr.com/
  */
 #pragma once
 
 #include <vector>
 #include <string>
-#include <string_view>
-#include <ranges>
 #include <utility>
 
 #include "test_injection.hpp"
@@ -24,16 +22,14 @@ private:
 	struct LogEntry {
 		std::string level;
 		std::string message;
-
-		LogEntry() = default;
-		LogEntry(std::string_view lvl, std::string_view msg) :
-			level(lvl), message(msg) { }
 	};
 
 public:
 	mutable std::vector<LogEntry> logs;
 
 	InMemoryLogger() = default;
+	InMemoryLogger(const InMemoryLogger &) { }
+	InMemoryLogger(const InMemoryLogger &&) { }
 
 	static di::extension::injector<> &install(di::extension::injector<> &injector) {
 		injector.install(di::bind<Logger>.to<InMemoryLogger>().in(di::singleton));
@@ -45,16 +41,17 @@ public:
 		return *this;
 	}
 
-	bool hasLogEntry(std::string_view lvl, std::string_view expectedMsg) const {
-		return std::ranges::any_of(
-			logs,
-			[&](const auto &entry) {
-				return entry.level == lvl && entry.message == expectedMsg;
+	bool hasLogEntry(const std::string &lvl, const std::string &expectedMsg) const {
+		for (const auto &entry : logs) {
+			if (entry.level == lvl && entry.message == expectedMsg) {
+				return true;
 			}
-		);
+		}
+
+		return false;
 	}
 
-	void setLevel(const std::string &name) const override {
+	void setLevel(const std::string &name) override {
 		// For the stub, setting a level might not have any behavior.
 		// But you can implement level filtering if you like.
 	}
@@ -64,34 +61,9 @@ public:
 		return "DEBUG";
 	}
 
-	void info(const std::string &msg) const override {
-		logs.emplace_back("info", msg);
+	virtual void log(const std::string &lvl, fmt::basic_string_view<char> msg) const override {
+		logs.push_back({ lvl, { msg.data(), msg.size() } });
 	}
-
-	void warn(const std::string &msg) const override {
-		logs.emplace_back("warning", msg);
-	}
-
-	void error(const std::string &msg) const override {
-		logs.emplace_back("error", msg);
-	}
-
-	void critical(const std::string &msg) const override {
-		logs.emplace_back("critical", msg);
-	}
-
-#if defined(DEBUG_LOG)
-	void debug(const std::string &msg) const override {
-		logs.emplace_back("debug", msg);
-	}
-
-	void trace(const std::string &msg) const override {
-		logs.emplace_back("trace", msg);
-	}
-#else
-	void debug(const std::string &) const override { }
-	void trace(const std::string &) const override { }
-#endif
 
 	// Helper methods for testing
 	size_t logCount() const {

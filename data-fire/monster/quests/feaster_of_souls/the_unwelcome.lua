@@ -66,13 +66,6 @@ monster.light = {
 	color = 0,
 }
 
-monster.summon = {
-	maxSummons = 3,
-	summons = {
-		{ name = "wormling", chance = 40, interval = 2000, count = 3 },
-	},
-}
-
 monster.voices = {
 	interval = 5000,
 	chance = 10,
@@ -144,5 +137,19 @@ monster.immunities = {
 	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
+
+mType.onThink = function(monster, interval) end
+
+mType.onAppear = function(monster, creature)
+	if monster:getType():isRewardBoss() then
+		monster:setReward(true)
+	end
+end
+
+mType.onDisappear = function(monster, creature) end
+
+mType.onMove = function(monster, creature, fromPosition, toPosition) end
+
+mType.onSay = function(monster, creature, type, message) end
 
 mType:register(monster)

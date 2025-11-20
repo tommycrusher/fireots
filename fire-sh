@@ -4,7 +4,7 @@ ulimit -c unlimited
 i=1
 while [ $i -le 99999000 ]
 do
-./fireots > ./data/output.txt
+./fire > ./data/output.txt
 i=`expr $i + 1`
 done
 

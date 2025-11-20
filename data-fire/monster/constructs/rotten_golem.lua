@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Rotten Wasteland.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "venom"
@@ -95,7 +91,7 @@ monster.loot = {
 	{ name = "stone skin amulet", chance = 740 },
 	{ name = "terra mantle", chance = 510 },
 	{ name = "rubber cap", chance = 430 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

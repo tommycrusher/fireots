@@ -4,7 +4,6 @@ local config = {
 }
 
 local theThievesVine = Action()
-
 function theThievesVine.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local targetPosition = config[item.actionid]
 	if not targetPosition then

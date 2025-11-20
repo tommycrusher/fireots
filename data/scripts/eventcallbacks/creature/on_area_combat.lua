@@ -1,7 +1,7 @@
-local callback = EventCallback("CreatureOnAreaCombatBaseEvent")
+local callback = EventCallback()
 
 function callback.creatureOnAreaCombat(creature, tile, isAggressive)
-	return RETURNVALUE_NOERROR
+	return true
 end
 
 callback:register()

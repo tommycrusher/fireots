@@ -1,6 +1,7 @@
 local cake = MoveEvent()
 
 function cake.onAddItem(moveitem, tileitem, position)
+	-- has to be a candle
 	if moveitem.itemid ~= 2918 then
 		return true
 	end

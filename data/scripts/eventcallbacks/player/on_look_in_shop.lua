@@ -1,4 +1,4 @@
-local callback = EventCallback("PlayerOnLookInShopBaseEvent")
+local callback = EventCallback()
 
 function callback.playerOnLookInShop(player, itemType, count)
 	return true

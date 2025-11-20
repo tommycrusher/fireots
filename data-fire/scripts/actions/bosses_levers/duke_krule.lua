@@ -19,5 +19,5 @@ local config = {
 }
 
 local lever = BossLever(config)
-lever:position(Position(33454, 31493, 13))
+lever:position({ x = 33454, y = 31493, z = 13 })
 lever:register()

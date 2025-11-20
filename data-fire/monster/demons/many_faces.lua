@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Mirrored Nightmare.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 30000
 monster.maxHealth = 30000
 monster.race = "undead"
@@ -99,7 +95,7 @@ monster.loot = {
 	{ name = "glacier robe", chance = 2130 },
 	{ name = "gruesome fan", chance = 610 },
 	{ name = "glacial rod", chance = 610 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {
@@ -136,9 +132,5 @@ monster.immunities = {
 	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
-
-mType.onThink = function(monster, interval)
-	monster:tryTeleportToPlayer("Hands off my comrades!")
-end
 
 mType:register(monster)

@@ -52,6 +52,10 @@ SERVER_MOTD = configManager.getString(configKeys.SERVER_MOTD)
 
 AUTH_TYPE = configManager.getString(configKeys.AUTH_TYPE)
 
+-- Bestiary charm
+GLOBAL_CHARM_GUT = 120 -- 20% more chance to get creature products from looting
+GLOBAL_CHARM_SCAVENGE = 125 -- 25% more chance to get creature products from skinning
+
 -- Event Schedule
 SCHEDULE_LOOT_RATE = 100
 SCHEDULE_EXP_RATE = 100
@@ -172,7 +176,7 @@ function addStamina(playerId, ...)
 
 		local actualStamina = player:getStamina()
 
-		if actualStamina > 2340 and actualStamina < 2520 then
+		if actualStamina > 2400 and actualStamina < 2520 then
 			delay = configManager.getNumber(configKeys.STAMINA_GREEN_DELAY) * 60 * 1000 -- Stamina Green 12 min.
 		elseif actualStamina == 2520 then
 			player:sendTextMessage(

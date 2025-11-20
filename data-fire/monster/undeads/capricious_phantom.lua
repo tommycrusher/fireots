@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Ebb and Flow.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 30000
 monster.maxHealth = 30000
 monster.race = "undead"
@@ -97,7 +93,7 @@ monster.loot = {
 	{ id = 23542, chance = 1180 }, -- collar of blue plasma
 	{ name = "glacial rod", chance = 940 },
 	{ name = "ornate crossbow", chance = 940 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

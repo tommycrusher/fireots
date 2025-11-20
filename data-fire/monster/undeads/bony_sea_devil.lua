@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Ebb and Flow.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 24000
 monster.maxHealth = 24000
 monster.race = "undead"
@@ -100,7 +96,7 @@ monster.loot = {
 	{ name = "goblet of gloom", chance = 880 },
 	{ name = "glacier kilt", chance = 880 },
 	{ name = "glacial rod", chance = 1210 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {
@@ -139,9 +135,5 @@ monster.immunities = {
 	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
-
-mType.onThink = function(monster, interval)
-	monster:tryTeleportToPlayer("Get out the way!")
-end
 
 mType:register(monster)

@@ -1,4 +1,4 @@
-local callback = EventCallback("PlayerOnBrowseFieldBaseEvent")
+local callback = EventCallback()
 
 function callback.playerOnBrowseField(player, position)
 	return true

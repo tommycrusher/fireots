@@ -1,10 +1,16 @@
 local config = {
+	activationMessage = "You have received %s VIP days.",
+	activationMessageType = MESSAGE_EVENT_ADVANCE,
+
+	expirationMessage = "Your VIP days ran out.",
+	expirationMessageType = MESSAGE_ADMINISTRATOR,
+
 	outfits = {},
 	mounts = {},
 }
 
 function Player.onRemoveVip(self)
-	self:sendTextMessage(MESSAGE_ADMINISTRATOR, "Your VIP status has expired. All VIP benefits have been removed.")
+	self:sendTextMessage(config.expirationMessageType, config.expirationMessage)
 
 	for _, outfit in ipairs(config.outfits) do
 		self:removeOutfit(outfit)
@@ -15,14 +21,13 @@ function Player.onRemoveVip(self)
 	end
 
 	local playerOutfit = self:getOutfit()
-	if table.contains(config.outfits, playerOutfit.lookType) then
+	if table.contains(config.outfits, self:getOutfit().lookType) then
 		if self:getSex() == PLAYERSEX_FEMALE then
 			playerOutfit.lookType = 136
 		else
 			playerOutfit.lookType = 128
 		end
 		playerOutfit.lookAddons = 0
-
 		self:setOutfit(playerOutfit)
 	end
 
@@ -31,7 +36,7 @@ end
 
 function Player.onAddVip(self, days, silent)
 	if not silent then
-		self:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("You have been granted %s days of VIP status.", days))
+		self:sendTextMessage(config.activationMessageType, string.format(config.activationMessage, days))
 	end
 
 	for _, outfit in ipairs(config.outfits) do
@@ -45,17 +50,18 @@ function Player.onAddVip(self, days, silent)
 	self:kv():scoped("account"):set("vip-system", true)
 end
 
-function Player.sendVipStatus(self)
-	if self:getVipDays() == 0xFFFF then
-		self:sendTextMessage(MESSAGE_LOGIN, "You have unlimited VIP status.")
+function CheckPremiumAndPrint(player, msgType)
+	if player:getVipDays() == 0xFFFF then
+		player:sendTextMessage(msgType, "You have infinite amount of VIP days left.")
 		return true
 	end
 
-	local playerVipTime = self:getVipTime()
+	local playerVipTime = player:getVipTime()
 	if playerVipTime < os.time() then
-		self:sendTextMessage(MESSAGE_STATUS, "Your VIP status is currently inactive.")
+		local msg = "You do not have VIP on your account."
+		player:sendTextMessage(msgType, msg)
 		return true
 	end
 
-	self:sendTextMessage(MESSAGE_LOGIN, string.format("You have %s of VIP time remaining.", getFormattedTimeRemaining(playerVipTime)))
+	player:sendTextMessage(msgType, string.format("You have %s of VIP time left.", getFormattedTimeRemaining(playerVipTime)))
 end

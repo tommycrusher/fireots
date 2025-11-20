@@ -12,8 +12,8 @@ local config = {
 local lovelyMonsters = MoveEvent()
 
 function lovelyMonsters.onStepIn(creature, item, position, fromPosition)
-	local monsterConfig = config[item.actionid]
-	if not monsterConfig then
+	local config = config[item.actionid]
+	if not config then
 		return true
 	end
 
@@ -22,19 +22,18 @@ function lovelyMonsters.onStepIn(creature, item, position, fromPosition)
 	end
 
 	local monster = creature:getMonster()
-	if monster:getName():lower() == monsterConfig.name then
+	if monster:getName():lower() == config.name then
 		monster:say("That seemed correct!", TALKTYPE_MONSTER_SAY)
 		monster:getPosition():sendMagicEffect(CONST_ME_THUNDER)
 		monster:remove()
-
-		local spectators = Game.getSpectators(monsterConfig.centerPos, false, true, 9, 9, 9, 9)
+		local spectators = Game.getSpectators(config.centerPos, false, true, 9, 9, 9, 9)
 		for _, spectator in pairs(spectators) do
 			if spectator:isPlayer() then
 				local player = spectator
-				if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.ZamuloshTeleports) < 0 then
-					player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.ZamuloshTeleports, 0)
+				if player:getStorageValue(Storage.FerumbrasAscension.ZamuloshTeleports) < 0 then
+					player:setStorageValue(Storage.FerumbrasAscension.ZamuloshTeleports, 0)
 				end
-				player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.ZamuloshTeleports, player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.ZamuloshTeleports) + 1)
+				player:setStorageValue(Storage.FerumbrasAscension.ZamuloshTeleports, player:getStorageValue(Storage.FerumbrasAscension.ZamuloshTeleports) + 1)
 			end
 		end
 		return true

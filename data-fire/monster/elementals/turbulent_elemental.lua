@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Ebb and Flow.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "blood"
@@ -95,7 +91,7 @@ monster.loot = {
 	{ name = "crystalline armor", chance = 710 },
 	{ name = "rubber cap", chance = 710 },
 	{ name = "stone skin amulet", chance = 470 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

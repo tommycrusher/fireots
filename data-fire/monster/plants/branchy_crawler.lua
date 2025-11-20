@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Rotten Wasteland.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 27000
 monster.maxHealth = 27000
 monster.race = "blood"
@@ -98,7 +94,7 @@ monster.loot = {
 	{ name = "twiceslicer", chance = 420 },
 	{ name = "crystalline sword", chance = 390 },
 	{ name = "ruthless axe", chance = 330 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {
@@ -135,9 +131,5 @@ monster.immunities = {
 	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
-
-mType.onThink = function(monster, interval)
-	monster:tryTeleportToPlayer("My growth is your death!")
-end
 
 mType:register(monster)

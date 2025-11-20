@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Rotten Wasteland.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "undead"
@@ -97,7 +93,7 @@ monster.loot = {
 	{ id = 23529, chance = 1040 }, -- ring of blue plasma
 	{ name = "ornate crossbow", chance = 840 },
 	{ name = "crystal crossbow", chance = 620 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

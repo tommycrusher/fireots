@@ -14,7 +14,7 @@ local config = {
 		name = "Scarlett Etzel",
 		createFunction = function()
 			local scarlett = Game.createMonster("Scarlett Etzel", Position(33396, 32643, 6), true, true)
-			scarlett:setStorageValue(Storage.Quest.U12_20.GraveDanger.CobraBastion.Questline, 1)
+			scarlett:setStorageValue(Storage.GraveDanger.CobraBastion.Questline, 1)
 			return scarlett
 		end,
 	},
@@ -56,7 +56,6 @@ local function backMirror()
 	for x = mirror.fromPos.x, mirror.toPos.x do
 		for y = mirror.fromPos.y, mirror.toPos.y do
 			local sqm = Tile(Position(x, y, 6))
-
 			if sqm then
 				for _, id in pairs(mirror.mirrors) do
 					local item = sqm:getItemById(id)
@@ -71,13 +70,7 @@ local function backMirror()
 end
 
 local graveScarlettAid = Action()
-
 function graveScarlettAid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getStorageValue(Storage.Quest.U12_20.GraveDanger.GaffirKilled) ~= 1 and player:getStorageValue(Storage.Quest.U12_20.GraveDanger.CustodianKilled) ~= 1 and player:getStorageValue(Storage.Quest.U12_20.GraveDanger.QuaidKilled) ~= 1 then
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are not allowed to use this yet.")
-		return true
-	end
-
 	if table.contains(transformTo, item.itemid) then
 		local pilar = transformTo[item.itemid]
 		if pilar then
@@ -101,7 +94,6 @@ function graveScarlettAid.onUse(player, item, fromPosition, target, toPosition, 
 			player:teleportTo(Position(33395, 32666, 6))
 		end
 	end
-
 	return true
 end
 

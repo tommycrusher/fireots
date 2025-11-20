@@ -5,12 +5,11 @@ function familiarOnLogin.onLogin(player)
 		return false
 	end
 
-	player:registerEvent("FamiliarAdvance")
 	local vocation = FAMILIAR_ID[player:getVocation():getBaseId()]
 
 	local familiarName
 	local familiarSummonTime = player:kv():get("familiar-summon-time") or 0
-	local familiarTimeLeft = math.max(0, familiarSummonTime - os.time())
+	local familiarTimeLeft = familiarSummonTime - player:getLastLogout()
 
 	if vocation then
 		if (not player:isPremium() and player:hasFamiliar(vocation.id)) or player:getLevel() < 200 then

@@ -3,7 +3,7 @@ function ferumbrasAscendantBoneFlute.onUse(player, item, fromPosition, target, t
 	if target:isItem() then
 		return false
 	end
-	if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BoneFlute) >= 1 then
+	if player:getStorageValue(Storage.FerumbrasAscension.BoneFlute) >= 1 then
 		return false
 	end
 	if not target:getPosition():isInRange(Position(33477, 32775, 11), Position(33493, 32781, 11)) then
@@ -13,7 +13,7 @@ function ferumbrasAscendantBoneFlute.onUse(player, item, fromPosition, target, t
 		local rand = math.random(100)
 		if rand <= 5 then
 			player:say("Finally this one reveal your spirit animal.", TALKTYPE_MONSTER_SAY)
-			player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BoneFlute, 1)
+			player:setStorageValue(Storage.FerumbrasAscension.BoneFlute, 1)
 			item:remove()
 			return true
 		elseif rand > 5 and rand <= 50 then

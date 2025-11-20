@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Furious Crater",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 27000
 monster.maxHealth = 27000
 monster.race = "undead"
@@ -96,7 +92,7 @@ monster.loot = {
 	{ name = "stone skin amulet", chance = 910 },
 	{ name = "nightmare blade", chance = 1190 },
 	{ name = "demonrage sword", chance = 600 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

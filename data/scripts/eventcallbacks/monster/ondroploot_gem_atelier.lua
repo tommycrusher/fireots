@@ -1,4 +1,4 @@
-local callback = EventCallback("MonsterOnDropLootGemAtelier")
+local callback = EventCallback()
 
 function callback.monsterOnDropLoot(monster, corpse)
 	if not monster or not corpse then

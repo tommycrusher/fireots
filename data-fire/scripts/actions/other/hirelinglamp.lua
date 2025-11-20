@@ -2,9 +2,8 @@ local hirelingLamp = Action()
 
 function hirelingLamp.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local spawnPosition = player:getPosition()
-	local hirelingId = item:getCustomAttribute("Hireling")
+	local hireling_id = item:getCustomAttribute("Hireling")
 	local house = spawnPosition and spawnPosition:getTile() and spawnPosition:getTile():getHouse() or nil
-
 	if not house then
 		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 		player:sendTextMessage(MESSAGE_FAILURE, "You may use this only inside a house.")
@@ -23,10 +22,10 @@ function hirelingLamp.onUse(player, item, fromPosition, target, toPosition, isHo
 		return false
 	end
 
-	local hireling = getHirelingById(hirelingId)
+	local hireling = getHirelingById(hireling_id)
 	if not hireling then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "There was an error creating the hireling and it has been deleted, please, contact server admin.")
-		logger.warn("[hirelingLamp.onUse] Player {} is using hireling with id {} not exist in the database", player:getName(), hirelingId)
+		logger.warn("[hirelingLamp.onUse] Player {} is using hireling with id {} not exist in the database", player:getName(), hireling_id)
 		logger.error("Deleted the lamp")
 		item:remove(1)
 		return true

@@ -85,8 +85,6 @@ local firstStageConfig = {
 		Position(33785, 32676, 10),
 	},
 	shallowWaterBorderIds = {
-		1722,
-		1723,
 		38125,
 		38134,
 		38130,
@@ -334,7 +332,6 @@ function timiraBucket.onUse(player, item, fromPosition, target, toPosition, isHo
 	return false
 end
 timiraBucket:id(firstStageConfig.sparklingBucketId, firstStageConfig.emptyBucketId, firstStageConfig.badWaterBucketId)
-timiraBucket:allowFarUse(true)
 timiraBucket:register()
 
 local corruptedWater = Action()

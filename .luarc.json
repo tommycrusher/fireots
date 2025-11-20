@@ -1,9 +1,3 @@
 {
-  "workspace.maxPreload": 20000,
-  "workspace.ignoreDir": ["build", ".git", "vcpkg_installed"],
-  "workspace.preloadFileSize": 50,
-  "workspace.checkThirdParty": false,
-  "diagnostics.disable": ["lowercase-global", "undefined-global"],
-  "diagnostics.workspaceDelay": 5000,
-  "telemetry.enable": false
+    "workspace.maxPreload": 10000
 }

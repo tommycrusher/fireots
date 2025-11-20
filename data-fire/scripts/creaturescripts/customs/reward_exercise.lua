@@ -1,4 +1,3 @@
---[[ TEMPORARILY DISABLED FOR LOGIN DEBUGGING
 local winReward = CreatureEvent("WinReward")
 
 function winReward.onLogin(player)
@@ -14,4 +13,3 @@ end
 if configManager.getBoolean(configKeys.TOGGLE_RECEIVE_REWARD) then
 	winReward:register()
 end
-]]--

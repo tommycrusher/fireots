@@ -1,11 +1,11 @@
 local dreamCourtsConfig = {
-	["Monday"] = { map = "alptramun", bossName = "Alptramun" },
-	["Tuesday"] = { map = "izcandar_the_banished", bossName = "Izcandar the Banished" },
-	["Wednesday"] = { map = "malofur_mangrinder", bossName = "Malofur Mangrinder" },
-	["Thursday"] = { map = "maxxenius", bossName = "Maxxenius" },
+	["Monday"] = { map = "plagueroot", bossName = "Plagueroot" },
+	["Tuesday"] = { map = "malofur_mangrinder", bossName = "Malofur Mangrinder" },
+	["Wednesday"] = { map = "maxxenius", bossName = "Maxxenius" },
+	["Thursday"] = { map = "alptramun", bossName = "Alptramun" },
 	["Friday"] = { map = "izcandar_the_banished", bossName = "Izcandar the Banished" },
-	["Saturday"] = { map = "plagueroot", bossName = "Plagueroot" },
-	["Sunday"] = { map = "maxxenius", bossName = "Maxxenius" },
+	["Saturday"] = { map = "maxxenius", bossName = "Maxxenius" },
+	["Sunday"] = { map = "alptramun", bossName = "Alptramun" },
 }
 
 local dreamCourtsEvent = GlobalEvent("DreamCourts")
@@ -20,7 +20,6 @@ function dreamCourtsEvent.onStartup()
 
 	Game.loadMap(DATA_DIRECTORY .. "/world/quest/the_dream_courts/" .. dayConfig.map .. ".otbm")
 	logger.info("[World Change] The Dream Courts today's boss is: {}!", dayConfig.bossName)
-
 	return true
 end
 

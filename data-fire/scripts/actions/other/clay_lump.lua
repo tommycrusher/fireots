@@ -8,29 +8,31 @@ local config = {
 local clayLump = Action()
 
 function clayLump.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local randomChance = math.random() * 100
-	for _, itemConfig in ipairs(config) do
-		if randomChance >= itemConfig.chance[1] and randomChance < itemConfig.chance[2] then
+	local random, tmpItem = math.random(0, 10000) * 0.01
+	for i = 1, #config do
+		tmpItem = config[i]
+		if random >= tmpItem.chance[1] and random < tmpItem.chance[2] then
 			item:getPosition():sendMagicEffect(CONST_ME_POFF)
 
-			if itemConfig.remove then
+			if tmpItem.remove then
 				item:remove()
 			else
-				item:transform(itemConfig.transformId)
+				item:transform(tmpItem.transformId)
 			end
 
-			if itemConfig.sound then
-				player:say(itemConfig.sound, TALKTYPE_MONSTER_SAY, false, player)
+			if tmpItem.sound then
+				player:say(tmpItem.sound, TALKTYPE_MONSTER_SAY, false, player)
 			end
 
-			if itemConfig.description then
-				item:setDescription(itemConfig.description:gsub("|PLAYERNAME|", player:getName()))
+			if tmpItem.description then
+				item:setDescription(tmpItem.description:gsub("|PLAYERNAME|", player:getName()))
 			end
 
-			if itemConfig.achievement then
+			if tmpItem.achievement then
 				player:addAchievement("Clay Fighter")
 				player:addAchievementProgress("Clay to Fame", 5)
 			end
+
 			break
 		end
 	end

@@ -1,20 +1,3 @@
--- MINIMAL LOGIN SCRIPT FOR DEBUGGING
--- Temporarily disabled all custom logic to isolate login issues
-local playerLogin = CreatureEvent("PlayerLogin")
-
-function playerLogin.onLogin(player)
-	-- Just send a simple welcome message
-	player:sendTextMessage(MESSAGE_LOGIN, "Welcome to FireOTS! Login successful.")
-	
-	-- Open basic channels
-	player:openChannel(3) -- World chat
-	
-	return true
-end
-
-playerLogin:register()
-
---[[ DISABLED - Custom FireOTS login logic (restore after login works)
 local playerLogin = CreatureEvent("PlayerLogin")
 
 function playerLogin.onLogin(player)
@@ -25,22 +8,22 @@ function playerLogin.onLogin(player)
 	if not player:isPremium() and not table.contains(freeTowns, player:getTown():getName()) then
 		local town = player:getTown()
 		local sex = player:getSex()
-		local home = Game.getHouseByPlayerGUID(player:getGuid())
+		local home = getHouseByPlayerGUID(getPlayerGUID(player))
 		town = table.contains(freeTowns, town:getName()) and town or Town(defaultTown)
 		player:teleportTo(town:getTemplePosition())
 		player:setTown(town)
-		player:sendTextMessage(MESSAGE_FAILURE, "Your premium time has expired!")
+		player:sendTextMessage(MESSAGE_FAILURE, "Your premium time has expired.")
 
 		if sex == 1 then
-			player:setOutfit({ lookType = 128, lookHead = 114, lookBody = 120, lookLegs = 132, lookFeet = 115, lookAddons = 0 })
+			player:setOutfit({ lookType = 128, lookFeet = 114, lookLegs = 134, lookHead = 114, lookAddons = 0 })
 		elseif sex == 0 then
-			player:setOutfit({ lookType = 136, lookHead = 114, lookBody = 120, lookLegs = 132, lookFeet = 115, lookAddons = 0 })
+			player:setOutfit({ lookType = 136, lookFeet = 114, lookLegs = 134, lookHead = 114, lookAddons = 0 })
 		end
 
 		if home and not player:isPremium() then
-			home:setOwnerGuid(0)
-			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "You have lost your house because you are no longer a premium account.")
-			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Your items from the house have been sent to your inbox.")
+			setHouseOwner(home, 0)
+			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "You've lost your house because you are not premium anymore.")
+			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Your items from house are send to your inbox.")
 		end
 	end
 
@@ -58,4 +41,3 @@ function playerLogin.onLogin(player)
 end
 
 playerLogin:register()
-]]--

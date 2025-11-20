@@ -33,5 +33,5 @@ function othersLifeRing.onUse(player, item, fromPosition, target, toPosition, is
 	return true
 end
 
-othersLifeRing:aid(30007)
+othersLifeRing:aid(50129)
 othersLifeRing:register()

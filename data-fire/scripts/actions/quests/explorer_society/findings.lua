@@ -3,49 +3,49 @@ local UniqueTable = {
 	[14029] = {
 		-- Uzgod's Family Brooch
 		rewardItemId = 4834,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.JoiningTheExplorers,
+		storageMission = Storage.ExplorerSociety.JoiningTheExplorers,
 		storageMissionValue = 3,
 		storageQuestlineValue = 3,
 	},
 	[14030] = {
 		-- Wrinkled parchment
 		rewardItemId = 173,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.TheBonelordSecret,
+		storageMission = Storage.ExplorerSociety.TheBonelordSecret,
 		storageMissionValue = 31,
 		storageQuestlineValue = 30,
 	},
 	[14031] = {
 		-- Strange powder
 		rewardItemId = 13974,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.TheOrcPowder,
+		storageMission = Storage.ExplorerSociety.TheOrcPowder,
 		storageMissionValue = 34,
 		storageQuestlineValue = 33,
 	},
 	[14032] = {
 		-- Elven poetry book
 		rewardItemId = 4844,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.TheElvenPoetry,
+		storageMission = Storage.ExplorerSociety.TheElvenPoetry,
 		storageMissionValue = 37,
 		storageQuestlineValue = 36,
 	},
 	[14033] = {
 		-- Memory stone
 		rewardItemId = 4841,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.TheMemoryStone,
+		storageMission = Storage.ExplorerSociety.TheMemoryStone,
 		storageMissionValue = 40,
 		storageQuestlineValue = 39,
 	},
 	[14034] = {
 		-- Spectral dress
 		rewardItemId = 4836,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.TheSpectralDress,
+		storageMission = Storage.ExplorerSociety.TheSpectralDress,
 		storageMissionValue = 49,
 		storageQuestlineValue = 48,
 	},
 	[14035] = {
 		-- Damage logbook
 		rewardItemId = 21378,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.CalassaQuest,
+		storageMission = Storage.ExplorerSociety.CalassaQuest,
 		storageMissionValue = 2,
 		storageQuestlineValue = 0,
 	},
@@ -53,7 +53,7 @@ local UniqueTable = {
 	[40041] = {
 		-- Funeral urn
 		rewardItemId = 4847,
-		storageMission = Storage.Quest.U7_6.ExplorerSociety.TheLizardUrn,
+		storageMission = Storage.ExplorerSociety.TheLizardUrn,
 		storageMissionValue = 28,
 		storageQuestlineValue = 27,
 	},
@@ -75,7 +75,7 @@ function explorerSocietyFindings.onUse(player, item, fromPosition, target, toPos
 		player:setStorageValue(item.uid, 1)
 		player:setStorageValue(uniqueItem.storageMission, uniqueItem.storageMissionValue)
 		if uniqueItem.storageQuestlineValue > 0 then
-			player:setStorageValue(Storage.Quest.U7_6.ExplorerSociety.QuestLine, uniqueItem.storageQuestlineValue)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, uniqueItem.storageQuestlineValue)
 		end
 		return true
 	end

@@ -33,10 +33,6 @@ monster.corpse = 6081
 monster.speed = 235
 monster.manaCost = 0
 
-monster.events = {
-	"MirroredNightmareBossAccess",
-}
-
 monster.changeTarget = {
 	interval = 4000,
 	chance = 0,
@@ -96,7 +92,7 @@ monster.loot = {
 	{ name = "wand of starstorm", chance = 1310 },
 	{ name = "stone skin amulet", chance = 1310 },
 	{ name = "alloy legs", chance = 440 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

@@ -5,11 +5,12 @@ local bosses = {
 }
 
 local deeplingBosses = CreatureEvent("DeeplingBossDeath")
-function deeplingBosses.onDeath(creature)
+function deeplingBosses.onDeath(player, creature)
 	local bossConfig = bosses[creature:getName():lower()]
 	if not bossConfig then
 		return true
 	end
+
 	onDeathForDamagingPlayers(creature, function(creature, player)
 		if player:getStorageValue(Storage.DeeplingBosses.DeeplingStatus) < bossConfig.status then
 			player:setStorageValue(Storage.DeeplingBosses.DeeplingStatus, bossConfig.status)

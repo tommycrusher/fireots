@@ -29,19 +29,19 @@ local positions = {
 local othersFireBug = Action()
 function othersFireBug.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.actionid == 54387 and target.itemid == 22875 then
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BasinCounter) >= 8 or player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BoneFlute) < 1 then
+		if player:getStorageValue(Storage.FerumbrasAscension.BasinCounter) >= 8 or player:getStorageValue(Storage.FerumbrasAscension.BoneFlute) < 1 then
 			return false
 		end
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BasinCounter) < 0 then
-			player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BasinCounter, 0)
+		if player:getStorageValue(Storage.FerumbrasAscension.BasinCounter) < 0 then
+			player:setStorageValue(Storage.FerumbrasAscension.BasinCounter, 0)
 		end
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BasinCounter) == 7 then
+		if player:getStorageValue(Storage.FerumbrasAscension.BasinCounter) == 7 then
 			player:say("You ascended the last basin.", TALKTYPE_MONSTER_SAY)
 			item:remove()
-			player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.MonsterDoor, 1)
+			player:setStorageValue(Storage.FerumbrasAscension.MonsterDoor, 1)
 		end
 		target:transform(22876)
-		player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BasinCounter, player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.BasinCounter) + 1)
+		player:setStorageValue(Storage.FerumbrasAscension.BasinCounter, player:getStorageValue(Storage.FerumbrasAscension.BasinCounter) + 1)
 		toPosition:sendMagicEffect(CONST_ME_FIREAREA)
 		addEvent(revert, 2 * 60 * 1000, toPosition, 22876, 22875)
 		return true
@@ -57,9 +57,9 @@ function othersFireBug.onUse(player, item, fromPosition, target, toPosition, isH
 		createTeleport:setDestination(Position(32857, 32234, 11))
 		return true
 	elseif target.uid == 2273 then
-		if player:getStorageValue(Storage.Quest.U7_8.TheShatteredIsles.RaysMission2) == 1 and player:getStorageValue(Storage.Quest.U7_8.TheShatteredIsles.ReputationInSabrehaven) == 15 then
-			player:setStorageValue(Storage.Quest.U7_8.TheShatteredIsles.RaysMission2, 2)
-			player:setStorageValue(Storage.Quest.U7_8.TheShatteredIsles.ReputationInSabrehaven, 16)
+		if player:getStorageValue(Storage.TheShatteredIsles.RaysMission2) == 1 and player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 15 then
+			player:setStorageValue(Storage.TheShatteredIsles.RaysMission2, 2)
+			player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 16)
 			toPosition:sendMagicEffect(CONST_ME_HITBYFIRE)
 			return true
 		else
@@ -92,9 +92,9 @@ function othersFireBug.onUse(player, item, fromPosition, target, toPosition, isH
 			target:transform(2113)
 			return true
 		elseif target.actionid == 12550 or target.actionid == 12551 then -- Secret Service Quest
-			if player:getStorageValue(Storage.Quest.U8_1.SecretService.TBIMission01) == 1 then
+			if player:getStorageValue(Storage.SecretService.TBIMission01) == 1 then
 				Game.createItem(2118, 1, Position(32893, 32012, 6))
-				player:setStorageValue(Storage.Quest.U8_1.SecretService.TBIMission01, 2)
+				player:setStorageValue(Storage.SecretService.TBIMission01, 2)
 			end
 		end
 		return true

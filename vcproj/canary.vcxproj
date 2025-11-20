@@ -20,7 +20,6 @@
     <ClInclude Include="..\src\core.hpp" />
     <ClInclude Include="..\src\creatures\appearance\mounts\mounts.hpp" />
     <ClInclude Include="..\src\creatures\appearance\outfit\outfit.hpp" />
-    <ClInclude Include="..\src\creatures\appearance\attached_effects\attached_effects.hpp" />
     <ClInclude Include="..\src\creatures\combat\combat.hpp" />
     <ClInclude Include="..\src\creatures\combat\condition.hpp" />
     <ClInclude Include="..\src\creatures\combat\spells.hpp" />
@@ -44,16 +43,9 @@
     <ClInclude Include="..\src\creatures\players\storages\storages.hpp" />
     <ClInclude Include="..\src\creatures\players\player.hpp" />
     <ClInclude Include="..\src\creatures\players\vocations\vocation.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\wheel\wheel_gems.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_achievement.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_attached_effects.hpp" />
-    <ClInclude Include="..\src\creatures\players\animus_mastery\animus_mastery.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_badge.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_cyclopedia.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_storage.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_title.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\player_vip.hpp" />
-    <ClInclude Include="..\src\creatures\players\components\wheel\player_wheel.hpp" />
+    <ClInclude Include="..\src\creatures\players\wheel\wheel_gems.hpp" />
+    <ClInclude Include="..\src\creatures\players\achievement\player_achievement.hpp" />
+    <ClInclude Include="..\src\creatures\players\wheel\player_wheel.hpp" />
     <ClInclude Include="..\src\creatures\players\wheel\wheel_definitions.hpp" />
     <ClInclude Include="..\src\database\database.hpp" />
     <ClInclude Include="..\src\database\databasemanager.hpp" />
@@ -86,8 +78,6 @@
     <ClInclude Include="..\src\io\ioprey.hpp" />
     <ClInclude Include="..\src\io\io_bosstiary.hpp" />
     <ClInclude Include="..\src\io\io_definitions.hpp" />
-    <ClInclude Include="..\src\io\player_storage_repository.hpp" />
-    <ClInclude Include="..\src\io\player_storage_repository_db.hpp" />
     <ClInclude Include="..\src\items\bed.hpp" />
     <ClInclude Include="..\src\items\containers\container.hpp" />
     <ClInclude Include="..\src\items\containers\depot\depotchest.hpp" />
@@ -143,6 +133,7 @@
     <ClInclude Include="..\src\lua\functions\core\game\zone_functions.hpp" />
     <ClInclude Include="..\src\lua\functions\core\game\lua_enums.hpp" />
     <ClInclude Include="..\src\lua\functions\core\game\modal_window_functions.hpp" />
+    <ClInclude Include="..\src\lua\functions\core\libs\bit_functions.hpp" />
     <ClInclude Include="..\src\lua\functions\core\libs\core_libs_functions.hpp" />
     <ClInclude Include="..\src\lua\functions\core\libs\kv_functions.hpp" />
     <ClInclude Include="..\src\lua\functions\core\libs\db_functions.hpp" />
@@ -210,7 +201,7 @@
     <ClInclude Include="..\src\map\spectators.hpp" />
     <ClInclude Include="..\src\map\town.hpp" />
     <ClInclude Include="..\src\map\utils\astarnodes.hpp" />
-    <ClInclude Include="..\src\map\utils\mapsector.hpp" />
+    <ClInclude Include="..\src\map\utils\qtreenode.hpp" />
     <ClInclude Include="..\src\security\rsa.hpp" />
     <ClInclude Include="..\src\server\network\connection\connection.hpp" />
     <ClInclude Include="..\src\server\network\message\networkmessage.hpp" />
@@ -242,7 +233,6 @@
     <ClCompile Include="..\src\config\configmanager.cpp" />
     <ClCompile Include="..\src\creatures\appearance\mounts\mounts.cpp" />
     <ClCompile Include="..\src\creatures\appearance\outfit\outfit.cpp" />
-    <ClCompile Include="..\src\creatures\appearance\attached_effects\attached_effects.cpp" />
     <ClCompile Include="..\src\creatures\combat\combat.cpp" />
     <ClCompile Include="..\src\creatures\combat\condition.cpp" />
     <ClCompile Include="..\src\creatures\combat\spells.cpp" />
@@ -265,16 +255,9 @@
     <ClCompile Include="..\src\creatures\players\storages\storages.cpp" />
     <ClCompile Include="..\src\creatures\players\player.cpp" />
     <ClCompile Include="..\src\creatures\players\vocations\vocation.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\wheel\wheel_gems.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_achievement.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_attached_effects.cpp" />
-    <ClCompile Include="..\src\creatures\players\animus_mastery\animus_mastery.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_badge.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_cyclopedia.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_storage.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_title.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\player_vip.cpp" />
-    <ClCompile Include="..\src\creatures\players\components\wheel\player_wheel.cpp" />
+    <ClCompile Include="..\src\creatures\players\wheel\wheel_gems.cpp" />
+    <ClCompile Include="..\src\creatures\players\achievement\player_achievement.cpp" />
+    <ClCompile Include="..\src\creatures\players\wheel\player_wheel.cpp" />
     <ClCompile Include="..\src\database\database.cpp" />
     <ClCompile Include="..\src\database\databasemanager.cpp" />
     <ClCompile Include="..\src\database\databasetasks.cpp" />
@@ -301,7 +284,6 @@
     <ClCompile Include="..\src\io\iomarket.cpp" />
     <ClCompile Include="..\src\io\ioprey.cpp" />
     <ClCompile Include="..\src\io\io_bosstiary.cpp" />
-    <ClCompile Include="..\src\io\player_storage_repository_db.cpp" />
     <ClCompile Include="..\src\items\bed.cpp" />
     <ClCompile Include="..\src\items\containers\container.cpp" />
     <ClCompile Include="..\src\items\containers\depot\depotchest.cpp" />
@@ -326,7 +308,6 @@
     <ClCompile Include="..\src\kv\kv_sql.cpp" />
     <ClCompile Include="..\src\kv\kv.cpp" />
     <ClCompile Include="..\src\lib\di\soft_singleton.cpp" />
-    <ClCompile Include="..\src\lib\logging\logger.cpp" />
     <ClCompile Include="..\src\lib\logging\log_with_spd_log.cpp" />
     <ClCompile Include="..\src\lib\metrics\metrics.cpp" />
     <ClCompile Include="..\src\lib\thread\thread_pool.cpp" />
@@ -346,6 +327,7 @@
     <ClCompile Include="..\src\lua\functions\core\game\zone_functions.cpp" />
     <ClCompile Include="..\src\lua\functions\core\game\lua_enums.cpp" />
     <ClCompile Include="..\src\lua\functions\core\game\modal_window_functions.cpp" />
+    <ClCompile Include="..\src\lua\functions\core\libs\bit_functions.cpp" />
     <ClCompile Include="..\src\lua\functions\core\libs\kv_functions.cpp" />
     <ClCompile Include="..\src\lua\functions\core\libs\db_functions.cpp" />
     <ClCompile Include="..\src\lua\functions\core\libs\result_functions.cpp" />
@@ -402,11 +384,11 @@
     <ClCompile Include="..\src\map\house\housetile.cpp" />
     <ClCompile Include="..\src\map\spectators.cpp" />
     <ClCompile Include="..\src\map\utils\astarnodes.cpp" />
-    <ClCompile Include="..\src\map\utils\mapsector.cpp" />
+    <ClCompile Include="..\src\map\utils\qtreenode.cpp" />
     <ClCompile Include="..\src\map\map.cpp" />
     <ClCompile Include="..\src\map\mapcache.cpp" />
     <ClCompile Include="..\src\main.cpp" />
-    <ClCompile Include="..\src\fireots_server.cpp" />
+    <ClCompile Include="..\src\canary_server.cpp" />
     <ClCompile Include="..\src\security\argon.cpp" />
     <ClCompile Include="..\src\security\rsa.cpp" />
     <ClCompile Include="..\src\server\network\connection\connection.cpp" />
@@ -419,25 +401,22 @@
     <ClCompile Include="..\src\server\network\webhook\webhook.cpp" />
     <ClCompile Include="..\src\server\server.cpp" />
     <ClCompile Include="..\src\server\signals.cpp" />
-    <ClCompile Include="..\src\utils\benchmark.cpp" />
-    <ClCompile Include="..\src\utils\counter_pointer.cpp" />
     <ClCompile Include="..\src\utils\pugicast.cpp" />
     <ClCompile Include="..\src\utils\tools.cpp" />
     <ClCompile Include="..\src\utils\wildcardtree.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\pch.cpp">
+    <ClCompile Include="..\src\pch.hpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\cmake\fireots.rc" />
+    <ResourceCompile Include="..\cmake\canary.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7AA6C5AC-C8C4-40EF-A0B3-3569B9819163}</ProjectGuid>
-    <RootNamespace>Fireots</RootNamespace>
+    <RootNamespace>Canary</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <OutDir>$(ProjectDir)../</OutDir>
@@ -521,16 +500,15 @@
       <WarningLevel>Level1</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile />
       <SupportJustMyCode>true</SupportJustMyCode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <IncludeInUnityFile>true</IncludeInUnityFile>
       <OpenMPSupport>true</OpenMPSupport>
       <LanguageStandard_C>Default</LanguageStandard_C>
-      <AdditionalOptions>/Zc:__cplusplus /fsanitize=address /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus /fsanitize=address %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>_DISABLE_VECTOR_ANNOTATION;_DISABLE_STRING_ANNOTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -543,7 +521,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(FIREOTS_LIBDEPS)</AdditionalDependencies>
+      <AdditionalDependencies>$(CANARY_LIBDEPS)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -558,15 +536,14 @@
       <WarningLevel>Level1</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile />
       <SupportJustMyCode>true</SupportJustMyCode>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization>true</WholeProgramOptimization>
       <IncludeInUnityFile>true</IncludeInUnityFile>
       <OpenMPSupport>true</OpenMPSupport>
-      <AdditionalOptions>/Zc:__cplusplus /utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <PreprocessorDefinitions>_DISABLE_VECTOR_ANNOTATION;_DISABLE_STRING_ANNOTATION;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -609,11 +586,9 @@
     <ItemGroup>
       <ClCompile Include="generated\%(ProtoFiles.Filename).pb.cc">
         <IncludeInUnityFile>false</IncludeInUnityFile>
-        <PrecompiledHeader>NotUsing</PrecompiledHeader>
       </ClCompile>
       <ClInclude Include="generated\%(ProtoFiles.Filename).pb.h">
         <IncludeInUnityFile>false</IncludeInUnityFile>
-        <PrecompiledHeader>NotUsing</PrecompiledHeader>
       </ClInclude>
     </ItemGroup>
   </Target>

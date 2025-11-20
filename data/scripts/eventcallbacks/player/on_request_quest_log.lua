@@ -1,4 +1,4 @@
-local callback = EventCallback("PlayerOnRequestQuestLogBaseEvent")
+local callback = EventCallback()
 
 function callback.playerOnRequestQuestLog(player)
 	player:sendQuestLog()

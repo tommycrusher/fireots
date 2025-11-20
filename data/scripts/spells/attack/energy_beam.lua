@@ -28,10 +28,11 @@ local spell = Spell("instant")
 
 function spell.onCastSpell(creature, var)
 	local player = creature:getPlayer()
-	if not creature or not player then
-		return false
+	if creature and player and player:instantSkillWOD("Beam Mastery") then
+		var.runeName = "Beam Mastery"
+		return combatWOD:execute(creature, var)
 	end
-	return player:instantSkillWOD("Beam Mastery") and combatWOD:execute(creature, var) or combat:execute(creature, var)
+	return combat:execute(creature, var)
 end
 
 spell:group("attack")

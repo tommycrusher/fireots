@@ -26,11 +26,6 @@ monster.Bestiary = {
 	Locations = "Furious Crater.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-	"CloakOfTerrorHealthLoss",
-}
-
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "undead"
@@ -98,7 +93,7 @@ monster.loot = {
 	{ name = "blue gem", chance = 1490 },
 	{ name = "brooch of embracement", chance = 1490 },
 	{ name = "wand of defiance", chance = 990 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {
@@ -135,9 +130,5 @@ monster.immunities = {
 	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
-
-mType.onThink = function(monster, interval)
-	monster:tryTeleportToPlayer("I am your terror!")
-end
 
 mType:register(monster)

@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Claustrophobic Inferno.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 26000
 monster.maxHealth = 26000
 monster.race = "undead"
@@ -99,7 +95,7 @@ monster.loot = {
 	{ name = "crystal mace", chance = 1610 },
 	{ name = "war axe", chance = 1410 },
 	{ name = "warrior's axe", chance = 1410 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

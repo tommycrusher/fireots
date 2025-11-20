@@ -33,10 +33,6 @@ monster.corpse = 111
 monster.speed = 235
 monster.manaCost = 0
 
-monster.events = {
-	"MirroredNightmareBossAccess",
-}
-
 monster.changeTarget = {
 	interval = 4000,
 	chance = 0,
@@ -95,7 +91,7 @@ monster.loot = {
 	{ name = "stone skin amulet", chance = 1560 },
 	{ id = 23542, chance = 1250 }, -- collar of blue plasma
 	{ id = 23529, chance = 1250 }, -- ring of blue plasma
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {

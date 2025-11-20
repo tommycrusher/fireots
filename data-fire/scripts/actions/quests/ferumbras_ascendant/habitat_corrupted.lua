@@ -340,7 +340,6 @@ local corrupted = {
 	{ itemid = 417, position = Position(33614, 32721, 12) },
 	{ itemid = 417, position = Position(33611, 32712, 12) },
 }
-
 local function transformArea()
 	for x = 33611, 33625 do
 		for y = 32712, 32727 do
@@ -375,23 +374,10 @@ local function transformArea()
 	return true
 end
 
-local function resetFerumbrasAscendantHabitats(player)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Roshamuul, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Grass, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Mushroom, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Desert, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Venom, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Ice, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Corrupted, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Dimension, -1)
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.AllHabitats, 0)
-end
-
 local ferumbrasAscendantHabitatCorrupted = Action()
-
 function ferumbrasAscendantHabitatCorrupted.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 9125 then
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Corrupted) >= 1 then
+		if Game.getStorageValue(GlobalStorage.FerumbrasAscendant.Habitats.Corrupted) >= 1 then
 			player:say("The lever are stuck, need some time to it can be movable again.", TALKTYPE_MONSTER_SAY)
 			return true
 		end
@@ -403,12 +389,12 @@ function ferumbrasAscendantHabitatCorrupted.onUse(player, item, fromPosition, ta
 			basin:getPosition():sendMagicEffect(CONST_ME_ENERGYAREA)
 			basin:transform(22196)
 		end
-		player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.Corrupted, 1)
-		player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.AllHabitats, player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.AllHabitats) + 1)
+		Game.setStorageValue(GlobalStorage.FerumbrasAscendant.Habitats.Corrupted, 1)
+		Game.setStorageValue(GlobalStorage.FerumbrasAscendant.Habitats.AllHabitats, Game.getStorageValue(GlobalStorage.FerumbrasAscendant.Habitats.AllHabitats) + 1)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The room transforms into a completely different landscape.")
-		if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Habitats.AllHabitats) >= 7 then
+		if Game.getStorageValue(GlobalStorage.FerumbrasAscendant.Habitats.AllHabitats) >= 8 then
 			addEvent(function()
-				resetFerumbrasAscendantHabitats(player)
+				resetFerumbrasAscendantHabitats()
 				local basin = Tile(Position(33628, 32721, 12)):getItemById(22196)
 				if basin then
 					basin:getPosition():sendMagicEffect(CONST_ME_ENERGYAREA)

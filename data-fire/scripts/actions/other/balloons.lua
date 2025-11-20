@@ -1,4 +1,4 @@
-local settings = {
+local balloonItems = {
 	[37471] = 37414,
 	[37414] = 37471, -- blue balloon
 	[37472] = 37416,
@@ -77,28 +77,32 @@ local settings = {
 	[39692] = 39680, -- balloon no.9
 }
 
-local anniversaryBalloons = Action()
+local balloons = Action()
 
-function anniversaryBalloons.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local balloon = settings[item.itemid]
+function balloons.onUse(player, item, fp, target, toPosition, isHotkey)
+	local balloon = balloonItems[item.itemid]
 	if not balloon then
-		return true
+		return false
 	end
 
 	local fromPosition = item:getPosition()
 	local tile = Tile(fromPosition)
-
-	if not tile:getHouse() then
+	if not fromPosition:getTile():getHouse() then
 		player:sendTextMessage(MESSAGE_FAILURE, "You may use this only inside a house.")
-		return true
+	elseif tile:getItemCountById(item.itemid) == 1 then
+		for index, value in pairs(balloonItems) do
+			if tile:getItemCountById(index) > 0 and index ~= item.itemid then
+				player:sendCancelMessage(Game.getReturnMessage(RETURNVALUE_NOTPOSSIBLE))
+				return true
+			end
+		end
+		item:transform(balloon)
 	end
-
-	item:transform(balloon, 1)
 	return true
 end
 
-for itemId in pairs(settings) do
-	anniversaryBalloons:id(itemId)
+for index, value in pairs(balloonItems) do
+	balloons:id(index)
 end
 
-anniversaryBalloons:register()
+balloons:register()

@@ -14,7 +14,7 @@ function ferumbrasAscendantReward.onUse(player, item, fromPosition, target, toPo
 	if item.itemid ~= 4073 then
 		return false
 	end
-	if player:getStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Reward) >= 1 then
+	if player:getStorageValue(Storage.FerumbrasAscension.Reward) >= 1 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The treasure chest is empty.")
 		return true
 	end
@@ -34,7 +34,7 @@ function ferumbrasAscendantReward.onUse(player, item, fromPosition, target, toPo
 		end
 		return true
 	end
-	player:setStorageValue(Storage.Quest.U10_90.FerumbrasAscension.Reward, 1)
+	player:setStorageValue(Storage.FerumbrasAscension.Reward, 1)
 	return true
 end
 

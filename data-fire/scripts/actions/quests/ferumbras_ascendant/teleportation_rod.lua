@@ -1,15 +1,14 @@
 local config = {
-	[22174] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Razzagorn },
-	[22175] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Ragiaz },
-	[22176] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Zamulosh },
-	[22177] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Mazoran },
-	[22178] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Tarbaz },
-	[22179] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Shulgrax },
-	[22180] = { storageKey = Storage.Quest.U10_90.FerumbrasAscension.Plagirath },
+	[22174] = { storageKey = Storage.FerumbrasAscension.Razzagorn },
+	[22175] = { storageKey = Storage.FerumbrasAscension.Ragiaz },
+	[22176] = { storageKey = Storage.FerumbrasAscension.Zamulosh },
+	[22177] = { storageKey = Storage.FerumbrasAscension.Mazoran },
+	[22178] = { storageKey = Storage.FerumbrasAscension.Tarbaz },
+	[22179] = { storageKey = Storage.FerumbrasAscension.Shulgrax },
+	[22180] = { storageKey = Storage.FerumbrasAscension.Plagirath },
 }
 
 local ferumbrasAscendantTeleportation = Action()
-
 function ferumbrasAscendantTeleportation.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local targetItem = config[target.itemid]
 	if not targetItem then

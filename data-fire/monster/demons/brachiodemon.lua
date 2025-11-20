@@ -26,10 +26,6 @@ monster.Bestiary = {
 	Locations = "Claustrophobic Inferno.",
 }
 
-monster.events = {
-	"FourthTaintBossesPrepareDeath",
-}
-
 monster.health = 25000
 monster.maxHealth = 25000
 monster.race = "blood"
@@ -103,7 +99,7 @@ monster.loot = {
 	{ name = "mastermind shield", chance = 420 },
 	{ name = "assassin dagger", chance = 340 },
 	{ name = "alloy legs", chance = 170 },
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {
@@ -140,9 +136,5 @@ monster.immunities = {
 	{ type = "invisible", condition = true },
 	{ type = "bleed", condition = false },
 }
-
-mType.onThink = function(monster, interval)
-	monster:tryTeleportToPlayer("Burn in hell!")
-end
 
 mType:register(monster)

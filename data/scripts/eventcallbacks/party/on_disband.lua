@@ -1,4 +1,4 @@
-local callback = EventCallback("PartyOnDisbandEventBaseEvent")
+local callback = EventCallback()
 
 function callback.partyOnDisband(party)
 	local members = party:getMembers()

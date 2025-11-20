@@ -17,7 +17,6 @@ monster.raceId = 1946
 monster.Bestiary = {
 	class = "Undead",
 	race = BESTY_RACE_UNDEAD,
-	toKill = 5000,
 	FirstUnlock = 200,
 	SecondUnlock = 2000,
 	CharmsPoints = 100,
@@ -32,10 +31,6 @@ monster.race = "blood"
 monster.corpse = 6081
 monster.speed = 235
 monster.manaCost = 0
-
-monster.events = {
-	"MirroredNightmareBossAccess",
-}
 
 monster.changeTarget = {
 	interval = 4000,
@@ -95,7 +90,7 @@ monster.loot = {
 	{ name = "platinum amulet", chance = 1750 },
 	{ name = "glacier robe", chance = 880 },
 	{ id = 23544, chance = 440 }, -- collar of red plasma
-	{ name = "bag you desire", chance = 15 },
+	{ id = 34109, chance = 20 }, -- bag you desire
 }
 
 monster.attacks = {
