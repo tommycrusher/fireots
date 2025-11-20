@@ -8,7 +8,7 @@ function playerLogin.onLogin(player)
 	if not player:isPremium() and not table.contains(freeTowns, player:getTown():getName()) then
 		local town = player:getTown()
 		local sex = player:getSex()
-		local home = getHouseByPlayerGUID(getPlayerGUID(player))
+		local home = Game.getHouseByPlayerGUID(player:getGuid())
 		town = table.contains(freeTowns, town:getName()) and town or Town(defaultTown)
 		player:teleportTo(town:getTemplePosition())
 		player:setTown(town)
@@ -21,7 +21,7 @@ function playerLogin.onLogin(player)
 		end
 
 		if home and not player:isPremium() then
-			setHouseOwner(home, 0)
+			home:setOwnerGuid(0)
 			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "You have lost your house because you are no longer a premium account.")
 			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Your items from the house have been sent to your inbox.")
 		end
