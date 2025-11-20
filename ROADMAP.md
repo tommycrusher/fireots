@@ -648,6 +648,232 @@ Formatting, comments, documentation.
 
 ---
 
+---
+
+## Phase 6: Systematic Error Remediation (Q1 2026)
+
+### Priority: MEDIUM
+**Goal**: Resolve 908 script warnings from server startup logs
+**Estimated Effort**: 1-2 weeks
+**Impact**: Medium (code quality, forward compatibility)
+
+### Status: NOT STARTED
+**Analysis completed**: 2025-11-19
+**Source**: `data/output.txt` (6751 lines, server startup logs)
+
+### 6.1 Error Categories
+
+#### 6.1.1 Duplicate UID Registrations (71 warnings)
+**Priority**: MEDIUM
+**Effort**: 2-3 days
+
+**File**: `data-fire/scripts/actions/quests/quest_reward_common.lua`
+- **Issue**: UIDs 5003-12000 registered multiple times
+- **Cause**: Single script uses broad UID range (5000-12000) conflicting with individual quest scripts
+- **Impact**: Quest rewards may not trigger correctly, duplicate event handlers
+- **Solution Options**:
+  1. Consolidate all quest rewards into quest_reward_common.lua
+  2. Split UID ranges into non-overlapping segments per quest
+  3. Migrate to AID-based system instead of UIDs
+
+**Example warnings**:
+```
+[registerLuaUniqueEvent] duplicate registered item with uid: 5003 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua
+[registerLuaUniqueEvent] duplicate registered item with uid: 5004 in range from uid: 5000, to uid: 12000, for script: quest_reward_common.lua
+```
+
+**Affected UIDs**: 5003, 5004, 5006, 5007, 5008, 5009, 5017, 5101-5104, 5150-5154, 5200-5210, 5301-5312, etc.
+
+---
+
+#### 6.1.2 Teleport Duplicate UIDs (8 warnings)
+**Priority**: LOW
+**Effort**: 1 hour
+
+**File**: `data-fire/scripts/actions/other/teleport_item.lua`
+- **Issue**: UIDs 15001-20000 range overlaps with individual teleport scripts
+- **Cause**: Broad teleport handler conflicts with specific teleport implementations
+- **Impact**: Some teleports may not function, event handler confusion
+- **Solution**: Narrow teleport_item.lua UID range or use itemid registration
+
+**Example warnings**:
+```
+[registerLuaUniqueEvent] duplicate registered item with uid: 15901 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua
+[registerLuaUniqueEvent] duplicate registered item with uid: 17756 in range from uid: 15001, to uid: 20000, for script: teleport_item.lua
+```
+
+**Affected UIDs**: 15901, 15902, 15903, 15904, 17756, 17757, 19000, 19778
+
+---
+
+#### 6.1.3 Concoctions Duplicate Item IDs (40 warnings)
+**Priority**: LOW
+**Effort**: 2 hours
+
+**File**: `data/scripts/actions/items/concoctions.lua`
+- **Issue**: Concoction item IDs 36723-36742 registered twice (once in data/, once in data-fire/)
+- **Cause**: Script exists in both core data/ and custom data-fire/ directories
+- **Impact**: Event handlers registered multiple times, potential double-triggers
+- **Solution**: Remove duplicate script from data-fire/ or data/, ensure single registration
+
+**Example warnings**:
+```
+[registerLuaItemEvent] - Duplicate registered item with id: 36726 in range from id: 36726, to id: 36726, for script: concoctions.lua
+[registerLuaItemEvent] - Duplicate registered item with id: 36723 in range from id: 36723, to id: 36723, for script: concoctions.lua
+```
+
+**Affected Item IDs**: 36723-36742 (20 concoction types)
+
+---
+
+#### 6.1.4 Deprecated Function Calls (5 warnings)
+**Priority**: HIGH
+**Effort**: 30 minutes
+
+**Pattern**: `setCombatCondition()` → `Combat.addCondition()`
+- **Issue**: Legacy function renamed in upstream Canary
+- **Cause**: Scripts not updated to new API
+- **Impact**: Forward compatibility - function will be removed in future Canary releases
+- **Solution**: Simple find/replace across affected scripts
+
+**Example warnings**:
+```
+[setCombatCondition] - Function was renamed to Combat.addCondition and will be removed in the future
+```
+
+**Action Required**:
+```bash
+# Find all usages
+grep -r "setCombatCondition" data-fire/scripts/
+
+# Replace with Combat.addCondition
+# Update function signature as needed
+```
+
+---
+
+#### 6.1.5 Duplicate Move Events (50+ warnings)
+**Priority**: LOW
+**Effort**: 1 day
+
+**Files**: 
+- `epic.lua`, `cake.lua`, `bath_tub.lua`, `decay.lua`, `trap.lua`, `dough.lua`
+- Various custom movement scripts
+
+**Issue**: Movement event item IDs registered multiple times
+**Cause**: 
+  1. Scripts in both data/ and data-fire/
+  2. Overlapping item ID ranges
+  3. Multiple script files handling same items
+
+**Example warnings**:
+```
+[registerEvent] duplicate move event found: 31557, for script: epic.lua
+[registerEvent] duplicate move event found: 6278, for script: cake.lua
+[registerEvent] duplicate move event found: 3944, for script: trap.lua
+```
+
+**Solution**: Audit movement scripts, consolidate or separate by item ID ranges
+
+---
+
+#### 6.1.6 Missing Event Registration Data (700+ warnings)
+**Priority**: LOW
+**Effort**: Review needed
+
+**Pattern**: `[registerLuaEvent] missing id, aid, uid or position for script: X.lua`
+**Issue**: Scripts registered without proper ID/UID/position identifiers
+**Cause**: Generic registration fallback mechanism
+**Impact**: Unclear - may be intentional catch-all handlers
+**Solution**: Review each script to determine if explicit IDs needed
+
+**Common files**:
+- All files from categories 6.1.1-6.1.5 also generate "missing" warnings
+- May be expected behavior for catch-all event handlers
+
+---
+
+### 6.2 Remediation Plan
+
+#### Phase 6.2.1: High Priority Fixes (Week 1)
+1. **Update deprecated function calls** (30 mins)
+   - Replace `setCombatCondition` → `Combat.addCondition`
+   - Test spell system functionality
+   - Commit: "fix: Update deprecated setCombatCondition to Combat.addCondition"
+
+#### Phase 6.2.2: Medium Priority Fixes (Week 1)
+2. **Quest UID consolidation** (2 days)
+   - Analyze quest_reward_common.lua architecture
+   - Decide: consolidate vs split vs migrate to AID
+   - Implement chosen solution
+   - Test quest reward system
+   - Commit: "fix: Resolve duplicate UID registrations in quest system"
+
+#### Phase 6.2.3: Low Priority Fixes (Week 2)
+3. **Concoctions duplicate removal** (2 hours)
+   - Identify which script to keep (data/ vs data-fire/)
+   - Remove duplicate, update path references if needed
+   - Test concoction functionality
+   - Commit: "fix: Remove duplicate concoctions script registration"
+
+4. **Teleport UID narrowing** (1 hour)
+   - Narrow teleport_item.lua UID range to avoid conflicts
+   - Update documentation for UID allocation
+   - Commit: "fix: Narrow teleport_item UID range to prevent conflicts"
+
+5. **Movement event audit** (1 day)
+   - List all movement scripts and their item ID ranges
+   - Consolidate or separate as appropriate
+   - Document movement event architecture
+   - Commit: "fix: Consolidate duplicate movement event registrations"
+
+#### Phase 6.2.4: Documentation (Ongoing)
+6. **Update UID/AID allocation docs** (2 hours)
+   - Document reserved UID ranges per system
+   - Create UID allocation policy for new content
+   - Add to docs/ directory
+
+---
+
+### 6.3 Success Criteria
+
+- [x] **Analysis complete**: All 908 warnings categorized ✅
+- [ ] **Deprecated functions**: 0 setCombatCondition warnings
+- [ ] **Quest UIDs**: 0 duplicate UID warnings for quest system
+- [ ] **Concoctions**: 0 duplicate item ID warnings
+- [ ] **Movement events**: <10 duplicate warnings (intentional only)
+- [ ] **Server startup**: Clean logs with only informational messages
+- [ ] **Testing**: All affected systems verified functional
+
+---
+
+### 6.4 Risk Assessment
+
+**Low Risk**: Most warnings are code quality issues, not functional blockers
+- Server currently runs successfully despite warnings
+- No reported gameplay issues from warning sources
+- Changes are isolated to script registration logic
+
+**Testing Required**:
+- Quest reward chest opening and item distribution
+- Teleport functionality across all UID ranges
+- Concoction crafting and usage
+- Movement-based triggers (decay, traps, dough, etc.)
+
+---
+
+### 6.5 Dependencies
+
+**Requires**:
+- Understanding of Lua event registration system
+- Map knowledge for UID/position validation
+- Quest system architecture documentation (may need to create)
+
+**Blocks**:
+- None (can proceed in parallel with other phases)
+
+---
+
 **This roadmap is a living document. Updates will be made quarterly or as priorities shift.**
 
 **Questions or Suggestions?** Open an issue on GitHub: https://github.com/tommycrusher/fireots/issues
