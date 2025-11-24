@@ -70,7 +70,7 @@ private:
 	Logger &logger;
 	std::atomic<bool> stopped { false };
 
-	std::unique_ptr<BS::thread_pool<BS::tp::none>> pool;
+	std::unique_ptr<BS::thread_pool> pool;
 };
 
 constexpr auto g_threadPool = ThreadPool::getInstance;

@@ -32,7 +32,7 @@ ThreadPool &ThreadPool::getInstance() {
 
 ThreadPool::ThreadPool(Logger &logger, uint32_t threadCount) :
 	logger(logger),
-	pool { std::make_unique<BS::thread_pool<BS::tp::none>>(
+	pool { std::make_unique<BS::thread_pool>(
 		threadCount > 0 ? threadCount : std::max<int>(getNumberOfCores(), DEFAULT_NUMBER_OF_THREADS)
 	) } {
 	start();

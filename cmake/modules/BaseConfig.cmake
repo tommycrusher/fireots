@@ -43,6 +43,8 @@ find_package(unofficial-argon2 CONFIG REQUIRED)
 find_package(unofficial-libmariadb CONFIG REQUIRED)
 
 find_path(BOOST_DI_INCLUDE_DIRS "boost/di.hpp")
+find_path(PARALLEL_HASHMAP_INCLUDE_DIRS "parallel_hashmap/phmap.h")
+find_path(ATOMIC_QUEUE_INCLUDE_DIRS "atomic_queue/atomic_queue.h")
 
 # *****************************************************************************
 # Sanity Checks
@@ -71,7 +73,7 @@ option(OPTIONS_ENABLE_OPENMP "Enable Open Multi-Processing support." ON)
 option(DEBUG_LOG "Enable Debug Log" OFF)
 option(ASAN_ENABLED "Build this target with AddressSanitizer" OFF)
 option(BUILD_STATIC_LIBRARY "Build using static libraries" OFF)
-option(SPEED_UP_BUILD_UNITY "Compile using build unity for speed up build" ON)
+option(SPEED_UP_BUILD_UNITY "Compile using build unity for speed up build" OFF)
 option(USE_PRECOMPILED_HEADER "Compile using precompiled header" ON)
 
 # === ASAN ===
@@ -102,6 +104,81 @@ else()
     log_option_disabled("STATIC_LIBRARY")
 endif()
 
+# === SPEED_UP_BUILD_UNITY ===
+if(SPEED_UP_BUILD_UNITY)
+    log_option_enabled("SPEED_UP_BUILD_UNITY")
+else()
+    log_option_disabled("SPEED_UP_BUILD_UNITY")
+endif()
+
+# === USE_PRECOMPILED_HEADER ===
+if(USE_PRECOMPILED_HEADER)
+    log_option_enabled("USE_PRECOMPILED_HEADER")
+else()
+    log_option_disabled("USE_PRECOMPILED_HEADER")
+endif()
+
+# === IPO Configuration ===
+function(configure_linking target_name)
+    if(OPTIONS_ENABLE_IPO)
+        # Check if IPO/LTO is supported
+        include(CheckIPOSupported)
+        check_ipo_supported(
+            RESULT ipo_supported
+            OUTPUT ipo_output
+            LANGUAGES CXX
+        )
+
+        # Get the GCC compiler version, if applicable
+        if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+            execute_process(
+                COMMAND ${CMAKE_CXX_COMPILER} -dumpversion
+                OUTPUT_VARIABLE GCC_VERSION
+                OUTPUT_STRIP_TRAILING_WHITESPACE
+            )
+        endif()
+
+        if(ipo_supported)
+            set_property(
+                TARGET ${target_name}
+                PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE
+            )
+            log_option_enabled("IPO/LTO enabled for target ${target_name}.")
+
+            if(MSVC)
+                target_compile_options(${target_name} PRIVATE /GL)
+                target_link_options(${target_name} PRIVATE /LTCG)
+            elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+                # Check if it's running on Linux, using GCC 14, and in Debug mode
+                if(CMAKE_SYSTEM_NAME STREQUAL "Linux"
+                   AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU"
+                   AND GCC_VERSION VERSION_GREATER_EQUAL "14.0"
+                   AND CMAKE_BUILD_TYPE STREQUAL "Debug")
+                    log_option_disabled("IPO/LTO disabled for GCC 14+ in Debug mode (known bug).")
+                else()
+                    target_compile_options(${target_name} PRIVATE -flto=auto)
+                    target_link_options(${target_name} PRIVATE -flto=auto)
+                endif()
+            endif()
+        else()
+            log_option_disabled("IPO/LTO not supported: ${ipo_output}")
+        endif()
+    else()
+        log_option_disabled("IPO/LTO")
+    endif()
+
+    # Incremental Linking for MSVC
+    if(MSVC)
+        if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+            target_link_options(${target_name} PRIVATE /INCREMENTAL)
+            log_option_enabled("Incremental linking for Debug mode.")
+        else()
+            target_link_options(${target_name} PRIVATE /INCREMENTAL:NO)
+            log_option_disabled("Incremental linking for non-Debug mode.")
+        endif()
+    endif()
+endfunction()
+
 # === DEBUG LOG ===
 # cmake -DDEBUG_LOG=ON ..
 if(DEBUG_LOG)
@@ -121,7 +198,19 @@ if (MSVC)
     endforeach(type)
 
     add_compile_options(/MP /FS /Zf /EHsc)
+else()
+    add_compile_options(
+        -Wno-unused-parameter
+        -Wno-sign-compare
+        -Wno-switch
+        -Wno-implicit-fallthrough
+        -Wno-extra
+    )
 endif (MSVC)
+
+# === Compiler Features ===
+add_library(project_options INTERFACE)
+target_compile_features(project_options INTERFACE cxx_std_23)
 
 ## Link compilation files to build/bin folder, else link to the main dir
 function(set_output_directory target_name)
@@ -143,6 +232,7 @@ function(setup_target TARGET_NAME)
     if (MSVC AND BUILD_STATIC_LIBRARY)
         set_property(TARGET ${TARGET_NAME} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
     endif()
+    target_link_libraries(${TARGET_NAME} PUBLIC project_options)
 endfunction()
 
 # *****************************************************************************
